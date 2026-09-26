@@ -1,0 +1,22 @@
+{
+  "official": {
+    "ic_mean": -0.015188643745198807,
+    "ic_std": 0.2312937220215098,
+    "icir": -0.06566820583131218,
+    "ic_positive_ratio": 0.4669421487603306,
+    "annual_excess": -0.7498982971962538,
+    "top1_annual_ret": -0.763942948196551,
+    "mean_turnover": 0.5982095211992785,
+    "final_score": -0.11050780301673921
+  },
+  "local_minus_official": {
+    "ic_mean": 0.0,
+    "ic_std": 0.0,
+    "icir": 0.0,
+    "ic_positive_ratio": 0.0,
+    "annual_excess": 0.0,
+    "top1_annual_ret": 0.0,
+    "mean_turnover": 0.0,
+    "final_score": 0.0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "primary_2023": {
+    "train_start": 20180102,
+    "train_end": 20221229,
+    "purge_date": 20221230,
+    "valid_start": 20230103,
+    "valid_end": 20231229
+  },
+  "oos_2024": {
+    "train_start": 20180102,
+    "train_end": 20231228,
+    "purge_date": 20231229,
+    "valid_start": 20240102,
+    "valid_end": 20241231
+  }
+}

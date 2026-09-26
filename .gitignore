@@ -1,0 +1,56 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Local secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+
+# IDE settings
+.idea/
+.vscode/
+
+# Competition raw data (obtain from the official source)
+赛题五/赛题五数据/
+赛题五/赛题五数据.zip
+
+# Generated evaluation fixtures and large prediction files
+artifacts/**/evaluate_input/
+artifacts/**/submission*.csv
+artifacts/**/daily_top_sets.csv
+
+# Generated audit JSON currently contains a machine-specific absolute path
+artifacts/data_profile.json
+
+# Generated model files and checkpoints
+artifacts/**/models/
+artifacts/**/checkpoints/
+models/
+checkpoints/
+*.pkl
+*.pickle
+*.joblib
+*.ckpt
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+赛题五/赛题五-更新.pdf
+开发计划_0925-1012.xlsx
+股票收益预测竞赛_小组启动会_正式版.pptx
