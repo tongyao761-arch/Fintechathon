@@ -2,9 +2,12 @@
 
 from __future__ import annotations
 
+import hashlib
+import importlib.util
 import json
 import platform
 import sys
+import tempfile
 import threading
 import time
 from datetime import datetime
@@ -20,25 +23,24 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from src.data.data_contract import assert_unique_keys, require_columns
+from src.features.baseline_v1 import (
+    FEATURE_COLUMNS,
+    FEATURE_DEFINITIONS,
+    RAW_FEATURE_COLUMNS,
+    build_baseline_v1_features,
+)
 from src.metrics.official import score_official
 from src.validation.splits import TimeSplit, get_split
 
 
 DATA_PATH = ROOT / "赛题五" / "赛题五数据" / "训练集_clean.csv"
-OUTPUT_PATH = ROOT / "artifacts" / "lightgbm_baseline" / "summary.json"
-FEATURE_COLUMNS = [
-    "open",
-    "high",
-    "low",
-    "close",
-    "vol",
-    "amount",
-    "flag_limit_up",
-    "flag_limit_down",
-]
+OUTPUT_PATH = ROOT / "artifacts" / "lightgbm_baseline_v1" / "summary.json"
 EXCLUDED_COLUMNS = [
     "ts_code",
     "trade_date",
+    *RAW_FEATURE_COLUMNS,
+    "flag_limit_up",
+    "flag_limit_down",
     "y_ret_1d",
     "is_price_valid",
     "is_trainable",
@@ -47,7 +49,9 @@ EXCLUDED_COLUMNS = [
 REQUIRED_COLUMNS = [
     "ts_code",
     "trade_date",
-    *FEATURE_COLUMNS,
+    *RAW_FEATURE_COLUMNS,
+    "flag_limit_up",
+    "flag_limit_down",
     "y_ret_1d",
     "is_price_valid",
     "is_trainable",
@@ -139,6 +143,52 @@ def load_clean_panel(path: Path = DATA_PATH) -> pd.DataFrame:
     return panel
 
 
+def _load_official_evaluator():
+    spec = importlib.util.spec_from_file_location(
+        "competition_evaluate",
+        ROOT / "赛题五" / "evaluate.py",
+    )
+    if spec is None or spec.loader is None:
+        raise ImportError("cannot load supplied competition evaluator")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.evaluate
+
+
+def _compare_with_official_evaluator(
+    pred: pd.DataFrame,
+    truth: pd.DataFrame,
+    x: pd.DataFrame,
+    local_metrics: dict[str, Any],
+) -> dict[str, Any]:
+    with tempfile.TemporaryDirectory(prefix="fintechathon_lgbm_eval_") as temp_dir:
+        fixture = Path(temp_dir)
+        submission_path = fixture / "submission.csv"
+        pred.to_csv(submission_path, index=False, float_format="%.17g")
+        truth.to_csv(
+            fixture / "测试集_Y.csv",
+            index=False,
+            float_format="%.17g",
+        )
+        x.to_csv(fixture / "测试集_X.csv", index=False)
+        official_raw = _load_official_evaluator()(str(submission_path), str(fixture))
+    official = {key: float(value) for key, value in official_raw.items()}
+    differences = {
+        key: float(local_metrics[key] - official[key]) for key in local_metrics
+    }
+    max_abs_difference = max(abs(value) for value in differences.values())
+    if max_abs_difference > 1e-12:
+        raise AssertionError(
+            "local scorer diverges from supplied official evaluator: "
+            f"{differences}"
+        )
+    return {
+        "official_metrics": official,
+        "local_minus_official": differences,
+        "max_abs_difference": max_abs_difference,
+    }
+
+
 def split_masks(panel: pd.DataFrame, split: TimeSplit) -> tuple[pd.Series, pd.Series]:
     """Return the eligible training mask and the complete validation mask."""
     train_period, valid_mask = split.masks(panel)
@@ -160,23 +210,27 @@ def split_masks(panel: pd.DataFrame, split: TimeSplit) -> tuple[pd.Series, pd.Se
     return train_mask, valid_mask
 
 
-def run_split(panel: pd.DataFrame, split_name: str) -> dict[str, Any]:
+def run_split(
+    panel: pd.DataFrame,
+    features: pd.DataFrame,
+    split_name: str,
+) -> dict[str, Any]:
     split = get_split(split_name)
     split_started = time.perf_counter()
     train_period, _ = split.masks(panel)
     train_mask, valid_mask = split_masks(panel, split)
 
-    train_x = panel.loc[train_mask, FEATURE_COLUMNS]
+    train_x = features.loc[train_mask, FEATURE_COLUMNS]
     train_y = panel.loc[train_mask, "y_ret_1d"]
     model = lgb.LGBMRegressor(**MODEL_PARAMS)
     model.fit(train_x, train_y, feature_name=FEATURE_COLUMNS)
-    if list(model.feature_name_) != FEATURE_COLUMNS:
+    if tuple(model.feature_name_) != FEATURE_COLUMNS:
         raise AssertionError(
             f"model feature order changed: {model.feature_name_!r}"
         )
     del train_x, train_y
 
-    valid_x = panel.loc[valid_mask, FEATURE_COLUMNS]
+    valid_x = features.loc[valid_mask, FEATURE_COLUMNS]
     prediction_values = model.predict(valid_x)
     del valid_x, model
     if len(prediction_values) != int(valid_mask.sum()):
@@ -186,6 +240,9 @@ def run_split(panel: pd.DataFrame, split_name: str) -> dict[str, Any]:
             f"{split_name} predictions contain "
             f"{int((~np.isfinite(prediction_values)).sum())} non-finite values"
         )
+    prediction_sha256 = hashlib.sha256(
+        np.asarray(prediction_values, dtype="<f8").tobytes()
+    ).hexdigest()
 
     valid = panel.loc[
         valid_mask,
@@ -193,7 +250,8 @@ def run_split(panel: pd.DataFrame, split_name: str) -> dict[str, Any]:
     ].copy()
     pred = valid[["ts_code", "trade_date"]].copy()
     pred["pred"] = prediction_values
-    truth = valid[["ts_code", "trade_date", "y_ret_1d"]]
+    truth = valid[["ts_code", "trade_date", "y_ret_1d"]].copy()
+    truth["y_ret_1d"] = truth["y_ret_1d"].astype("float64")
     x = valid[["ts_code", "trade_date", "flag_limit_up"]]
     metrics_with_details = score_official(
         pred,
@@ -202,6 +260,12 @@ def run_split(panel: pd.DataFrame, split_name: str) -> dict[str, Any]:
         return_details=True,
     )
     metrics_with_details.pop("details")
+    official_comparison = _compare_with_official_evaluator(
+        pred,
+        truth,
+        x,
+        metrics_with_details,
+    )
 
     elapsed = time.perf_counter() - split_started
     return {
@@ -218,7 +282,9 @@ def run_split(panel: pd.DataFrame, split_name: str) -> dict[str, Any]:
         "purge_rows": int(panel["trade_date"].eq(split.purge_date).sum()),
         "valid_prediction_rows": len(pred),
         "prediction_coverage": 1.0,
+        "prediction_sha256": prediction_sha256,
         "metrics": metrics_with_details,
+        "official_comparison": official_comparison,
         "elapsed_seconds": elapsed,
     }
 
@@ -242,15 +308,31 @@ def main() -> None:
         raw_rows = len(panel)
         raw_dates = int(panel["trade_date"].nunique())
         raw_stocks = int(panel["ts_code"].nunique())
-        results = [run_split(panel, name) for name in SPLIT_NAMES]
+        features = build_baseline_v1_features(panel)
+        if len(features) != raw_rows or not features.index.equals(panel.index):
+            raise AssertionError("feature construction changed panel alignment")
+        feature_values = features.to_numpy(dtype=np.float32, copy=False)
+        feature_infinite_counts = {
+            column: int(np.isinf(feature_values[:, position]).sum())
+            for position, column in enumerate(FEATURE_COLUMNS)
+        }
+        if any(feature_infinite_counts.values()):
+            raise ValueError(
+                f"formal baseline features contain infinity: {feature_infinite_counts}"
+            )
+        feature_missing_counts = {
+            column: int(features[column].isna().sum())
+            for column in FEATURE_COLUMNS
+        }
+        results = [run_split(panel, features, name) for name in SPLIT_NAMES]
     total_elapsed = time.perf_counter() - total_started
     finished_at = datetime.now().astimezone()
 
     summary = {
-        "experiment_id": "lightgbm_raw_fields_v1",
+        "experiment_id": "lightgbm_ten_features_v1",
         "purpose": (
-            "Engineering validation of data read, frozen time splits, LightGBM, "
-            "prediction, Rank IC, Top10% return, and turnover; not a financial result."
+            "First formal ten-feature baseline using frozen time splits and the "
+            "official scoring contract."
         ),
         "started_at": started_at.isoformat(),
         "finished_at": finished_at.isoformat(),
@@ -261,7 +343,12 @@ def main() -> None:
             "dates": raw_dates,
             "stocks": raw_stocks,
         },
-        "features": FEATURE_COLUMNS,
+        "features": list(FEATURE_COLUMNS),
+        "feature_definitions": dict(FEATURE_DEFINITIONS),
+        "feature_rows": len(features),
+        "feature_index_preserved": features.index.equals(panel.index),
+        "feature_missing_counts": feature_missing_counts,
+        "feature_infinite_counts": feature_infinite_counts,
         "excluded_columns": EXCLUDED_COLUMNS,
         "random_seed": RANDOM_SEED,
         "model": "lightgbm.LGBMRegressor",

@@ -1,0 +1,219 @@
+{
+  "experiment_id": "lightgbm_ten_features_v1",
+  "purpose": "First formal ten-feature baseline using frozen time splits and the official scoring contract.",
+  "started_at": "2026-09-27T16:46:01.176880+08:00",
+  "finished_at": "2026-09-27T16:46:37.005556+08:00",
+  "data": {
+    "file": "C:\\fintechathon\\赛题五\\赛题五数据\\训练集_clean.csv",
+    "file_size_bytes": 959043633,
+    "raw_rows": 7900350,
+    "dates": 1699,
+    "stocks": 4650
+  },
+  "features": [
+    "ret_1d",
+    "ret_5d",
+    "ret_20d",
+    "gap_1d",
+    "intraday_ret",
+    "high_low_range",
+    "volatility_5d",
+    "volatility_20d",
+    "volume_ratio_5d",
+    "amount_ratio_5d"
+  ],
+  "feature_definitions": {
+    "ret_1d": "close / close.shift(1) - 1",
+    "ret_5d": "close / close.shift(5) - 1",
+    "ret_20d": "close / close.shift(20) - 1",
+    "gap_1d": "open / close.shift(1) - 1",
+    "intraday_ret": "close / open - 1",
+    "high_low_range": "high / low - 1",
+    "volatility_5d": "ret_1d.rolling(5, min_periods=5).std(ddof=1)",
+    "volatility_20d": "ret_1d.rolling(20, min_periods=20).std(ddof=1)",
+    "volume_ratio_5d": "vol / vol.shift(1).rolling(5, min_periods=5).mean()",
+    "amount_ratio_5d": "amount / amount.shift(1).rolling(5, min_periods=5).mean()"
+  },
+  "feature_rows": 7900350,
+  "feature_index_preserved": true,
+  "feature_missing_counts": {
+    "ret_1d": 1146344,
+    "ret_5d": 1167623,
+    "ret_20d": 1239210,
+    "gap_1d": 1146344,
+    "intraday_ret": 1139980,
+    "high_low_range": 1139980,
+    "volatility_5d": 1171741,
+    "volatility_20d": 1266119,
+    "volume_ratio_5d": 1204393,
+    "amount_ratio_5d": 1204393
+  },
+  "feature_infinite_counts": {
+    "ret_1d": 0,
+    "ret_5d": 0,
+    "ret_20d": 0,
+    "gap_1d": 0,
+    "intraday_ret": 0,
+    "high_low_range": 0,
+    "volatility_5d": 0,
+    "volatility_20d": 0,
+    "volume_ratio_5d": 0,
+    "amount_ratio_5d": 0
+  },
+  "excluded_columns": [
+    "ts_code",
+    "trade_date",
+    "open",
+    "high",
+    "low",
+    "close",
+    "vol",
+    "amount",
+    "flag_limit_up",
+    "flag_limit_down",
+    "y_ret_1d",
+    "is_price_valid",
+    "is_trainable",
+    "row_id"
+  ],
+  "random_seed": 20260927,
+  "model": "lightgbm.LGBMRegressor",
+  "model_params": {
+    "objective": "regression",
+    "boosting_type": "gbdt",
+    "n_estimators": 100,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "max_depth": -1,
+    "min_child_samples": 100,
+    "subsample": 1.0,
+    "subsample_freq": 0,
+    "colsample_bytree": 1.0,
+    "reg_alpha": 0.0,
+    "reg_lambda": 1.0,
+    "random_state": 20260927,
+    "data_random_seed": 20260927,
+    "feature_fraction_seed": 20260927,
+    "bagging_seed": 20260927,
+    "deterministic": true,
+    "force_col_wise": true,
+    "n_jobs": -1,
+    "verbosity": -1
+  },
+  "splits": [
+    {
+      "split_name": "primary_2023",
+      "dates": {
+        "train_start": 20180102,
+        "train_end": 20221229,
+        "purge_date": 20221230,
+        "valid_start": 20230103,
+        "valid_end": 20231229
+      },
+      "split_train_rows": 5645100,
+      "train_samples": 4597785,
+      "purge_rows": 4650,
+      "valid_prediction_rows": 1125300,
+      "prediction_coverage": 1.0,
+      "prediction_sha256": "a494f88497430041c51febc0cdaebca45a93c187697412dad81be9c0c7cf890d",
+      "metrics": {
+        "ic_mean": 0.02113411935065089,
+        "ic_std": 0.0712482123053009,
+        "icir": 0.29662666145349026,
+        "ic_positive_ratio": 0.640495867768595,
+        "annual_excess": 0.07055126501262099,
+        "top1_annual_ret": 0.08997450249956299,
+        "mean_turnover": 0.4824181889098113,
+        "final_score": 0.18489357057110323
+      },
+      "official_comparison": {
+        "official_metrics": {
+          "ic_mean": 0.02113411935065089,
+          "ic_std": 0.0712482123053009,
+          "icir": 0.29662666145349026,
+          "ic_positive_ratio": 0.640495867768595,
+          "annual_excess": 0.07055126501262106,
+          "top1_annual_ret": 0.08997450249956358,
+          "mean_turnover": 0.4824181889098113,
+          "final_score": 0.18489357057110326
+        },
+        "local_minus_official": {
+          "ic_mean": 0.0,
+          "ic_std": 0.0,
+          "icir": 0.0,
+          "ic_positive_ratio": 0.0,
+          "annual_excess": -6.938893903907228e-17,
+          "top1_annual_ret": -5.967448757360216e-16,
+          "mean_turnover": 0.0,
+          "final_score": -2.7755575615628914e-17
+        },
+        "max_abs_difference": 5.967448757360216e-16
+      },
+      "elapsed_seconds": 11.873751399998582
+    },
+    {
+      "split_name": "oos_2024",
+      "dates": {
+        "train_start": 20180102,
+        "train_end": 20231228,
+        "purge_date": 20231229,
+        "valid_start": 20240102,
+        "valid_end": 20241231
+      },
+      "split_train_rows": 6770400,
+      "train_samples": 5659954,
+      "purge_rows": 4650,
+      "valid_prediction_rows": 1125300,
+      "prediction_coverage": 1.0,
+      "prediction_sha256": "7b30a851843a2ec5261fd6d00b1035f5e04bad6bf8d6a99c53c0a9a97f79e254",
+      "metrics": {
+        "ic_mean": 0.0525231384523425,
+        "ic_std": 0.14085158552086582,
+        "icir": 0.3728970338396489,
+        "ic_positive_ratio": 0.6735537190082644,
+        "annual_excess": 0.07403187626707203,
+        "top1_annual_ret": 0.059987225676175454,
+        "mean_turnover": 0.7106195201138428,
+        "final_score": 0.13003296222690577
+      },
+      "official_comparison": {
+        "official_metrics": {
+          "ic_mean": 0.0525231384523425,
+          "ic_std": 0.14085158552086582,
+          "icir": 0.3728970338396489,
+          "ic_positive_ratio": 0.6735537190082644,
+          "annual_excess": 0.07403187626707204,
+          "top1_annual_ret": 0.0599872256761758,
+          "mean_turnover": 0.7106195201138428,
+          "final_score": 0.13003296222690577
+        },
+        "local_minus_official": {
+          "ic_mean": 0.0,
+          "ic_std": 0.0,
+          "icir": 0.0,
+          "ic_positive_ratio": 0.0,
+          "annual_excess": -1.3877787807814457e-17,
+          "top1_annual_ret": -3.469446951953614e-16,
+          "mean_turnover": 0.0,
+          "final_score": 0.0
+        },
+        "max_abs_difference": 3.469446951953614e-16
+      },
+      "elapsed_seconds": 12.906307799999922
+    }
+  ],
+  "environment": {
+    "python": "3.12.10",
+    "python_implementation": "CPython",
+    "architecture": "64bit",
+    "lightgbm": "4.7.0",
+    "pandas": "2.3.3",
+    "numpy": "2.3.4"
+  },
+  "resources": {
+    "elapsed_seconds": 35.829213199998776,
+    "peak_process_rss_mb": 1771.7109375,
+    "logical_cpu_count": 32,
+    "physical_cpu_count": 24
+  }
+}
