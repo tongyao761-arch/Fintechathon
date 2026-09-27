@@ -1,0 +1,13 @@
+-r requirements.txt
+
+# LightGBM baseline runtime and validation dependencies
+lightgbm
+scikit-learn
+pyarrow
+pyyaml
+joblib
+psutil
+pytest
+
+# Required by the official competition evaluator
+loguru

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "rows": 7900350,
+  "columns": [
+    "ts_code",
+    "trade_date",
+    "open",
+    "high",
+    "low",
+    "close",
+    "vol",
+    "amount",
+    "flag_limit_up",
+    "flag_limit_down",
+    "y_ret_1d",
+    "is_price_valid",
+    "is_trainable"
+  ],
+  "keys_flags_raw_float32_inputs_training_labels_equal": true,
+  "split_masks_equal": true,
+  "clean_sha256": "667797aac6e43ee83208704a5f9abbce2b6b27b90efeec019013aa238068a70e"
+}

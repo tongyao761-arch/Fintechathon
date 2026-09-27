@@ -52,17 +52,26 @@ def score_official(
     require_columns(truth_df, [*KEYS, "y_ret_1d"], name="truth")
     require_columns(x_df, [*KEYS, "flag_limit_up"], name="features")
     assert_finite_predictions(pred_df)
+    if not np.isfinite(truth_df["y_ret_1d"].dropna().to_numpy(dtype=float)).all():
+        raise DataContractError("truth contains non-finite nonmissing labels")
+    if not x_df["flag_limit_up"].isin((0, 1)).all():
+        raise DataContractError("flag_limit_up must contain only 0 or 1")
     if validate_keys:
         _validate_prediction_keys(pred_df, truth_df, x_df)
         _check_daily_prediction_variation(pred_df)
     df = pred_df[KEYS + ["pred"]].merge(truth_df[KEYS + ["y_ret_1d"]], on=KEYS, how="inner", validate="one_to_one")
     df = df.merge(x_df[KEYS + ["flag_limit_up"]], on=KEYS, how="inner", validate="one_to_one")
 
-    ic_rows, excess_rows, turnover_rows, top_sets = [], [], [], []
+    ic_rows, excess_rows, turnover_rows, top_sets, return_top_sets = [], [], [], [], []
+    previous_date, previous = None, None
     for date, group in df.groupby("trade_date", sort=True):
         valid_ic = group.dropna(subset=["y_ret_1d"])
         if len(valid_ic) >= 30:
+            if valid_ic["pred"].nunique() < 2 or valid_ic["y_ret_1d"].nunique() < 2:
+                raise DataContractError(f"{date}: constant prediction or label in IC sample")
             ic = float(spearmanr(valid_ic["pred"], valid_ic["y_ret_1d"])[0])
+            if not np.isfinite(ic):
+                raise DataContractError(f"{date}: non-finite daily IC")
             ic_rows.append({"trade_date": date, "ic": ic, "n": len(valid_ic)})
 
         valid_ret = group[(group.flag_limit_up == 0) & group.y_ret_1d.notna()].copy()
@@ -71,20 +80,25 @@ def score_official(
             n_top = max(len(valid_ret) // 10, 1)
             top_ret = float(valid_ret.y_ret_1d.iloc[:n_top].mean())
             market_ret = float(valid_ret.y_ret_1d.mean())
+            if not np.isfinite([top_ret, market_ret, top_ret - market_ret]).all():
+                raise DataContractError(f"{date}: non-finite daily return")
             excess_rows.append({"trade_date": date, "top_ret": top_ret, "market_ret": market_ret, "excess": top_ret - market_ret, "n": len(valid_ret)})
+            return_top_sets.append((date, frozenset(valid_ret.ts_code.iloc[:n_top])))
 
         valid_turnover = group[group.flag_limit_up == 0].copy()
         if len(valid_turnover) >= 100:
             valid_turnover = valid_turnover.sort_values("pred", ascending=False)
             codes = frozenset(valid_turnover.ts_code.iloc[:max(len(valid_turnover) // 10, 1)])
             top_sets.append((date, codes))
-
-    for (previous_date, previous), (date, current) in zip(top_sets, top_sets[1:]):
-        union = len(previous | current)
-        turnover_rows.append({"trade_date": date, "previous_trade_date": previous_date, "turnover": 1.0 - len(previous & current) / union})
+            if previous is not None:
+                turnover_rows.append({"trade_date": date, "previous_trade_date": previous_date, "turnover": 1.0 - len(previous & codes) / len(previous | codes)})
+            previous_date, previous = date, codes
+        else:
+            # The official evaluator resets continuity on an ineligible date.
+            previous_date, previous = None, None
 
     ic_df, excess_df, turnover_df = pd.DataFrame(ic_rows), pd.DataFrame(excess_rows), pd.DataFrame(turnover_rows)
-    if ic_df.empty or excess_df.empty or turnover_df.empty:
+    if len(ic_df) < 2 or excess_df.empty or turnover_df.empty:
         raise DataContractError("not enough valid daily observations to calculate all official metrics")
     ic_mean = float(ic_df.ic.mean())
     ic_std = float(ic_df.ic.std(ddof=1))
@@ -96,6 +110,9 @@ def score_official(
         "top1_annual_ret": float(excess_df.top_ret.mean() * 252), "mean_turnover": mean_turnover,
         "final_score": float(ic_mean * 0.4 + annual_excess * 0.3 + (1 - mean_turnover) * 0.3),
     }
+    if not np.isfinite(list(result.values())).all():
+        raise DataContractError("non-finite scoring result")
     if return_details:
         result["details"] = {"daily_ic": ic_df, "daily_excess": excess_df, "daily_turnover": turnover_df, "daily_top_sets": pd.DataFrame({"trade_date": [d for d, _ in top_sets], "top_codes": [",".join(sorted(s)) for _, s in top_sets]})}
+        result["details"]["daily_return_top_sets"] = pd.DataFrame({"trade_date": [d for d, _ in return_top_sets], "top_codes": [",".join(sorted(s)) for _, s in return_top_sets]})
     return result

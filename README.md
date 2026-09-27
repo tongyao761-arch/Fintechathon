@@ -1,6 +1,6 @@
 # Fintechathon：基于原始量价数据的股票收益预测
 
-本项目面向全市场 A 股日线量价数据，预测每只股票在每个交易日的未来一天收益率 `y_ret_1d`。仓库当前已完成数据与验证框架（DDL①），并提供一个用于验证管线的 5 日动量基线。该基线不是最终比赛模型。
+本项目面向全市场 A 股日线量价数据，预测每只股票在每个交易日的未来一天收益率 `y_ret_1d`。当前固定对照为十特征 LightGBM `baseline_v1_1`，用于后续特征实验；最终比赛模型与测试集 submission 尚未完成。
 
 ## 赛题交付
 
@@ -20,7 +20,7 @@
 | 里程碑 | 内容 | 状态 |
 |---|---|---|
 | DDL① | 数据审计、时间切分、本地评分、提交校验 | 已完成 |
-| DDL② | LightGBM Baseline | 待完成 |
+| DDL② | LightGBM Baseline | 十特征对照已建立；验收见修正版交接报告 |
 | DDL③ | 特征候选基本冻结 | 待完成 |
 | DDL④ | 模型候选冻结 | 待完成 |
 | DDL⑤ | 最终方案冻结 | 待完成 |
@@ -31,7 +31,7 @@ DDL①已确认：
 - 训练集标签符合 `close(t+1) / close(t) - 1`。
 - 时间切分在训练期与验证期之间显式 purge 一个边界交易日。
 - 本地评分器与官方 Python 评分脚本的标量指标一致。
-- 现有 7 项单元测试全部通过。
+- 当前评分边界测试与全量复现记录见 `artifacts/baseline_v1_1/REVIEW_HANDOFF.md`。
 
 ## 仓库结构
 
@@ -46,17 +46,16 @@ artifacts/                小体积审计报告和实验摘要
 赛题五/                   赛题说明与官方评分脚本
 ```
 
-`artifacts/` 中的基线仅用于确认数据、切分和评分流程能够端到端运行。当前 5 日动量基线的 2024 样本外综合得分为 `-0.110508`，不应视为最终模型表现。
+`artifacts/lightgbm_baseline_v1/` 保留旧版十特征结果；`artifacts/baseline_v1_1/` 保存修正版的小型验收材料。早期 5 日动量结果仍保留作为历史管线检查。
 
 ## 环境安装
 
-建议使用 Python 3.12。
+已验证环境为 Windows、Python 3.12.10。模型依赖意图保存在 `requirements-model.in`，复现使用已核对的 `requirements-model.lock`；`requirements.txt` 仅包含早期基础依赖。以下命令使用独立虚拟环境，不修改系统 Python 或 PATH。
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-model.lock
+.\.venv\Scripts\python.exe -m pip check
 ```
 
 ## 数据准备
@@ -81,16 +80,24 @@ python -m pip install -r requirements.txt
 
 在项目根目录执行：
 
-```bash
-# 重新生成原始数据审计报告
-python -m src.data.profile_raw
-
+```powershell
 # 运行单元测试
-python -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -m unittest discover -s tests -v
 
-# 运行 2024 年 5 日动量管线验证
-python scripts/run_baseline_2024.py
+# 固定十特征基线，默认只验证 2023
+.\.venv\Scripts\python.exe scripts/run_lightgbm_baseline.py
+
+# 明确需要两年验收时才执行；--verify-clean 额外要求本机存在旧 clean 文件
+.\.venv\Scripts\python.exe scripts/run_lightgbm_baseline.py --experiment-id baseline_v1_1 --split all --verify-clean
 ```
+
+每次运行写入独立的 `artifacts/experiments/<experiment-id>/<run-id>/`，禁止覆盖。默认重建只需要原始训练 CSV；`--verify-clean` 用于输入迁移验收，不是日常运行依赖。重建逻辑见 `src/data/baseline_panel.py`：仅依据当日 OHLC 生成质量标记，不填补、不删行；模型 X 与训练 Y 使用原 float32 规范，评分标签保留原始精度。
+
+运行目录保留模型、原始预测 Parquet、实际评分 CSV、逐日和月度诊断、文件哈希、代码哈希、依赖版本及状态。只有全部检查通过才写入成功状态。预测哈希和训练样本数必须匹配冻结的十特征版本；`--experiment-id` 仅改变留档名称，不会解除这项检查或启用新特征。
+
+后续新增特征应建立独立候选入口，复用这里的评分、原始真值提取和留档辅助模块，保留此入口作为固定对照；不能把改动后的候选写回旧基线。日常筛选使用 2023，2024 用于少量候选复核，不能反复依据其分数调参后仍声称它是未参与选择的样本外检验。
+
+官方换手率包含标签缺失股票，收益分组还会排除这些股票。诊断会分别保存两个 Top 集合，并报告标签缺失、价格无效、十特征全缺失占比。价格有效样本上的换手率仅供诊断，不替代官方分数，也不改变预测排名。
 
 ## 数据、特征与预测接口
 

@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "test_count": 35,
+  "unit_tests": "passed",
+  "pip_check": "passed",
+  "runs": [
+    {
+      "path": "artifacts/experiments/baseline_v1_1/20260927T114446904324Z_b938d122",
+      "summary_sha256": "1368739fa256a70a8fb315c2ba0edcc6998fe49dbefed650420bb49fabe9cf73",
+      "resources": {
+        "elapsed_seconds": 60.6524574,
+        "peak_process_rss_mb": 2539.625,
+        "logical_cpu_count": 32,
+        "physical_cpu_count": 24
+      }
+    },
+    {
+      "path": "artifacts/experiments/baseline_v1_1/20260927T114614962794Z_2f5b6764",
+      "summary_sha256": "4c224882b2c3dba69fe9b1f28815aced90f2f9f1076d53d0d5eb2dcfacbe3228",
+      "resources": {
+        "elapsed_seconds": 61.07656129999987,
+        "peak_process_rss_mb": 2372.50390625,
+        "logical_cpu_count": 32,
+        "physical_cpu_count": 24
+      }
+    }
+  ],
+  "same_source_snapshot": true,
+  "same_dependencies": true,
+  "all_saved_file_hashes_verified": true,
+  "per_split_repeatability": {
+    "primary_2023": {
+      "dates": true,
+      "train_samples": true,
+      "valid_prediction_rows": true,
+      "prediction_sha256": true,
+      "metrics": true,
+      "official_comparison": true,
+      "diagnostics": true,
+      "file_sha256": true
+    },
+    "oos_2024": {
+      "dates": true,
+      "train_samples": true,
+      "valid_prediction_rows": true,
+      "prediction_sha256": true,
+      "metrics": true,
+      "official_comparison": true,
+      "diagnostics": true,
+      "file_sha256": true
+    }
+  },
+  "model_predictions_unchanged_from_v1": true,
+  "original_data_and_clean_files_preserved": true,
+  "test_command": ".\\.venv\\Scripts\\python.exe -B -m unittest discover -s tests -v",
+  "full_run_command": ".\\.venv\\Scripts\\python.exe -B scripts/run_lightgbm_baseline.py --experiment-id baseline_v1_1 --split all --verify-clean"
+}

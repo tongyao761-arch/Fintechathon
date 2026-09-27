@@ -1,0 +1,24 @@
+{
+  "note": "Diagnostics only; predictions and official scores are unchanged.",
+  "price_valid_only_turnover": 0.8458783247146384,
+  "top_groups": {
+    "return": {
+      "top_count": 107238,
+      "missing_label_count": 0,
+      "invalid_price_count": 0,
+      "all_features_missing_count": 0,
+      "missing_label_fraction": 0.0,
+      "invalid_price_fraction": 0.0,
+      "all_features_missing_fraction": 0.0
+    },
+    "turnover": {
+      "top_count": 110363,
+      "missing_label_count": 30867,
+      "invalid_price_count": 30828,
+      "all_features_missing_count": 30828,
+      "missing_label_fraction": 0.27968612669101056,
+      "invalid_price_fraction": 0.2793327473881645,
+      "all_features_missing_fraction": 0.2793327473881645
+    }
+  }
+}

@@ -33,6 +33,11 @@ env/
 artifacts/**/evaluate_input/
 artifacts/**/submission*.csv
 artifacts/**/daily_top_sets.csv
+artifacts/**/daily_return_top_sets.csv
+artifacts/experiments/**/predictions.parquet
+
+# Immutable local run directories; reviewed small results live in baseline_v1_1/.
+artifacts/experiments/
 
 # Generated audit JSON currently contains a machine-specific absolute path
 artifacts/data_profile.json
