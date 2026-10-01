@@ -1,0 +1,182 @@
+test_hand_calculated_counts_and_no_mutation (test_baseline_acceptance.TestBaselineDiagnostics.test_hand_calculated_counts_and_no_mutation) ... ok
+test_default_is_2023_and_full_validation_requires_explicit_all (test_baseline_acceptance.TestDataAndArtifacts.test_default_is_2023_and_full_validation_requires_explicit_all) ... ok
+test_nonfinite_summary_cannot_mark_run_success (test_baseline_acceptance.TestDataAndArtifacts.test_nonfinite_summary_cannot_mark_run_success) ... ok
+test_original_label_tokens_and_shared_csv_precision (test_baseline_acceptance.TestDataAndArtifacts.test_original_label_tokens_and_shared_csv_precision) ... [32m2026-10-01 22:26:15.850[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 300, 交易日数: 3[0m
+[32m2026-10-01 22:26:15.853[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.999895, std=0.000000, ICIR=0.0000, IC>0占比=100.00%[0m
+[32m2026-10-01 22:26:15.856[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=1.1343, Top1年化绝对收益=2.3814[0m
+[32m2026-10-01 22:26:15.857[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:15.857[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.999895×0.4 + 1.1343×0.3 + 1.0000×0.3 = 1.040234[0m
+ok
+test_raw_loader_builds_current_row_flags_without_filling (test_baseline_acceptance.TestDataAndArtifacts.test_raw_loader_builds_current_row_flags_without_filling) ... ok
+test_run_collision_failure_and_missing_summary (test_baseline_acceptance.TestDataAndArtifacts.test_run_collision_failure_and_missing_summary) ... ok
+test_small_end_to_end_model_reload_and_key_coverage (test_baseline_acceptance.TestDataAndArtifacts.test_small_end_to_end_model_reload_and_key_coverage) ... [32m2026-10-01 22:26:16.160[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 400, 交易日数: 4[0m
+[32m2026-10-01 22:26:16.164[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.801819, std=0.059635, ICIR=13.4455, IC>0占比=100.00%[0m
+[32m2026-10-01 22:26:16.170[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=6.0799, Top1年化绝对收益=5.6856[0m
+[32m2026-10-01 22:26:16.171[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.2828, (1-turnover)=0.7172[0m
+[32m2026-10-01 22:26:16.172[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.801819×0.4 + 6.0799×0.3 + 0.7172×0.3 = 2.359839[0m
+ok
+test_actual_official_nan_is_rejected (test_baseline_acceptance.TestScoringFailurePaths.test_actual_official_nan_is_rejected) ... ok
+test_constant_labels_fail (test_baseline_acceptance.TestScoringFailurePaths.test_constant_labels_fail) ... ok
+test_constant_predictions_in_labeled_subset_fail (test_baseline_acceptance.TestScoringFailurePaths.test_constant_predictions_in_labeled_subset_fail) ... ok
+test_infinite_label_fails_even_if_limit_up (test_baseline_acceptance.TestScoringFailurePaths.test_infinite_label_fails_even_if_limit_up) ... ok
+test_no_turnover_pair_fails (test_baseline_acceptance.TestScoringFailurePaths.test_no_turnover_pair_fails) ... ok
+test_nonfinite_official_or_local_metrics_never_pass (test_baseline_acceptance.TestScoringFailurePaths.test_nonfinite_official_or_local_metrics_never_pass) ... ok
+test_short_first_or_last_date_matches_official (test_baseline_acceptance.TestScoringFailurePaths.test_short_first_or_last_date_matches_official) ... [32m2026-10-01 22:26:16.307[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 400, 交易日数: 4[0m
+[32m2026-10-01 22:26:16.311[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=1.000000, std=0.000000, ICIR=0.0000, IC>0占比=100.00%[0m
+[32m2026-10-01 22:26:16.314[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=1.1340, Top1年化绝对收益=2.3814[0m
+[32m2026-10-01 22:26:16.316[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:16.316[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 1.000000×0.4 + 1.1340×0.3 + 1.0000×0.3 = 1.040200[0m
+[32m2026-10-01 22:26:16.415[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 400, 交易日数: 4[0m
+[32m2026-10-01 22:26:16.418[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=1.000000, std=0.000000, ICIR=0.0000, IC>0占比=100.00%[0m
+[32m2026-10-01 22:26:16.422[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=1.1340, Top1年化绝对收益=2.3814[0m
+[32m2026-10-01 22:26:16.424[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:16.424[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 1.000000×0.4 + 1.1340×0.3 + 1.0000×0.3 = 1.040200[0m
+ok
+test_single_valid_ic_day_fails (test_baseline_acceptance.TestScoringFailurePaths.test_single_valid_ic_day_fails) ... ok
+test_skipped_day_breaks_turnover_and_matches_official (test_baseline_acceptance.TestScoringFailurePaths.test_skipped_day_breaks_turnover_and_matches_official) ... [32m2026-10-01 22:26:16.519[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 400, 交易日数: 4[0m
+[32m2026-10-01 22:26:16.522[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.154701, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:16.525[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=-0.3780, Top1年化绝对收益=0.8694[0m
+[32m2026-10-01 22:26:16.527[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:16.527[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + -0.3780×0.3 + 1.0000×0.3 = 0.186600[0m
+ok
+test_corrupt_saved_artifact_is_rejected (test_baseline_audit.TestAuditAndExport.test_corrupt_saved_artifact_is_rejected) ... ok
+test_export_restores_input_order_and_rejects_bad_keys (test_baseline_audit.TestAuditAndExport.test_export_restores_input_order_and_rejects_bad_keys) ... ok
+test_failed_check_preserves_expected_actual_evidence (test_baseline_audit.TestAuditAndExport.test_failed_check_preserves_expected_actual_evidence) ... Checking fixture
+ok
+test_failed_experiment_cannot_have_success_status (test_baseline_audit.TestAuditAndExport.test_failed_experiment_cannot_have_success_status) ... ok
+test_optimized_python_cannot_skip_audit_assertions (test_baseline_audit.TestAuditAndExport.test_optimized_python_cannot_skip_audit_assertions) ... ok
+test_recurring_control_alert_is_same_for_raw_and_residual_controls (test_baseline_audit.TestAuditAndExport.test_recurring_control_alert_is_same_for_raw_and_residual_controls) ... ok
+test_release_requires_all_critical_checks (test_baseline_audit.TestAuditAndExport.test_release_requires_all_critical_checks) ... ok
+test_saved_control_hashes_use_final_status_and_reload (test_baseline_audit.TestAuditAndExport.test_saved_control_hashes_use_final_status_and_reload) ... [32m2026-10-01 22:26:20.129[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 2090, 交易日数: 19[0m
+[32m2026-10-01 22:26:20.148[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.037527, std=0.631369, ICIR=0.0594, IC>0占比=47.37%[0m
+[32m2026-10-01 22:26:20.169[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=-0.3374, Top1年化绝对收益=-0.1229[0m
+[32m2026-10-01 22:26:20.175[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.1019, (1-turnover)=0.8981[0m
+[32m2026-10-01 22:26:20.175[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.037527×0.4 + -0.3374×0.3 + 0.8981×0.3 = 0.183226[0m
+ok
+test_source_or_data_changed_during_run_is_rejected (test_baseline_audit.TestAuditAndExport.test_source_or_data_changed_during_run_is_rejected) ... ok
+test_all_formulas_multiple_lengths_and_precision (test_baseline_audit.TestIndependentFeatures.test_all_formulas_multiple_lengths_and_precision) ... ok
+test_cast_overflow_is_nan_after_conversion (test_baseline_audit.TestIndependentFeatures.test_cast_overflow_is_nan_after_conversion) ... ok
+test_history_to_test_continuation_and_observation_windows (test_baseline_audit.TestIndependentFeatures.test_history_to_test_continuation_and_observation_windows) ... ok
+test_missing_zero_and_all_missing_histories (test_baseline_audit.TestIndependentFeatures.test_missing_zero_and_all_missing_histories) ... ok
+test_nonfinite_inputs_and_large_finite_values (test_baseline_audit.TestIndependentFeatures.test_nonfinite_inputs_and_large_finite_values) ... ok
+test_positive_stock_price_rescaling_preserves_ratio_features (test_baseline_audit.TestIndependentFeatures.test_positive_stock_price_rescaling_preserves_ratio_features) ... ok
+test_rejects_duplicate_index_keys_unsorted_missing_fields (test_baseline_audit.TestIndependentFeatures.test_rejects_duplicate_index_keys_unsorted_missing_fields) ... ok
+test_truncation_future_perturbation_and_stock_isolation (test_baseline_audit.TestIndependentFeatures.test_truncation_future_perturbation_and_stock_isolation) ... ok
+test_hand_scoring_and_official_sample_boundaries (test_baseline_audit.TestIndependentScoring.test_hand_scoring_and_official_sample_boundaries) ... [32m2026-10-01 22:26:20.446[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 389, 交易日数: 4[0m
+[32m2026-10-01 22:26:20.448[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.333333, std=1.154701, ICIR=0.2887, IC>0占比=66.67%[0m
+[32m2026-10-01 22:26:20.452[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.4536, Top1年化绝对收益=1.9530[0m
+[32m2026-10-01 22:26:20.453[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:20.454[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.333333×0.4 + 0.4536×0.3 + 1.0000×0.3 = 0.569413[0m
+[32m2026-10-01 22:26:20.529[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 390, 交易日数: 4[0m
+[32m2026-10-01 22:26:20.532[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.154701, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:20.536[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.4536, Top1年化绝对收益=1.9530[0m
+[32m2026-10-01 22:26:20.538[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:20.538[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.4536×0.3 + 1.0000×0.3 = 0.436080[0m
+[32m2026-10-01 22:26:20.597[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 459, 交易日数: 4[0m
+[32m2026-10-01 22:26:20.600[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.154701, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:20.604[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.4536, Top1年化绝对收益=1.9530[0m
+[32m2026-10-01 22:26:20.605[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:20.605[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.4536×0.3 + 1.0000×0.3 = 0.436080[0m
+[32m2026-10-01 22:26:20.683[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 460, 交易日数: 4[0m
+[32m2026-10-01 22:26:20.686[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.154701, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:20.690[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.0567, Top1年化绝对收益=1.4931[0m
+[32m2026-10-01 22:26:20.692[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.6667, (1-turnover)=0.3333[0m
+[32m2026-10-01 22:26:20.692[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.0567×0.3 + 0.3333×0.3 = 0.117010[0m
+[32m2026-10-01 22:26:20.757[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 461, 交易日数: 4[0m
+[32m2026-10-01 22:26:20.760[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.154701, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:20.764[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.0536, Top1年化绝对收益=1.4931[0m
+[32m2026-10-01 22:26:20.766[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.6667, (1-turnover)=0.3333[0m
+[32m2026-10-01 22:26:20.766[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.0536×0.3 + 0.3333×0.3 = 0.116065[0m
+[32m2026-10-01 22:26:20.839[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 480, 交易日数: 4[0m
+[32m2026-10-01 22:26:20.842[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.154701, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:20.848[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.0000, Top1年化绝对收益=1.4994[0m
+[32m2026-10-01 22:26:20.850[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:20.850[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.0000×0.3 + 1.0000×0.3 = 0.300000[0m
+ok
+test_hand_scoring_missing_labels_limits_and_breaks (test_baseline_audit.TestIndependentScoring.test_hand_scoring_missing_labels_limits_and_breaks) ... [32m2026-10-01 22:26:20.925[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 480, 交易日数: 4[0m
+[32m2026-10-01 22:26:20.928[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.154701, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:20.932[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.4536, Top1年化绝对收益=1.9530[0m
+[32m2026-10-01 22:26:20.934[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:20.934[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.4536×0.3 + 1.0000×0.3 = 0.436080[0m
+ok
+test_missing_extra_duplicate_keys_in_every_input_fail (test_baseline_audit.TestIndependentScoring.test_missing_extra_duplicate_keys_in_every_input_fail) ... ok
+test_no_ties_independent_shuffles_and_affine_rank_invariance (test_baseline_audit.TestIndependentScoring.test_no_ties_independent_shuffles_and_affine_rank_invariance) ... ok
+test_nonfinite_predictions_and_invalid_limit_flags_fail (test_baseline_audit.TestIndependentScoring.test_nonfinite_predictions_and_invalid_limit_flags_fail) ... ok
+test_positive_and_negative_rank_direction (test_baseline_audit.TestIndependentScoring.test_positive_and_negative_rank_direction) ... ok
+test_ties_match_official_and_have_measurable_order_sensitivity (test_baseline_audit.TestIndependentScoring.test_ties_match_official_and_have_measurable_order_sensitivity) ... [32m2026-10-01 22:26:21.105[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 480, 交易日数: 4[0m
+[32m2026-10-01 22:26:21.108[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.118073, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:21.113[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=-0.0000, Top1年化绝对收益=1.4994[0m
+[32m2026-10-01 22:26:21.114[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:21.114[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + -0.0000×0.3 + 1.0000×0.3 = 0.300000[0m
+[32m2026-10-01 22:26:21.189[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 480, 交易日数: 4[0m
+[32m2026-10-01 22:26:21.193[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.118073, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:21.197[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.0011, Top1年化绝对收益=1.5004[0m
+[32m2026-10-01 22:26:21.199[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.7111, (1-turnover)=0.2889[0m
+[32m2026-10-01 22:26:21.199[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.0011×0.3 + 0.2889×0.3 = 0.086982[0m
+[32m2026-10-01 22:26:21.260[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 480, 交易日数: 4[0m
+[32m2026-10-01 22:26:21.264[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.118073, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:21.268[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.0021, Top1年化绝对收益=1.5015[0m
+[32m2026-10-01 22:26:21.270[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.6405, (1-turnover)=0.3595[0m
+[32m2026-10-01 22:26:21.270[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.0021×0.3 + 0.3595×0.3 = 0.108473[0m
+[32m2026-10-01 22:26:21.350[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 480, 交易日数: 4[0m
+[32m2026-10-01 22:26:21.353[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.118073, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:21.357[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.0194, Top1年化绝对收益=1.5188[0m
+[32m2026-10-01 22:26:21.359[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.7789, (1-turnover)=0.2211[0m
+[32m2026-10-01 22:26:21.359[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.0194×0.3 + 0.2211×0.3 = 0.072143[0m
+[32m2026-10-01 22:26:21.423[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 480, 交易日数: 4[0m
+[32m2026-10-01 22:26:21.426[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.118073, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:21.430[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.0488, Top1年化绝对收益=1.5482[0m
+[32m2026-10-01 22:26:21.432[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.7746, (1-turnover)=0.2254[0m
+[32m2026-10-01 22:26:21.432[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.0488×0.3 + 0.2254×0.3 = 0.082267[0m
+[32m2026-10-01 22:26:21.491[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 480, 交易日数: 4[0m
+[32m2026-10-01 22:26:21.494[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.000000, std=1.118073, ICIR=0.0000, IC>0占比=50.00%[0m
+[32m2026-10-01 22:26:21.498[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.0089, Top1年化绝对收益=1.5083[0m
+[32m2026-10-01 22:26:21.500[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.8344, (1-turnover)=0.1656[0m
+[32m2026-10-01 22:26:21.500[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.000000×0.4 + 0.0089×0.3 + 0.1656×0.3 = 0.052370[0m
+ok
+test_actual_fit_inputs_and_prediction_invariance (test_baseline_audit.TestRawAndTraining.test_actual_fit_inputs_and_prediction_invariance) ... [32m2026-10-01 22:26:22.032[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 2090, 交易日数: 19[0m
+[32m2026-10-01 22:26:22.044[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.037527, std=0.631369, ICIR=0.0594, IC>0占比=47.37%[0m
+[32m2026-10-01 22:26:22.062[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=-0.3374, Top1年化绝对收益=-0.1229[0m
+[32m2026-10-01 22:26:22.069[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.1019, (1-turnover)=0.8981[0m
+[32m2026-10-01 22:26:22.069[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.037527×0.4 + -0.3374×0.3 + 0.8981×0.3 = 0.183226[0m
+[32m2026-10-01 22:26:22.403[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 2090, 交易日数: 19[0m
+[32m2026-10-01 22:26:22.415[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=-0.037499, std=0.631326, ICIR=-0.0594, IC>0占比=52.63%[0m
+[32m2026-10-01 22:26:22.434[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=1.0353, Top1年化绝对收益=0.3813[0m
+[32m2026-10-01 22:26:22.440[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.1019, (1-turnover)=0.8981[0m
+[32m2026-10-01 22:26:22.440[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = -0.037499×0.4 + 1.0353×0.3 + 0.8981×0.3 = 0.565041[0m
+ok
+test_float32_training_label_overflow_fails_before_fit (test_baseline_audit.TestRawAndTraining.test_float32_training_label_overflow_fails_before_fit) ... C:\fintechathon\.venv\Lib\site-packages\pandas\core\dtypes\astype.py:133: RuntimeWarning: overflow encountered in cast
+  return arr.astype(dtype, copy=True)
+ok
+test_independent_labels_and_terminal_target_price (test_baseline_audit.TestRawAndTraining.test_independent_labels_and_terminal_target_price) ... ok
+test_invalid_calendar_dates_fail_and_raw_rows_are_preserved (test_baseline_audit.TestRawAndTraining.test_invalid_calendar_dates_fail_and_raw_rows_are_preserved) ... ok
+test_raw_audit_rejects_sign_flags_infinite_and_ohlc_errors (test_baseline_audit.TestRawAndTraining.test_raw_audit_rejects_sign_flags_infinite_and_ohlc_errors) ... ok
+test_exact_price_return_range_and_volatility_values (test_lightgbm_baseline.TestBaselineV1Features.test_exact_price_return_range_and_volatility_values) ... ok
+test_future_changes_do_not_change_past_features (test_lightgbm_baseline.TestBaselineV1Features.test_future_changes_do_not_change_past_features) ... ok
+test_missing_history_and_zero_denominators_become_nan_not_infinity (test_lightgbm_baseline.TestBaselineV1Features.test_missing_history_and_zero_denominators_become_nan_not_infinity) ... ok
+test_rejects_duplicate_keys_and_missing_columns (test_lightgbm_baseline.TestBaselineV1Features.test_rejects_duplicate_keys_and_missing_columns) ... ok
+test_rejects_interleaved_unsorted_rows (test_lightgbm_baseline.TestBaselineV1Features.test_rejects_interleaved_unsorted_rows) ... ok
+test_stock_boundary_does_not_share_history (test_lightgbm_baseline.TestBaselineV1Features.test_stock_boundary_does_not_share_history) ... ok
+test_volume_and_amount_ratios_exclude_current_row (test_lightgbm_baseline.TestBaselineV1Features.test_volume_and_amount_ratios_exclude_current_row) ... ok
+test_feature_contract_is_exact_and_excludes_keys_and_labels (test_lightgbm_baseline.TestLightGBMBaseline.test_feature_contract_is_exact_and_excludes_keys_and_labels) ... ok
+test_model_configuration_is_fixed_and_deterministic (test_lightgbm_baseline.TestLightGBMBaseline.test_model_configuration_is_fixed_and_deterministic) ... ok
+test_nonfinite_training_label_is_rejected (test_lightgbm_baseline.TestLightGBMBaseline.test_nonfinite_training_label_is_rejected) ... ok
+test_official_csv_round_trip_matches_local_score (test_lightgbm_baseline.TestLightGBMBaseline.test_official_csv_round_trip_matches_local_score) ... [32m2026-10-01 22:26:22.629[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 300, 交易日数: 3[0m
+[32m2026-10-01 22:26:22.632[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=1.000000, std=0.000000, ICIR=0.0000, IC>0占比=100.00%[0m
+[32m2026-10-01 22:26:22.635[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=1.1340, Top1年化绝对收益=2.3814[0m
+[32m2026-10-01 22:26:22.636[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.0000, (1-turnover)=1.0000[0m
+[32m2026-10-01 22:26:22.636[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 1.000000×0.4 + 1.1340×0.3 + 1.0000×0.3 = 1.040200[0m
+ok
+test_train_filter_does_not_filter_validation_rows (test_lightgbm_baseline.TestLightGBMBaseline.test_train_filter_does_not_filter_validation_rows) ... ok
+test_perfect_rank_has_expected_ic_and_zero_turnover (test_official_score.TestOfficialScore.test_perfect_rank_has_expected_ic_and_zero_turnover) ... ok
+test_rejects_missing_prediction_key (test_official_score.TestOfficialScore.test_rejects_missing_prediction_key) ... ok
+test_rejects_nonfinite_prediction (test_official_score.TestOfficialScore.test_rejects_nonfinite_prediction) ... ok
+test_oos_is_strictly_after_training (test_splits.TestSplits.test_oos_is_strictly_after_training) ... ok
+test_primary_split_purges_boundary_day (test_splits.TestSplits.test_primary_split_purges_boundary_day) ... ok
+test_accepts_valid_keys_in_a_different_order (test_submission.TestSubmission.test_accepts_valid_keys_in_a_different_order) ... ok
+test_validates_key_set_not_only_row_count (test_submission.TestSubmission.test_validates_key_set_not_only_row_count) ... ok
+
+----------------------------------------------------------------------
+Ran 64 tests in 6.931s
+
+OK

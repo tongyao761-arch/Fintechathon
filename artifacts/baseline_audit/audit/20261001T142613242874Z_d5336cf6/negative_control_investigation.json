@@ -1,0 +1,441 @@
+{
+  "market_mean_control": {
+    "kind": "market_mean_only",
+    "seed": null,
+    "prediction_sha256": "113ef434354cf7895f8e3225d3f7a276334d9691296237eb8440f1a591e62a2d",
+    "training_label_sha256": "9a3da4254ba17d9fdb9ebf3a7d0ed4fa4b5b51033b68f48a0808876018d66e1f",
+    "metrics": {
+      "ic_mean": -0.04387583954672737,
+      "ic_std": 0.10731564666328534,
+      "icir": -0.40884848492217213,
+      "ic_positive_ratio": 0.32231404958677684,
+      "annual_excess": -0.2641242615234178,
+      "top1_annual_ret": -0.2447010242033007,
+      "mean_turnover": 0.4885329264361598,
+      "final_score": 0.05665250779343578
+    },
+    "official_max_abs_difference": 0.0,
+    "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T142949414475Z_4f4012c3",
+    "file_sha256": {
+      "daily_excess.csv": "400c4c6afd577b1a3f4bb2b407e124c19543a5a92744562d3852b61598e26889",
+      "daily_ic.csv": "d81ef1d33af1d1bf492abec4072576755b51ac88590adecf1dae452582830489",
+      "daily_turnover.csv": "e16d4d773f585d9c98f7a9225cff0db43a6ac756b00359a334af46fbf1b18f1a",
+      "evaluate_input/submission.csv": "cdfd2e2d3a457e8baac7390dc2df3048c814667afd22c02ad2355df27922fa3d",
+      "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+      "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+      "models/lightgbm.txt": "37c7de92f1841c4753d96d8cb8c893af4b7e2d2e16dfe942c43799bedf31f3e2",
+      "predictions.parquet": "65b0ceeea93f3554de10fd9ddb3724758c14b625343ed72ce1d7bbf4a9e6fb3d"
+    },
+    "model_reload_equal": true,
+    "model_params": {
+      "objective": "regression",
+      "boosting_type": "gbdt",
+      "n_estimators": 100,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": -1,
+      "min_child_samples": 100,
+      "subsample": 1.0,
+      "subsample_freq": 0,
+      "colsample_bytree": 1.0,
+      "reg_alpha": 0.0,
+      "reg_lambda": 1.0,
+      "random_state": 20260927,
+      "data_random_seed": 20260927,
+      "feature_fraction_seed": 20260927,
+      "bagging_seed": 20260927,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": -1,
+      "verbosity": -1
+    },
+    "audit_source_provenance": "artifacts\\baseline_audit\\audit\\20261001T142613242874Z_d5336cf6\\provenance.json",
+    "summary_sha256": "760c5fe45c5645321e587c77b3a57009ae64cdecd17ea8d84343411315e261de",
+    "status_sha256": "2d82ff324889620fa0cd1789771e2572ab1ba9c9f50bf2471f19478e346b4b7c"
+  },
+  "prediction_correlations": [
+    {
+      "seed": 20260927,
+      "mean_daily_prediction_spearman": 0.9653917505566241,
+      "median_daily_prediction_spearman": 0.9669584468169041
+    },
+    {
+      "seed": 20260928,
+      "mean_daily_prediction_spearman": 0.9596404032721058,
+      "median_daily_prediction_spearman": 0.96226370991865
+    },
+    {
+      "seed": 20260929,
+      "mean_daily_prediction_spearman": 0.9640308372196204,
+      "median_daily_prediction_spearman": 0.9660981333199208
+    },
+    {
+      "seed": 20260930,
+      "mean_daily_prediction_spearman": 0.9677349566469214,
+      "median_daily_prediction_spearman": 0.9694784136080984
+    },
+    {
+      "seed": 20260931,
+      "mean_daily_prediction_spearman": 0.9662809711072573,
+      "median_daily_prediction_spearman": 0.9676840977653267
+    }
+  ],
+  "demeaned_controls": [
+    {
+      "kind": "demeaned_day_shuffle",
+      "seed": 20260927,
+      "prediction_sha256": "c5d7888c72ea79ce3b3edfd1c984fe48a89165564be4affd0d95f5b252a18bd1",
+      "training_label_sha256": "c5867c392b721cf1088812df4910d032da5569a645078698ca6826b113d0a6f8",
+      "metrics": {
+        "ic_mean": -0.010916458323114784,
+        "ic_std": 0.038679771546144326,
+        "icir": -0.28222654598907415,
+        "ic_positive_ratio": 0.4297520661157025,
+        "annual_excess": -0.18607056795213994,
+        "top1_annual_ret": -0.166647330632023,
+        "mean_turnover": 0.8713603373212949,
+        "final_score": -0.02159585491127637
+      },
+      "official_max_abs_difference": 0.0,
+      "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T143001314792Z_9abf616d",
+      "file_sha256": {
+        "daily_excess.csv": "af6aee76c5187bb01f6d860d547c39ba4416e782b6f83ac41b66eccf8a621c64",
+        "daily_ic.csv": "9d6a81185fcb62cd8f80ed3e12cd2956bc930ecf63ebefdb29292bad9442a8c6",
+        "daily_turnover.csv": "76a0387178a65238373edc453f833d5eefce2f5f7c893c16c6e80b3e14ee6a12",
+        "evaluate_input/submission.csv": "9444c026e4be0f1f716177cd22e4549319175bafe3ecd61972fff96cac86c460",
+        "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "models/lightgbm.txt": "1693e75d646121ac64ff7fc449c434ed1f745eaa7469a1a917897466780a4d9d",
+        "predictions.parquet": "795d83ae81c63c339fc3cfba8c6fae94aa3362173a12b896c0f96d5f7014a607"
+      },
+      "model_reload_equal": true,
+      "model_params": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "audit_source_provenance": "artifacts\\baseline_audit\\audit\\20261001T142613242874Z_d5336cf6\\provenance.json",
+      "summary_sha256": "9be31281a10f2eff04696f1dc17b445b9b8a349afa74659bbf86d20dda27cc88",
+      "status_sha256": "b14c125d091b1acb048e14159e68e4a36ccbe29b3286043679c9da10d1c89c6e",
+      "within_day_label_multiset_preserved": true
+    },
+    {
+      "kind": "demeaned_day_shuffle",
+      "seed": 20260928,
+      "prediction_sha256": "e1c902dda324f4d529440d00b302810a99fe6a1457ff8e2a88fb1609b81e294b",
+      "training_label_sha256": "d66584bb588c0ae60c39b34bb76b5fbefe2f33ea6106c3cf817c25cc2394c42b",
+      "metrics": {
+        "ic_mean": 0.007669687619108715,
+        "ic_std": 0.04871536381077173,
+        "icir": 0.15743878356118993,
+        "ic_positive_ratio": 0.5661157024793388,
+        "annual_excess": -0.15660510844665815,
+        "top1_annual_ret": -0.13718187112654115,
+        "mean_turnover": 0.854794919719446,
+        "final_score": -0.0003521334021877598
+      },
+      "official_max_abs_difference": 0.0,
+      "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T143011352085Z_9a4a34f3",
+      "file_sha256": {
+        "daily_excess.csv": "ab02a556f26ca44cbcdc83f02a964d09765df554da3f02f589ddbd9d744a5d8f",
+        "daily_ic.csv": "112fe67314e848a3c072f2e3166ae588e3cfa1fc93e234468fd1cacc19de284a",
+        "daily_turnover.csv": "afdb965e2d415d403a145969ada3633d59c4e95db405469d9a95adddb96390a9",
+        "evaluate_input/submission.csv": "693a043fc96512975f5bd9d6469b4fe275c9e91fc5cc5984f96575a9ef2b00f8",
+        "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "models/lightgbm.txt": "eb1f9b468271dcd43dbaa27e0bce3cb1432d3e0443038b2a0beb7624fa8e5cce",
+        "predictions.parquet": "f720694a9964748ff32876a179d9e780e9d070938ac680f124e55066c8d5f8fe"
+      },
+      "model_reload_equal": true,
+      "model_params": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "audit_source_provenance": "artifacts\\baseline_audit\\audit\\20261001T142613242874Z_d5336cf6\\provenance.json",
+      "summary_sha256": "85776f2dc77a2257af9182e9aca8422a48c1803bd4cccd81d3bdd5d79eb15ba9",
+      "status_sha256": "164ec8a295c95d164b7a7da4f9db14c4fb1a24551f9fab9cc610b2d00ef43508",
+      "within_day_label_multiset_preserved": true
+    },
+    {
+      "kind": "demeaned_day_shuffle",
+      "seed": 20260929,
+      "prediction_sha256": "540315a7d61378fddbd29decb782d79226b0604e398a38fc1a2a6cde8a1c00a2",
+      "training_label_sha256": "6eb284a5a3d337742322ef6f946958cd13135a091dc453d0680523a19e5f8b1b",
+      "metrics": {
+        "ic_mean": -0.013360792846513288,
+        "ic_std": 0.0431090988458012,
+        "icir": -0.30992976434752406,
+        "ic_positive_ratio": 0.36363636363636365,
+        "annual_excess": -0.2523610702059675,
+        "top1_annual_ret": -0.23293783288585043,
+        "mean_turnover": 0.7475723899324187,
+        "final_score": -0.005324355180121185
+      },
+      "official_max_abs_difference": 0.0,
+      "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T143021343521Z_4a1546d7",
+      "file_sha256": {
+        "daily_excess.csv": "180e7764e78c6aa0170533dc14b7d7439c43764d1299f96484f961deae571d85",
+        "daily_ic.csv": "89dd169280e30c0dfb0e95f8bfa274a5d5f2505ac38baaae904c582cb98509e9",
+        "daily_turnover.csv": "6d605b4105668220e2df058738245d84f52f9b680d4287859e0cfe6f5a49a6fe",
+        "evaluate_input/submission.csv": "24ebe8c3c94a4b9850da148b9d8bb4d361b66f65b556152735227fd1e344423f",
+        "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "models/lightgbm.txt": "3502219a4e4a3fb2ad9ce305dd12c80c0f5fa35360be515f7428aca424b6fff5",
+        "predictions.parquet": "acf4383f6d5a9dcc71ab195a07fb3152461f9ace3701f239f382fce9e6dc1fcc"
+      },
+      "model_reload_equal": true,
+      "model_params": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "audit_source_provenance": "artifacts\\baseline_audit\\audit\\20261001T142613242874Z_d5336cf6\\provenance.json",
+      "summary_sha256": "e056c47d219b23085b692230354727305203f0da6a4ba8c4fedab86cc268d50a",
+      "status_sha256": "6cbc275b83f0c09458249325d45ea8c02d5b879fb7a1097587d34139a4b5b6c2",
+      "within_day_label_multiset_preserved": true
+    },
+    {
+      "kind": "demeaned_day_shuffle",
+      "seed": 20260930,
+      "prediction_sha256": "e28c64be5e1b545059d0ed2d701622c64de185b13d04193559b46dc9661cf9b8",
+      "training_label_sha256": "e7556c24cb2f6242a2fa82595d15ceaf4f224b9f7b8489da5d22906a07ba2c65",
+      "metrics": {
+        "ic_mean": 0.020074191110923553,
+        "ic_std": 0.0616142369777204,
+        "icir": 0.3258044259832731,
+        "ic_positive_ratio": 0.6611570247933884,
+        "annual_excess": -0.1832603756346461,
+        "top1_annual_ret": -0.16383713831452903,
+        "mean_turnover": 0.9031177388922145,
+        "final_score": -0.01788375791368875
+      },
+      "official_max_abs_difference": 0.0,
+      "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T143031308296Z_80e75208",
+      "file_sha256": {
+        "daily_excess.csv": "51e85120291c16da927a7ba19726ba1ac39c8734e89599b3c5399e738a5e0ef2",
+        "daily_ic.csv": "2590b9b52fd96a5013acbbe3233baf8a2e9668c609c29d1623ca7d67268785c3",
+        "daily_turnover.csv": "5f51d16d823920a0836dd75400044e9389e7e4bd4b91078e81d215f6a1f9ab94",
+        "evaluate_input/submission.csv": "7065ef9f0146791a71f36acae0ef366a5410c59311bc00e9f0a2a12cc8c349c4",
+        "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "models/lightgbm.txt": "eb7024c4bdc96d79154042566a509c3c0d0edc8ed28c0a2e6e1d050055915598",
+        "predictions.parquet": "ac2a44b8a4950b6001f1b32d3bc8a983680bd1052cfe5a4b240b72e8ce041cbe"
+      },
+      "model_reload_equal": true,
+      "model_params": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "audit_source_provenance": "artifacts\\baseline_audit\\audit\\20261001T142613242874Z_d5336cf6\\provenance.json",
+      "summary_sha256": "506327ebdfe9150c91dc98c42c5994713af9cc690c01ea468500442d5dd3d1cc",
+      "status_sha256": "820cdba189d920b97e675ac65c8e67a2a3f6de70e23e59883a0d2fa394d03f24",
+      "within_day_label_multiset_preserved": true
+    },
+    {
+      "kind": "demeaned_day_shuffle",
+      "seed": 20260931,
+      "prediction_sha256": "30b465eb673410701ba959e6cad4ad1c62924bdd6697e78d13df3ffaab481aa9",
+      "training_label_sha256": "53e3219fac55b8368f8c312b6b60de42c4f5035c44b58f3543cb77e740e24c3f",
+      "metrics": {
+        "ic_mean": -0.03669505914355312,
+        "ic_std": 0.06983865904139011,
+        "icir": -0.5254261700787478,
+        "ic_positive_ratio": 0.30578512396694213,
+        "annual_excess": -0.30388963640147443,
+        "top1_annual_ret": -0.28446639908135746,
+        "mean_turnover": 0.8696955321518286,
+        "final_score": -0.06675357422341216
+      },
+      "official_max_abs_difference": 0.0,
+      "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T143041214979Z_2ec52861",
+      "file_sha256": {
+        "daily_excess.csv": "e68c5e40730d9346614ccddff401c67ca4b9deaaa8f45f54d595a11c7c334e64",
+        "daily_ic.csv": "d582568151863faed00d26993db2b6fb02d9355e69a61bce8f7d8458922ae991",
+        "daily_turnover.csv": "c95bb61c01098b58fc75a57a0d7ae2b1a2e24db2ea7f26b98d01d7c9d55448c5",
+        "evaluate_input/submission.csv": "34bbbfa64397cf1aafafef24f489aaeef68f4cff84821d1f98cd5a7bc19f7f2b",
+        "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "models/lightgbm.txt": "562f02ca2a7ac54f5b3ae0ca473127cc859ce8fe0a500c216de5f196d7ec8108",
+        "predictions.parquet": "aa234b78820a496bd338715cf954c98ba684fc69273019c7359447e61dc54902"
+      },
+      "model_reload_equal": true,
+      "model_params": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "audit_source_provenance": "artifacts\\baseline_audit\\audit\\20261001T142613242874Z_d5336cf6\\provenance.json",
+      "summary_sha256": "c6839e28f6e3bcdc09bae69f860ac0ff11886cdc7e4097289e1e2944fa936371",
+      "status_sha256": "1a3e92d3eee687274d5e9c0e056cddbbe463c74986ba830aee18635d49d78908",
+      "within_day_label_multiset_preserved": true
+    }
+  ],
+  "resolved": true,
+  "residual_recurring_alert": false,
+  "residual_exposure": {
+    "strongest_residual_seed": 20260931,
+    "original_metrics": {
+      "ic_mean": -0.03669505914355312,
+      "ic_std": 0.06983865904139011,
+      "icir": -0.5254261700787478,
+      "ic_positive_ratio": 0.30578512396694213,
+      "annual_excess": -0.30388963640147443,
+      "top1_annual_ret": -0.28446639908135746,
+      "mean_turnover": 0.8696955321518286,
+      "final_score": -0.06675357422341216
+    },
+    "existing_feature_associations": {
+      "ret_1d": {
+        "feature_mean_ic": -0.02369909806286055,
+        "prediction_mean_spearman": -0.03813042470409349
+      },
+      "ret_5d": {
+        "feature_mean_ic": -0.02975141182240052,
+        "prediction_mean_spearman": 0.07583183495667045
+      },
+      "ret_20d": {
+        "feature_mean_ic": -0.03704938206184398,
+        "prediction_mean_spearman": 0.1921145504637931
+      },
+      "gap_1d": {
+        "feature_mean_ic": 0.024468741404434932,
+        "prediction_mean_spearman": -0.38627675771870473
+      },
+      "intraday_ret": {
+        "feature_mean_ic": -0.03387739477309757,
+        "prediction_mean_spearman": 0.08853816919826882
+      },
+      "high_low_range": {
+        "feature_mean_ic": -0.06966538713763311,
+        "prediction_mean_spearman": 0.27369699194287034
+      },
+      "volatility_5d": {
+        "feature_mean_ic": -0.061872963073893075,
+        "prediction_mean_spearman": 0.3372521804314349
+      },
+      "volatility_20d": {
+        "feature_mean_ic": -0.06355940656781311,
+        "prediction_mean_spearman": 0.3899173297311999
+      },
+      "volume_ratio_5d": {
+        "feature_mean_ic": -0.02811590945168784,
+        "prediction_mean_spearman": -0.03733181804379928
+      },
+      "amount_ratio_5d": {
+        "feature_mean_ic": -0.027990658942597373,
+        "prediction_mean_spearman": -0.03550573044519326
+      }
+    },
+    "within_day_prediction_multiset_preserved": true,
+    "prediction_permutation_metrics": {
+      "ic_mean": 0.001205103904928594,
+      "ic_std": 0.014822874829515107,
+      "icir": 0.08130028208354073,
+      "ic_positive_ratio": 0.5495867768595041,
+      "annual_excess": 0.017843587331241445,
+      "top1_annual_ret": 0.03726682465135844,
+      "mean_turnover": 0.9482018191459696,
+      "final_score": 0.021374572017553
+    },
+    "official_max_abs_difference": 0.0,
+    "run_directory": "artifacts\\experiments\\baseline_audit_prediction_permutation\\20261001T143054869137Z_f3aae656",
+    "file_sha256": {
+      "evaluate_input/submission.csv": "34d00c07f063babad2300bb7a2c7ff74fb82314ce24a300a49694bf227d641d7",
+      "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+      "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453"
+    },
+    "interpretation": "Nonzero shuffled-model IC can arise from accidental exposure to informative existing X. Prediction-row permutation checks the observed row association; it does not certify future alpha.",
+    "summary_sha256": "78ed3cc3dda3ded01b56a17546a971c5afc35fc4a0e1b1453cfb93e4af76f8f5",
+    "status_sha256": "800021787cb454e84db33e22a506279eca6be5882a69bbb50c0584de18cc0f43"
+  },
+  "explanation_rule": "all shuffled/market-mean daily rank correlations >=0.8; demeaned controls do not trigger the SAME original 3/5 alert; prediction-row permutation |IC| <0.005",
+  "methodology_note": "A single large residual IC is retained and investigated, not automatically treated as a coding defect. The original alert is unchanged; an earlier exploratory requirement that every residual IC be smaller was too strict for a diagnostic control.",
+  "interpretation": "Daily market targets explain the recurring original effect. Existing informative X can also yield incidental residual exposures after label shuffling. This is diagnostic evidence, not a statistical proof of zero leakage or significant baseline alpha."
+}

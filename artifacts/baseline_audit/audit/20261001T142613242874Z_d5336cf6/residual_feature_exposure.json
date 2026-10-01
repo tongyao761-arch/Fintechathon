@@ -1,0 +1,76 @@
+{
+  "strongest_residual_seed": 20260931,
+  "original_metrics": {
+    "ic_mean": -0.03669505914355312,
+    "ic_std": 0.06983865904139011,
+    "icir": -0.5254261700787478,
+    "ic_positive_ratio": 0.30578512396694213,
+    "annual_excess": -0.30388963640147443,
+    "top1_annual_ret": -0.28446639908135746,
+    "mean_turnover": 0.8696955321518286,
+    "final_score": -0.06675357422341216
+  },
+  "existing_feature_associations": {
+    "ret_1d": {
+      "feature_mean_ic": -0.02369909806286055,
+      "prediction_mean_spearman": -0.03813042470409349
+    },
+    "ret_5d": {
+      "feature_mean_ic": -0.02975141182240052,
+      "prediction_mean_spearman": 0.07583183495667045
+    },
+    "ret_20d": {
+      "feature_mean_ic": -0.03704938206184398,
+      "prediction_mean_spearman": 0.1921145504637931
+    },
+    "gap_1d": {
+      "feature_mean_ic": 0.024468741404434932,
+      "prediction_mean_spearman": -0.38627675771870473
+    },
+    "intraday_ret": {
+      "feature_mean_ic": -0.03387739477309757,
+      "prediction_mean_spearman": 0.08853816919826882
+    },
+    "high_low_range": {
+      "feature_mean_ic": -0.06966538713763311,
+      "prediction_mean_spearman": 0.27369699194287034
+    },
+    "volatility_5d": {
+      "feature_mean_ic": -0.061872963073893075,
+      "prediction_mean_spearman": 0.3372521804314349
+    },
+    "volatility_20d": {
+      "feature_mean_ic": -0.06355940656781311,
+      "prediction_mean_spearman": 0.3899173297311999
+    },
+    "volume_ratio_5d": {
+      "feature_mean_ic": -0.02811590945168784,
+      "prediction_mean_spearman": -0.03733181804379928
+    },
+    "amount_ratio_5d": {
+      "feature_mean_ic": -0.027990658942597373,
+      "prediction_mean_spearman": -0.03550573044519326
+    }
+  },
+  "within_day_prediction_multiset_preserved": true,
+  "prediction_permutation_metrics": {
+    "ic_mean": 0.001205103904928594,
+    "ic_std": 0.014822874829515107,
+    "icir": 0.08130028208354073,
+    "ic_positive_ratio": 0.5495867768595041,
+    "annual_excess": 0.017843587331241445,
+    "top1_annual_ret": 0.03726682465135844,
+    "mean_turnover": 0.9482018191459696,
+    "final_score": 0.021374572017553
+  },
+  "official_max_abs_difference": 0.0,
+  "run_directory": "artifacts\\experiments\\baseline_audit_prediction_permutation\\20261001T143054869137Z_f3aae656",
+  "file_sha256": {
+    "evaluate_input/submission.csv": "34d00c07f063babad2300bb7a2c7ff74fb82314ce24a300a49694bf227d641d7",
+    "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+    "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453"
+  },
+  "interpretation": "Nonzero shuffled-model IC can arise from accidental exposure to informative existing X. Prediction-row permutation checks the observed row association; it does not certify future alpha.",
+  "summary_sha256": "78ed3cc3dda3ded01b56a17546a971c5afc35fc4a0e1b1453cfb93e4af76f8f5",
+  "status_sha256": "800021787cb454e84db33e22a506279eca6be5882a69bbb50c0584de18cc0f43"
+}

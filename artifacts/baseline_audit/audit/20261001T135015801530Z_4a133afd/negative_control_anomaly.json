@@ -1,0 +1,150 @@
+{
+  "baseline_ic": 0.02113401950237192,
+  "controls": [
+    {
+      "seed": 20260927,
+      "within_day_label_multiset_preserved": true,
+      "shuffled_training_label_sha256": "b48394cf17ea2538582033fd3eb453b3d1abc6b5dfb666bcf2ad27ca3d6eef08",
+      "prediction_sha256": "b18e45a5ad2f35252a37223b931d864d053d92a3f9bdd5defa4efa63947538fc",
+      "metrics": {
+        "ic_mean": -0.04696775611398159,
+        "ic_std": 0.10675833405682345,
+        "icir": -0.43994463316542964,
+        "ic_positive_ratio": 0.32231404958677684,
+        "annual_excess": -0.28980573284775146,
+        "top1_annual_ret": -0.2703824955276344,
+        "mean_turnover": 0.4879676463502524,
+        "final_score": 0.047880883795006185
+      },
+      "official_max_abs_difference": 0.0,
+      "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T135256432750Z_3d30327a",
+      "file_sha256": {
+        "daily_excess.csv": "af0f73101456afe7941770b789f7708ff7111429719f28d83cb180463342003e",
+        "daily_ic.csv": "d7dd3dcf25c85978f7b566b3a14da29f223f7acf9c4a2e57a5e8a4a0cca6b290",
+        "daily_turnover.csv": "d1460f4cd8487c91d81b3c830adf8ddd2d61ddad8076f321758d1c200f7c41dd",
+        "evaluate_input/submission.csv": "0bc37d66e35a91d0f5177da0dc7394023e422cbe2b058c8d3b9ca26e01cb34c7",
+        "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "models/lightgbm.txt": "dec35da3bdcfcabc9871ff09a20df63840271abcabef590896edc761def703a9",
+        "predictions.parquet": "c004f8dfe36c6d053762680524ce498a4132fd5163ca6af73db73a6500b1767d",
+        "status.json": "17958de8b89f1f9e48540fe73cfb40c73bf5e1f3bec8e73db67ac417dcdd5a9c"
+      }
+    },
+    {
+      "seed": 20260928,
+      "within_day_label_multiset_preserved": true,
+      "shuffled_training_label_sha256": "4a3a6561d4832633ddc2044ce25c4aca77eb02967192ee78b81f7b7153716e85",
+      "prediction_sha256": "02ef1f339aeadf132b2766c6e5029104a22a63b4558b6f2badb0b8b5917eb1a4",
+      "metrics": {
+        "ic_mean": -0.043449566178957885,
+        "ic_std": 0.10734445966413596,
+        "icir": -0.40476766397543745,
+        "ic_positive_ratio": 0.3347107438016529,
+        "annual_excess": -0.24110238511967788,
+        "top1_annual_ret": -0.22167914779956083,
+        "mean_turnover": 0.4846937892221686,
+        "final_score": 0.0648813212258629
+      },
+      "official_max_abs_difference": 0.0,
+      "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T135307390413Z_92fc0728",
+      "file_sha256": {
+        "daily_excess.csv": "115cdb28f335ee8047da829c55659d49bb5ab71a038d47bcf7b2ca993b422fc8",
+        "daily_ic.csv": "369d4d7a1366e1e95a7f51b411b12a65d12806b949106af3de45489b347399ab",
+        "daily_turnover.csv": "7473b93ed55332efc09b690a3f8962548353a7b7dd1e92be1acce0bcf64ccb3a",
+        "evaluate_input/submission.csv": "7d93a3f2924d9a620eb36764c4c678a81db848a46ed1be6752826b2d3310c191",
+        "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "models/lightgbm.txt": "4edf0f13efaf37ac156a79c97f375d5772252c8494697dab87c6b28448fdfd68",
+        "predictions.parquet": "34a6856af9b4e2083f02e154aa0879d3f295829377230419d4b137d55ef2c1e7",
+        "status.json": "9537e401c53d69be971d6def93856179d18c95470f28da6b991d0ed7ebcc7867"
+      }
+    },
+    {
+      "seed": 20260929,
+      "within_day_label_multiset_preserved": true,
+      "shuffled_training_label_sha256": "85ee6a2c04b833f81da2d106f53718d20967ce81815e24e58d377200cf35cfa0",
+      "prediction_sha256": "b2d172689d8a0c87ee13d02a59eed3925e8f4a91a31f9e86bc1eacf61796997e",
+      "metrics": {
+        "ic_mean": -0.043326035765047934,
+        "ic_std": 0.10608270754992806,
+        "icir": -0.40841751465154147,
+        "ic_positive_ratio": 0.34297520661157027,
+        "annual_excess": -0.26126532866108687,
+        "top1_annual_ret": -0.24184209134096987,
+        "mean_turnover": 0.487673077204435,
+        "final_score": 0.05798806393432428
+      },
+      "official_max_abs_difference": 0.0,
+      "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T135318321469Z_f76391d9",
+      "file_sha256": {
+        "daily_excess.csv": "4368f97e7722fc76a31bce954f7ec68711308fb08aa8cc1054ade3afe2a1d03d",
+        "daily_ic.csv": "3a6eac2adca8d87349106eb9eff935b1bd44e013b09d974354adb07fb9d17c20",
+        "daily_turnover.csv": "6d1f1cb27c79232ffe2ecc187fbc09b72985afe15e6c21a4ab2512590625c5f4",
+        "evaluate_input/submission.csv": "7c36d87d416fe8eac82132d106ad810e8584264fe78ad4ff949decd72689da5d",
+        "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "models/lightgbm.txt": "8ed06468136cebfc334040d20338e25e1f871f0178aa088df2d1b105ae1b707a",
+        "predictions.parquet": "a2e14f5bb6c5c52ae7edccd2f84495c4650bee0a431f7399f6a021c7997dc150",
+        "status.json": "f575d8dfbf401027fd903fce60d7a9dcb60876e6e2863cf117d2d1aae5489b55"
+      }
+    },
+    {
+      "seed": 20260930,
+      "within_day_label_multiset_preserved": true,
+      "shuffled_training_label_sha256": "53cb265abd6817cda6e953d73d74d4150f9daf2feceac8d16b37c2519a243174",
+      "prediction_sha256": "9a941edde9456c5592f4139ef611b7b9600b43e238914f66ad3553ee9b6ec0f4",
+      "metrics": {
+        "ic_mean": -0.04214148002291604,
+        "ic_std": 0.10523897670925157,
+        "icir": -0.40043604889224826,
+        "ic_positive_ratio": 0.32644628099173556,
+        "annual_excess": -0.2724432326983408,
+        "top1_annual_ret": -0.2530199953782238,
+        "mean_turnover": 0.48773964221434357,
+        "final_score": 0.05508854551702823
+      },
+      "official_max_abs_difference": 0.0,
+      "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T135329429603Z_67707a7c",
+      "file_sha256": {
+        "daily_excess.csv": "c2b05c2a3e968b4888404a409d16127cbce4b1045fe2d778ce432e9e1f174d3e",
+        "daily_ic.csv": "88e358e8a498b5935b90c909427f02570b0ba8b208460b097cda2342feeb1980",
+        "daily_turnover.csv": "cb570f08e2c38fcfce9516bf699b0508d67da7934e51554692489b202a03fc78",
+        "evaluate_input/submission.csv": "a98b0503cc962d5f89a76856304abe2b589f24b2bc28380c4794ded827c6539c",
+        "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "models/lightgbm.txt": "680b8ea55c06a985257bbccd8ecc86e37b7ade6c4438b240fa62331724a5632c",
+        "predictions.parquet": "c1627e054d5c2dac4175d8599c5ce1476c8f184a29c9ce49c50e93d1a2675dcd",
+        "status.json": "dbc816b501b9010b7e905ebad54bb3b69a0a9565b08824ce0fc6d8f832cf2511"
+      }
+    },
+    {
+      "seed": 20260931,
+      "within_day_label_multiset_preserved": true,
+      "shuffled_training_label_sha256": "c7189cfcc492e5e34f1b3e22844ca32e04c3d28328b653885cf3ecb4c7ef93f9",
+      "prediction_sha256": "a82f9f182c8acb3f2b4f49a160e4758172ef82a458116d642310ef0c33d45d6e",
+      "metrics": {
+        "ic_mean": -0.04576507526037282,
+        "ic_std": 0.10595942384078005,
+        "icir": -0.4319113260670587,
+        "ic_positive_ratio": 0.3181818181818182,
+        "annual_excess": -0.25821506159163277,
+        "top1_annual_ret": -0.23879182427151582,
+        "mean_turnover": 0.513956561664526,
+        "final_score": 0.05004248291900325
+      },
+      "official_max_abs_difference": 0.0,
+      "run_directory": "artifacts\\experiments\\baseline_audit_controls\\20261001T135340652441Z_f526f1f5",
+      "file_sha256": {
+        "daily_excess.csv": "a17acf0e7861eaebc2828c89d9ab0fa2adebe91ca33a9edf14fe2974cbb84de6",
+        "daily_ic.csv": "2ff03ced580d436f1063548c6bda0b2f2ebd30cd8d6dde31b9a72d20174f2053",
+        "daily_turnover.csv": "70f92b546aff5b2d038e80f85d63abc2d518458464164c6378d0752c32873659",
+        "evaluate_input/submission.csv": "fc8682f32242f7415080ea6901cff8a141bffeaf25e642797625ac4841a70352",
+        "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "models/lightgbm.txt": "821e9a406dc438aae328e68582e83b8b0a34a5408ab2f79ddabe86d6a3e29b3d",
+        "predictions.parquet": "9ed8b39ab37957c2daf1dc8ac2785fdd20c1ba1f1586ac3d1a50ffb54db319e2",
+        "status.json": "2ae1005f033d335a6e7e8157288838d4759078f76dd0506a1f8569cd73fbf520"
+      }
+    }
+  ]
+}

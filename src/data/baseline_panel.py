@@ -27,6 +27,11 @@ def load_raw_baseline_panel(path: Path) -> pd.DataFrame:
         "y_ret_1d": "float64",
     })
     assert_sorted_by_panel_key(panel, name="raw baseline panel")
+    dates = pd.Series(panel.trade_date.unique()).astype(str)
+    if not dates.str.fullmatch(r"\d{8}").all() or pd.to_datetime(
+        dates, format="%Y%m%d", errors="coerce"
+    ).isna().any():
+        raise DataContractError("raw baseline panel contains invalid calendar dates")
     for column in ("flag_limit_up", "flag_limit_down"):
         if not panel[column].isin((0, 1)).all():
             raise DataContractError(f"{column} must contain only 0 or 1")

@@ -1,0 +1,5 @@
+{
+  "error_type": "AssertionError",
+  "error": "three or more shuffled controls match baseline |IC|; investigate before release",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\fintechathon\\scripts\\audit_baseline.py\", line 261, in check\n    actual = function()\n             ^^^^^^^^^^\n  File \"C:\\fintechathon\\scripts\\audit_baseline.py\", line 516, in <lambda>\n    audit.check(\"controls_and_ties\", \"five controls investigated; official parity and tie sensitivity quantified\", lambda: full_controls(output, accepted))\n                                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\fintechathon\\scripts\\audit_baseline.py\", line 423, in full_controls\n    raise AssertionError(\"three or more shuffled controls match baseline |IC|; investigate before release\")\nAssertionError: three or more shuffled controls match baseline |IC|; investigate before release\n"
+}

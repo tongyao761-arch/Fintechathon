@@ -1,0 +1,16 @@
+Experiment directory: C:\fintechathon\artifacts\experiments\baseline_audit\20261001T142637793268Z_a186a4cc
+Raw input loaded and migration checks finished
+Original truth tokens extracted; training begins
+[32m2026-10-01 22:27:17.339[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 1125300, 交易日数: 242[0m
+[32m2026-10-01 22:27:17.688[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.021134, std=0.071248, ICIR=0.2966, IC>0占比=64.05%[0m
+[32m2026-10-01 22:27:18.142[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.0706, Top1年化绝对收益=0.0900[0m
+[32m2026-10-01 22:27:18.556[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.4824, (1-turnover)=0.5176[0m
+[32m2026-10-01 22:27:18.557[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.021134×0.4 + 0.0706×0.3 + 0.5176×0.3 = 0.184894[0m
+{"split": "primary_2023", "metrics": {"ic_mean": 0.02113401950237192, "ic_std": 0.07124830420833916, "icir": 0.29662487742267296, "ic_positive_ratio": 0.640495867768595, "annual_excess": 0.07055126460379821, "top1_annual_ret": 0.08997450192391523, "mean_turnover": 0.4824181889098113, "final_score": 0.1848935305091448}, "prediction_hash_matches_v1": true}
+[32m2026-10-01 22:27:32.081[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m33[0m - [1m合并后样本数: 1125300, 交易日数: 242[0m
+[32m2026-10-01 22:27:32.457[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m49[0m - [1mRank IC: mean=0.052523, std=0.140850, ICIR=0.3729, IC>0占比=67.36%[0m
+[32m2026-10-01 22:27:32.937[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m75[0m - [1mTop组超额收益: 年化=0.0740, Top1年化绝对收益=0.0600[0m
+[32m2026-10-01 22:27:33.395[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m101[0m - [1m预测换手率: mean=0.7106, (1-turnover)=0.2894[0m
+[32m2026-10-01 22:27:33.395[0m | [1mINFO    [0m | [36mcompetition_evaluate[0m:[36mevaluate[0m:[36m105[0m - [1m综合得分 = 0.052523×0.4 + 0.0740×0.3 + 0.2894×0.3 = 0.130033[0m
+{"split": "oos_2024", "metrics": {"ic_mean": 0.05252347878523769, "ic_std": 0.1408500084468986, "icir": 0.3729036253841575, "ic_positive_ratio": 0.6735537190082644, "annual_excess": 0.07403187695388395, "top1_annual_ret": 0.05998722595358683, "mean_turnover": 0.7106195201138428, "final_score": 0.13003309856610742}, "prediction_hash_matches_v1": true}
+Accepted experiment: C:\fintechathon\artifacts\experiments\baseline_audit\20261001T142637793268Z_a186a4cc

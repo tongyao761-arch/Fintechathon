@@ -116,7 +116,10 @@ def build_baseline_v1_features(panel: pd.DataFrame) -> pd.DataFrame:
         index=panel.index,
         columns=FEATURE_COLUMNS,
     )
-    features = features.replace([np.inf, -np.inf], np.nan).astype("float32")
+    # A finite float64 result can overflow during the final float32 cast.
+    with np.errstate(over="ignore", invalid="ignore"):
+        features = features.astype("float32")
+    features = features.replace([np.inf, -np.inf], np.nan)
     if len(features) != len(panel) or not features.index.equals(panel.index):
         raise AssertionError("feature construction changed panel rows or index")
     return features

@@ -1,0 +1,1082 @@
+{
+  "suite": "all",
+  "checks": [
+    {
+      "name": "unit_tests",
+      "status": "passed",
+      "blocking": true,
+      "expected": "all existing and new tests pass",
+      "actual": {
+        "command": [
+          "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "count": 60,
+        "log": "unit_tests.log",
+        "log_sha256": "14011a320fa521cda879f44da6c02168148ac06741c343768bacb9b31af3a05e"
+      },
+      "evidence": "unit_tests.json",
+      "error": null
+    },
+    {
+      "name": "dependencies",
+      "status": "passed",
+      "blocking": true,
+      "expected": "pip check passes and all dependency pins match",
+      "actual": {
+        "pip_check": "No broken requirements found.",
+        "locked_versions": {
+          "cloudpickle": "3.1.2",
+          "colorama": "0.4.6",
+          "iniconfig": "2.3.0",
+          "joblib": "1.6.0",
+          "lightgbm": "4.7.0",
+          "loguru": "0.7.3",
+          "narwhals": "2.26.0",
+          "numpy": "2.3.4",
+          "packaging": "26.3",
+          "pandas": "2.3.3",
+          "pluggy": "1.6.0",
+          "psutil": "7.2.2",
+          "pyarrow": "25.0.1",
+          "Pygments": "2.21.0",
+          "pytest": "9.1.1",
+          "python-dateutil": "2.9.0.post0",
+          "pytz": "2026.4",
+          "PyYAML": "6.0.3",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.17.1",
+          "six": "1.17.0",
+          "threadpoolctl": "3.7.0",
+          "tzdata": "2026.4",
+          "win32_setctime": "1.2.0"
+        },
+        "all_pins_match": true
+      },
+      "evidence": "dependencies.json",
+      "error": null
+    },
+    {
+      "name": "raw_data_and_features",
+      "status": "passed",
+      "blocking": true,
+      "expected": "valid keys/dates, labels <=1e-10, independent features, no future leakage",
+      "actual": {
+        "train": {
+          "rows": 7900350,
+          "stocks": 4650,
+          "dates": 1699,
+          "key_unique_sorted": true,
+          "valid_calendar_dates": true,
+          "counts": {
+            "open_missing": 1139980,
+            "open_infinite": 0,
+            "open_invalid_sign": 0,
+            "high_missing": 1139980,
+            "high_infinite": 0,
+            "high_invalid_sign": 0,
+            "low_missing": 1139980,
+            "low_infinite": 0,
+            "low_invalid_sign": 0,
+            "close_missing": 1139980,
+            "close_infinite": 0,
+            "close_invalid_sign": 0,
+            "vol_missing": 1139940,
+            "vol_infinite": 0,
+            "vol_invalid_sign": 0,
+            "amount_missing": 1139940,
+            "amount_infinite": 0,
+            "amount_invalid_sign": 0,
+            "flag_limit_up_invalid": 0,
+            "flag_limit_down_invalid": 0,
+            "high_below_other_price": 0,
+            "low_above_other_price": 0,
+            "label_infinite": 0
+          },
+          "both_limit_flags": 4,
+          "both_limit_flags_policy": "preserve supplied values; official only filters flag_limit_up"
+        },
+        "test": {
+          "rows": 1599600,
+          "stocks": 4650,
+          "dates": 344,
+          "key_unique_sorted": true,
+          "valid_calendar_dates": true,
+          "counts": {
+            "open_missing": 44844,
+            "open_infinite": 0,
+            "open_invalid_sign": 0,
+            "high_missing": 44844,
+            "high_infinite": 0,
+            "high_invalid_sign": 0,
+            "low_missing": 44844,
+            "low_infinite": 0,
+            "low_invalid_sign": 0,
+            "close_missing": 44844,
+            "close_infinite": 0,
+            "close_invalid_sign": 0,
+            "vol_missing": 44831,
+            "vol_infinite": 0,
+            "vol_invalid_sign": 0,
+            "amount_missing": 44831,
+            "amount_infinite": 0,
+            "amount_invalid_sign": 0,
+            "flag_limit_up_invalid": 0,
+            "flag_limit_down_invalid": 0,
+            "high_below_other_price": 0,
+            "low_above_other_price": 0
+          },
+          "both_limit_flags": 0,
+          "both_limit_flags_policy": "preserve supplied values; official only filters flag_limit_up"
+        },
+        "labels": {
+          "checked": 6758531,
+          "mismatches_gt_1e_10": 0,
+          "max_abs_error": 7.563394355258879e-16,
+          "missing_labels": 1141819,
+          "nonmissing_uncheckable": 0,
+          "uncheckable_examples": [],
+          "split_target_boundaries": {
+            "primary_2023": {
+              "train_samples": 4597785,
+              "latest_training_target_date": 20221230,
+              "purge_date": 20221230,
+              "validation_start": 20230103
+            },
+            "oos_2024": {
+              "train_samples": 5659954,
+              "latest_training_target_date": 20231229,
+              "purge_date": 20231229,
+              "validation_start": 20240102
+            }
+          },
+          "terminal_cross_file_checked": 4525
+        },
+        "real_feature_sample": {
+          "rows": 54368,
+          "stocks": 32,
+          "max_abs_error": 0.0,
+          "nan_positions_equal": true,
+          "rtol": 1e-06,
+          "atol": 1e-07
+        },
+        "prefixes": {
+          "rows": 54368,
+          "cutoffs": [
+            20221229,
+            20221230,
+            20230103,
+            20231228,
+            20231229,
+            20240102
+          ],
+          "truncation_equal": true,
+          "future_perturbation_equal": true,
+          "stock_isolation_equal": true
+        },
+        "history_continuation": {
+          "primary_2023": {
+            "first_day_history_values": 248,
+            "history_preserved": true
+          },
+          "oos_2024": {
+            "first_day_history_values": 248,
+            "history_preserved": true
+          }
+        },
+        "sample_codes": [
+          "000001.SZ",
+          "000565.SZ",
+          "000793.SZ",
+          "001208.SZ",
+          "002059.SZ",
+          "002213.SZ",
+          "002367.SZ",
+          "002523.SZ",
+          "002677.SZ",
+          "002842.SZ",
+          "003005.SZ",
+          "300121.SZ",
+          "300276.SZ",
+          "300433.SZ",
+          "300586.SZ",
+          "300741.SZ",
+          "300896.SZ",
+          "301056.SZ",
+          "301229.SZ",
+          "301479.SZ",
+          "600101.SH",
+          "600282.SH",
+          "600487.SH",
+          "600662.SH",
+          "600833.SH",
+          "601089.SH",
+          "601872.SH",
+          "603123.SH",
+          "603327.SH",
+          "603662.SH",
+          "603936.SH",
+          "605599.SH"
+        ],
+        "sample_policy": "32 evenly spaced sorted codes; all 1699 historical rows"
+      },
+      "evidence": "raw_data_and_features.json",
+      "error": null
+    },
+    {
+      "name": "full_repeatability",
+      "status": "passed",
+      "blocking": true,
+      "expected": "two full runs match frozen v1.1 with coverage 100% and official delta <=1e-12",
+      "actual": {
+        "command": [
+          "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+          "-B",
+          "scripts/run_lightgbm_baseline.py",
+          "--experiment-id",
+          "baseline_audit",
+          "--split",
+          "all",
+          "--verify-clean"
+        ],
+        "runs": [
+          {
+            "path": "artifacts\\experiments\\baseline_audit\\20261001T135039439934Z_fd7a880f",
+            "summary_sha256": "bf146ffdd356a0a2975623368005793890522e7038e7e17f60f9bd259a026bc8",
+            "checked_files": 28,
+            "all_file_hashes_match": true,
+            "summary": {
+              "experiment_id": "baseline_audit",
+              "baseline_version": "baseline_v1_1",
+              "run_id": "20261001T135039439934Z_fd7a880f",
+              "started_at": "2026-10-01T21:50:39.439934+08:00",
+              "finished_at": "2026-10-01T21:51:37.905924+08:00",
+              "data": {
+                "path": "赛题五\\赛题五数据\\训练集.csv",
+                "bytes": 946832276,
+                "sha256": "e9d23e87f7e1f9439f28f7dd951d129ea49eaacda5ad650da8576a830a6deac9",
+                "raw_rows": 7900350,
+                "dates": 1699,
+                "stocks": 4650
+              },
+              "input_comparison": {
+                "status": "passed",
+                "rows": 7900350,
+                "columns": [
+                  "ts_code",
+                  "trade_date",
+                  "open",
+                  "high",
+                  "low",
+                  "close",
+                  "vol",
+                  "amount",
+                  "flag_limit_up",
+                  "flag_limit_down",
+                  "y_ret_1d",
+                  "is_price_valid",
+                  "is_trainable"
+                ],
+                "keys_flags_raw_float32_inputs_training_labels_equal": true,
+                "split_masks_equal": true,
+                "clean_sha256": "667797aac6e43ee83208704a5f9abbce2b6b27b90efeec019013aa238068a70e"
+              },
+              "features": [
+                "ret_1d",
+                "ret_5d",
+                "ret_20d",
+                "gap_1d",
+                "intraday_ret",
+                "high_low_range",
+                "volatility_5d",
+                "volatility_20d",
+                "volume_ratio_5d",
+                "amount_ratio_5d"
+              ],
+              "feature_definitions": {
+                "ret_1d": "close / close.shift(1) - 1",
+                "ret_5d": "close / close.shift(5) - 1",
+                "ret_20d": "close / close.shift(20) - 1",
+                "gap_1d": "open / close.shift(1) - 1",
+                "intraday_ret": "close / open - 1",
+                "high_low_range": "high / low - 1",
+                "volatility_5d": "ret_1d.rolling(5, min_periods=5).std(ddof=1)",
+                "volatility_20d": "ret_1d.rolling(20, min_periods=20).std(ddof=1)",
+                "volume_ratio_5d": "vol / vol.shift(1).rolling(5, min_periods=5).mean()",
+                "amount_ratio_5d": "amount / amount.shift(1).rolling(5, min_periods=5).mean()"
+              },
+              "feature_missing_counts": {
+                "ret_1d": 1146344,
+                "ret_5d": 1167623,
+                "ret_20d": 1239210,
+                "gap_1d": 1146344,
+                "intraday_ret": 1139980,
+                "high_low_range": 1139980,
+                "volatility_5d": 1171741,
+                "volatility_20d": 1266119,
+                "volume_ratio_5d": 1204393,
+                "amount_ratio_5d": 1204393
+              },
+              "feature_infinite_counts": {
+                "ret_1d": 0,
+                "ret_5d": 0,
+                "ret_20d": 0,
+                "gap_1d": 0,
+                "intraday_ret": 0,
+                "high_low_range": 0,
+                "volatility_5d": 0,
+                "volatility_20d": 0,
+                "volume_ratio_5d": 0,
+                "amount_ratio_5d": 0
+              },
+              "feature_index_preserved": true,
+              "excluded_columns": [
+                "ts_code",
+                "trade_date",
+                "open",
+                "high",
+                "low",
+                "close",
+                "vol",
+                "amount",
+                "flag_limit_up",
+                "flag_limit_down",
+                "y_ret_1d",
+                "is_price_valid",
+                "is_trainable",
+                "row_id"
+              ],
+              "random_seed": 20260927,
+              "model": "lightgbm.LGBMRegressor",
+              "model_params": {
+                "objective": "regression",
+                "boosting_type": "gbdt",
+                "n_estimators": 100,
+                "learning_rate": 0.05,
+                "num_leaves": 31,
+                "max_depth": -1,
+                "min_child_samples": 100,
+                "subsample": 1.0,
+                "subsample_freq": 0,
+                "colsample_bytree": 1.0,
+                "reg_alpha": 0.0,
+                "reg_lambda": 1.0,
+                "random_state": 20260927,
+                "data_random_seed": 20260927,
+                "feature_fraction_seed": 20260927,
+                "bagging_seed": 20260927,
+                "deterministic": true,
+                "force_col_wise": true,
+                "n_jobs": -1,
+                "verbosity": -1
+              },
+              "environment": {
+                "python": "3.12.10",
+                "python_implementation": "CPython",
+                "architecture": "64bit",
+                "lightgbm": "4.7.0",
+                "pandas": "2.3.3",
+                "numpy": "2.3.4"
+              },
+              "splits": [
+                {
+                  "split_name": "primary_2023",
+                  "dates": {
+                    "train_start": 20180102,
+                    "train_end": 20221229,
+                    "purge_date": 20221230,
+                    "valid_start": 20230103,
+                    "valid_end": 20231229
+                  },
+                  "split_train_rows": 5645100,
+                  "train_samples": 4597785,
+                  "purge_rows": 4650,
+                  "valid_prediction_rows": 1125300,
+                  "prediction_coverage": 1.0,
+                  "prediction_sha256": "a494f88497430041c51febc0cdaebca45a93c187697412dad81be9c0c7cf890d",
+                  "model_reload_predictions_equal": true,
+                  "original_prediction_hash_matches": true,
+                  "metrics": {
+                    "ic_mean": 0.02113401950237192,
+                    "ic_std": 0.07124830420833916,
+                    "icir": 0.29662487742267296,
+                    "ic_positive_ratio": 0.640495867768595,
+                    "annual_excess": 0.07055126460379821,
+                    "top1_annual_ret": 0.08997450192391523,
+                    "mean_turnover": 0.4824181889098113,
+                    "final_score": 0.1848935305091448
+                  },
+                  "score_contributions": {
+                    "ic": 0.008453607800948768,
+                    "excess": 0.021165379381139462,
+                    "stability": 0.1552745433270566
+                  },
+                  "diagnostics": {
+                    "note": "Diagnostics only; predictions and official scores are unchanged.",
+                    "price_valid_only_turnover": 0.8527606458401363,
+                    "top_groups": {
+                      "return": {
+                        "top_count": 105142,
+                        "missing_label_count": 0,
+                        "invalid_price_count": 0,
+                        "all_features_missing_count": 0,
+                        "missing_label_fraction": 0.0,
+                        "invalid_price_fraction": 0.0,
+                        "all_features_missing_fraction": 0.0
+                      },
+                      "turnover": {
+                        "top_count": 111424,
+                        "missing_label_count": 62565,
+                        "invalid_price_count": 62553,
+                        "all_features_missing_count": 62553,
+                        "missing_label_fraction": 0.5615038052843193,
+                        "invalid_price_fraction": 0.5613961085582998,
+                        "all_features_missing_fraction": 0.5613961085582998
+                      }
+                    }
+                  },
+                  "metrics_minus_v1": {
+                    "ic_mean": -9.9848278971304e-08,
+                    "ic_std": 9.190303826289714e-08,
+                    "icir": -1.7840308172978325e-06,
+                    "ic_positive_ratio": 0.0,
+                    "annual_excess": -4.088227811838152e-10,
+                    "top1_annual_ret": -5.756477516882796e-10,
+                    "mean_turnover": 0.0,
+                    "final_score": -4.006195841732563e-08
+                  },
+                  "file_sha256": {
+                    "daily_excess.csv": "82fd31d00e6c628fdbd70de5f7c81759ef327ba3634497797fac668595b895c3",
+                    "daily_ic.csv": "55a33a16b2386dd5c910068678a0df85076e3ebcfd28feb16ce3ded73637f06b",
+                    "daily_missing_diagnostics.csv": "0010df8cb17f737cc985aa4e915ced7c92164302d93f03d4948bd2b1948b33b4",
+                    "daily_price_valid_turnover.csv": "9208c7e57f01907264b87d58e34647f1f943a810c1640a0defb589440e4b5b85",
+                    "daily_return_top_sets.csv": "2e16e8672fb56a93ee7138beb71b3ade9ad44df0e1a07540538590a773f9613b",
+                    "daily_top_sets.csv": "26e9c015fb71ba91aa2be55c6766aaeb4f940bdd4e49c8b8a98658db38fded1c",
+                    "daily_turnover.csv": "78fba16f79dd47c7c9b45a5adeae591c26e991d72ecf30ccfdb3d7464ce43c4c",
+                    "diagnostics.json": "a8008e588759c72665d80c1c1c4d6529c885293d86eb4aec7056e5d9ea1a1e72",
+                    "evaluate_input/submission.csv": "88bd5f4ff2719460e7540b7b9fcde294a36493b9391185dcbad9290d195eaba7",
+                    "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+                    "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+                    "models/lightgbm.txt": "0a5418f6305632aae700b1ec41801db366b1ad10c7197ed86e4e3ce3ccb7183e",
+                    "monthly_metrics.csv": "a389c41148a0a6cc5d60a5bd4d346728067d6d33b2053fab056f81b459cba196",
+                    "predictions.parquet": "ec80c8605c5c4720ac5ac7723d8e86eaae6c9a8e860d9349fe934869a387411e"
+                  },
+                  "official_comparison": {
+                    "official_metrics": {
+                      "ic_mean": 0.02113401950237192,
+                      "ic_std": 0.07124830420833916,
+                      "icir": 0.29662487742267296,
+                      "ic_positive_ratio": 0.640495867768595,
+                      "annual_excess": 0.07055126460379821,
+                      "top1_annual_ret": 0.08997450192391523,
+                      "mean_turnover": 0.4824181889098113,
+                      "final_score": 0.1848935305091448
+                    },
+                    "local_minus_official": {
+                      "ic_mean": 0.0,
+                      "ic_std": 0.0,
+                      "icir": 0.0,
+                      "ic_positive_ratio": 0.0,
+                      "annual_excess": 0.0,
+                      "top1_annual_ret": 0.0,
+                      "mean_turnover": 0.0,
+                      "final_score": 0.0
+                    },
+                    "max_abs_difference": 0.0
+                  },
+                  "elapsed_seconds": 13.671498900000074
+                },
+                {
+                  "split_name": "oos_2024",
+                  "dates": {
+                    "train_start": 20180102,
+                    "train_end": 20231228,
+                    "purge_date": 20231229,
+                    "valid_start": 20240102,
+                    "valid_end": 20241231
+                  },
+                  "split_train_rows": 6770400,
+                  "train_samples": 5659954,
+                  "purge_rows": 4650,
+                  "valid_prediction_rows": 1125300,
+                  "prediction_coverage": 1.0,
+                  "prediction_sha256": "7b30a851843a2ec5261fd6d00b1035f5e04bad6bf8d6a99c53c0a9a97f79e254",
+                  "model_reload_predictions_equal": true,
+                  "original_prediction_hash_matches": true,
+                  "metrics": {
+                    "ic_mean": 0.05252347878523769,
+                    "ic_std": 0.1408500084468986,
+                    "icir": 0.3729036253841575,
+                    "ic_positive_ratio": 0.6735537190082644,
+                    "annual_excess": 0.07403187695388395,
+                    "top1_annual_ret": 0.05998722595358683,
+                    "mean_turnover": 0.7106195201138428,
+                    "final_score": 0.13003309856610742
+                  },
+                  "score_contributions": {
+                    "ic": 0.021009391514095078,
+                    "excess": 0.022209563086165184,
+                    "stability": 0.08681414396584716
+                  },
+                  "diagnostics": {
+                    "note": "Diagnostics only; predictions and official scores are unchanged.",
+                    "price_valid_only_turnover": 0.8458783247146384,
+                    "top_groups": {
+                      "return": {
+                        "top_count": 107238,
+                        "missing_label_count": 0,
+                        "invalid_price_count": 0,
+                        "all_features_missing_count": 0,
+                        "missing_label_fraction": 0.0,
+                        "invalid_price_fraction": 0.0,
+                        "all_features_missing_fraction": 0.0
+                      },
+                      "turnover": {
+                        "top_count": 110363,
+                        "missing_label_count": 30867,
+                        "invalid_price_count": 30828,
+                        "all_features_missing_count": 30828,
+                        "missing_label_fraction": 0.27968612669101056,
+                        "invalid_price_fraction": 0.2793327473881645,
+                        "all_features_missing_fraction": 0.2793327473881645
+                      }
+                    }
+                  },
+                  "metrics_minus_v1": {
+                    "ic_mean": 3.4033289519203036e-07,
+                    "ic_std": -1.577073967223841e-06,
+                    "icir": 6.591544508605107e-06,
+                    "ic_positive_ratio": 0.0,
+                    "annual_excess": 6.868119267755546e-10,
+                    "top1_annual_ret": 2.7741137859083054e-10,
+                    "mean_turnover": 0.0,
+                    "final_score": 1.3633920165068147e-07
+                  },
+                  "file_sha256": {
+                    "daily_excess.csv": "581e661e8592a5fdda88361d6dca182d8f9cbc6e2915895bf4d9841374fe79ca",
+                    "daily_ic.csv": "95562de0b9ba8c883dc6d8b584a2e6b20095036de165fa1bba3e0bf7fc2f0de2",
+                    "daily_missing_diagnostics.csv": "24d61a90f82809ab4ac7829634e669f7fca92d11230cf9d9a5391e899835aa68",
+                    "daily_price_valid_turnover.csv": "b7fea16a9b1ff059cb1c49c40d4c03e808430ce78a1d5953e65ee95888d4ec78",
+                    "daily_return_top_sets.csv": "79330efd9f5023efa3e1970c8ccaa12a9bb8b22591080ee6bacdfe3d46c7de38",
+                    "daily_top_sets.csv": "348fcb46a346383651a7d0e3f8ccc20d3292cd23359b82559b3c2b407b1752fb",
+                    "daily_turnover.csv": "5598b28626328a379934d701d9cb2a5df9b17fdb13985012153de45302e65186",
+                    "diagnostics.json": "57eb2d47bb1c4da4fe9da6866c953570608812a415a93217b218403d4093148a",
+                    "evaluate_input/submission.csv": "2fbf538a7b79b95fce7511069946a5fe9f8a56f080d73e1b227aaaf85806b163",
+                    "evaluate_input/测试集_X.csv": "e3a1f33991d28543ac131db14548f6837bcf9fdb0609676725d6f43d8e3fec96",
+                    "evaluate_input/测试集_Y.csv": "efd3d9d13f94a1ee689ae3a45c47ae43bdb3b8df05a94f57e98d3f63c5898a80",
+                    "models/lightgbm.txt": "3cad7f1729c0d31069761a32a8ca49653e23d2b078e06d5c4a5f03071e8b6d87",
+                    "monthly_metrics.csv": "3f3dca0f03b20bbb312c91ae9f63dfe2d66effa099b2e8dd8bece1871332cef8",
+                    "predictions.parquet": "3a730b6d3cd7ff646efa06f2be3bdf1bd26b911571fc26de8834fd307562bf71"
+                  },
+                  "official_comparison": {
+                    "official_metrics": {
+                      "ic_mean": 0.05252347878523769,
+                      "ic_std": 0.1408500084468986,
+                      "icir": 0.3729036253841575,
+                      "ic_positive_ratio": 0.6735537190082644,
+                      "annual_excess": 0.07403187695388395,
+                      "top1_annual_ret": 0.05998722595358683,
+                      "mean_turnover": 0.7106195201138428,
+                      "final_score": 0.13003309856610742
+                    },
+                    "local_minus_official": {
+                      "ic_mean": 0.0,
+                      "ic_std": 0.0,
+                      "icir": 0.0,
+                      "ic_positive_ratio": 0.0,
+                      "annual_excess": 0.0,
+                      "top1_annual_ret": 0.0,
+                      "mean_turnover": 0.0,
+                      "final_score": 0.0
+                    },
+                    "max_abs_difference": 0.0
+                  },
+                  "elapsed_seconds": 14.595305900000085
+                }
+              ],
+              "reference_summary_sha256": "49d1b08165e03f026696be8a873e0b1475bf60160f8b3c748f614f1181fb61cb",
+              "provenance_sha256": "3784e97159bda2188ec513ab4a240b22d2e3a365e64c040e1ead3567674702a7",
+              "resources": {
+                "elapsed_seconds": 58.59344839999994,
+                "peak_process_rss_mb": 2136.55078125,
+                "logical_cpu_count": 32,
+                "physical_cpu_count": 24
+              }
+            }
+          },
+          {
+            "path": "artifacts\\experiments\\baseline_audit\\20261001T135139793242Z_ac32275f",
+            "summary_sha256": "330fe5b1db11beafb541e51372a75ecde16e14bc337a56cd24eed1c651b6b5ee",
+            "checked_files": 28,
+            "all_file_hashes_match": true,
+            "summary": {
+              "experiment_id": "baseline_audit",
+              "baseline_version": "baseline_v1_1",
+              "run_id": "20261001T135139793242Z_ac32275f",
+              "started_at": "2026-10-01T21:51:39.793242+08:00",
+              "finished_at": "2026-10-01T21:52:38.024899+08:00",
+              "data": {
+                "path": "赛题五\\赛题五数据\\训练集.csv",
+                "bytes": 946832276,
+                "sha256": "e9d23e87f7e1f9439f28f7dd951d129ea49eaacda5ad650da8576a830a6deac9",
+                "raw_rows": 7900350,
+                "dates": 1699,
+                "stocks": 4650
+              },
+              "input_comparison": {
+                "status": "passed",
+                "rows": 7900350,
+                "columns": [
+                  "ts_code",
+                  "trade_date",
+                  "open",
+                  "high",
+                  "low",
+                  "close",
+                  "vol",
+                  "amount",
+                  "flag_limit_up",
+                  "flag_limit_down",
+                  "y_ret_1d",
+                  "is_price_valid",
+                  "is_trainable"
+                ],
+                "keys_flags_raw_float32_inputs_training_labels_equal": true,
+                "split_masks_equal": true,
+                "clean_sha256": "667797aac6e43ee83208704a5f9abbce2b6b27b90efeec019013aa238068a70e"
+              },
+              "features": [
+                "ret_1d",
+                "ret_5d",
+                "ret_20d",
+                "gap_1d",
+                "intraday_ret",
+                "high_low_range",
+                "volatility_5d",
+                "volatility_20d",
+                "volume_ratio_5d",
+                "amount_ratio_5d"
+              ],
+              "feature_definitions": {
+                "ret_1d": "close / close.shift(1) - 1",
+                "ret_5d": "close / close.shift(5) - 1",
+                "ret_20d": "close / close.shift(20) - 1",
+                "gap_1d": "open / close.shift(1) - 1",
+                "intraday_ret": "close / open - 1",
+                "high_low_range": "high / low - 1",
+                "volatility_5d": "ret_1d.rolling(5, min_periods=5).std(ddof=1)",
+                "volatility_20d": "ret_1d.rolling(20, min_periods=20).std(ddof=1)",
+                "volume_ratio_5d": "vol / vol.shift(1).rolling(5, min_periods=5).mean()",
+                "amount_ratio_5d": "amount / amount.shift(1).rolling(5, min_periods=5).mean()"
+              },
+              "feature_missing_counts": {
+                "ret_1d": 1146344,
+                "ret_5d": 1167623,
+                "ret_20d": 1239210,
+                "gap_1d": 1146344,
+                "intraday_ret": 1139980,
+                "high_low_range": 1139980,
+                "volatility_5d": 1171741,
+                "volatility_20d": 1266119,
+                "volume_ratio_5d": 1204393,
+                "amount_ratio_5d": 1204393
+              },
+              "feature_infinite_counts": {
+                "ret_1d": 0,
+                "ret_5d": 0,
+                "ret_20d": 0,
+                "gap_1d": 0,
+                "intraday_ret": 0,
+                "high_low_range": 0,
+                "volatility_5d": 0,
+                "volatility_20d": 0,
+                "volume_ratio_5d": 0,
+                "amount_ratio_5d": 0
+              },
+              "feature_index_preserved": true,
+              "excluded_columns": [
+                "ts_code",
+                "trade_date",
+                "open",
+                "high",
+                "low",
+                "close",
+                "vol",
+                "amount",
+                "flag_limit_up",
+                "flag_limit_down",
+                "y_ret_1d",
+                "is_price_valid",
+                "is_trainable",
+                "row_id"
+              ],
+              "random_seed": 20260927,
+              "model": "lightgbm.LGBMRegressor",
+              "model_params": {
+                "objective": "regression",
+                "boosting_type": "gbdt",
+                "n_estimators": 100,
+                "learning_rate": 0.05,
+                "num_leaves": 31,
+                "max_depth": -1,
+                "min_child_samples": 100,
+                "subsample": 1.0,
+                "subsample_freq": 0,
+                "colsample_bytree": 1.0,
+                "reg_alpha": 0.0,
+                "reg_lambda": 1.0,
+                "random_state": 20260927,
+                "data_random_seed": 20260927,
+                "feature_fraction_seed": 20260927,
+                "bagging_seed": 20260927,
+                "deterministic": true,
+                "force_col_wise": true,
+                "n_jobs": -1,
+                "verbosity": -1
+              },
+              "environment": {
+                "python": "3.12.10",
+                "python_implementation": "CPython",
+                "architecture": "64bit",
+                "lightgbm": "4.7.0",
+                "pandas": "2.3.3",
+                "numpy": "2.3.4"
+              },
+              "splits": [
+                {
+                  "split_name": "primary_2023",
+                  "dates": {
+                    "train_start": 20180102,
+                    "train_end": 20221229,
+                    "purge_date": 20221230,
+                    "valid_start": 20230103,
+                    "valid_end": 20231229
+                  },
+                  "split_train_rows": 5645100,
+                  "train_samples": 4597785,
+                  "purge_rows": 4650,
+                  "valid_prediction_rows": 1125300,
+                  "prediction_coverage": 1.0,
+                  "prediction_sha256": "a494f88497430041c51febc0cdaebca45a93c187697412dad81be9c0c7cf890d",
+                  "model_reload_predictions_equal": true,
+                  "original_prediction_hash_matches": true,
+                  "metrics": {
+                    "ic_mean": 0.02113401950237192,
+                    "ic_std": 0.07124830420833916,
+                    "icir": 0.29662487742267296,
+                    "ic_positive_ratio": 0.640495867768595,
+                    "annual_excess": 0.07055126460379821,
+                    "top1_annual_ret": 0.08997450192391523,
+                    "mean_turnover": 0.4824181889098113,
+                    "final_score": 0.1848935305091448
+                  },
+                  "score_contributions": {
+                    "ic": 0.008453607800948768,
+                    "excess": 0.021165379381139462,
+                    "stability": 0.1552745433270566
+                  },
+                  "diagnostics": {
+                    "note": "Diagnostics only; predictions and official scores are unchanged.",
+                    "price_valid_only_turnover": 0.8527606458401363,
+                    "top_groups": {
+                      "return": {
+                        "top_count": 105142,
+                        "missing_label_count": 0,
+                        "invalid_price_count": 0,
+                        "all_features_missing_count": 0,
+                        "missing_label_fraction": 0.0,
+                        "invalid_price_fraction": 0.0,
+                        "all_features_missing_fraction": 0.0
+                      },
+                      "turnover": {
+                        "top_count": 111424,
+                        "missing_label_count": 62565,
+                        "invalid_price_count": 62553,
+                        "all_features_missing_count": 62553,
+                        "missing_label_fraction": 0.5615038052843193,
+                        "invalid_price_fraction": 0.5613961085582998,
+                        "all_features_missing_fraction": 0.5613961085582998
+                      }
+                    }
+                  },
+                  "metrics_minus_v1": {
+                    "ic_mean": -9.9848278971304e-08,
+                    "ic_std": 9.190303826289714e-08,
+                    "icir": -1.7840308172978325e-06,
+                    "ic_positive_ratio": 0.0,
+                    "annual_excess": -4.088227811838152e-10,
+                    "top1_annual_ret": -5.756477516882796e-10,
+                    "mean_turnover": 0.0,
+                    "final_score": -4.006195841732563e-08
+                  },
+                  "file_sha256": {
+                    "daily_excess.csv": "82fd31d00e6c628fdbd70de5f7c81759ef327ba3634497797fac668595b895c3",
+                    "daily_ic.csv": "55a33a16b2386dd5c910068678a0df85076e3ebcfd28feb16ce3ded73637f06b",
+                    "daily_missing_diagnostics.csv": "0010df8cb17f737cc985aa4e915ced7c92164302d93f03d4948bd2b1948b33b4",
+                    "daily_price_valid_turnover.csv": "9208c7e57f01907264b87d58e34647f1f943a810c1640a0defb589440e4b5b85",
+                    "daily_return_top_sets.csv": "2e16e8672fb56a93ee7138beb71b3ade9ad44df0e1a07540538590a773f9613b",
+                    "daily_top_sets.csv": "26e9c015fb71ba91aa2be55c6766aaeb4f940bdd4e49c8b8a98658db38fded1c",
+                    "daily_turnover.csv": "78fba16f79dd47c7c9b45a5adeae591c26e991d72ecf30ccfdb3d7464ce43c4c",
+                    "diagnostics.json": "a8008e588759c72665d80c1c1c4d6529c885293d86eb4aec7056e5d9ea1a1e72",
+                    "evaluate_input/submission.csv": "88bd5f4ff2719460e7540b7b9fcde294a36493b9391185dcbad9290d195eaba7",
+                    "evaluate_input/测试集_X.csv": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+                    "evaluate_input/测试集_Y.csv": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+                    "models/lightgbm.txt": "0a5418f6305632aae700b1ec41801db366b1ad10c7197ed86e4e3ce3ccb7183e",
+                    "monthly_metrics.csv": "a389c41148a0a6cc5d60a5bd4d346728067d6d33b2053fab056f81b459cba196",
+                    "predictions.parquet": "ec80c8605c5c4720ac5ac7723d8e86eaae6c9a8e860d9349fe934869a387411e"
+                  },
+                  "official_comparison": {
+                    "official_metrics": {
+                      "ic_mean": 0.02113401950237192,
+                      "ic_std": 0.07124830420833916,
+                      "icir": 0.29662487742267296,
+                      "ic_positive_ratio": 0.640495867768595,
+                      "annual_excess": 0.07055126460379821,
+                      "top1_annual_ret": 0.08997450192391523,
+                      "mean_turnover": 0.4824181889098113,
+                      "final_score": 0.1848935305091448
+                    },
+                    "local_minus_official": {
+                      "ic_mean": 0.0,
+                      "ic_std": 0.0,
+                      "icir": 0.0,
+                      "ic_positive_ratio": 0.0,
+                      "annual_excess": 0.0,
+                      "top1_annual_ret": 0.0,
+                      "mean_turnover": 0.0,
+                      "final_score": 0.0
+                    },
+                    "max_abs_difference": 0.0
+                  },
+                  "elapsed_seconds": 13.598446800000033
+                },
+                {
+                  "split_name": "oos_2024",
+                  "dates": {
+                    "train_start": 20180102,
+                    "train_end": 20231228,
+                    "purge_date": 20231229,
+                    "valid_start": 20240102,
+                    "valid_end": 20241231
+                  },
+                  "split_train_rows": 6770400,
+                  "train_samples": 5659954,
+                  "purge_rows": 4650,
+                  "valid_prediction_rows": 1125300,
+                  "prediction_coverage": 1.0,
+                  "prediction_sha256": "7b30a851843a2ec5261fd6d00b1035f5e04bad6bf8d6a99c53c0a9a97f79e254",
+                  "model_reload_predictions_equal": true,
+                  "original_prediction_hash_matches": true,
+                  "metrics": {
+                    "ic_mean": 0.05252347878523769,
+                    "ic_std": 0.1408500084468986,
+                    "icir": 0.3729036253841575,
+                    "ic_positive_ratio": 0.6735537190082644,
+                    "annual_excess": 0.07403187695388395,
+                    "top1_annual_ret": 0.05998722595358683,
+                    "mean_turnover": 0.7106195201138428,
+                    "final_score": 0.13003309856610742
+                  },
+                  "score_contributions": {
+                    "ic": 0.021009391514095078,
+                    "excess": 0.022209563086165184,
+                    "stability": 0.08681414396584716
+                  },
+                  "diagnostics": {
+                    "note": "Diagnostics only; predictions and official scores are unchanged.",
+                    "price_valid_only_turnover": 0.8458783247146384,
+                    "top_groups": {
+                      "return": {
+                        "top_count": 107238,
+                        "missing_label_count": 0,
+                        "invalid_price_count": 0,
+                        "all_features_missing_count": 0,
+                        "missing_label_fraction": 0.0,
+                        "invalid_price_fraction": 0.0,
+                        "all_features_missing_fraction": 0.0
+                      },
+                      "turnover": {
+                        "top_count": 110363,
+                        "missing_label_count": 30867,
+                        "invalid_price_count": 30828,
+                        "all_features_missing_count": 30828,
+                        "missing_label_fraction": 0.27968612669101056,
+                        "invalid_price_fraction": 0.2793327473881645,
+                        "all_features_missing_fraction": 0.2793327473881645
+                      }
+                    }
+                  },
+                  "metrics_minus_v1": {
+                    "ic_mean": 3.4033289519203036e-07,
+                    "ic_std": -1.577073967223841e-06,
+                    "icir": 6.591544508605107e-06,
+                    "ic_positive_ratio": 0.0,
+                    "annual_excess": 6.868119267755546e-10,
+                    "top1_annual_ret": 2.7741137859083054e-10,
+                    "mean_turnover": 0.0,
+                    "final_score": 1.3633920165068147e-07
+                  },
+                  "file_sha256": {
+                    "daily_excess.csv": "581e661e8592a5fdda88361d6dca182d8f9cbc6e2915895bf4d9841374fe79ca",
+                    "daily_ic.csv": "95562de0b9ba8c883dc6d8b584a2e6b20095036de165fa1bba3e0bf7fc2f0de2",
+                    "daily_missing_diagnostics.csv": "24d61a90f82809ab4ac7829634e669f7fca92d11230cf9d9a5391e899835aa68",
+                    "daily_price_valid_turnover.csv": "b7fea16a9b1ff059cb1c49c40d4c03e808430ce78a1d5953e65ee95888d4ec78",
+                    "daily_return_top_sets.csv": "79330efd9f5023efa3e1970c8ccaa12a9bb8b22591080ee6bacdfe3d46c7de38",
+                    "daily_top_sets.csv": "348fcb46a346383651a7d0e3f8ccc20d3292cd23359b82559b3c2b407b1752fb",
+                    "daily_turnover.csv": "5598b28626328a379934d701d9cb2a5df9b17fdb13985012153de45302e65186",
+                    "diagnostics.json": "57eb2d47bb1c4da4fe9da6866c953570608812a415a93217b218403d4093148a",
+                    "evaluate_input/submission.csv": "2fbf538a7b79b95fce7511069946a5fe9f8a56f080d73e1b227aaaf85806b163",
+                    "evaluate_input/测试集_X.csv": "e3a1f33991d28543ac131db14548f6837bcf9fdb0609676725d6f43d8e3fec96",
+                    "evaluate_input/测试集_Y.csv": "efd3d9d13f94a1ee689ae3a45c47ae43bdb3b8df05a94f57e98d3f63c5898a80",
+                    "models/lightgbm.txt": "3cad7f1729c0d31069761a32a8ca49653e23d2b078e06d5c4a5f03071e8b6d87",
+                    "monthly_metrics.csv": "3f3dca0f03b20bbb312c91ae9f63dfe2d66effa099b2e8dd8bece1871332cef8",
+                    "predictions.parquet": "3a730b6d3cd7ff646efa06f2be3bdf1bd26b911571fc26de8834fd307562bf71"
+                  },
+                  "official_comparison": {
+                    "official_metrics": {
+                      "ic_mean": 0.05252347878523769,
+                      "ic_std": 0.1408500084468986,
+                      "icir": 0.3729036253841575,
+                      "ic_positive_ratio": 0.6735537190082644,
+                      "annual_excess": 0.07403187695388395,
+                      "top1_annual_ret": 0.05998722595358683,
+                      "mean_turnover": 0.7106195201138428,
+                      "final_score": 0.13003309856610742
+                    },
+                    "local_minus_official": {
+                      "ic_mean": 0.0,
+                      "ic_std": 0.0,
+                      "icir": 0.0,
+                      "ic_positive_ratio": 0.0,
+                      "annual_excess": 0.0,
+                      "top1_annual_ret": 0.0,
+                      "mean_turnover": 0.0,
+                      "final_score": 0.0
+                    },
+                    "max_abs_difference": 0.0
+                  },
+                  "elapsed_seconds": 14.514234299999998
+                }
+              ],
+              "reference_summary_sha256": "49d1b08165e03f026696be8a873e0b1475bf60160f8b3c748f614f1181fb61cb",
+              "provenance_sha256": "3784e97159bda2188ec513ab4a240b22d2e3a365e64c040e1ead3567674702a7",
+              "resources": {
+                "elapsed_seconds": 58.33072600000003,
+                "peak_process_rss_mb": 2537.8515625,
+                "logical_cpu_count": 32,
+                "physical_cpu_count": 24
+              }
+            }
+          }
+        ],
+        "per_split": {
+          "primary_2023": {
+            "matches_frozen_v1_1": true,
+            "repeat_equal": true,
+            "prediction_sha256": "a494f88497430041c51febc0cdaebca45a93c187697412dad81be9c0c7cf890d",
+            "metrics": {
+              "ic_mean": 0.02113401950237192,
+              "ic_std": 0.07124830420833916,
+              "icir": 0.29662487742267296,
+              "ic_positive_ratio": 0.640495867768595,
+              "annual_excess": 0.07055126460379821,
+              "top1_annual_ret": 0.08997450192391523,
+              "mean_turnover": 0.4824181889098113,
+              "final_score": 0.1848935305091448
+            }
+          },
+          "oos_2024": {
+            "matches_frozen_v1_1": true,
+            "repeat_equal": true,
+            "prediction_sha256": "7b30a851843a2ec5261fd6d00b1035f5e04bad6bf8d6a99c53c0a9a97f79e254",
+            "metrics": {
+              "ic_mean": 0.05252347878523769,
+              "ic_std": 0.1408500084468986,
+              "icir": 0.3729036253841575,
+              "ic_positive_ratio": 0.6735537190082644,
+              "annual_excess": 0.07403187695388395,
+              "top1_annual_ret": 0.05998722595358683,
+              "mean_turnover": 0.7106195201138428,
+              "final_score": 0.13003309856610742
+            }
+          }
+        },
+        "same_provenance": true
+      },
+      "evidence": "full_repeatability.json",
+      "error": null
+    },
+    {
+      "name": "controls_and_ties",
+      "status": "failed",
+      "blocking": true,
+      "expected": "five controls investigated; official parity and tie sensitivity quantified",
+      "actual": {
+        "error_type": "AssertionError",
+        "error": "three or more shuffled controls match baseline |IC|; investigate before release",
+        "traceback": "Traceback (most recent call last):\n  File \"C:\\fintechathon\\scripts\\audit_baseline.py\", line 261, in check\n    actual = function()\n             ^^^^^^^^^^\n  File \"C:\\fintechathon\\scripts\\audit_baseline.py\", line 516, in <lambda>\n    audit.check(\"controls_and_ties\", \"five controls investigated; official parity and tie sensitivity quantified\", lambda: full_controls(output, accepted))\n                                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\fintechathon\\scripts\\audit_baseline.py\", line 423, in full_controls\n    raise AssertionError(\"three or more shuffled controls match baseline |IC|; investigate before release\")\nAssertionError: three or more shuffled controls match baseline |IC|; investigate before release\n"
+      },
+      "evidence": "controls_and_ties.json",
+      "error": "three or more shuffled controls match baseline |IC|; investigate before release"
+    },
+    {
+      "name": "snapshot_unchanged",
+      "status": "passed",
+      "blocking": true,
+      "expected": "no mixed source or data snapshots",
+      "actual": {
+        "source_dependencies_git_and_all_inputs_unchanged": true
+      },
+      "evidence": "snapshot_unchanged.json",
+      "error": null
+    }
+  ],
+  "decision": {
+    "can_start_feature_experiments": false,
+    "blocking_failures": [
+      "controls_and_ties"
+    ],
+    "critical_unverified": [],
+    "scope": "fixed-data competition experiment baseline; no absolute correctness or tradability guarantee"
+  },
+  "upstream": [
+    {
+      "status": "unverified",
+      "blocking": false,
+      "item": "复权方式及复权数据是否随未来信息回溯修改"
+    },
+    {
+      "status": "unverified",
+      "blocking": false,
+      "item": "历史股票池、退市样本覆盖与幸存者偏差"
+    },
+    {
+      "status": "unverified",
+      "blocking": false,
+      "item": "原始数据事后修订及其历史可得性"
+    },
+    {
+      "status": "unverified",
+      "blocking": false,
+      "item": "当日收盘价、成交量额的实际发布时间和可成交时点"
+    },
+    {
+      "status": "unverified",
+      "blocking": false,
+      "item": "交易成本、成交限制与实际可实现收益（本次比赛验收范围之外）"
+    }
+  ],
+  "resources": {
+    "elapsed_seconds": 213.1483604,
+    "peak_process_rss_mb": 2140.3203125,
+    "audit_directory_bytes": 87621
+  },
+  "provenance_sha256": "c5359279110de9300be9547b31183f693e797f2255e2bdac01fdfff2b645fd78",
+  "report_sha256": "e54078b1566873dfdb578599713a4dedde26bf9b539ce1a21ab4b1dd8950162a"
+}

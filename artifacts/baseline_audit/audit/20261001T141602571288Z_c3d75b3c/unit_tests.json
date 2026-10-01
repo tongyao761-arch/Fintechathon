@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "count": 64,
+  "log": "unit_tests.log",
+  "log_sha256": "13cc94f8ff920424608209ef151e7ca0dbe6c1a4a5c33122d799285d795d6ba3"
+}

@@ -1,0 +1,7 @@
+{
+  "experiment_id": "audit",
+  "run_id": "20261001T140207836741Z_cdfb47a8",
+  "status": "failed",
+  "error_type": "RuntimeError",
+  "error": "baseline not released: {'can_start_feature_experiments': False, 'blocking_failures': ['controls_and_ties'], 'critical_unverified': [], 'scope': 'fixed-data competition experiment baseline; no absolute correctness or tradability guarantee'}"
+}

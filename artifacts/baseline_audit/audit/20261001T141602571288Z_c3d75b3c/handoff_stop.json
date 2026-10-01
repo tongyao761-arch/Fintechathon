@@ -1,0 +1,9 @@
+{
+  "user_requested_stop": true,
+  "can_start_feature_experiments": false,
+  "changed_running_status_files": [
+    "artifacts\\baseline_audit\\audit\\20261001T141602571288Z_c3d75b3c\\status.json",
+    "artifacts\\experiments\\baseline_audit_controls\\20261001T142013103444Z_b86d1ad4\\status.json"
+  ],
+  "successful_existing_runs_preserved": true
+}

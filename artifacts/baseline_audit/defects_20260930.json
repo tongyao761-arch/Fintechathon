@@ -1,0 +1,36 @@
+{
+  "status": "reproduced_before_fix",
+  "git_commit": "71d7e65",
+  "source_sha256": {
+    "src/features/baseline_v1.py": "6755892332ae085694a4232430e07663fbb7805ac97e62b88d2bc526972b8443",
+    "src/data/baseline_panel.py": "fdf90b51da945a0269b0cab0e9c15091e2480c6a4ea75c83b9c90111db7d2412"
+  },
+  "defects": [
+    {
+      "id": "feature_cast_overflow",
+      "file": "src/features/baseline_v1.py",
+      "input": {
+        "prices": [
+          1e-40,
+          1.0
+        ],
+        "dates": [
+          20240102,
+          20240103
+        ]
+      },
+      "actual_infinity_count": 3,
+      "expected": "finite features or NaN after float32 conversion"
+    },
+    {
+      "id": "invalid_calendar_date",
+      "file": "src/data/baseline_panel.py",
+      "input_dates": [
+        20240102,
+        20240199
+      ],
+      "actual": "accepted",
+      "expected": "DataContractError"
+    }
+  ]
+}
