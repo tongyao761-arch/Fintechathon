@@ -1,0 +1,91 @@
+# 34特征阶段进度
+
+当前：第1步已完成并验证，停在本步。未开始第2步筛选；不得把PLAN的后续矩阵当作授权。
+
+已读取实际AGENTS.md/AGENTS.override.md、用户指定7个文件及数据/评分/诊断/留档模块。原先不存在docs/features34。分支ivor-work；初始仅既有未跟踪AGENTS.md，保留。push保护不变。
+
+已新增独立特征模块、配置、候选入口、14项正确性测试、PLAN及冻结文件哈希清单。冻结代码及产物未改。
+
+## 开发验证记录
+
+- 命令：`.\.venv\Scripts\python.exe -B -m unittest tests.test_features34 -v`
+- 首次：14项中1项错误。小端到端fixture只有100只股票，缺失1只后收益评分可用样本不足100，官方评分按规则拒绝；将fixture改为120只，继续保留缺失行，不修改评分规则。
+- 第二次：14项中1项错误。测试读取中文摘要未指定UTF-8，Windows默认GBK解码失败；修正测试显式UTF-8。
+- 第三次：14项新增测试全通过。最终全回归78项全通过，pip check通过。两次开发失败另存 `artifacts/features34_step1/development_failures.json`。
+- 失败路径测试确认越权34特征2024运行在加载数据前被拒绝，写failed状态和耗时、无成功摘要；该测试用临时目录，结果保存在测试日志。
+
+## 本步新增文件及原因
+
+- `src/features/features34.py`：24个新增公式、F组截面排名、明确34列合同、组/单列选择，冻结十特征直接复用。
+- `configs/features34.json`：独立候选配置与14项待授权实验矩阵；当前仅开放3项框架验证。
+- `scripts/run_features34.py`：独立训练入口，固定参数/样本/评分，完整留档，运行前后检查冻结文件和数据来源，阻止本步筛选及34特征2024。
+- `tests/test_features34.py`：14项正确性、选择和失败路径测试，含带缺失验证行的小端到端训练。
+- `docs/features34/PLAN.md`：本阶段合同、计划、选择规则和阶段边界。
+- `docs/features34/FROZEN_REFERENCE.json`：修改前39个冻结文件的实际SHA-256；包含十特征/冻结入口/评分/切分/现有基线产物与复用模块。
+- 本文件：继续工作的事实依据。代码及文档按AGENTS.md要求做本地提交；日志、证据副本、完整运行产物保留本地，不混入代码提交。
+
+## 准确运行命令
+
+在 `C:\fintechathon` 的PowerShell执行：
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest tests.test_features34 -v
+.\.venv\Scripts\python.exe -B -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe -B -m pip check
+.\.venv\Scripts\python.exe -B scripts/run_features34.py --candidate baseline10 --split primary_2023 --experiment-id features34_step1_baseline10_2023
+.\.venv\Scripts\python.exe -B scripts/run_features34.py --candidate baseline10 --split oos_2024 --experiment-id features34_step1_baseline10_2024
+.\.venv\Scripts\python.exe -B scripts/run_features34.py --candidate full34 --split primary_2023 --experiment-id features34_step1_full34_2023
+```
+
+上面的三项全量运行已经完成，不能将本列表理解为下一步再次运行的待办。每次执行会创建新run_id，不覆盖已有目录。
+
+## 实际运行及结果
+
+以下目录均位于 `artifacts/experiments/`，含status/config/provenance/summary、模型、Parquet预测、原始评分输入、逐日/月度/缺失诊断、特征缺失统计。
+
+|候选/验证年|目录|训练样本|验证预测|耗时|采样峰值RSS|
+|---|---|---:|---:|---:|---:|
+|10 / 2023|features34_step1_baseline10_2023/20261001T144903748616Z_fb241809|4,597,785|1,125,300|38.34秒|2117.05 MiB|
+|10 / 2024|features34_step1_baseline10_2024/20261001T144954793056Z_f06492bb|5,659,954|1,125,300|38.73秒|2044.57 MiB|
+|34 / 2023|features34_step1_full34_2023/20261001T145046998460Z_a2802673|4,597,785|1,125,300|79.85秒|4440.75 MiB|
+
+|指标|10 / 2023|10 / 2024|34 / 2023（仅框架验证）|
+|---|---:|---:|---:|
+|综合分|0.1848935305091448|0.13003309856610742|0.24370305750837315|
+|Rank IC|0.02113401950237192|0.05252347878523769|0.06681659921293406|
+|年化超额收益|0.07055126460379821|0.07403187695388395|0.23070696913897798|
+|官方换手|0.4824181889098113|0.7106195201138428|0.5074522430616462|
+|价格有效样本换手|0.8527606458401363|0.8458783247146384|0.8759681884957207|
+|换手Top组标签缺失占比|0.5615038052843193|0.27968612669101056|0.5615486789201608|
+|換手Top组十特征全缺失占比|0.5613961085582998|0.2793327473881645|0.5613961085582998|
+|換手Top组候选输入全缺失占比|0.5613961085582998|0.2793327473881645|0.0|
+|本地/官方最大标量差异|0|0|0|
+
+34特征中原始涨跌停标记有有效值，所以“全部候选列缺失”占比可以为0；这不代表价格有效。保留十特征全缺失、标签缺失、价格无效三个诊断，以防混淆。
+
+十特征两年的预测哈希与冻结v1_1完全相同，评分所有标量及缺失诊断完全相同：
+
+- 2023：`a494f88497430041c51febc0cdaebca45a93c187697412dad81be9c0c7cf890d`
+- 2024：`7b30a851843a2ec5261fd6d00b1035f5e04bad6bf8d6a99c53c0a9a97f79e254`
+- 34特征2023：`6c5a6cae8d24e23a49ff62340a355dccadba9c991242b4a781f781f1a52da57e`
+
+三次覆盖率均100%，模型保存重载预测逐值一致，预测全部有限。34列覆盖完整7,900,350行，34列均有有限观测、无无穷值；缺失历史等行保留NaN。完整面板、训练资格、验证全部键分别留有缺失统计；每年12个月诊断已保存。所有评分真值为float64，严格容差保持1e-12。三次源码快照一致，评分标签/预测主键及所有split逐文件哈希已独立核验。39个冻结文件哈希不变。完整运行无失败。
+
+运行来源记录的是执行时父提交及当时未提交工作区，精确版本以provenance源码哈希为准；不把父提交说成当前已完成代码提交。
+
+全量验证后，git diff --check指出候选入口末尾多一个空行；只删除该空行，无可执行逻辑变化，不重复全量实验。精确执行版入口保留于 `artifacts/features34_step1/executed_sources/run_features34.py`，执行版/最终版SHA-256记录在 `final_source_note.json`。三个全量实验间源码仍完全一致；最终版本只存在这一处可验证的空行差异。
+
+## 证据索引
+
+- 总验收：`artifacts/features34_step1/acceptance.json`
+- 测试原始日志与状态：`artifacts/features34_step1/tests.txt`、`tests_result.json`；最终文件版本复核仍为78项通过，见`final_tests.txt`、`final_tests_result.json`。
+- 依赖检查：`artifacts/features34_step1/dependency_check.json`
+- 两次测试开发失败：`artifacts/features34_step1/development_failures.json`
+- 小型证据副本：`artifacts/features34_step1/baseline10_primary_2023/`、`baseline10_oos_2024/`、`full34_primary_2023/`；包括每次summary/config/status/provenance，以及月度、缺失诊断和完整/分切分特征统计。大文件只在完整运行目录保留。
+- 冻结参照摘要SHA-256：`4c224882b2c3dba69fe9b1f28815aced90f2f9f1076d53d0d5eb2dcfacbe3228`。
+
+## 剩余问题与下一步
+
+本步无未解决的验收失败。尚未验证新增特征在2021/2022/2024的表现，也未证明任何单个新增特征应保留或删除。34特征2023的单次结果不能作为选择结论。
+
+等待第2步提示词。收到明确授权后，先读本文件和PLAN、确认源码/数据/合同未变，再按授权实施2023组实验；同口径已有10/34运行可复用，其余矩阵未运行。开发年份切分仅在PLAN中核实和拟定，尚未新增执行配置。2024新增候选仍封锁，最后复核需要另行授权。

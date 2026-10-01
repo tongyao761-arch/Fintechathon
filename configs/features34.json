@@ -1,0 +1,113 @@
+{
+  "stage": "step1_framework_only",
+  "allowed_runs": {
+    "baseline10": [
+      "primary_2023",
+      "oos_2024"
+    ],
+    "full34": [
+      "primary_2023"
+    ]
+  },
+  "experiments": {
+    "baseline10": {
+      "groups": []
+    },
+    "full34": {
+      "groups": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "10+A": {
+      "groups": [
+        "A"
+      ]
+    },
+    "34-A": {
+      "groups": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "10+B": {
+      "groups": [
+        "B"
+      ]
+    },
+    "34-B": {
+      "groups": [
+        "A",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "10+C": {
+      "groups": [
+        "C"
+      ]
+    },
+    "34-C": {
+      "groups": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "10+D": {
+      "groups": [
+        "D"
+      ]
+    },
+    "34-D": {
+      "groups": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F"
+      ]
+    },
+    "10+E": {
+      "groups": [
+        "E"
+      ]
+    },
+    "34-E": {
+      "groups": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F"
+      ]
+    },
+    "10+F": {
+      "groups": [
+        "F"
+      ]
+    },
+    "34-F": {
+      "groups": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    }
+  },
+  "reference_summary": "artifacts/baseline_v1_1/summary.json",
+  "frozen_manifest": "docs/features34/FROZEN_REFERENCE.json"
+}
