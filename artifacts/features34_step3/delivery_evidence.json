@@ -1,0 +1,13 @@
+{
+  "report_sha256": "b90313211a7db3937d3b47c5fb86f13220833413934466d5f6e35052c2967266",
+  "progress_sha256": "bb22cd1ee0b32c97b220e0491f7939c354f5ad6c3e1ca8721d70cb5ce07fcbb9",
+  "plan_sha256": "fe652d042f081abd34d88375709d23a89fbb58dd1fb42fe144c63f7aa71b933f",
+  "acceptance_sha256": "fe59f60a6aa0eee38977663ca53d51b6b46d14a338cb13f51e4a9e39e224720c",
+  "proposed_next_candidates": [
+    "lean31",
+    "full34"
+  ],
+  "stage_stopped": true,
+  "2024_training_scoring_selection_used": false,
+  "final_model_features_selected": false
+}

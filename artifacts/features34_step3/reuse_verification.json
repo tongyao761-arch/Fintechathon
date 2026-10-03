@@ -1,0 +1,71 @@
+{
+  "shared_extension": {
+    "previous_sha256": "a7676e09cab68e5263c942f6af8d86db8c60611a929c642421adea0189ee5692",
+    "current_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+    "full_ast_equal_after_only_documented_extensions": true,
+    "unchanged_training_scoring_feature_diagnostic_logic": true
+  },
+  "unchanged_sources": {
+    "requirements-model.in": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+    "requirements-model.lock": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+    "requirements.txt": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+    "configs/features34.json": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+    "configs/features34_step2.json": "3db07d995ef104a2bf94a33b21b3b5343ef3c777de262803b76ba57932156133",
+    "configs/splits.yaml": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+    "scripts/audit_baseline.py": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+    "scripts/run_baseline_2024.py": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+    "scripts/run_features34_step2.py": "5b1d69b94c577ebd106d7ece02cddc0eea73140140a6f4af2f62035816a8ab53",
+    "scripts/run_lightgbm_baseline.py": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+    "src/__init__.py": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+    "tests/test_baseline_acceptance.py": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+    "tests/test_baseline_audit.py": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+    "tests/test_features34.py": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+    "tests/test_features34_step2.py": "fb647aa72cbf4bea5a2d1173d9873433b6bd8aa74df2ea4249816ff623d41dae",
+    "tests/test_lightgbm_baseline.py": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+    "tests/test_official_score.py": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+    "tests/test_splits.py": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+    "tests/test_submission.py": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+    "tests/__init__.py": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+    "赛题五/evaluate.py": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+    "src/data/baseline_panel.py": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+    "src/data/data_contract.py": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+    "src/data/load_panel.py": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+    "src/data/profile_raw.py": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+    "src/data/__init__.py": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+    "src/features/baseline_v1.py": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+    "src/features/features34.py": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+    "src/features/__init__.py": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+    "src/metrics/diagnostics.py": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+    "src/metrics/official.py": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+    "src/metrics/__init__.py": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+    "src/validation/experiment.py": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+    "src/validation/leakage.py": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+    "src/validation/splits.py": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+    "src/validation/submission.py": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+    "src/validation/__init__.py": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035"
+  },
+  "runs": [
+    {
+      "candidate": "baseline10",
+      "previous_candidate": "baseline10",
+      "directory": "artifacts/experiments/features34_step1_baseline10_2023/20261001T144903748616Z_fb241809",
+      "summary_sha256": "bcc5c87b043aed3cd3b97b7171a48459d42cd81f9f37978f5e95d5a538f09ce6",
+      "saved_files_verified": true
+    },
+    {
+      "candidate": "full34",
+      "previous_candidate": "full34",
+      "directory": "artifacts/experiments/features34_step1_full34_2023/20261001T145046998460Z_a2802673",
+      "summary_sha256": "34a2c7d0d6a0a5db2f6a655223b021cfca713556617f787b87762f08c722f6eb",
+      "saved_files_verified": true
+    },
+    {
+      "candidate": "lean31",
+      "previous_candidate": "34-A",
+      "directory": "artifacts/experiments/features34_step2_34minusA/20261003T084241291962Z_47787afa",
+      "summary_sha256": "d15f6981cd757e558c0a4b996879f9ec4084082db5014c531eff7a2c8fa2e4f0",
+      "saved_files_verified": true
+    }
+  ],
+  "step2_acceptance_sha256": "14c658f713cfb4f84418564060d8abb3d57fcc6e63a59a6a66318c56893c8803"
+}

@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "phase": "pre-existing untracked file hash inventory",
+  "error": "git ls-files quoted non-ASCII filenames; literal quoted name could not be opened",
+  "models_affected": false
+}

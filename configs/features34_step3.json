@@ -1,0 +1,87 @@
+{
+  "stage": "step3_development_only",
+  "experiments": {
+    "baseline10": {
+      "groups": []
+    },
+    "full34": {
+      "groups": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "lean31": {
+      "groups": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "lean27": {
+      "groups": [
+        "B",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "lean23": {
+      "groups": [
+        "B",
+        "D",
+        "F"
+      ]
+    }
+  },
+  "splits": {
+    "dev_2021": {
+      "train_start": 20180102,
+      "train_end": 20201230,
+      "purge_date": 20201231,
+      "valid_start": 20210104,
+      "valid_end": 20211231
+    },
+    "dev_2022": {
+      "train_start": 20180102,
+      "train_end": 20211230,
+      "purge_date": 20211231,
+      "valid_start": 20220104,
+      "valid_end": 20221230
+    },
+    "primary_2023": {
+      "train_start": 20180102,
+      "train_end": 20221229,
+      "purge_date": 20221230,
+      "valid_start": 20230103,
+      "valid_end": 20231229
+    }
+  },
+  "selection_rule": {
+    "primary": "same-year official score delta versus baseline10",
+    "conflict": "any negative annual delta is a cross-year conflict, not a robust improvement",
+    "order": [
+      "mean_annual_delta descending",
+      "worst_annual_delta descending",
+      "positive_months descending"
+    ],
+    "near_mean_delta": 0.003,
+    "near_worst_delta": 0.003,
+    "near_positive_months": 2,
+    "tie_break": "within all three tolerances prefer fewer features; do not claim statistical equivalence",
+    "max_next_candidates": 2
+  },
+  "reference_summary": "artifacts/baseline_v1_1/summary.json",
+  "frozen_manifest": "docs/features34/FROZEN_REFERENCE.json",
+  "boundary_source": {
+    "path": "赛题五/赛题五数据/训练集.csv",
+    "sha256": "e9d23e87f7e1f9439f28f7dd951d129ea49eaacda5ad650da8576a830a6deac9",
+    "date_count": 1699,
+    "dates_sha256": "0080ba626ec263d3bb7e197fe57c19273a6f17992f7e6071158024fb42621043"
+  }
+}

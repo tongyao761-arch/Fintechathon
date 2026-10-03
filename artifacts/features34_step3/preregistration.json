@@ -1,0 +1,174 @@
+{
+  "config_sha256": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+  "candidates_sha256": "10859614079ffc265f035b4e8762741c80e8b8fe4985476feaa8b628947da18f",
+  "config": {
+    "stage": "step3_development_only",
+    "experiments": {
+      "baseline10": {
+        "groups": []
+      },
+      "full34": {
+        "groups": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "lean31": {
+        "groups": [
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "lean27": {
+        "groups": [
+          "B",
+          "D",
+          "E",
+          "F"
+        ]
+      },
+      "lean23": {
+        "groups": [
+          "B",
+          "D",
+          "F"
+        ]
+      }
+    },
+    "splits": {
+      "dev_2021": {
+        "train_start": 20180102,
+        "train_end": 20201230,
+        "purge_date": 20201231,
+        "valid_start": 20210104,
+        "valid_end": 20211231
+      },
+      "dev_2022": {
+        "train_start": 20180102,
+        "train_end": 20211230,
+        "purge_date": 20211231,
+        "valid_start": 20220104,
+        "valid_end": 20221230
+      },
+      "primary_2023": {
+        "train_start": 20180102,
+        "train_end": 20221229,
+        "purge_date": 20221230,
+        "valid_start": 20230103,
+        "valid_end": 20231229
+      }
+    },
+    "selection_rule": {
+      "primary": "same-year official score delta versus baseline10",
+      "conflict": "any negative annual delta is a cross-year conflict, not a robust improvement",
+      "order": [
+        "mean_annual_delta descending",
+        "worst_annual_delta descending",
+        "positive_months descending"
+      ],
+      "near_mean_delta": 0.003,
+      "near_worst_delta": 0.003,
+      "near_positive_months": 2,
+      "tie_break": "within all three tolerances prefer fewer features; do not claim statistical equivalence",
+      "max_next_candidates": 2
+    },
+    "reference_summary": "artifacts/baseline_v1_1/summary.json",
+    "frozen_manifest": "docs/features34/FROZEN_REFERENCE.json",
+    "boundary_source": {
+      "path": "赛题五/赛题五数据/训练集.csv",
+      "sha256": "e9d23e87f7e1f9439f28f7dd951d129ea49eaacda5ad650da8576a830a6deac9",
+      "date_count": 1699,
+      "dates_sha256": "0080ba626ec263d3bb7e197fe57c19273a6f17992f7e6071158024fb42621043"
+    }
+  },
+  "source": {
+    "data": {
+      "path": "赛题五\\赛题五数据\\训练集.csv",
+      "bytes": 946832276,
+      "sha256": "e9d23e87f7e1f9439f28f7dd951d129ea49eaacda5ad650da8576a830a6deac9"
+    },
+    "git": {
+      "commit": "1add72f526408ec64c153859b132862eca90c117",
+      "branch": "ivor-work",
+      "status": "M docs/features34/PLAN.md\n M docs/features34/PROGRESS.md\n M scripts/run_features34.py\n?? AGENTS.md\n?? artifacts/features34_step1/\n?? artifacts/features34_step2/G02_command.json\n?? artifacts/features34_step2/G02_run.txt\n?? artifacts/features34_step2/G03_command.json\n?? artifacts/features34_step2/G03_run.txt\n?? artifacts/features34_step2/G04_command.json\n?? artifacts/features34_step2/G04_run.txt\n?? artifacts/features34_step2/G05_command.json\n?? artifacts/features34_step2/G05_run.txt\n?? artifacts/features34_step2/G06_command.json\n?? artifacts/features34_step2/G06_run.txt\n?? artifacts/features34_step2/G07_command.json\n?? artifacts/features34_step2/G07_run.txt\n?? artifacts/features34_step2/G09_command.json\n?? artifacts/features34_step2/G09_run.txt\n?? artifacts/features34_step2/G10_command.json\n?? artifacts/features34_step2/G10_run.txt\n?? artifacts/features34_step2/G11_command.json\n?? artifacts/features34_step2/G11_run.txt\n?? artifacts/features34_step2/G12_command.json\n?? artifacts/features34_step2/G12_run.txt\n?? artifacts/features34_step2/G13_command.json\n?? artifacts/features34_step2/G13_run.txt\n?? artifacts/features34_step2/G14_command.json\n?? artifacts/features34_step2/G14_run.txt\n?? artifacts/features34_step2/executed_sources/\n?? artifacts/features34_step2/preflight.json\n?? artifacts/features34_step3/\n?? artifacts/features34_step3_checks/\n?? configs/features34_step3.json\n?? docs/features34/STEP3_CANDIDATES.md\n?? scripts/run_features34_step3.py\n?? tests/test_features34_step3.py"
+    },
+    "source_sha256": {
+      "configs/features34.json": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+      "configs/features34_step2.json": "3db07d995ef104a2bf94a33b21b3b5343ef3c777de262803b76ba57932156133",
+      "configs/features34_step3.json": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+      "configs/splits.yaml": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+      "requirements-model.in": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+      "requirements-model.lock": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+      "requirements.txt": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+      "scripts/audit_baseline.py": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+      "scripts/run_baseline_2024.py": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+      "scripts/run_features34.py": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "scripts/run_features34_step2.py": "5b1d69b94c577ebd106d7ece02cddc0eea73140140a6f4af2f62035816a8ab53",
+      "scripts/run_features34_step3.py": "ad5ef7f0415fd589007c47c7e6575273e7ef651500999b25b9d749c19da9581d",
+      "scripts/run_lightgbm_baseline.py": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+      "src/__init__.py": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+      "src/data/__init__.py": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+      "src/data/baseline_panel.py": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+      "src/data/data_contract.py": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+      "src/data/load_panel.py": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+      "src/data/profile_raw.py": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+      "src/features/__init__.py": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+      "src/features/baseline_v1.py": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+      "src/features/features34.py": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+      "src/metrics/__init__.py": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+      "src/metrics/diagnostics.py": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+      "src/metrics/official.py": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+      "src/validation/__init__.py": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035",
+      "src/validation/experiment.py": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+      "src/validation/leakage.py": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+      "src/validation/splits.py": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+      "src/validation/submission.py": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+      "tests/__init__.py": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+      "tests/test_baseline_acceptance.py": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+      "tests/test_baseline_audit.py": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+      "tests/test_features34.py": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+      "tests/test_features34_step2.py": "fb647aa72cbf4bea5a2d1173d9873433b6bd8aa74df2ea4249816ff623d41dae",
+      "tests/test_features34_step3.py": "923c788da17ce0652734bf8acd9b5f47dfc2c146c537dbbd09f8730fdbfe5408",
+      "tests/test_lightgbm_baseline.py": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+      "tests/test_official_score.py": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+      "tests/test_splits.py": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+      "tests/test_submission.py": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+      "赛题五/evaluate.py": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5"
+    },
+    "dependencies": {
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "cloudpickle": "3.1.2",
+      "colorama": "0.4.6",
+      "iniconfig": "2.3.0",
+      "joblib": "1.6.0",
+      "lightgbm": "4.7.0",
+      "loguru": "0.7.3",
+      "narwhals": "2.26.0",
+      "numpy": "2.3.4",
+      "packaging": "26.3",
+      "pandas": "2.3.3",
+      "pip": "25.0.1",
+      "pluggy": "1.6.0",
+      "psutil": "7.2.2",
+      "pyarrow": "25.0.1",
+      "pytest": "9.1.1",
+      "python-dateutil": "2.9.0.post0",
+      "pytz": "2026.4",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1",
+      "six": "1.17.0",
+      "threadpoolctl": "3.7.0",
+      "tzdata": "2026.4",
+      "win32_setctime": "1.2.0"
+    }
+  },
+  "started_at": "2026-10-04T02:06:55.209191+08:00"
+}

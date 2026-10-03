@@ -27,6 +27,7 @@ from src.features.features34 import build_features34, select_features, FEATURE_C
 from src.metrics.diagnostics import baseline_diagnostics
 from src.validation.experiment import experiment_run, provenance, sha256_file, write_json
 from src.validation.splits import get_split
+from src.validation.splits import TimeSplit
 
 def run_split(
     panel: pd.DataFrame,
@@ -34,10 +35,13 @@ def run_split(
     split_name: str,
     *,
     output_dir: Path,
-    reference: dict,
+    reference: dict | None,
     columns: tuple[str, ...],
+    research_split: TimeSplit | None = None,
 ) -> dict[str, Any]:
-    split = get_split(split_name)
+    split = research_split if research_split is not None else get_split(split_name)
+    if split.name != split_name:
+        raise ValueError("research split name mismatch")
     split_started = time.perf_counter()
     train_period, _ = split.masks(panel)
     train_mask, valid_mask = split_masks(panel, split)
@@ -76,9 +80,9 @@ def run_split(
     prediction_sha256 = hashlib.sha256(
         np.asarray(prediction_values, dtype="<f8").tobytes()
     ).hexdigest()
-    if columns == BASE_COLUMNS and prediction_sha256 != reference["prediction_sha256"]:
+    if reference is not None and columns == BASE_COLUMNS and prediction_sha256 != reference["prediction_sha256"]:
         raise AssertionError(f"{split_name}: original prediction hash changed; investigate before acceptance")
-    if int(train_mask.sum()) != reference["train_samples"] or int(valid_mask.sum()) != reference["valid_prediction_rows"]:
+    if reference is not None and (int(train_mask.sum()) != reference["train_samples"] or int(valid_mask.sum()) != reference["valid_prediction_rows"]):
         raise AssertionError(f"{split_name}: frozen sample counts changed")
 
     valid = panel.loc[
@@ -117,7 +121,7 @@ def run_split(
     contributions = {"ic": metrics_with_details["ic_mean"] * 0.4,
                      "excess": metrics_with_details["annual_excess"] * 0.3,
                      "stability": (1 - metrics_with_details["mean_turnover"]) * 0.3}
-    if columns == BASE_COLUMNS:
+    if reference is not None and columns == BASE_COLUMNS:
         compare_metrics(metrics_with_details, reference["metrics"])
         if diagnostics["top_groups"] != reference["diagnostics"]["top_groups"] or diagnostics["price_valid_only_turnover"] != reference["diagnostics"]["price_valid_only_turnover"]:
             raise AssertionError("ten-feature diagnostic reproduction differs from baseline_v1_1")
@@ -141,11 +145,11 @@ def run_split(
         "prediction_coverage": 1.0,
         "prediction_sha256": prediction_sha256,
         "model_reload_predictions_equal": True,
-        "original_prediction_hash_matches": prediction_sha256 == reference["prediction_sha256"],
+        "original_prediction_hash_matches": None if reference is None else prediction_sha256 == reference["prediction_sha256"],
         "metrics": metrics_with_details,
         "score_contributions": contributions,
         "diagnostics": diagnostics,
-        "metrics_minus_baseline_v1_1": {key: value - reference["metrics"][key]
+        "metrics_minus_baseline_v1_1": None if reference is None else {key: value - reference["metrics"][key]
                              for key, value in metrics_with_details.items()},
         "file_sha256": {str(p.relative_to(output_dir)).replace("\\", "/"): sha256_file(p)
                         for p in sorted(output_dir.rglob("*")) if p.is_file()},

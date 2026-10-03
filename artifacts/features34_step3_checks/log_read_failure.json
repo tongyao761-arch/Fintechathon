@@ -1,0 +1,5 @@
+{
+  "phase": "test wrapper log decoding",
+  "status": "failed",
+  "error": "Windows child stdout used non-UTF8 bytes; full raw test log preserved; test status is independently recorded in tests_result.json"
+}

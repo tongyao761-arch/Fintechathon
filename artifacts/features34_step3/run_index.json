@@ -1,0 +1,109 @@
+{
+  "runs": [
+    {
+      "candidate": "baseline10",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step1_baseline10_2023/20261001T144903748616Z_fb241809",
+      "mode": "reused_step2",
+      "summary_sha256": "bcc5c87b043aed3cd3b97b7171a48459d42cd81f9f37978f5e95d5a538f09ce6"
+    },
+    {
+      "candidate": "full34",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step1_full34_2023/20261001T145046998460Z_a2802673",
+      "mode": "reused_step2",
+      "summary_sha256": "34a2c7d0d6a0a5db2f6a655223b021cfca713556617f787b87762f08c722f6eb"
+    },
+    {
+      "candidate": "lean31",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step2_34minusA/20261003T084241291962Z_47787afa",
+      "mode": "reused_step2",
+      "summary_sha256": "d15f6981cd757e558c0a4b996879f9ec4084082db5014c531eff7a2c8fa2e4f0"
+    },
+    {
+      "candidate": "baseline10",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_baseline10_dev_2021/20261003T180659133903Z_69346cd9",
+      "mode": "new_run",
+      "summary_sha256": "2ffc53d2d34721448ae1b1c6f07fd472bf038ba3afddd8d35df4fa4c2fba4171"
+    },
+    {
+      "candidate": "full34",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_full34_dev_2021/20261003T180738608686Z_70f49bc1",
+      "mode": "new_run",
+      "summary_sha256": "6ebe1a22e24694b5b41abc9328943d3acbbe65fd8ff8a8f40f5a2a9be8051bdb"
+    },
+    {
+      "candidate": "lean31",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_lean31_dev_2021/20261003T180857919690Z_9a8fa5e8",
+      "mode": "new_run",
+      "summary_sha256": "8b5ef9764d44000ed75bc15e37f45a5013921980e33c8f4a33cde3d1709a80b5"
+    },
+    {
+      "candidate": "lean27",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_lean27_dev_2021/20261003T181015997209Z_96c67c52",
+      "mode": "new_run",
+      "summary_sha256": "c7bc9b2dfa1f9469c230f67ce79cbf9b322b8ae215bc9b8a73e3356586cc7d74"
+    },
+    {
+      "candidate": "lean23",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_lean23_dev_2021/20261003T181125231667Z_9ef817b9",
+      "mode": "new_run",
+      "summary_sha256": "6398920b0f120a40034af3d70b7a623ba19452c7cac4f150b551aa6de2d15296"
+    },
+    {
+      "candidate": "baseline10",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_baseline10_dev_2022/20261003T181231328895Z_863de785",
+      "mode": "new_run",
+      "summary_sha256": "2228917da7a16b9ed7cc1877106b386f2db4c698b1860ae990a7c6b13150198d"
+    },
+    {
+      "candidate": "full34",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_full34_dev_2022/20261003T181310927243Z_d27fb847",
+      "mode": "new_run",
+      "summary_sha256": "f52a6c074a4887e48b8f831374f6f196818d290937dc597b063a2514dfeb2e11"
+    },
+    {
+      "candidate": "lean31",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_lean31_dev_2022/20261003T181431453037Z_61467b0e",
+      "mode": "new_run",
+      "summary_sha256": "f043754acf863aba73debdaa4869558974b76d46166bb412c4ec82fbf4cf27f1"
+    },
+    {
+      "candidate": "lean27",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_lean27_dev_2022/20261003T181549918246Z_da789081",
+      "mode": "new_run",
+      "summary_sha256": "10423b83975d8deaf21c0edd6d917fcb205eb29f4338b4c1f60c55dab4fbc47c"
+    },
+    {
+      "candidate": "lean23",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_lean23_dev_2022/20261003T181700052564Z_3c1a69af",
+      "mode": "new_run",
+      "summary_sha256": "3a9bb12c76142a54592070c1a87afc00b51202986ee912cfd58dab5e77c2629e"
+    },
+    {
+      "candidate": "lean27",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step3_lean27_primary_2023/20261003T181808243036Z_c2a920bf",
+      "mode": "new_run",
+      "summary_sha256": "0d18e9c538255e32d98a24d32cf3635eed9950ab5236d14e9f14576c64b9df02"
+    },
+    {
+      "candidate": "lean23",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step3_lean23_primary_2023/20261003T181921150905Z_793b522c",
+      "mode": "new_run",
+      "summary_sha256": "6e741ff2527be8b52da2b4dab71435176967407ef478b5d8bed66c8514097b98"
+    }
+  ]
+}

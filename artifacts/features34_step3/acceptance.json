@@ -1,0 +1,163 @@
+{
+  "accepted": true,
+  "stage": "step3_development_only",
+  "runs": [
+    {
+      "candidate": "baseline10",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step1_baseline10_2023/20261001T144903748616Z_fb241809",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "full34",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step1_full34_2023/20261001T145046998460Z_a2802673",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "lean31",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step2_34minusA/20261003T084241291962Z_47787afa",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "baseline10",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_baseline10_dev_2021/20261003T180659133903Z_69346cd9",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "full34",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_full34_dev_2021/20261003T180738608686Z_70f49bc1",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "lean31",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_lean31_dev_2021/20261003T180857919690Z_9a8fa5e8",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "lean27",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_lean27_dev_2021/20261003T181015997209Z_96c67c52",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "lean23",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_lean23_dev_2021/20261003T181125231667Z_9ef817b9",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "baseline10",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_baseline10_dev_2022/20261003T181231328895Z_863de785",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "full34",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_full34_dev_2022/20261003T181310927243Z_d27fb847",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "lean31",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_lean31_dev_2022/20261003T181431453037Z_61467b0e",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "lean27",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_lean27_dev_2022/20261003T181549918246Z_da789081",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "lean23",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_lean23_dev_2022/20261003T181700052564Z_3c1a69af",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "lean27",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step3_lean27_primary_2023/20261003T181808243036Z_c2a920bf",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "lean23",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step3_lean23_primary_2023/20261003T181921150905Z_793b522c",
+      "hashes_verified": 16,
+      "keys_match_raw_panel": true,
+      "official_max_abs_difference": 0.0
+    }
+  ],
+  "frozen_files_verified": 39,
+  "new_runs": 12,
+  "reused_runs": 3,
+  "regression_tests_passed": 88,
+  "pip_check_passed": true,
+  "all_raw_validation_keys_verified": true,
+  "training_eligibility_counts_verified": true,
+  "actual_trading_day_purge_verified": true,
+  "source_snapshots_verified": true,
+  "pre_registration_unchanged": true,
+  "all_comparison_tables_recomputed": true,
+  "branch": "ivor-work",
+  "push_protections_unchanged": true,
+  "existing_untracked_files_preserved": 103,
+  "used_2024": false,
+  "feature_checks_run": false,
+  "final_submission_generated": false,
+  "proposed_next_candidates": [
+    "lean31",
+    "full34"
+  ],
+  "audit_elapsed_seconds": 24.55455380000012,
+  "auxiliary_failures": [
+    "artifacts/features34_step3_checks/log_read_failure.json",
+    "artifacts/features34_step3_checks/preflight_attempt_01.json"
+  ],
+  "model_run_failures": 0,
+  "audit_script_sha256": "fb0c65a1de551b4e0665baef5ea2cc6a9aaa1cb4d594fbd98b75c83427a012d3",
+  "evidence_sha256": {
+    "comparison.csv": "2143d27ea9d6dbd61a30f4dbe1f26a55b01d0674269c076fd7a80d9902b9d1e7",
+    "monthly_comparison.csv": "554263acd646a51d736678aa98cb18751623813cdf2b10941a7a9ff4e81c889c",
+    "monthly_missing_diagnostics.csv": "ca26738cc8b78d5aa2e4afded13eefac2807691abdecaded57b7985fd051583f",
+    "candidate_ranking.csv": "3322a6479f157bd02ff5e9b62151f02dea920dd502ccd672a55da036da86fa03",
+    "split_audit.csv": "0adbf806130c4b3d864429f1c7ecc2c6f7b343482ec9e54bd1b29138b07e38de",
+    "monthly_stability.csv": "22ce24971ec8934441f07dd030d8f8c97c88885bb82e4e398da0c8827ac123f1",
+    "conditional_group_deletions.csv": "398e896e167f6bfffe9033daa099f7e343388063b496607b4d5a2301a9f61590"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "report_sha256": "b90313211a7db3937d3b47c5fb86f13220833413934466d5f6e35052c2967266",
+  "generator_sha256": "e26b558b019424fbd768ae2b60cf9b969e6805c33fbd30d5420e7b236bbf5de9",
+  "proposed": [
+    "lean31",
+    "full34"
+  ],
+  "source_acceptance_sha256": "fe59f60a6aa0eee38977663ca53d51b6b46d14a338cb13f51e4a9e39e224720c"
+}
