@@ -1,0 +1,148 @@
+{
+  "stage": "step2_groups_2023",
+  "allowed_runs": {
+    "baseline10": [
+      "primary_2023"
+    ],
+    "full34": [
+      "primary_2023"
+    ],
+    "10+A": [
+      "primary_2023"
+    ],
+    "34-A": [
+      "primary_2023"
+    ],
+    "10+B": [
+      "primary_2023"
+    ],
+    "34-B": [
+      "primary_2023"
+    ],
+    "10+C": [
+      "primary_2023"
+    ],
+    "34-C": [
+      "primary_2023"
+    ],
+    "10+D": [
+      "primary_2023"
+    ],
+    "34-D": [
+      "primary_2023"
+    ],
+    "10+E": [
+      "primary_2023"
+    ],
+    "34-E": [
+      "primary_2023"
+    ],
+    "10+F": [
+      "primary_2023"
+    ],
+    "34-F": [
+      "primary_2023"
+    ]
+  },
+  "experiments": {
+    "baseline10": {
+      "groups": []
+    },
+    "full34": {
+      "groups": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "10+A": {
+      "groups": [
+        "A"
+      ]
+    },
+    "34-A": {
+      "groups": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "10+B": {
+      "groups": [
+        "B"
+      ]
+    },
+    "34-B": {
+      "groups": [
+        "A",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "10+C": {
+      "groups": [
+        "C"
+      ]
+    },
+    "34-C": {
+      "groups": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "10+D": {
+      "groups": [
+        "D"
+      ]
+    },
+    "34-D": {
+      "groups": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F"
+      ]
+    },
+    "10+E": {
+      "groups": [
+        "E"
+      ]
+    },
+    "34-E": {
+      "groups": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F"
+      ]
+    },
+    "10+F": {
+      "groups": [
+        "F"
+      ]
+    },
+    "34-F": {
+      "groups": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    }
+  },
+  "reference_summary": "artifacts/baseline_v1_1/summary.json",
+  "frozen_manifest": "docs/features34/FROZEN_REFERENCE.json"
+}

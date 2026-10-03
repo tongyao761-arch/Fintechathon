@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "stage": "step2_groups_2023",
+  "serial": true,
+  "completed": [
+    "baseline10",
+    "10+A",
+    "10+B",
+    "10+C",
+    "10+D",
+    "10+E",
+    "10+F",
+    "full34",
+    "34-A",
+    "34-B",
+    "34-C",
+    "34-D",
+    "34-E",
+    "34-F"
+  ],
+  "elapsed_seconds": 791.4293845999998
+}

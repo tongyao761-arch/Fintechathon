@@ -1,0 +1,5 @@
+Command: .\.venv\Scripts\python.exe -B -m unittest discover -s tests -v
+Final terminal result (not the full log):
+Ran 82 tests in 29.447s
+OK
+Exit code: 0

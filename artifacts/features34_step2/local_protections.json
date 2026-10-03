@@ -1,0 +1,7 @@
+{
+  "branch": "ivor-work",
+  "origin_push_url": "https://invalid.invalid/NO_PUSH",
+  "pre_push_sha256": "34ba7cd00e02f985f36badb582397a194b546046069021012ee98a6f184bf9a9",
+  "pre_existing_untracked_AGENTS_sha256": "1385cfaf9e9adc4dd83acdbc6862f74cfc1ebade9b0b4ae4b1fb95f1968bb5e2",
+  "pre_existing_untracked_step1_artifacts_preserved": true
+}

@@ -1,0 +1,124 @@
+{
+  "accepted": true,
+  "stage": "step2_groups_2023",
+  "experiments": [
+    {
+      "candidate": "baseline10",
+      "directory": "artifacts/experiments/features34_step1_baseline10_2023/20261001T144903748616Z_fb241809",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "10+A",
+      "directory": "artifacts/experiments/features34_step2_10plusA/20261003T083744568146Z_173e76e3",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "10+B",
+      "directory": "artifacts/experiments/features34_step2_10plusB/20261003T083829786738Z_fcddf2f5",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "10+C",
+      "directory": "artifacts/experiments/features34_step2_10plusC/20261003T083915765465Z_7e1e246a",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "10+D",
+      "directory": "artifacts/experiments/features34_step2_10plusD/20261003T084005872011Z_175f85a5",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "10+E",
+      "directory": "artifacts/experiments/features34_step2_10plusE/20261003T084052156369Z_cb1d01ae",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "10+F",
+      "directory": "artifacts/experiments/features34_step2_10plusF/20261003T084136552341Z_402e7ecd",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "full34",
+      "directory": "artifacts/experiments/features34_step1_full34_2023/20261001T145046998460Z_a2802673",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "34-A",
+      "directory": "artifacts/experiments/features34_step2_34minusA/20261003T084241291962Z_47787afa",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "34-B",
+      "directory": "artifacts/experiments/features34_step2_34minusB/20261003T084404309061Z_7605747e",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "34-C",
+      "directory": "artifacts/experiments/features34_step2_34minusC/20261003T084528056410Z_0c89663a",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "34-D",
+      "directory": "artifacts/experiments/features34_step2_34minusD/20261003T084646063337Z_01b925e1",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "34-E",
+      "directory": "artifacts/experiments/features34_step2_34minusE/20261003T084809273777Z_846ae82b",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "candidate": "34-F",
+      "directory": "artifacts/experiments/features34_step2_34minusF/20261003T084930537961Z_73608e43",
+      "saved_hashes_verified": 16,
+      "official_max_abs_difference": 0.0
+    }
+  ],
+  "new_runs": 12,
+  "reused_runs": 2,
+  "full_regression_tests_passed": 82,
+  "actual_disk_artifacts_reverified": true,
+  "exact_comparison_metrics_match_json": true,
+  "source_snapshot_matches_execution_and_current_files": true,
+  "table_rows": {
+    "comparison": 14,
+    "monthly": 168,
+    "group_effects": 6,
+    "top_membership": 28
+  },
+  "frozen_files_verified": 39,
+  "push_protection_unchanged": true,
+  "pre_existing_AGENTS_preserved": true,
+  "2024_candidate_scores_used": false,
+  "final_retention_list_created": false,
+  "audit_first_attempt_failed": "audit_attempt_01.json",
+  "audit_second_attempt": "passed",
+  "report_sha256": "96cef4fee4750b97c5239001c2e220cad7b92d91718884cdba4a1fac9a83c8e0",
+  "progress_sha256": "595620286aa9545dc787c3ffe5c6192b0e664d6edb2aa4dafab875c8199c317d",
+  "evidence_sha256": {
+    "summary.json": "611bdcbbcbb76841366aa5408de129a12628026a9b90db1c3934aaea8c09e8c7",
+    "status.json": "c759e5355d2f3e7e7ba4b3d0bf44bd106a9e439ac297da5fb3855b77ed4f8b65",
+    "reuse_verification.json": "b647468e19ede8105fead3ad6cef368d2bb96e6443a88536f7c47248d1b3a937",
+    "tests_result.json": "25e4f5233651a70a646481c7b179eb40b9ea2ca37169cb3998e67a229cd67770",
+    "tests_summary.txt": "57bbe62aeb3f79e018fbedb31ccb31bfcc83f4ae17b94b5d9594d0b9fe2b00c0",
+    "audit_attempt_01.json": "df480c7ec75b865c8f5c515174e12a928426c71c8f051dfb421460c4fe15b986",
+    "local_protections.json": "782aaa1d346460bdb2d0fde358766f701f4b7b88974074185ae935366b502453",
+    "comparison.csv": "b0fb180945e2a3e11d3470a8d4105a36cd6979bf21d649acc3c047e454629034",
+    "monthly_comparison.csv": "32cf9e461352b64ea07ae9eee724ce142a017f56e63f21df5a021f7803a767b5",
+    "group_effects.csv": "cc643364e2d0ed8080f6765b5ed8f803fa884e00a068dd7a97c24ebf13757d66",
+    "top_membership_comparison.csv": "4ef6a3e70c7b1de4c5b1990e6ee567789df3836ed3720f92f833d352b012fdd5"
+  }
+}

@@ -1,4 +1,4 @@
-"""Independent features34 framework runner; current authorization is step 1 only."""
+"""Independent features34 runner with explicit stage and experiment boundaries."""
 from __future__ import annotations
 
 import argparse
@@ -23,7 +23,7 @@ from scripts.run_lightgbm_baseline import (
 )
 from src.data.baseline_panel import load_raw_baseline_panel, extract_truth_files
 from src.features.baseline_v1 import FEATURE_COLUMNS as BASE_COLUMNS
-from src.features.features34 import build_features34, select_features, FEATURE_COLUMNS, FEATURE_DEFINITIONS
+from src.features.features34 import build_features34, select_features, FEATURE_COLUMNS, FEATURE_DEFINITIONS, GROUPS
 from src.metrics.diagnostics import baseline_diagnostics
 from src.validation.experiment import experiment_run, provenance, sha256_file, write_json
 from src.validation.splits import get_split
@@ -171,18 +171,29 @@ def feature_statistics(features, *, train_mask=None, valid_mask=None):
 
 
 def resolve_selection(config, candidate, split_name):
-    if config["stage"] != "step1_framework_only":
-        raise ValueError("this runner currently authorizes only step 1")
+    stage = config["stage"]
+    if stage not in ("step1_framework_only", "step2_groups_2023"):
+        raise ValueError("unsupported authorization stage")
     spec = config["experiments"][candidate]
     if set(spec) - {"groups", "include", "exclude"}:
         raise ValueError("candidate config contains unsupported fields; model tuning is prohibited")
     columns = select_features(**spec)
     if split_name not in config["allowed_runs"].get(candidate, []):
-        raise ValueError("run outside current step-1 authorization")
-    if columns not in (BASE_COLUMNS, FEATURE_COLUMNS):
-        raise ValueError("step 1 permits only baseline10 or full34, not feature selection")
-    if split_name == "oos_2024" and columns != BASE_COLUMNS:
-        raise ValueError("2024 is authorized only for ten-feature reproduction in step 1")
+        raise ValueError("run outside current stage authorization")
+    if stage == "step1_framework_only":
+        if columns not in (BASE_COLUMNS, FEATURE_COLUMNS):
+            raise ValueError("step 1 permits only baseline10 or full34, not feature selection")
+        if split_name == "oos_2024" and columns != BASE_COLUMNS:
+            raise ValueError("2024 is authorized only for ten-feature reproduction in step 1")
+    else:
+        expected = {"baseline10": {"groups": []}, "full34": {"groups": list(GROUPS)}}
+        for group in GROUPS:
+            expected[f"10+{group}"] = {"groups": [group]}
+            expected[f"34-{group}"] = {"groups": [g for g in GROUPS if g != group]}
+        if split_name != "primary_2023":
+            raise ValueError("step 2 permits only primary_2023; 2024 is prohibited")
+        if candidate not in expected or spec != expected[candidate]:
+            raise ValueError("step 2 permits only the fixed fourteen group experiments")
     return columns
 
 
@@ -213,7 +224,7 @@ def main(argv=None):
             columns = resolve_selection(config, args.candidate, args.split)
             write_json(output / "config.json", {"requested": config, "candidate": args.candidate,
                        "split": args.split, "features": list(columns), "model_params": MODEL_PARAMS,
-                       "purpose": "framework validation only; no feature-selection conclusion"})
+                       "purpose": config["stage"]})
             reference_path = ROOT / config["reference_summary"]
             reference = json.loads(reference_path.read_text(encoding="utf-8"))
             references = {s["split_name"]: s for s in reference["splits"]}
@@ -252,7 +263,7 @@ def main(argv=None):
             if current_metadata["source_sha256"] != metadata["source_sha256"] or sha256_file(args.config) != metadata["candidate_config_sha256"]:
                 raise AssertionError("source/config changed during run")
             write_json(split_output / "summary.json", result)
-            summary = {"stage": "step1_framework_only", "candidate": args.candidate,
+            summary = {"stage": config["stage"], "candidate": args.candidate,
                        "run_id": output.name, "started_at": started_at,
                        "finished_at": datetime.now().astimezone().isoformat(),
                        "features": list(columns), "feature_count": len(columns),
@@ -263,7 +274,7 @@ def main(argv=None):
                        "provenance_sha256": sha256_file(output / "provenance.json"),
                        "config_sha256": sha256_file(output / "config.json"),
                        "frozen_files_unchanged": True, "splits": [result],
-                       "purpose": "framework validation only; no feature-selection conclusion",
+                       "purpose": config["stage"],
                        "resources": {"elapsed_seconds": time.perf_counter()-started,
                                      "peak_process_rss_mb": memory.peak_rss_bytes/(1024**2)}}
             write_json(output / "summary.json", summary)

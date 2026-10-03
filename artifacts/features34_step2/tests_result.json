@@ -1,0 +1,10 @@
+{
+  "command": ".\\.venv\\Scripts\\python.exe -B -m unittest discover -s tests -v",
+  "exit_code": 0,
+  "total": 82,
+  "passed": 82,
+  "elapsed_seconds": 29.447,
+  "evidence": "Terminal execution completed with Ran 82 tests in 29.447s / OK; tests_summary.txt retains final result stanza, full output was returned in tool transcript.",
+  "new_boundary_tests": 4,
+  "expected_failure_tests_are_not_experiment_failures": true
+}

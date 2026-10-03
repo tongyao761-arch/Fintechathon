@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "phase": "final_disk_audit",
+  "error_type": "UnicodeDecodeError",
+  "error": "PowerShell-invoked audit used Windows GBK default to read a UTF-8 JSON containing Chinese paths.",
+  "elapsed_seconds": 1.8182227,
+  "experiment_runs_affected": 0,
+  "success_acceptance_generated": false,
+  "correction": "Use explicit encoding=utf-8 for every JSON read; rerun disk audit only, no experiment rerun."
+}
