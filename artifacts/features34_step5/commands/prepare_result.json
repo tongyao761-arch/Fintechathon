@@ -1,0 +1,10 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "scripts/run_features34_step5.py",
+    "prepare"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 10.486080200000288
+}

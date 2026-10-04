@@ -1,0 +1,22 @@
+{
+  "runs": [
+    {
+      "item": {
+        "id": "S5_S4R_lean31_minus4_2024",
+        "candidate": "S4R_lean31_minus4",
+        "split": "oos_2024"
+      },
+      "directory": "artifacts/experiments/S5_S4R_lean31_minus4_2024/20261004T153205837882Z_7694eca8",
+      "summary_sha256": "e90a3328db7606b3a781d6dcab0602a768b7552fcbcfb76cb6fd763d628fa798"
+    },
+    {
+      "item": {
+        "id": "S5_S4R_full34_minus3_2024",
+        "candidate": "S4R_full34_minus3",
+        "split": "oos_2024"
+      },
+      "directory": "artifacts/experiments/S5_S4R_full34_minus3_2024/20261004T153236927517Z_ba7c2aec",
+      "summary_sha256": "1a6380650149960c9c194d11f92320bd9fc824be2beff58a452ba1f81755bd0c"
+    }
+  ]
+}

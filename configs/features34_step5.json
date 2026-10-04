@@ -1,0 +1,12 @@
+{
+  "stage": "step5_limited_2024_review",
+  "candidate_source": "artifacts/features34_step4_revision/frozen_candidates.json",
+  "development_config": "configs/features34_step3.json",
+  "candidates": ["S4R_lean31_minus4", "S4R_full34_minus3"],
+  "split": "oos_2024",
+  "new_training_runs": 2,
+  "baseline_directory": "artifacts/experiments/baseline_v1_1/20260927T114614962794Z_2f5b6764",
+  "review_scope": "2024 previously viewed; restricted review set, not untouched blind test",
+  "interpretation": "all four annual score deltas positive supports next-stage consideration; any negative annual delta is cross-year degradation; no further search",
+  "bootstrap": {"block_trading_days": 20, "repetitions": 2000, "seed": 20261004, "confidence": 0.95}
+}

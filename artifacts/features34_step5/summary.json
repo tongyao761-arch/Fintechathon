@@ -1,0 +1,40 @@
+{
+  "accepted": true,
+  "stage": "step5_limited_2024_review",
+  "new_runs": 2,
+  "reused_development_runs": 9,
+  "reused_2024_baseline": 1,
+  "candidates": [
+    {
+      "candidate": "S4R_lean31_minus4",
+      "all_four_years_above_baseline10": true,
+      "negative_score_years": "",
+      "delta_score_2024": 0.13011295333872688,
+      "worst_annual_delta": 0.07859686820871142,
+      "delta_2024_minus_delta_2023": 0.05151608513001546,
+      "positive_months_2024": 11,
+      "negative_months_2024": 1,
+      "worst_month_2024": 202409,
+      "worst_month_delta_2024": -0.12600258402296782,
+      "next_stage": "有证据支持进入下一阶段，保留月度及统计风险",
+      "evidence_limit": "restricted previously viewed 2024; exploratory development selection; not independent blind test or final replacement proof"
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "all_four_years_above_baseline10": true,
+      "negative_score_years": "",
+      "delta_score_2024": 0.11901613217645565,
+      "worst_annual_delta": 0.06518217667101067,
+      "delta_2024_minus_delta_2023": 0.05383395550544498,
+      "positive_months_2024": 11,
+      "negative_months_2024": 1,
+      "worst_month_2024": 202409,
+      "worst_month_delta_2024": -0.22170469184541866,
+      "next_stage": "有证据支持进入下一阶段，保留月度及统计风险",
+      "evidence_limit": "restricted previously viewed 2024; exploratory development selection; not independent blind test or final replacement proof"
+    }
+  ],
+  "review_scope": "2024 previously viewed; restricted review set, not untouched blind test",
+  "final_submission_generated": false,
+  "acceptance_sha256": "a17b9b717b17714df7471a2df061d58cd59d42609ee574b2a7d40e2cb29352f3"
+}

@@ -1,6 +1,6 @@
 # 34特征阶段进度
 
-当前：第1、2、3、4步验收通过。2026-10-04完成full34/lean31逐列删除与跨年复核，冻结原full34及lean31并停止。2024仍未授权。以下旧记录保留作历史证据。
+当前：第1—5步验收通过。2026-10-04完成第5步两项最终候选2024受限复核，已汇总开发结果、月度风险及逐列条件性名单并停止。2024此前已被查看，不称未接触的盲测。以下旧记录保留作历史证据，不构成继续运行授权。
 
 已读取实际AGENTS.md/AGENTS.override.md、用户指定7个文件及数据/评分/诊断/留档模块。原先不存在docs/features34。分支ivor-work；初始仅既有未跟踪AGENTS.md，保留。push保护不变。
 
@@ -219,3 +219,32 @@ flag_limit_down的保留主要涉及官方含缺标签行的Top换手集合：�
 证据：docs/features34/STEP4_REVISION_RULES.md、STEP4_REVISION_REPORT.md；artifacts/features34_step4_revision/中的registration.json、matrix.json、probe_evidence.csv、single_decisions.csv、joint_results.csv、candidate_results.csv、monthly_candidate_results.csv、candidate_ranking.csv、frozen_candidates.json、run_index.json、acceptance.json、summary.json、preflight.json、failures.json、EVIDENCE_INDEX.md和commands/。完整模型和大体积预测留在run_index.json指向的不可覆盖目录。
 
 入口：scripts/run_features34_step4_revision.py prepare/run/aggregate；独立审计scripts/audit_features34_step4_revision.py。规则和源码已冻结；已有一致完成实验核验后复用。仅本地ivor-work，按实际AGENTS.md创建本次相关代码/文档/小型证据提交，不进行远程写操作。第4步修订已完成并停止，2024复核等待另行授权。
+
+
+## 第5步：最终候选2024受限复核（2026-10-04）
+
+本次授权已完成并通过独立验收，完成后停止。先读取实际规则、指定文件及前四步报告/配置/原始结果和验收，再于23:30:44（Asia/Shanghai）冻结两候选；首项新运行目录于23:32:05创建。选择仅沿用第4步修订的开发排序，不依据本次2024结果改特征。2024已查看过，仅称受限使用的复核集。
+
+事前FROZEN_CANDIDATES.json保存27列S4R_lean31_minus4、31列S4R_full34_minus3的精确列序、逐列公式、参数、选择理由、开发证据来源及源码/配置/数据/依赖哈希；registration.json保存不可覆盖的冻结哈希。十特征固定保留；完整历史X面板先计算34列，再投影和筛训练资格；全部验证键保留。模型/种子/标签/资格/切分/purge/公式和原24列合同未变。
+
+仅新增两项oos_2024训练，复用已核验冻结十特征2024及9项开发运行（3个baseline、6个候选）。训练20180102—20231228，purge 20231229，验证20240102—20241231；同为5,659,954训练资格行、1,125,300预测、覆盖100%。完整两项矩阵116.51秒、采样峰值RSS4633.87 MiB；独立验收96.85秒。
+
+|2024候选|IC|年化超额|官方换手|综合分|对十特征分差|价格有效换手|Top标签缺失|
+|---|---:|---:|---:|---:|---:|---:|---:|
+|baseline10|0.052523479|0.074031877|0.710619520|0.130033099|0|0.845878325|27.9686%|
+|S4R_lean31_minus4（27）|0.094958854|0.552933946|0.812392244|0.260146052|+0.130112953|0.858511940|15.6556%|
+|S4R_full34_minus3（31）|0.092694632|0.452954843|0.746383584|0.249049231|+0.119016132|0.867215676|26.2253%|
+
+两候选2021/2022/2023/2024均优于同年十特征；没有相对同年baseline转负的年度退化，均有证据支持进入下一阶段，27列沿用开发第一候选地位。四年最差分差分别+0.078596868/+0.065182177。2024绝对分数比各自2023略低（约-0.003344347/-0.001026476），但对照优势分别增加+0.051516085/+0.053833956；不能将跨市场年份绝对分数变化等同于相对基线失败。本步未复核原full34/lean31的2024，不能证明联合删除对原背景的2024边际增益。
+
+两候选2024均11/12个月涨分，唯一负月9月：27列-0.126002584，31列-0.221704692。月度风险不能被全年涨分遮盖。配对20交易日/2000次固定预测区间对十特征四年均在0以上，2024分别[0.085577984,0.172397332]/[0.062097742,0.173639978]；并非涵盖探索性选择、多重检验、训练与未来分布风险的最终证明。第4步对原候选的区间不确定性原样保留。
+
+2024对十特征IC/收益/低换手贡献增量：27列+0.016974150/+0.143670621/-0.030531817；31列+0.016068461/+0.113676890/-0.010729219。涨分由IC和收益贡献支持，不支持将通过缺失排名降低换手作为主要涨分来源；官方及价格有效换手均增加。但缺失排名确实影响官方Top集合：27列缺标签成员变化占全部成员变化9.3371%、价格无效9.3076%，31列1.5639%/1.5293%。2021所有换手Top成员变化都来自缺失/无效子集，2022也有5.47%/7.22%；不能以2023变化很小外推所有年份。现有诊断不能精确分离缺失排名对换手的因果贡献，不追加干预搜索。
+
+逐列开发结论保留并单独记录实际候选输入：full34保留5/删除0/不确定19；lean31保留4/删除2/不确定18（含缺席A三列）。联合移出列不自动变为确定删除，本步没有2024单列证据，无法统一成无背景限制的24列名单。完整48条在feature_decisions.csv及报告。
+
+102项回归测试、pip check和独立验收通过。核验两项保存模型重载预测、原始全部键/资格、源码/配置/冻结先后顺序及文件哈希；重新从保存CSV调用官方评分，全部标量最大差0；重新计算月度、缺失、价格有效换手与候选特征缺失统计。39个冻结文件、前四步产物、既有未跟踪文件和Git配置/pre-push保护保持。运行/辅助失败0，failures.json保留空清单和命令退出码。原始测试日志字节保留在checks，显示时按替换解码，未重写日志。
+
+证据：docs/features34/STEP5_REPORT.md；artifacts/features34_step5/中的FROZEN_CANDIDATES.json、registration.json、run_index.json、annual_comparison.csv（12行）、monthly_comparison.csv（144行）、monthly_missing_diagnostics.csv（288行）、top_membership_comparison.csv（8行）、paired_intervals.csv、candidate_conclusions.csv、feature_decisions.csv（48行）、acceptance.json、summary.json、status.json、preflight.json、tests_result.json、dependency_check.json、failures.json及commands/。完整两项模型/预测/历史评分输入由run_index.json指向；执行源码快照和原始日志保留本地。人工补充的分项解读与生成报告分开记录，交付哈希见delivery_verification.json。
+
+命令：项目.venv解释器运行scripts/run_features34_step5.py prepare/run，再运行scripts/audit_features34_step5.py。已完成实验不再重做。仅本地ivor-work，按实际AGENTS.md仅提交本步相关代码/文档及小型证据，无远程写入、push保护更改、进一步搜索/调参/平滑或最终比赛submission。第5步完成后停止。

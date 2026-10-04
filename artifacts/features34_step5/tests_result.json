@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 36.27647280000019,
+  "test_count": 102,
+  "raw_log_sha256": "8de2b48f68fa5bc356bff1a9b1097ac9b59f31b69df835ec9bc10487d0527b35",
+  "raw_log_encoding": "native subprocess output retained; decoded with replacement only for display"
+}
