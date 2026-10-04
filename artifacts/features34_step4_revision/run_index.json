@@ -1,0 +1,103 @@
+{
+  "runs": [
+    {
+      "item": {
+        "id": "S4R_full34_minus3_2021",
+        "version": "S4R_full34_minus3",
+        "context": "full34",
+        "exclude": [
+          "ret_10d",
+          "limit_up_count_5d",
+          "volatility_20d_rank_pct"
+        ],
+        "split": "dev_2021",
+        "kind": "joint"
+      },
+      "directory": "artifacts/experiments/S4R_full34_minus3_2021/20261004T090607834910Z_eadde3a4",
+      "summary_sha256": "3ee9ce3ba860de59dd1f40aa18083b4a459c0f6f2a463d18372a4cfd6ff817f2"
+    },
+    {
+      "item": {
+        "id": "S4R_full34_minus3_2022",
+        "version": "S4R_full34_minus3",
+        "context": "full34",
+        "exclude": [
+          "ret_10d",
+          "limit_up_count_5d",
+          "volatility_20d_rank_pct"
+        ],
+        "split": "dev_2022",
+        "kind": "joint"
+      },
+      "directory": "artifacts/experiments/S4R_full34_minus3_2022/20261004T090627775954Z_bffc5f5a",
+      "summary_sha256": "e9938f24367b7837b7d297c52e8d5e8cd8ebaaec5da8842360337648e21495f5"
+    },
+    {
+      "item": {
+        "id": "S4R_full34_minus3_2023",
+        "version": "S4R_full34_minus3",
+        "context": "full34",
+        "exclude": [
+          "ret_10d",
+          "limit_up_count_5d",
+          "volatility_20d_rank_pct"
+        ],
+        "split": "primary_2023",
+        "kind": "joint"
+      },
+      "directory": "artifacts/experiments/S4R_full34_minus3_2023/20261004T090648724514Z_0e18c478",
+      "summary_sha256": "42247e488cc133dfb3dc3c089b733ec7aeb49e4b41c18d870d51c1242cba2de3"
+    },
+    {
+      "item": {
+        "id": "S4R_lean31_minus4_2021",
+        "version": "S4R_lean31_minus4",
+        "context": "lean31",
+        "exclude": [
+          "price_position_20d",
+          "lower_shadow",
+          "ret_5d_rank_pct",
+          "volatility_20d_rank_pct"
+        ],
+        "split": "dev_2021",
+        "kind": "joint"
+      },
+      "directory": "artifacts/experiments/S4R_lean31_minus4_2021/20261004T090711374528Z_074f66ba",
+      "summary_sha256": "fd205a25d71e39effac175ba7b3665f2695eb77232eae96bdf6fd12ae8258cdb"
+    },
+    {
+      "item": {
+        "id": "S4R_lean31_minus4_2022",
+        "version": "S4R_lean31_minus4",
+        "context": "lean31",
+        "exclude": [
+          "price_position_20d",
+          "lower_shadow",
+          "ret_5d_rank_pct",
+          "volatility_20d_rank_pct"
+        ],
+        "split": "dev_2022",
+        "kind": "joint"
+      },
+      "directory": "artifacts/experiments/S4R_lean31_minus4_2022/20261004T090730132670Z_e52a05ef",
+      "summary_sha256": "1981ee25e9df86e9d4b894ac37646c6b28f8dbf1420ae407f5fda517ac805480"
+    },
+    {
+      "item": {
+        "id": "S4R_lean31_minus4_2023",
+        "version": "S4R_lean31_minus4",
+        "context": "lean31",
+        "exclude": [
+          "price_position_20d",
+          "lower_shadow",
+          "ret_5d_rank_pct",
+          "volatility_20d_rank_pct"
+        ],
+        "split": "primary_2023",
+        "kind": "joint"
+      },
+      "directory": "artifacts/experiments/S4R_lean31_minus4_2023/20261004T090750752259Z_95be596d",
+      "summary_sha256": "7e59ea3de6ba396ba070011e17876db3adcafc5ca6ac959082eebba8797a9f31"
+    }
+  ]
+}

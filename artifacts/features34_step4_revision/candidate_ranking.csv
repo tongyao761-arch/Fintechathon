@@ -1,0 +1,5 @@
+candidate,context,original,eligible,feature_count,score_2023,mean_score,worst_delta_vs_baseline10,worst_delta_vs_parent,mean_delta_vs_parent,annual_conflict,statistical_uncertainty,positive_months_vs_parent,worst_month_vs_parent,reason,rank
+S4R_full34_minus3,full34,False,True,31,0.25007570718015548,0.35062885262638982,0.065182176671010672,0.0016031466852862719,0.0059573538897396972,False,True,21,-0.052774173908373856,score rule passed; diagnostics disclosed,2
+S4R_lean31_minus4,lean31,False,True,27,0.26349039871785623,0.35640951248313396,0.078596868208711423,0.0057926716509635323,0.011154177471587784,False,True,25,-0.056869472755128658,score rule passed; diagnostics disclosed,1
+full34,full34,True,True,34,0.24370305750837315,0.34467149873665009,0.05880952699922834,0,0,False,False,0,0,original fallback,4
+lean31,lean31,True,True,31,0.24740264671207587,0.3452553350115462,0.062509116202931064,0,0,False,False,0,0,original fallback,3

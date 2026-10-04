@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "C:\\fintechathon",
+  "started_at": 1791104588.3189664
+}

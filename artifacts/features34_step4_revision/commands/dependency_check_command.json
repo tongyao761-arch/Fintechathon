@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "pip",
+    "check"
+  ],
+  "cwd": "C:\\fintechathon",
+  "started_at": 1791104618.9522853
+}

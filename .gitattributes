@@ -1,3 +1,10 @@
 artifacts/experiments/baseline_v1_1/20260927T114614962794Z_2f5b6764/primary_2023/models/lightgbm.txt -text -diff
 artifacts/experiments/baseline_v1_1/20260927T114614962794Z_2f5b6764/oos_2024/models/lightgbm.txt -text -diff
 artifacts/baseline_audit/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+artifacts/features34_step4_revision/** -text
+configs/features34_step4_revision.json -text
+scripts/run_features34_step4_revision.py -text
+scripts/audit_features34_step4_revision.py -text
+tests/test_features34_step4_revision.py -text
+docs/features34/STEP4_REVISION_RULES.md -text
+docs/features34/STEP4_REVISION_REPORT.md -text

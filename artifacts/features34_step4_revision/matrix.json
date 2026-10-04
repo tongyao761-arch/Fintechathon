@@ -1,0 +1,84 @@
+{
+  "direction": "after minus original same-year candidate",
+  "experiments": [
+    {
+      "id": "S4R_full34_minus3_2021",
+      "version": "S4R_full34_minus3",
+      "context": "full34",
+      "exclude": [
+        "ret_10d",
+        "limit_up_count_5d",
+        "volatility_20d_rank_pct"
+      ],
+      "split": "dev_2021",
+      "kind": "joint"
+    },
+    {
+      "id": "S4R_full34_minus3_2022",
+      "version": "S4R_full34_minus3",
+      "context": "full34",
+      "exclude": [
+        "ret_10d",
+        "limit_up_count_5d",
+        "volatility_20d_rank_pct"
+      ],
+      "split": "dev_2022",
+      "kind": "joint"
+    },
+    {
+      "id": "S4R_full34_minus3_2023",
+      "version": "S4R_full34_minus3",
+      "context": "full34",
+      "exclude": [
+        "ret_10d",
+        "limit_up_count_5d",
+        "volatility_20d_rank_pct"
+      ],
+      "split": "primary_2023",
+      "kind": "joint"
+    },
+    {
+      "id": "S4R_lean31_minus4_2021",
+      "version": "S4R_lean31_minus4",
+      "context": "lean31",
+      "exclude": [
+        "price_position_20d",
+        "lower_shadow",
+        "ret_5d_rank_pct",
+        "volatility_20d_rank_pct"
+      ],
+      "split": "dev_2021",
+      "kind": "joint"
+    },
+    {
+      "id": "S4R_lean31_minus4_2022",
+      "version": "S4R_lean31_minus4",
+      "context": "lean31",
+      "exclude": [
+        "price_position_20d",
+        "lower_shadow",
+        "ret_5d_rank_pct",
+        "volatility_20d_rank_pct"
+      ],
+      "split": "dev_2022",
+      "kind": "joint"
+    },
+    {
+      "id": "S4R_lean31_minus4_2023",
+      "version": "S4R_lean31_minus4",
+      "context": "lean31",
+      "exclude": [
+        "price_position_20d",
+        "lower_shadow",
+        "ret_5d_rank_pct",
+        "volatility_20d_rank_pct"
+      ],
+      "split": "primary_2023",
+      "kind": "joint"
+    }
+  ],
+  "joint_versions_before": 0,
+  "joint_versions_planned": 2,
+  "addback_versions_before": 0,
+  "addback_versions_planned": 0
+}

@@ -1,0 +1,14 @@
+{
+  "accepted": true,
+  "evidence_hashes_verified": 20,
+  "executed_sources_verified": 49,
+  "old_files_and_protections_preserved": true,
+  "report_copy_equal": true,
+  "validated_candidates": [
+    "S4R_lean31_minus4",
+    "S4R_full34_minus3"
+  ],
+  "tracked_docs_updated_after_audit_only": true,
+  "used_2024": false,
+  "model_runs_unchanged": true
+}

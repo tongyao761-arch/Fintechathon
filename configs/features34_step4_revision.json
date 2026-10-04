@@ -1,0 +1,27 @@
+{
+  "stage": "step4_score_revision_development_only",
+  "revision_type": "exploratory_after_observing_existing_development_results",
+  "step3_config": "configs/features34_step3.json",
+  "old_config": "configs/features34_step4.json",
+  "contexts": {"full34": ["A", "B", "C", "D", "E", "F"], "lean31": ["B", "C", "D", "E", "F"]},
+  "rules": {
+    "near_score": 0.001,
+    "clear_year_degradation": 0.005,
+    "single_retention": "all three direct annual deltas strictly below -near_score",
+    "single_deletion": "all three direct annual deltas strictly above near_score",
+    "uncertain": "incomplete, near annual effect or mixed direction; context conditional",
+    "probe": "min annual delta >= -near_score, mean annual delta > near_score, 2023 delta > near_score",
+    "joint": "2023 delta > near_score, mean annual delta > 0, min annual delta >= -clear_year_degradation, every year above baseline10",
+    "ranking": "2023 official score descending; ties within 1e-12: worst yearly delta vs baseline10, mean yearly score descending, feature count ascending, candidate ID ascending",
+    "score_tie": 1e-12,
+    "diagnostics_are_vetoes": false,
+    "bootstrap_is_veto": false,
+    "bootstrap": {"block_trading_days": 20, "repetitions": 2000, "seed": 20261004, "confidence": 0.95}
+  },
+  "versions": [
+    {"candidate": "S4R_full34_minus3", "context": "full34", "exclude": ["ret_10d", "limit_up_count_5d", "volatility_20d_rank_pct"]},
+    {"candidate": "S4R_lean31_minus4", "context": "lean31", "exclude": ["price_position_20d", "lower_shadow", "ret_5d_rank_pct", "volatility_20d_rank_pct"]}
+  ],
+  "budgets": {"new_joint_versions": 2, "new_training_runs": 6, "new_addback_versions": 0, "stage_joint_versions_max": 2, "stage_addback_versions_max": 2},
+  "used_2024": false
+}

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "scripts/run_features34_step4_revision.py",
+    "prepare"
+  ],
+  "cwd": "C:\\fintechathon",
+  "started_at": 1791104650.6512384
+}

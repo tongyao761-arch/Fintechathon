@@ -192,3 +192,28 @@ flag_limit_down的保留主要涉及官方含缺标签行的Top换手集合：�
 执行入口：scripts/run_features34_step4.py screen/cross；复核清单和报告生成脚本保存在证据目录。独立审计入口scripts/audit_features34_step4.py。已有完成ID核验后复用；执行源码快照包含修正前审计器，后审计修正单独登记，不能将其当作训练口径变化或重跑理由。
 
 仅本地ivor-work，push保护不变，既有无关修改/未跟踪内容保持。按实际AGENTS.md仅提交本次代码、文档及小型证据；完整运行、日志和源码快照留本地。第4步到此停止，不执行2024复核或其他后续步骤。
+
+## 第4步修订：官方得分导向（2026-10-04）
+
+用户确认并授权实施修订计划。保留旧第4步规则、代码、名单、报告和全部实验，不将旧结论静默替换。新规则基于已经观察的135项旧单删结果，属于探索性修订；registration.json于六项新训练前冻结规则/配置/源码和联合矩阵，不称旧结果是新规则的事前验证。
+
+保持模型、种子、标签、资格、数据、十特征、24新增列和三个开发切分/purge不变。官方综合分是主要判定指标；95%配对块区间和IC/收益/换手/月度/缺失诊断保留，但不再独立否决总分。接近绝对值≤0.001，明显退化<−0.005；单列三年直接分差均<−0.001判保留，均>0.001判删除，其他不确定。区间跨零另外标统计不确定，决策标签不表示统计显著、联合可加性或未来名次保证。
+
+复用前核验135项旧单删的保存文件哈希、模型输入、预测和来源以及9项同年参照，未重训单删。单列准入最小年度分差≥−0.001、均值>0.001、2023>0.001，准确产生固定七个背景—列组合，分别组成两个联合版本。先完整历史面板计算34列，再按模型列投影；排名源中间计算不删除，验证全部键和缺失行保留。2024未用于训练、评分或筛选，无最终比赛submission。
+
+|联合版本|背景|删除列|2021对原候选|2022对原候选|2023对原候选|2023官方分|
+|---|---|---|---:|---:|---:|---:|
+|S4R_full34_minus3（31列）|full34|ret_10d、limit_up_count_5d、volatility_20d_rank_pct|+0.009896265|+0.001603147|+0.006372650|0.250075707|
+|S4R_lean31_minus4（27列）|lean31|price_position_20d、lower_shadow、ret_5d_rank_pct、volatility_20d_rank_pct|+0.005792672|+0.011582109|+0.016087752|0.263490399|
+
+两个联合版本均通过固定总分准入，六项训练成功；不能把单删收益求和推断联合结果。对十特征的2021/2022/2023分差，31列为+0.159159983/+0.122912849/+0.065182177，27列为+0.151386320/+0.134613800/+0.078596868。联合两版均三年涨分，没有年度明显退化；全阶段联合2版额度已用完，回补0，不追加搜索。
+
+按固定2023官方分优先的规则，冻结第一候选S4R_lean31_minus4、第二候选S4R_full34_minus3。原full34/lean31保留参照。27列最差年度对原候选+0.005792672，月度正分差25/36、最差月−0.056869473，2021正超额增量最大月占53.21%，2021配对区间跨零。31列最差年度+0.001603147，正月21/36、最差月−0.052774174，三个年度区间均跨零。月度退化、收益集中和统计不确定没有消除，具体区间及分项/四种Top缺失占比/价格有效换手全部保留。
+
+逐列背景结论：full34保留5（bias_60d、close_location、flag_limit_down、log_mean_amount_20d、ret_1d_rank_pct）、删除0、不确定19；lean31保留4（bias_60d、close_location、flag_limit_down、ret_1d_rank_pct）、删除2（lower_shadow、ret_5d_rank_pct）、不确定18，含固定缺席的A三列。联合删掉的其余列仍为不确定；暂留输入和证明应保留分别记录，没有把背景条件结论强行统一。
+
+98项回归测试及pip check通过。独立审计通过：49个执行源码快照、39个冻结文件、135项复用的原始验证键与逐日官方分数、6项新保存文件哈希/资格/全部键/重载预测一致性；重算48条单列判定、所有年度/月度表、配对区间及候选排序。官方对比最大差0，逐日评分重建误差≤1e−12。旧第4步84个文件、旧规则文件、215个既有未跟踪文件及Git配置/pre-push保护均保持原哈希。新增精确路径.gitattributes换行保护，避免本次源码及证据哈希被自动换行转换改变。模型和辅助失败均0，failures.json保留空失败清单与真实命令日志。
+
+证据：docs/features34/STEP4_REVISION_RULES.md、STEP4_REVISION_REPORT.md；artifacts/features34_step4_revision/中的registration.json、matrix.json、probe_evidence.csv、single_decisions.csv、joint_results.csv、candidate_results.csv、monthly_candidate_results.csv、candidate_ranking.csv、frozen_candidates.json、run_index.json、acceptance.json、summary.json、preflight.json、failures.json、EVIDENCE_INDEX.md和commands/。完整模型和大体积预测留在run_index.json指向的不可覆盖目录。
+
+入口：scripts/run_features34_step4_revision.py prepare/run/aggregate；独立审计scripts/audit_features34_step4_revision.py。规则和源码已冻结；已有一致完成实验核验后复用。仅本地ivor-work，按实际AGENTS.md创建本次相关代码/文档/小型证据提交，不进行远程写操作。第4步修订已完成并停止，2024复核等待另行授权。
