@@ -1,0 +1,7 @@
+# 第6步证据索引
+
+结论见docs/features34/RESULTS.md；acceptance.json关联四项重复和两项baseline只读核验。registration.json引用第5步不可覆盖冻结，source哈希保存实际本步执行源码。run_index.json索引原运行与本步重复，所有大型模型/全部键预测/历史评分输入保留本地。
+
+annual_comparison.csv含15个已有候选年度，完整34的2024未运行；monthly_comparison.csv180行、monthly_missing_diagnostics.csv360行；feature_decisions.csv48条依背景结论，不据2024重判。repeat_comparison.csv6条包含四重复及两对照只读核验。失败记录保留日志显示编码、PowerShell辅助编辑解析及首次验收空表错误，模型训练失败0。兼容汇总入口audit_compat.py和2项回归测试test_audit_compat.py随小型证据提交，注册训练源码保持原样。
+
+commands、tests_result.json和dependency_check.json关联实际命令/退出码/日志；executed_sources及完整checks日志不提交。delivery_verification.json核对最终文档和验收哈希。只提交小型证据，不涉及远程写入。

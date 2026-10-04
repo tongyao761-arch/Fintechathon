@@ -1,0 +1,8 @@
+{
+  "stage": "step6_final_acceptance_no_selection",
+  "freeze": "artifacts/features34_step5/FROZEN_CANDIDATES.json",
+  "candidates": ["S4R_lean31_minus4", "S4R_full34_minus3"],
+  "splits": ["primary_2023", "oos_2024"],
+  "new_training_runs": 4,
+  "purpose": "repeat frozen versions only; no feature selection or tuning"
+}

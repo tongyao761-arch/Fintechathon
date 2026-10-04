@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-B",
+    "scripts/run_features34_step6.py",
+    "audit"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 118.72448410000288,
+  "log": "artifacts/features34_step6_checks/audit.log"
+}

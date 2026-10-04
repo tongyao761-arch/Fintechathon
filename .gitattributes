@@ -14,3 +14,10 @@ scripts/run_features34_step5.py -text whitespace=blank-at-eol,blank-at-eof,space
 scripts/audit_features34_step5.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 tests/test_features34_step5.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 docs/features34/STEP5_REPORT.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+artifacts/features34_step6/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+configs/features34_step6.json -text
+scripts/run_features34_step6.py -text
+tests/test_features34_step6.py -text
+docs/features34/RESULTS.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/features34/PLAN.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/features34/PROGRESS.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "branch": "ivor-work",
+  "reports_sha256": {
+    "docs\\features34\\RESULTS.md": "50a3171d7aa46714fc62d2059aaeab07745f4737dcbae37de45492aacfc9ba59",
+    "docs\\features34\\PROGRESS.md": "64114403aaeaccb7147b026e2f14a8402955755907275787b6b660c3b2809208",
+    "docs\\features34\\PLAN.md": "6e357af02892b22ad30e4deea30959ea23fe00f013ce69b0cc3cede41bc93dcb"
+  },
+  "acceptance_sha256": "58017f081d35a8337625108a89bd1734cf234a219b7fd301c70100fe94af5f5c",
+  "no_new_selection": true,
+  "previous_files_and_push_protections_unchanged": true,
+  "full34_2024_not_run": true,
+  "command_records_sha256": {
+    "audit_result.json": "8a9033ba6f1a00054b59c3f50cb8b0ea373fe839ade67536ec043a33d7125467",
+    "audit_retry_result.json": "9d3fbee03d385237b0c33cd6118bad20bc81ede5d0e236d2daf1060b37c29298",
+    "dependencies_result.json": "1bcf71b8a2ed4222aa7b15f1a4c87af2e1938e0221fa52e53be52aba7d6f1adf",
+    "prepare_result.json": "742b6a1372e2b4c1fa533242b81f1c73cb2773d1d59eaa888eff20160d8fa3d5",
+    "run_result.json": "ccf1870e68a1cc7493604ef266e503583754b6fc0c452667a755d7502b9d697f",
+    "tests_result.json": "a081bd2bfdccd00893adf97a3acae29dd7687386b76d498f62f90bc7137af38a"
+  },
+  "extra_audit_sources_sha256": {
+    "audit_compat.py": "b4a346de9d118b6b02047845b3b6de62c1f6468ab0652e8360549a5993465824",
+    "test_audit_compat.py": "e5f598791ab614a8ddba0f1b0a1ad829edf3fe8837e0bd17f043ffa083b9143f"
+  }
+}

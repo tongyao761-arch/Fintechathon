@@ -1,0 +1,25 @@
+{
+  "failures": [
+    {
+      "phase": "tests_log_display",
+      "error_type": "UnicodeEncodeError",
+      "error": "'gbk' codec can't encode character '\\ufffd' in position 0: illegal multibyte sequence",
+      "elapsed_seconds": 11.798438099998748,
+      "at": "2026-10-05T02:25:22.399422+08:00"
+    },
+    {
+      "phase": "delivery_helper_shell_parse",
+      "error_type": "PowerShellParserError",
+      "error": "quoted replacement command failed before execution; corrected using literal here-string",
+      "elapsed_seconds": 0.3264734,
+      "model_runs_affected": false
+    },
+    {
+      "phase": "audit",
+      "error_type": "KeyError",
+      "error": "'year'",
+      "elapsed_seconds": 117.1038976000018,
+      "at": "2026-10-05T02:32:04.973134+08:00"
+    }
+  ]
+}

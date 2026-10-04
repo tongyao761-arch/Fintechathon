@@ -1,6 +1,6 @@
 # 34特征阶段进度
 
-当前：第1—5步验收通过。2026-10-04完成第5步两项最终候选2024受限复核，已汇总开发结果、月度风险及逐列条件性名单并停止。2024此前已被查看，不称未接触的盲测。以下旧记录保留作历史证据，不构成继续运行授权。
+当前：第1—6步最终验收完成（2026-10-05）。两冻结候选2023/2024全量重复与原预测、评分和切分文件哈希一致；27列主候选、31列备选顺序沿用开发冻结，未重新筛选。阶段已停止，结论及局限见RESULTS.md。以下保留历史记录，不构成后续步骤授权。
 
 已读取实际AGENTS.md/AGENTS.override.md、用户指定7个文件及数据/评分/诊断/留档模块。原先不存在docs/features34。分支ivor-work；初始仅既有未跟踪AGENTS.md，保留。push保护不变。
 
@@ -248,3 +248,17 @@ flag_limit_down的保留主要涉及官方含缺标签行的Top换手集合：�
 证据：docs/features34/STEP5_REPORT.md；artifacts/features34_step5/中的FROZEN_CANDIDATES.json、registration.json、run_index.json、annual_comparison.csv（12行）、monthly_comparison.csv（144行）、monthly_missing_diagnostics.csv（288行）、top_membership_comparison.csv（8行）、paired_intervals.csv、candidate_conclusions.csv、feature_decisions.csv（48行）、acceptance.json、summary.json、status.json、preflight.json、tests_result.json、dependency_check.json、failures.json及commands/。完整两项模型/预测/历史评分输入由run_index.json指向；执行源码快照和原始日志保留本地。人工补充的分项解读与生成报告分开记录，交付哈希见delivery_verification.json。
 
 命令：项目.venv解释器运行scripts/run_features34_step5.py prepare/run，再运行scripts/audit_features34_step5.py。已完成实验不再重做。仅本地ivor-work，按实际AGENTS.md仅提交本步相关代码/文档及小型证据，无远程写入、push保护更改、进一步搜索/调参/平滑或最终比赛submission。第5步完成后停止。
+
+## 第6步：最终验收与交付（2026-10-05）
+
+核对实际规则、七个指定文件、PLAN/PROGRESS及原冻结来源；未新增候选或重新选择。新增独立step6配置/入口和4项边界/严格重复/失败路径测试；首次验收空表错误后增加独立兼容汇总入口和2项测试，未修改原特征/模型/目标/资格/评分/切分。注册前核对39个冻结哈希、此前执行源码及48条单删结论。
+
+仅两个事前冻结版本S4R_lean31_minus4（27列）/S4R_full34_minus3（31列）各重复2023/2024，共4项新增训练；预测数组、评分、全部诊断及切分文件哈希与原运行完全相同。原始X重算并重载模型，全部验证键、资格/purge、有限性和官方重评分通过；官方标量最大差0。十特征2023/2024只读重载及官方评分核验，没有重训对照。106项全回归、2项汇总兼容测试和pip check通过。
+
+失败共3项（模型训练失败0）：测试本身退出0后，包装器显示日志遇GBK UnicodeEncodeError；保留原日志，记录failures.json，使用-X utf8继续，不重跑测试。另一次交付生成器辅助编辑命令在PowerShell解析阶段失败，改用字面here-string完成，不涉及模型或评分。首次独立验收在六项重载/重评分完成后遇到baseline单独汇总的空区间KeyError，保留失败状态/原日志，增加audit_compat.py和2项测试，仅重验收、不重训。新模型运行失败0，成功摘要仅在全部验收完成后生成。
+
+年度对照15行（完整34的2024未运行）、月度180行、月度缺失诊断360行、背景限定逐列48行均与实际摘要/配置一致。保持full34保留5/删除0/不确定19，lean31保留4/删除2/不确定18，未据2024重判；模型移出不等于确定删除。四年历史官方分支持两个固定研究候选，保留2024九月负月、探索性选择和缺失样本换手局限，不宣布未来/实盘/最终比赛替代证明。
+
+交付docs/features34/RESULTS.md（范围、对照、逐列证据、完整公式/顺序/命令、复现/月度/缺失、限制和接续说明）；本步证据artifacts/features34_step6/，完整重复产物由run_index.json指向artifacts/experiments/，执行源码与原日志本地保存。PLAN只更新当前状态，旧授权作为历史保留。
+
+本地ivor-work，既有未跟踪内容、之前产物、冻结baseline和push保护保持。仅提交相关代码/配置/测试/文档及小型证据；未提交大型模型、预测或秘密，无远程写操作。第6步结束后停止，不进入调参、平滑或其他阶段。

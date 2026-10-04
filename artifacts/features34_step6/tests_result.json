@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 11.798438099998748,
+  "log": "artifacts/features34_step6_checks/tests.log"
+}

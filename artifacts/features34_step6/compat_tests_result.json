@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-B",
+    "artifacts/features34_step6/test_audit_compat.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 1.4910562000004575,
+  "log": "artifacts/features34_step6_checks/compat_tests.log"
+}

@@ -1,0 +1,40 @@
+{
+  "runs": [
+    {
+      "item": {
+        "candidate": "S4R_lean31_minus4",
+        "split": "primary_2023"
+      },
+      "directory": "artifacts/experiments/S6_S4R_lean31_minus4_2023/20261004T182620942911Z_24ab2629",
+      "original_directory": "artifacts/experiments/S4R_lean31_minus4_2023/20261004T090750752259Z_95be596d",
+      "summary_sha256": "7ea3aafeee3629deed3401ec5e62df422ddcb887feab7ee4079242760ec25770"
+    },
+    {
+      "item": {
+        "candidate": "S4R_lean31_minus4",
+        "split": "oos_2024"
+      },
+      "directory": "artifacts/experiments/S6_S4R_lean31_minus4_2024/20261004T182650280569Z_8e2d2881",
+      "original_directory": "artifacts/experiments/S5_S4R_lean31_minus4_2024/20261004T153205837882Z_7694eca8",
+      "summary_sha256": "c92edb5d871354146b4dc61da43a0e5b1da814bbd3690e78cfdac82f583318d3"
+    },
+    {
+      "item": {
+        "candidate": "S4R_full34_minus3",
+        "split": "primary_2023"
+      },
+      "directory": "artifacts/experiments/S6_S4R_full34_minus3_2023/20261004T182722043263Z_7bef86a4",
+      "original_directory": "artifacts/experiments/S4R_full34_minus3_2023/20261004T090648724514Z_0e18c478",
+      "summary_sha256": "37952227c77cd4e924745f36047444879340f7447f64930549a871f4c0882409"
+    },
+    {
+      "item": {
+        "candidate": "S4R_full34_minus3",
+        "split": "oos_2024"
+      },
+      "directory": "artifacts/experiments/S6_S4R_full34_minus3_2024/20261004T182752251485Z_1d21e639",
+      "original_directory": "artifacts/experiments/S5_S4R_full34_minus3_2024/20261004T153236927517Z_ba7c2aec",
+      "summary_sha256": "017c7c4c2b4ef8097b9ec53842c931851ad062f0bb781e1efacbaffe857dd50f"
+    }
+  ]
+}
