@@ -1,0 +1,1 @@
+{"command": [".venv/Scripts/python.exe", "-B", "-m", "pip", "check"], "exit_code": 0}

@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-10-04T15:22:52.629150+08:00",
+  "versions": [],
+  "experiments": [],
+  "fallbacks": [
+    {
+      "context": "full34",
+      "candidate": "full34",
+      "reason": "没有满足预登记跨年直接证据及全部护栏的确定删除列，冻结原候选；不强行精简",
+      "exclude": []
+    },
+    {
+      "context": "lean31",
+      "candidate": "lean31",
+      "reason": "没有满足预登记跨年直接证据及全部护栏的确定删除列，冻结原候选；不强行精简",
+      "exclude": []
+    }
+  ],
+  "rule": "每个背景最多一个联合版本；三年完整验证，任一年负删除分差或护栏不通过退回原候选；没有确定删除列可保留原候选",
+  "addback_budget_total": 2,
+  "addback_versions_planned": 0,
+  "addback_reason": "尚无明确替代或交互依据支持额外回补，不按猜测使用额度"
+}

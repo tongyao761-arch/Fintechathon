@@ -1,0 +1,15 @@
+{
+  "failures": [
+    {
+      "type": "auxiliary_audit",
+      "attempt": 1,
+      "exit_code": 1,
+      "error": "AssertionError: complete provenance dict compared including phase-specific git status",
+      "log": "audit.log",
+      "command": "audit_command.json",
+      "log_sha256": "10a78e9c3c732332d9bb16ac844b3a0fc35934a8352f8d000800fed71d52cbcd",
+      "source_sha256": "4da16cc6a4aa075873dde769219a9b055b64eda6aa272862b0817f6d0bd21951",
+      "model_runs_affected": 0
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "executed_sha256": "4da16cc6a4aa075873dde769219a9b055b64eda6aa272862b0817f6d0bd21951",
+  "corrected_sha256": "dff811c78b69bb06f0dee1f27d261c5f0a748ef027120ef67ffc17f935d0f298",
+  "training_runner_changed": false,
+  "reason": "Audit-only correction: compare executed sources/data/dependencies and git branch/commit; recorded working-tree status legitimately differs across phases. Exact original audit source is preserved; all training/feature/scoring sources unchanged."
+}

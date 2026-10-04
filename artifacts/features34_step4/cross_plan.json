@@ -1,0 +1,1178 @@
+{
+  "frozen_at": "2026-10-04T14:49:13.631972+08:00",
+  "rationale": "完整45项2023结果已核验；对可能删除、可能保留、接近/冲突列全部补齐固定背景的两年直接证据；不增加候选或组合。此预算覆盖全名单，避免把未验证留在输入当作确定保留。",
+  "screen_runs": 45,
+  "cross_budget": 90,
+  "experiments": [
+    {
+      "id": "S4_full34_ret_2d_2021",
+      "context": "full34",
+      "feature": "ret_2d",
+      "group": "A",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "ret_2d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_ret_2d_2023"
+    },
+    {
+      "id": "S4_full34_ret_2d_2022",
+      "context": "full34",
+      "feature": "ret_2d",
+      "group": "A",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "ret_2d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_ret_2d_2023"
+    },
+    {
+      "id": "S4_full34_ret_10d_2021",
+      "context": "full34",
+      "feature": "ret_10d",
+      "group": "A",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "ret_10d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_ret_10d_2023"
+    },
+    {
+      "id": "S4_full34_ret_10d_2022",
+      "context": "full34",
+      "feature": "ret_10d",
+      "group": "A",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "ret_10d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_ret_10d_2023"
+    },
+    {
+      "id": "S4_full34_ret_60d_2021",
+      "context": "full34",
+      "feature": "ret_60d",
+      "group": "A",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "ret_60d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定",
+      "screen_id": "S4_full34_ret_60d_2023"
+    },
+    {
+      "id": "S4_full34_ret_60d_2022",
+      "context": "full34",
+      "feature": "ret_60d",
+      "group": "A",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "ret_60d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定",
+      "screen_id": "S4_full34_ret_60d_2023"
+    },
+    {
+      "id": "S4_full34_close_location_2021",
+      "context": "full34",
+      "feature": "close_location",
+      "group": "B",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "close_location"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_close_location_2023"
+    },
+    {
+      "id": "S4_full34_close_location_2022",
+      "context": "full34",
+      "feature": "close_location",
+      "group": "B",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "close_location"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_close_location_2023"
+    },
+    {
+      "id": "S4_full34_upper_shadow_2021",
+      "context": "full34",
+      "feature": "upper_shadow",
+      "group": "B",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "upper_shadow"
+      ],
+      "reason": "2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_upper_shadow_2023"
+    },
+    {
+      "id": "S4_full34_upper_shadow_2022",
+      "context": "full34",
+      "feature": "upper_shadow",
+      "group": "B",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "upper_shadow"
+      ],
+      "reason": "2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_upper_shadow_2023"
+    },
+    {
+      "id": "S4_full34_lower_shadow_2021",
+      "context": "full34",
+      "feature": "lower_shadow",
+      "group": "B",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "lower_shadow"
+      ],
+      "reason": "2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_lower_shadow_2023"
+    },
+    {
+      "id": "S4_full34_lower_shadow_2022",
+      "context": "full34",
+      "feature": "lower_shadow",
+      "group": "B",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "lower_shadow"
+      ],
+      "reason": "2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_lower_shadow_2023"
+    },
+    {
+      "id": "S4_full34_body_ratio_2021",
+      "context": "full34",
+      "feature": "body_ratio",
+      "group": "B",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "body_ratio"
+      ],
+      "reason": "2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_body_ratio_2023"
+    },
+    {
+      "id": "S4_full34_body_ratio_2022",
+      "context": "full34",
+      "feature": "body_ratio",
+      "group": "B",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "body_ratio"
+      ],
+      "reason": "2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_body_ratio_2023"
+    },
+    {
+      "id": "S4_full34_bias_20d_2021",
+      "context": "full34",
+      "feature": "bias_20d",
+      "group": "C",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "bias_20d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_bias_20d_2023"
+    },
+    {
+      "id": "S4_full34_bias_20d_2022",
+      "context": "full34",
+      "feature": "bias_20d",
+      "group": "C",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "bias_20d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_bias_20d_2023"
+    },
+    {
+      "id": "S4_full34_bias_60d_2021",
+      "context": "full34",
+      "feature": "bias_60d",
+      "group": "C",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "bias_60d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_bias_60d_2023"
+    },
+    {
+      "id": "S4_full34_bias_60d_2022",
+      "context": "full34",
+      "feature": "bias_60d",
+      "group": "C",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "bias_60d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_bias_60d_2023"
+    },
+    {
+      "id": "S4_full34_price_position_20d_2021",
+      "context": "full34",
+      "feature": "price_position_20d",
+      "group": "C",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "price_position_20d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能删除，需要跨年验证是否退化",
+      "screen_id": "S4_full34_price_position_20d_2023"
+    },
+    {
+      "id": "S4_full34_price_position_20d_2022",
+      "context": "full34",
+      "feature": "price_position_20d",
+      "group": "C",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "price_position_20d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能删除，需要跨年验证是否退化",
+      "screen_id": "S4_full34_price_position_20d_2023"
+    },
+    {
+      "id": "S4_full34_price_position_60d_2021",
+      "context": "full34",
+      "feature": "price_position_60d",
+      "group": "C",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "price_position_60d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_price_position_60d_2023"
+    },
+    {
+      "id": "S4_full34_price_position_60d_2022",
+      "context": "full34",
+      "feature": "price_position_60d",
+      "group": "C",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "price_position_60d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_price_position_60d_2023"
+    },
+    {
+      "id": "S4_full34_amount_ratio_20d_2021",
+      "context": "full34",
+      "feature": "amount_ratio_20d",
+      "group": "D",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_20d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_amount_ratio_20d_2023"
+    },
+    {
+      "id": "S4_full34_amount_ratio_20d_2022",
+      "context": "full34",
+      "feature": "amount_ratio_20d",
+      "group": "D",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_20d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_amount_ratio_20d_2023"
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_2021",
+      "context": "full34",
+      "feature": "log_mean_amount_20d",
+      "group": "D",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_log_mean_amount_20d_2023"
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_2022",
+      "context": "full34",
+      "feature": "log_mean_amount_20d",
+      "group": "D",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_log_mean_amount_20d_2023"
+    },
+    {
+      "id": "S4_full34_volatility_60d_2021",
+      "context": "full34",
+      "feature": "volatility_60d",
+      "group": "D",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "volatility_60d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_volatility_60d_2023"
+    },
+    {
+      "id": "S4_full34_volatility_60d_2022",
+      "context": "full34",
+      "feature": "volatility_60d",
+      "group": "D",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "volatility_60d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_volatility_60d_2023"
+    },
+    {
+      "id": "S4_full34_flag_limit_up_2021",
+      "context": "full34",
+      "feature": "flag_limit_up",
+      "group": "E",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_up"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_flag_limit_up_2023"
+    },
+    {
+      "id": "S4_full34_flag_limit_up_2022",
+      "context": "full34",
+      "feature": "flag_limit_up",
+      "group": "E",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_up"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_flag_limit_up_2023"
+    },
+    {
+      "id": "S4_full34_flag_limit_down_2021",
+      "context": "full34",
+      "feature": "flag_limit_down",
+      "group": "E",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_down"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_flag_limit_down_2023"
+    },
+    {
+      "id": "S4_full34_flag_limit_down_2022",
+      "context": "full34",
+      "feature": "flag_limit_down",
+      "group": "E",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_down"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_flag_limit_down_2023"
+    },
+    {
+      "id": "S4_full34_limit_up_count_5d_2021",
+      "context": "full34",
+      "feature": "limit_up_count_5d",
+      "group": "E",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "limit_up_count_5d"
+      ],
+      "reason": "2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定",
+      "screen_id": "S4_full34_limit_up_count_5d_2023"
+    },
+    {
+      "id": "S4_full34_limit_up_count_5d_2022",
+      "context": "full34",
+      "feature": "limit_up_count_5d",
+      "group": "E",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "limit_up_count_5d"
+      ],
+      "reason": "2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定",
+      "screen_id": "S4_full34_limit_up_count_5d_2023"
+    },
+    {
+      "id": "S4_full34_limit_down_count_5d_2021",
+      "context": "full34",
+      "feature": "limit_down_count_5d",
+      "group": "E",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "limit_down_count_5d"
+      ],
+      "reason": "2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_limit_down_count_5d_2023"
+    },
+    {
+      "id": "S4_full34_limit_down_count_5d_2022",
+      "context": "full34",
+      "feature": "limit_down_count_5d",
+      "group": "E",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "limit_down_count_5d"
+      ],
+      "reason": "2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_limit_down_count_5d_2023"
+    },
+    {
+      "id": "S4_full34_ret_1d_rank_pct_2021",
+      "context": "full34",
+      "feature": "ret_1d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "ret_1d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_ret_1d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_ret_1d_rank_pct_2022",
+      "context": "full34",
+      "feature": "ret_1d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "ret_1d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_ret_1d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_ret_5d_rank_pct_2021",
+      "context": "full34",
+      "feature": "ret_5d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "ret_5d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_ret_5d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_ret_5d_rank_pct_2022",
+      "context": "full34",
+      "feature": "ret_5d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "ret_5d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_ret_5d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_ret_20d_rank_pct_2021",
+      "context": "full34",
+      "feature": "ret_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "ret_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定",
+      "screen_id": "S4_full34_ret_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_ret_20d_rank_pct_2022",
+      "context": "full34",
+      "feature": "ret_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "ret_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定",
+      "screen_id": "S4_full34_ret_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_amount_ratio_5d_rank_pct_2021",
+      "context": "full34",
+      "feature": "amount_ratio_5d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_5d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_amount_ratio_5d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_amount_ratio_5d_rank_pct_2022",
+      "context": "full34",
+      "feature": "amount_ratio_5d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_5d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_amount_ratio_5d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_volatility_20d_rank_pct_2021",
+      "context": "full34",
+      "feature": "volatility_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "volatility_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_volatility_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_volatility_20d_rank_pct_2022",
+      "context": "full34",
+      "feature": "volatility_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "volatility_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_volatility_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_rank_pct_2021",
+      "context": "full34",
+      "feature": "log_mean_amount_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_log_mean_amount_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_rank_pct_2022",
+      "context": "full34",
+      "feature": "log_mean_amount_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_full34_log_mean_amount_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_close_location_2021",
+      "context": "lean31",
+      "feature": "close_location",
+      "group": "B",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "close_location"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_close_location_2023"
+    },
+    {
+      "id": "S4_lean31_close_location_2022",
+      "context": "lean31",
+      "feature": "close_location",
+      "group": "B",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "close_location"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_close_location_2023"
+    },
+    {
+      "id": "S4_lean31_upper_shadow_2021",
+      "context": "lean31",
+      "feature": "upper_shadow",
+      "group": "B",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "upper_shadow"
+      ],
+      "reason": "2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_upper_shadow_2023"
+    },
+    {
+      "id": "S4_lean31_upper_shadow_2022",
+      "context": "lean31",
+      "feature": "upper_shadow",
+      "group": "B",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "upper_shadow"
+      ],
+      "reason": "2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_upper_shadow_2023"
+    },
+    {
+      "id": "S4_lean31_lower_shadow_2021",
+      "context": "lean31",
+      "feature": "lower_shadow",
+      "group": "B",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "lower_shadow"
+      ],
+      "reason": "2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_lower_shadow_2023"
+    },
+    {
+      "id": "S4_lean31_lower_shadow_2022",
+      "context": "lean31",
+      "feature": "lower_shadow",
+      "group": "B",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "lower_shadow"
+      ],
+      "reason": "2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_lower_shadow_2023"
+    },
+    {
+      "id": "S4_lean31_body_ratio_2021",
+      "context": "lean31",
+      "feature": "body_ratio",
+      "group": "B",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "body_ratio"
+      ],
+      "reason": "2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_body_ratio_2023"
+    },
+    {
+      "id": "S4_lean31_body_ratio_2022",
+      "context": "lean31",
+      "feature": "body_ratio",
+      "group": "B",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "body_ratio"
+      ],
+      "reason": "2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_body_ratio_2023"
+    },
+    {
+      "id": "S4_lean31_bias_20d_2021",
+      "context": "lean31",
+      "feature": "bias_20d",
+      "group": "C",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "bias_20d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_bias_20d_2023"
+    },
+    {
+      "id": "S4_lean31_bias_20d_2022",
+      "context": "lean31",
+      "feature": "bias_20d",
+      "group": "C",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "bias_20d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_bias_20d_2023"
+    },
+    {
+      "id": "S4_lean31_bias_60d_2021",
+      "context": "lean31",
+      "feature": "bias_60d",
+      "group": "C",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "bias_60d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_bias_60d_2023"
+    },
+    {
+      "id": "S4_lean31_bias_60d_2022",
+      "context": "lean31",
+      "feature": "bias_60d",
+      "group": "C",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "bias_60d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_bias_60d_2023"
+    },
+    {
+      "id": "S4_lean31_price_position_20d_2021",
+      "context": "lean31",
+      "feature": "price_position_20d",
+      "group": "C",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "price_position_20d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能删除，需要跨年验证是否退化",
+      "screen_id": "S4_lean31_price_position_20d_2023"
+    },
+    {
+      "id": "S4_lean31_price_position_20d_2022",
+      "context": "lean31",
+      "feature": "price_position_20d",
+      "group": "C",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "price_position_20d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023可能删除，需要跨年验证是否退化",
+      "screen_id": "S4_lean31_price_position_20d_2023"
+    },
+    {
+      "id": "S4_lean31_price_position_60d_2021",
+      "context": "lean31",
+      "feature": "price_position_60d",
+      "group": "C",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "price_position_60d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_price_position_60d_2023"
+    },
+    {
+      "id": "S4_lean31_price_position_60d_2022",
+      "context": "lean31",
+      "feature": "price_position_60d",
+      "group": "C",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "price_position_60d"
+      ],
+      "reason": "A/C组第3步跨年反转；单列直接检验不能被组级结果替代；2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_price_position_60d_2023"
+    },
+    {
+      "id": "S4_lean31_amount_ratio_20d_2021",
+      "context": "lean31",
+      "feature": "amount_ratio_20d",
+      "group": "D",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_20d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化",
+      "screen_id": "S4_lean31_amount_ratio_20d_2023"
+    },
+    {
+      "id": "S4_lean31_amount_ratio_20d_2022",
+      "context": "lean31",
+      "feature": "amount_ratio_20d",
+      "group": "D",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_20d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化",
+      "screen_id": "S4_lean31_amount_ratio_20d_2023"
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_2021",
+      "context": "lean31",
+      "feature": "log_mean_amount_20d",
+      "group": "D",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_log_mean_amount_20d_2023"
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_2022",
+      "context": "lean31",
+      "feature": "log_mean_amount_20d",
+      "group": "D",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_log_mean_amount_20d_2023"
+    },
+    {
+      "id": "S4_lean31_volatility_60d_2021",
+      "context": "lean31",
+      "feature": "volatility_60d",
+      "group": "D",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "volatility_60d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_volatility_60d_2023"
+    },
+    {
+      "id": "S4_lean31_volatility_60d_2022",
+      "context": "lean31",
+      "feature": "volatility_60d",
+      "group": "D",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "volatility_60d"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_volatility_60d_2023"
+    },
+    {
+      "id": "S4_lean31_flag_limit_up_2021",
+      "context": "lean31",
+      "feature": "flag_limit_up",
+      "group": "E",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_up"
+      ],
+      "reason": "2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_flag_limit_up_2023"
+    },
+    {
+      "id": "S4_lean31_flag_limit_up_2022",
+      "context": "lean31",
+      "feature": "flag_limit_up",
+      "group": "E",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_up"
+      ],
+      "reason": "2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_flag_limit_up_2023"
+    },
+    {
+      "id": "S4_lean31_flag_limit_down_2021",
+      "context": "lean31",
+      "feature": "flag_limit_down",
+      "group": "E",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_down"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_flag_limit_down_2023"
+    },
+    {
+      "id": "S4_lean31_flag_limit_down_2022",
+      "context": "lean31",
+      "feature": "flag_limit_down",
+      "group": "E",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_down"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_flag_limit_down_2023"
+    },
+    {
+      "id": "S4_lean31_limit_up_count_5d_2021",
+      "context": "lean31",
+      "feature": "limit_up_count_5d",
+      "group": "E",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "limit_up_count_5d"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_limit_up_count_5d_2023"
+    },
+    {
+      "id": "S4_lean31_limit_up_count_5d_2022",
+      "context": "lean31",
+      "feature": "limit_up_count_5d",
+      "group": "E",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "limit_up_count_5d"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_limit_up_count_5d_2023"
+    },
+    {
+      "id": "S4_lean31_limit_down_count_5d_2021",
+      "context": "lean31",
+      "feature": "limit_down_count_5d",
+      "group": "E",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "limit_down_count_5d"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_limit_down_count_5d_2023"
+    },
+    {
+      "id": "S4_lean31_limit_down_count_5d_2022",
+      "context": "lean31",
+      "feature": "limit_down_count_5d",
+      "group": "E",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "limit_down_count_5d"
+      ],
+      "reason": "2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_limit_down_count_5d_2023"
+    },
+    {
+      "id": "S4_lean31_ret_1d_rank_pct_2021",
+      "context": "lean31",
+      "feature": "ret_1d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "ret_1d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_ret_1d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_ret_1d_rank_pct_2022",
+      "context": "lean31",
+      "feature": "ret_1d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "ret_1d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能应保留，需要跨年直接证据才可确定；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_ret_1d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_ret_5d_rank_pct_2021",
+      "context": "lean31",
+      "feature": "ret_5d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "ret_5d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_ret_5d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_ret_5d_rank_pct_2022",
+      "context": "lean31",
+      "feature": "ret_5d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "ret_5d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_ret_5d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_ret_20d_rank_pct_2021",
+      "context": "lean31",
+      "feature": "ret_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "ret_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_ret_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_ret_20d_rank_pct_2022",
+      "context": "lean31",
+      "feature": "ret_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "ret_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_ret_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_amount_ratio_5d_rank_pct_2021",
+      "context": "lean31",
+      "feature": "amount_ratio_5d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_5d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_amount_ratio_5d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_amount_ratio_5d_rank_pct_2022",
+      "context": "lean31",
+      "feature": "amount_ratio_5d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_5d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_amount_ratio_5d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_volatility_20d_rank_pct_2021",
+      "context": "lean31",
+      "feature": "volatility_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "volatility_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定",
+      "screen_id": "S4_lean31_volatility_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_volatility_20d_rank_pct_2022",
+      "context": "lean31",
+      "feature": "volatility_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "volatility_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023可能删除，需要跨年验证是否退化；2023配对块区间跨零，仍不确定",
+      "screen_id": "S4_lean31_volatility_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_rank_pct_2021",
+      "context": "lean31",
+      "feature": "log_mean_amount_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2021",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_log_mean_amount_20d_rank_pct_2023"
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_rank_pct_2022",
+      "context": "lean31",
+      "feature": "log_mean_amount_20d_rank_pct",
+      "group": "F",
+      "split": "dev_2022",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d_rank_pct"
+      ],
+      "reason": "D源与F排名条件性效应；独立控制保留中间源；2023效应接近，补齐年份观察是否稳定或冲突；2023配对块区间跨零，仍不确定；2023删除分项/月度/缺失诊断至少一项护栏不通过",
+      "screen_id": "S4_lean31_log_mean_amount_20d_rank_pct_2023"
+    }
+  ]
+}

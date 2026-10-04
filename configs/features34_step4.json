@@ -1,0 +1,32 @@
+{
+  "stage": "step4_single_deletion_development_only",
+  "contexts": {"full34": ["A", "B", "C", "D", "E", "F"], "lean31": ["B", "C", "D", "E", "F"]},
+  "step3_config": "configs/features34_step3.json",
+  "rules": {
+    "near_score": 0.001,
+    "clear_year_degradation": 0.005,
+    "monthly_positive_required": 8,
+    "monthly_worst_floor": -0.03,
+    "largest_positive_excess_month_share_max": 0.5,
+    "ic_degradation_guard": 0.002,
+    "annual_excess_degradation_guard": 0.01,
+    "turnover_increase_guard": 0.01,
+    "missing_fraction_increase_guard": 0.01,
+    "price_valid_turnover_increase_guard": 0.01,
+    "deletion": "all three annual deltas >= near_score, all block CI lower bounds > 0, all metric/diagnostic/monthly guards pass",
+    "retention": "all three annual deltas <= -near_score, all block CI upper bounds < 0; direct conditional evidence only",
+    "uncertain": "incomplete direct evidence, near score, conflicting annual signs, CI spans zero, metric/diagnostic/monthly risk, or differing background conclusions",
+    "joint_pass": "no negative annual deletion delta, no clear annual degradation, all metric/diagnostic/monthly guards pass; joint evidence cannot establish individual necessity",
+    "bootstrap": {
+      "block_trading_days": 20,
+      "repetitions": 2000,
+      "seed": 20261004,
+      "confidence": 0.95,
+      "trigger": "every comparison, including all near/conflicting cases; descriptive intervals without multiplicity or post-selection significance claims",
+      "turnover_boundary": "sample paired contiguous noncircular date blocks; exclude each block first-day turnover including original incoming transition; never construct turnover across resampled seams; retain original internal adjacent-day transitions",
+      "scope": "fixed trained predictions within one year; conditional sampling uncertainty, not retraining or cross-year evidence"
+    }
+  },
+  "budgets": {"screen_2023": 45, "cross_year_max": 90, "joint_versions_max": 2, "addback_versions_max_total": 2},
+  "used_2024": false
+}

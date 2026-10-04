@@ -1,0 +1,15 @@
+{
+  "accepted": true,
+  "full_disk_audit_unchanged": true,
+  "numerical_tables_and_models_unchanged": true,
+  "added_explanation_rows_verified": 48,
+  "changed_evidence": [
+    "STEP4_REPORT.md"
+  ],
+  "unchanged_frozen_candidates": true,
+  "additions": [
+    "decision_evidence_details.csv",
+    "EVIDENCE_INDEX.md"
+  ],
+  "note": "Only report explanation and evidence index extended after full audit; derived trigger years independently checked against accepted numerical results."
+}

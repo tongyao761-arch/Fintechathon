@@ -1,0 +1,1101 @@
+{
+  "accepted": true,
+  "stage": "step4_single_deletion_development_only",
+  "runs": [
+    {
+      "id": "S4_full34_ret_2d_2023",
+      "directory": "artifacts/experiments/S4_full34_ret_2d_2023/20261004T063201047545Z_90d8a4be",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_10d_2023",
+      "directory": "artifacts/experiments/S4_full34_ret_10d_2023/20261004T063223788720Z_1a12a3e6",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_60d_2023",
+      "directory": "artifacts/experiments/S4_full34_ret_60d_2023/20261004T063246330331Z_ebffa35a",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_close_location_2023",
+      "directory": "artifacts/experiments/S4_full34_close_location_2023/20261004T063308841639Z_3c5011e0",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_upper_shadow_2023",
+      "directory": "artifacts/experiments/S4_full34_upper_shadow_2023/20261004T063331421112Z_359ab907",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_lower_shadow_2023",
+      "directory": "artifacts/experiments/S4_full34_lower_shadow_2023/20261004T063354143375Z_10614a50",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_body_ratio_2023",
+      "directory": "artifacts/experiments/S4_full34_body_ratio_2023/20261004T063416915382Z_ab9c1f61",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_bias_20d_2023",
+      "directory": "artifacts/experiments/S4_full34_bias_20d_2023/20261004T063439389499Z_fb1ad38c",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_bias_60d_2023",
+      "directory": "artifacts/experiments/S4_full34_bias_60d_2023/20261004T063501778690Z_6e2e70ba",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_price_position_20d_2023",
+      "directory": "artifacts/experiments/S4_full34_price_position_20d_2023/20261004T063524033187Z_d37c25df",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_price_position_60d_2023",
+      "directory": "artifacts/experiments/S4_full34_price_position_60d_2023/20261004T063546832374Z_b4744c75",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_amount_ratio_20d_2023",
+      "directory": "artifacts/experiments/S4_full34_amount_ratio_20d_2023/20261004T063609343992Z_6301436d",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_2023",
+      "directory": "artifacts/experiments/S4_full34_log_mean_amount_20d_2023/20261004T063631927530Z_5c47ef99",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_volatility_60d_2023",
+      "directory": "artifacts/experiments/S4_full34_volatility_60d_2023/20261004T063654374449Z_1753c775",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_flag_limit_up_2023",
+      "directory": "artifacts/experiments/S4_full34_flag_limit_up_2023/20261004T063716956459Z_44ef030c",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_flag_limit_down_2023",
+      "directory": "artifacts/experiments/S4_full34_flag_limit_down_2023/20261004T063740083882Z_ee0eb006",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_limit_up_count_5d_2023",
+      "directory": "artifacts/experiments/S4_full34_limit_up_count_5d_2023/20261004T063802696288Z_cda69227",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_limit_down_count_5d_2023",
+      "directory": "artifacts/experiments/S4_full34_limit_down_count_5d_2023/20261004T063825119173Z_5f29bc1b",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_1d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_full34_ret_1d_rank_pct_2023/20261004T063847664862Z_6b71cee6",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_5d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_full34_ret_5d_rank_pct_2023/20261004T063910066267Z_dcad5e43",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_20d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_full34_ret_20d_rank_pct_2023/20261004T063932498290Z_bfe71254",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_amount_ratio_5d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_full34_amount_ratio_5d_rank_pct_2023/20261004T063955053783Z_e4b484c1",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_volatility_20d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_full34_volatility_20d_rank_pct_2023/20261004T064017593044Z_6817335b",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_full34_log_mean_amount_20d_rank_pct_2023/20261004T064039926081Z_8ae89a7e",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_close_location_2023",
+      "directory": "artifacts/experiments/S4_lean31_close_location_2023/20261004T064102468945Z_be11fd4b",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_upper_shadow_2023",
+      "directory": "artifacts/experiments/S4_lean31_upper_shadow_2023/20261004T064124334031Z_f8753242",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_lower_shadow_2023",
+      "directory": "artifacts/experiments/S4_lean31_lower_shadow_2023/20261004T064146420873Z_2eb215ea",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_body_ratio_2023",
+      "directory": "artifacts/experiments/S4_lean31_body_ratio_2023/20261004T064208274458Z_65416fc5",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_bias_20d_2023",
+      "directory": "artifacts/experiments/S4_lean31_bias_20d_2023/20261004T064230239888Z_5c38ce88",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_bias_60d_2023",
+      "directory": "artifacts/experiments/S4_lean31_bias_60d_2023/20261004T064252271500Z_f4459e20",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_price_position_20d_2023",
+      "directory": "artifacts/experiments/S4_lean31_price_position_20d_2023/20261004T064314229310Z_9cfabddf",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_price_position_60d_2023",
+      "directory": "artifacts/experiments/S4_lean31_price_position_60d_2023/20261004T064336313659Z_e2c11e6b",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_amount_ratio_20d_2023",
+      "directory": "artifacts/experiments/S4_lean31_amount_ratio_20d_2023/20261004T064358577872Z_b415f560",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_2023",
+      "directory": "artifacts/experiments/S4_lean31_log_mean_amount_20d_2023/20261004T064420405963Z_3c071819",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_volatility_60d_2023",
+      "directory": "artifacts/experiments/S4_lean31_volatility_60d_2023/20261004T064442605779Z_1a88e690",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_flag_limit_up_2023",
+      "directory": "artifacts/experiments/S4_lean31_flag_limit_up_2023/20261004T064504681976Z_399cc06f",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_flag_limit_down_2023",
+      "directory": "artifacts/experiments/S4_lean31_flag_limit_down_2023/20261004T064526742137Z_8f2110cd",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_limit_up_count_5d_2023",
+      "directory": "artifacts/experiments/S4_lean31_limit_up_count_5d_2023/20261004T064548908133Z_1bc574f5",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_limit_down_count_5d_2023",
+      "directory": "artifacts/experiments/S4_lean31_limit_down_count_5d_2023/20261004T064611106003Z_9f1876b9",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_ret_1d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_lean31_ret_1d_rank_pct_2023/20261004T064633002434Z_52d5660a",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_ret_5d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_lean31_ret_5d_rank_pct_2023/20261004T064654913559Z_00c0af1f",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_ret_20d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_lean31_ret_20d_rank_pct_2023/20261004T064716828409Z_f2bc15c4",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_amount_ratio_5d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_lean31_amount_ratio_5d_rank_pct_2023/20261004T064738890275Z_597fd3bc",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_volatility_20d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_lean31_volatility_20d_rank_pct_2023/20261004T064801020588Z_2f05dda4",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_rank_pct_2023",
+      "directory": "artifacts/experiments/S4_lean31_log_mean_amount_20d_rank_pct_2023/20261004T064823188665Z_49fc7f7c",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_2d_2021",
+      "directory": "artifacts/experiments/S4_full34_ret_2d_2021/20261004T065028660106Z_f8c64590",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_2d_2022",
+      "directory": "artifacts/experiments/S4_full34_ret_2d_2022/20261004T065050106583Z_cdd8d78a",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_10d_2021",
+      "directory": "artifacts/experiments/S4_full34_ret_10d_2021/20261004T065111113980Z_ed7da86f",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_10d_2022",
+      "directory": "artifacts/experiments/S4_full34_ret_10d_2022/20261004T065130318055Z_9ca688fb",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_60d_2021",
+      "directory": "artifacts/experiments/S4_full34_ret_60d_2021/20261004T065151435641Z_8f0701ce",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_60d_2022",
+      "directory": "artifacts/experiments/S4_full34_ret_60d_2022/20261004T065210943080Z_c43e5211",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_close_location_2021",
+      "directory": "artifacts/experiments/S4_full34_close_location_2021/20261004T065231977973Z_00570596",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_close_location_2022",
+      "directory": "artifacts/experiments/S4_full34_close_location_2022/20261004T065251472431Z_ee2fe906",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_upper_shadow_2021",
+      "directory": "artifacts/experiments/S4_full34_upper_shadow_2021/20261004T065312382187Z_131a48e4",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_upper_shadow_2022",
+      "directory": "artifacts/experiments/S4_full34_upper_shadow_2022/20261004T065331728536Z_e6b8eed6",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_lower_shadow_2021",
+      "directory": "artifacts/experiments/S4_full34_lower_shadow_2021/20261004T065352828949Z_51b4b2b4",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_lower_shadow_2022",
+      "directory": "artifacts/experiments/S4_full34_lower_shadow_2022/20261004T065412067539Z_3a795ec1",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_body_ratio_2021",
+      "directory": "artifacts/experiments/S4_full34_body_ratio_2021/20261004T065432812319Z_1ff04a54",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_body_ratio_2022",
+      "directory": "artifacts/experiments/S4_full34_body_ratio_2022/20261004T065452147774Z_e5314efc",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_bias_20d_2021",
+      "directory": "artifacts/experiments/S4_full34_bias_20d_2021/20261004T065512948421Z_b8028f5f",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_bias_20d_2022",
+      "directory": "artifacts/experiments/S4_full34_bias_20d_2022/20261004T065532329930Z_14c2f6cc",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_bias_60d_2021",
+      "directory": "artifacts/experiments/S4_full34_bias_60d_2021/20261004T065553638944Z_77ef4e7f",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_bias_60d_2022",
+      "directory": "artifacts/experiments/S4_full34_bias_60d_2022/20261004T065612951165Z_dbf960c9",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_price_position_20d_2021",
+      "directory": "artifacts/experiments/S4_full34_price_position_20d_2021/20261004T065633699601Z_dabd6a30",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_price_position_20d_2022",
+      "directory": "artifacts/experiments/S4_full34_price_position_20d_2022/20261004T065653422801Z_f03ad85b",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_price_position_60d_2021",
+      "directory": "artifacts/experiments/S4_full34_price_position_60d_2021/20261004T065714980501Z_551ce22b",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_price_position_60d_2022",
+      "directory": "artifacts/experiments/S4_full34_price_position_60d_2022/20261004T065734282933Z_7ff4b957",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_amount_ratio_20d_2021",
+      "directory": "artifacts/experiments/S4_full34_amount_ratio_20d_2021/20261004T065755617290Z_3522f8d0",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_amount_ratio_20d_2022",
+      "directory": "artifacts/experiments/S4_full34_amount_ratio_20d_2022/20261004T065815166902Z_962ae322",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_2021",
+      "directory": "artifacts/experiments/S4_full34_log_mean_amount_20d_2021/20261004T065836102298Z_613a7bbc",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_2022",
+      "directory": "artifacts/experiments/S4_full34_log_mean_amount_20d_2022/20261004T065855700671Z_47115355",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_volatility_60d_2021",
+      "directory": "artifacts/experiments/S4_full34_volatility_60d_2021/20261004T065916293647Z_55287ff8",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_volatility_60d_2022",
+      "directory": "artifacts/experiments/S4_full34_volatility_60d_2022/20261004T065935719678Z_8cefb193",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_flag_limit_up_2021",
+      "directory": "artifacts/experiments/S4_full34_flag_limit_up_2021/20261004T065956897405Z_4350b188",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_flag_limit_up_2022",
+      "directory": "artifacts/experiments/S4_full34_flag_limit_up_2022/20261004T070016081630Z_76dc944d",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_flag_limit_down_2021",
+      "directory": "artifacts/experiments/S4_full34_flag_limit_down_2021/20261004T070036975416Z_6b476c18",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_flag_limit_down_2022",
+      "directory": "artifacts/experiments/S4_full34_flag_limit_down_2022/20261004T070056466000Z_a496dd37",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_limit_up_count_5d_2021",
+      "directory": "artifacts/experiments/S4_full34_limit_up_count_5d_2021/20261004T070117374376Z_0e353319",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_limit_up_count_5d_2022",
+      "directory": "artifacts/experiments/S4_full34_limit_up_count_5d_2022/20261004T070136875531Z_96838a17",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_limit_down_count_5d_2021",
+      "directory": "artifacts/experiments/S4_full34_limit_down_count_5d_2021/20261004T070158235583Z_ae76a95f",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_limit_down_count_5d_2022",
+      "directory": "artifacts/experiments/S4_full34_limit_down_count_5d_2022/20261004T070217495811Z_ea3b5a75",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_1d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_full34_ret_1d_rank_pct_2021/20261004T070238493344Z_38769593",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_1d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_full34_ret_1d_rank_pct_2022/20261004T070258037562Z_89346d29",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_5d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_full34_ret_5d_rank_pct_2021/20261004T070318901993Z_5cbedba3",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_5d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_full34_ret_5d_rank_pct_2022/20261004T070338508151Z_5ba177f1",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_20d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_full34_ret_20d_rank_pct_2021/20261004T070359543605Z_9ec01811",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_ret_20d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_full34_ret_20d_rank_pct_2022/20261004T070419185065Z_3affb459",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_amount_ratio_5d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_full34_amount_ratio_5d_rank_pct_2021/20261004T070439872038Z_76804574",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_amount_ratio_5d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_full34_amount_ratio_5d_rank_pct_2022/20261004T070459221112Z_faab2f1e",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_volatility_20d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_full34_volatility_20d_rank_pct_2021/20261004T070520046327Z_6aa05307",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_volatility_20d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_full34_volatility_20d_rank_pct_2022/20261004T070539531857Z_4bfd3a36",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_full34_log_mean_amount_20d_rank_pct_2021/20261004T070600825894Z_25da3e4b",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_full34_log_mean_amount_20d_rank_pct_2022/20261004T070620230246Z_264ca602",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_close_location_2021",
+      "directory": "artifacts/experiments/S4_lean31_close_location_2021/20261004T070640980052Z_bc633378",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_close_location_2022",
+      "directory": "artifacts/experiments/S4_lean31_close_location_2022/20261004T070659713445Z_70dbb1e1",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_upper_shadow_2021",
+      "directory": "artifacts/experiments/S4_lean31_upper_shadow_2021/20261004T070720091697Z_c1125617",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_upper_shadow_2022",
+      "directory": "artifacts/experiments/S4_lean31_upper_shadow_2022/20261004T070739088958Z_09336bb4",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_lower_shadow_2021",
+      "directory": "artifacts/experiments/S4_lean31_lower_shadow_2021/20261004T070759993617Z_4e75b3ad",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_lower_shadow_2022",
+      "directory": "artifacts/experiments/S4_lean31_lower_shadow_2022/20261004T070818773621Z_5cf75aa2",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_body_ratio_2021",
+      "directory": "artifacts/experiments/S4_lean31_body_ratio_2021/20261004T070839409046Z_68156ee8",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_body_ratio_2022",
+      "directory": "artifacts/experiments/S4_lean31_body_ratio_2022/20261004T070858442253Z_8d761319",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_bias_20d_2021",
+      "directory": "artifacts/experiments/S4_lean31_bias_20d_2021/20261004T070918830857Z_e3b4b3fa",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_bias_20d_2022",
+      "directory": "artifacts/experiments/S4_lean31_bias_20d_2022/20261004T070937926216Z_4061ee48",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_bias_60d_2021",
+      "directory": "artifacts/experiments/S4_lean31_bias_60d_2021/20261004T070958588924Z_44009ff5",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_bias_60d_2022",
+      "directory": "artifacts/experiments/S4_lean31_bias_60d_2022/20261004T071017808002Z_616d20de",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_price_position_20d_2021",
+      "directory": "artifacts/experiments/S4_lean31_price_position_20d_2021/20261004T071038442760Z_ed70f020",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_price_position_20d_2022",
+      "directory": "artifacts/experiments/S4_lean31_price_position_20d_2022/20261004T071057316341Z_037bf40a",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_price_position_60d_2021",
+      "directory": "artifacts/experiments/S4_lean31_price_position_60d_2021/20261004T071117821786Z_f749c110",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_price_position_60d_2022",
+      "directory": "artifacts/experiments/S4_lean31_price_position_60d_2022/20261004T071136982656Z_42e4d500",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_amount_ratio_20d_2021",
+      "directory": "artifacts/experiments/S4_lean31_amount_ratio_20d_2021/20261004T071157739044Z_345810ee",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_amount_ratio_20d_2022",
+      "directory": "artifacts/experiments/S4_lean31_amount_ratio_20d_2022/20261004T071216717769Z_b0ccad67",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_2021",
+      "directory": "artifacts/experiments/S4_lean31_log_mean_amount_20d_2021/20261004T071237278725Z_926e73fa",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_2022",
+      "directory": "artifacts/experiments/S4_lean31_log_mean_amount_20d_2022/20261004T071256096478Z_151864bc",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_volatility_60d_2021",
+      "directory": "artifacts/experiments/S4_lean31_volatility_60d_2021/20261004T071316356623Z_27ef8c77",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_volatility_60d_2022",
+      "directory": "artifacts/experiments/S4_lean31_volatility_60d_2022/20261004T071335464210Z_9c16fd51",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_flag_limit_up_2021",
+      "directory": "artifacts/experiments/S4_lean31_flag_limit_up_2021/20261004T071356507933Z_bb1fd4a2",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_flag_limit_up_2022",
+      "directory": "artifacts/experiments/S4_lean31_flag_limit_up_2022/20261004T071415114331Z_6b904a53",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_flag_limit_down_2021",
+      "directory": "artifacts/experiments/S4_lean31_flag_limit_down_2021/20261004T071435635843Z_d9997042",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_flag_limit_down_2022",
+      "directory": "artifacts/experiments/S4_lean31_flag_limit_down_2022/20261004T071454965091Z_d28e2d08",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_limit_up_count_5d_2021",
+      "directory": "artifacts/experiments/S4_lean31_limit_up_count_5d_2021/20261004T071515313405Z_e539f946",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_limit_up_count_5d_2022",
+      "directory": "artifacts/experiments/S4_lean31_limit_up_count_5d_2022/20261004T071534318294Z_80326fb0",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_limit_down_count_5d_2021",
+      "directory": "artifacts/experiments/S4_lean31_limit_down_count_5d_2021/20261004T071555202783Z_2b461343",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_limit_down_count_5d_2022",
+      "directory": "artifacts/experiments/S4_lean31_limit_down_count_5d_2022/20261004T071614217563Z_9f1c65ab",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_ret_1d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_lean31_ret_1d_rank_pct_2021/20261004T071634691371Z_9d56fbc3",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_ret_1d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_lean31_ret_1d_rank_pct_2022/20261004T071653786111Z_e43cf8c6",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_ret_5d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_lean31_ret_5d_rank_pct_2021/20261004T071714206551Z_1f1a7d38",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_ret_5d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_lean31_ret_5d_rank_pct_2022/20261004T071733414188Z_df84ba66",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_ret_20d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_lean31_ret_20d_rank_pct_2021/20261004T071754136300Z_57dde0ec",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_ret_20d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_lean31_ret_20d_rank_pct_2022/20261004T071813066397Z_9fbef540",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_amount_ratio_5d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_lean31_amount_ratio_5d_rank_pct_2021/20261004T071833605697Z_bcad0ec4",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_amount_ratio_5d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_lean31_amount_ratio_5d_rank_pct_2022/20261004T071852662156Z_b4b197ad",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_volatility_20d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_lean31_volatility_20d_rank_pct_2021/20261004T071913074757Z_3465ff8a",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_volatility_20d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_lean31_volatility_20d_rank_pct_2022/20261004T071932143031Z_6d80c4ca",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_rank_pct_2021",
+      "directory": "artifacts/experiments/S4_lean31_log_mean_amount_20d_rank_pct_2021/20261004T071953048045Z_6f7a26a8",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_rank_pct_2022",
+      "directory": "artifacts/experiments/S4_lean31_log_mean_amount_20d_rank_pct_2022/20261004T072011806966Z_f6010689",
+      "hashes_verified": 16,
+      "raw_keys_equal": true,
+      "official_max_abs_difference": 0.0
+    }
+  ],
+  "reused_references": [
+    {
+      "candidate": "baseline10",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step1_baseline10_2023/20261001T144903748616Z_fb241809",
+      "mode": "reused_step2",
+      "summary_sha256": "bcc5c87b043aed3cd3b97b7171a48459d42cd81f9f37978f5e95d5a538f09ce6",
+      "verified_files": 16
+    },
+    {
+      "candidate": "full34",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step1_full34_2023/20261001T145046998460Z_a2802673",
+      "mode": "reused_step2",
+      "summary_sha256": "34a2c7d0d6a0a5db2f6a655223b021cfca713556617f787b87762f08c722f6eb",
+      "verified_files": 16
+    },
+    {
+      "candidate": "lean31",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step2_34minusA/20261003T084241291962Z_47787afa",
+      "mode": "reused_step2",
+      "summary_sha256": "d15f6981cd757e558c0a4b996879f9ec4084082db5014c531eff7a2c8fa2e4f0",
+      "verified_files": 16
+    },
+    {
+      "candidate": "baseline10",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_baseline10_dev_2021/20261003T180659133903Z_69346cd9",
+      "mode": "new_run",
+      "summary_sha256": "2ffc53d2d34721448ae1b1c6f07fd472bf038ba3afddd8d35df4fa4c2fba4171",
+      "verified_files": 16
+    },
+    {
+      "candidate": "full34",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_full34_dev_2021/20261003T180738608686Z_70f49bc1",
+      "mode": "new_run",
+      "summary_sha256": "6ebe1a22e24694b5b41abc9328943d3acbbe65fd8ff8a8f40f5a2a9be8051bdb",
+      "verified_files": 16
+    },
+    {
+      "candidate": "lean31",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_lean31_dev_2021/20261003T180857919690Z_9a8fa5e8",
+      "mode": "new_run",
+      "summary_sha256": "8b5ef9764d44000ed75bc15e37f45a5013921980e33c8f4a33cde3d1709a80b5",
+      "verified_files": 16
+    },
+    {
+      "candidate": "baseline10",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_baseline10_dev_2022/20261003T181231328895Z_863de785",
+      "mode": "new_run",
+      "summary_sha256": "2228917da7a16b9ed7cc1877106b386f2db4c698b1860ae990a7c6b13150198d",
+      "verified_files": 16
+    },
+    {
+      "candidate": "full34",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_full34_dev_2022/20261003T181310927243Z_d27fb847",
+      "mode": "new_run",
+      "summary_sha256": "f52a6c074a4887e48b8f831374f6f196818d290937dc597b063a2514dfeb2e11",
+      "verified_files": 16
+    },
+    {
+      "candidate": "lean31",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_lean31_dev_2022/20261003T181431453037Z_61467b0e",
+      "mode": "new_run",
+      "summary_sha256": "f043754acf863aba73debdaa4869558974b76d46166bb412c4ec82fbf4cf27f1",
+      "verified_files": 16
+    }
+  ],
+  "frozen_files_verified": 39,
+  "all_raw_validation_keys_verified": true,
+  "training_eligibility_counts_verified": true,
+  "all_saved_hashes_verified": true,
+  "daily_official_scores_reconstructed": true,
+  "all_tables_and_decisions_recomputed": true,
+  "source_snapshots_verified": true,
+  "push_protections_unchanged": true,
+  "existing_untracked_files_preserved": 175,
+  "used_2024": false,
+  "final_submission_generated": false,
+  "model_run_failures": 0,
+  "auxiliary_failures": [
+    {
+      "type": "auxiliary_audit",
+      "attempt": 1,
+      "exit_code": 1,
+      "error": "AssertionError: complete provenance dict compared including phase-specific git status",
+      "log": "audit.log",
+      "command": "audit_command.json",
+      "log_sha256": "10a78e9c3c732332d9bb16ac844b3a0fc35934a8352f8d000800fed71d52cbcd",
+      "source_sha256": "4da16cc6a4aa075873dde769219a9b055b64eda6aa272862b0817f6d0bd21951",
+      "model_runs_affected": 0
+    }
+  ],
+  "audit_source_correction": {
+    "executed_sha256": "4da16cc6a4aa075873dde769219a9b055b64eda6aa272862b0817f6d0bd21951",
+    "corrected_sha256": "dff811c78b69bb06f0dee1f27d261c5f0a748ef027120ef67ffc17f935d0f298",
+    "training_runner_changed": false,
+    "reason": "Audit-only correction: compare executed sources/data/dependencies and git branch/commit; recorded working-tree status legitimately differs across phases. Exact original audit source is preserved; all training/feature/scoring sources unchanged."
+  },
+  "elapsed_seconds": 251.2005137999995,
+  "evidence_sha256": {
+    "audit_command.json": "493025da81eff8a9548d9ee8aab630f62a4d2d34c2e41648d2ee99f83889b7d3",
+    "audit_source_correction.json": "37a2ab9bccc5f872b41c3f95abdcb42bf9c7b631001b9f6620808f8888bea933",
+    "auxiliary_failures.json": "c1c62b2602bf0d630cc47e9f061f306302ab80afdbf30ebc4c6953db31a68d30",
+    "cross_plan.json": "0ae1c1f47f135525c846ed6ee36d7e646de4a86081efc0e20743da40615fd583",
+    "cross_registration.json": "34539bbac72737ec7e8a55ba343bbe40ab5eb0340aa3fed597a68acb16f8b831",
+    "cross_review_list.csv": "24abe416b61ab468ba324cf0d6e1e8c8b050aaf6e8e740b684c511616eae9492",
+    "cross_status.json": "88821cd19d479c44c7f8e29617916e6b053bcee8d5c34a97a2bad0f491b940ef",
+    "deletion_results.csv": "dcc9cca0f4db23a6552d820be13c482c1ac05ae43a549d2c7323bfe3c9b44c8f",
+    "dependency_check.json": "5d9163bb9ca8c1a764e2a265013b53a1e8e8464efeff8c7bb675f8286569179e",
+    "failures.json": "80d0a416e0bcd0887ae19659632bb0b67d5d42357842fb9cc61cf862c61bbed8",
+    "feature_decisions.csv": "b2339fd09b4af2ed9d5b6d5bafeef6a66ea7b35e280f5e9606c9c8d1441d4117",
+    "frozen_candidates.json": "9e7397c454e20f0000ce35e912997da0ab659791a8cf4408cbd8ef18d4eab6f2",
+    "frozen_candidate_comparison.csv": "ba89b0e51e246cd99928b4ee2c61f1fbd22e8320ba851a5fdddd94a4bb15532d",
+    "joint_plan.json": "0eb8c053af8a56e5e2f433fa23553a3e9acb3ab6da7c9ea80279a54970f4727d",
+    "monthly_deletion_results.csv": "9db328527b030d5e956a5b8f9c785ba61e954cb4d941737d5404673778647393",
+    "preflight.json": "f7018257197afd9df14074a792cfd304f0308f05e09a4848b6deed5254b1a4b1",
+    "preregistration.json": "1e2962cee0b7ae7309a68ffc8f8d698f9d2d4e20bd3be3071a0acc48fcfab2fc",
+    "run_index.json": "d99c6cdf24d4bdfc136476f704272e46c2ddf1765b41b7f259cd0711f63a5ade",
+    "screen_matrix.json": "8d39736bbd243a5f80bf0a36266405b08d205645af49375d4be629b74760c4eb",
+    "screen_registration.json": "d32d04f7cb3a9e91c609a2f6d7910c6d567331ac325642c4377412014b961d3a",
+    "screen_status.json": "14209d8112ec925b0400910d0f43ff6ef08314a5287b66e3c28cbe531517db0b",
+    "STEP4_PREREGISTRATION.md": "112d1f4ba7663a77c344b44248f55dc5e23e5673697924b68556c770f8d25f26",
+    "STEP4_REPORT.md": "89d7d6af288893223aada0f7997fb532f607db0d9b182c20435045e5c24e2e74",
+    "tests_result.json": "79769d574798fcf573dc4693743c9adaac3d20e3dcf6d7231ecb85dff569e0e7",
+    "decision_evidence_details.csv": "4312016e2379b6e69564aef5bd5954a558dcb23ba919f8253bf5e65d51f59777",
+    "EVIDENCE_INDEX.md": "cd327afc2205f00d3d91c1cb9f5f64d28c035b155a62b000a342a6cf2a8870cf",
+    "final_evidence_check.json": "7bc71f7319d776a0204d83d3bc5ce8812c8784c0ff94f5ed28c131a7ddb0a381"
+  },
+  "post_audit_explanation_check": {
+    "accepted": true,
+    "full_disk_audit_unchanged": true,
+    "numerical_tables_and_models_unchanged": true,
+    "added_explanation_rows_verified": 48,
+    "changed_evidence": [
+      "STEP4_REPORT.md"
+    ],
+    "unchanged_frozen_candidates": true,
+    "additions": [
+      "decision_evidence_details.csv",
+      "EVIDENCE_INDEX.md"
+    ],
+    "note": "Only report explanation and evidence index extended after full audit; derived trigger years independently checked against accepted numerical results."
+  }
+}

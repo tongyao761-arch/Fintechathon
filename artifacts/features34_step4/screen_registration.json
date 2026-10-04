@@ -1,0 +1,501 @@
+{
+  "experiments": [
+    {
+      "id": "S4_full34_ret_2d_2023",
+      "context": "full34",
+      "feature": "ret_2d",
+      "group": "A",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "ret_2d"
+      ]
+    },
+    {
+      "id": "S4_full34_ret_10d_2023",
+      "context": "full34",
+      "feature": "ret_10d",
+      "group": "A",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "ret_10d"
+      ]
+    },
+    {
+      "id": "S4_full34_ret_60d_2023",
+      "context": "full34",
+      "feature": "ret_60d",
+      "group": "A",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "ret_60d"
+      ]
+    },
+    {
+      "id": "S4_full34_close_location_2023",
+      "context": "full34",
+      "feature": "close_location",
+      "group": "B",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "close_location"
+      ]
+    },
+    {
+      "id": "S4_full34_upper_shadow_2023",
+      "context": "full34",
+      "feature": "upper_shadow",
+      "group": "B",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "upper_shadow"
+      ]
+    },
+    {
+      "id": "S4_full34_lower_shadow_2023",
+      "context": "full34",
+      "feature": "lower_shadow",
+      "group": "B",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "lower_shadow"
+      ]
+    },
+    {
+      "id": "S4_full34_body_ratio_2023",
+      "context": "full34",
+      "feature": "body_ratio",
+      "group": "B",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "body_ratio"
+      ]
+    },
+    {
+      "id": "S4_full34_bias_20d_2023",
+      "context": "full34",
+      "feature": "bias_20d",
+      "group": "C",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "bias_20d"
+      ]
+    },
+    {
+      "id": "S4_full34_bias_60d_2023",
+      "context": "full34",
+      "feature": "bias_60d",
+      "group": "C",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "bias_60d"
+      ]
+    },
+    {
+      "id": "S4_full34_price_position_20d_2023",
+      "context": "full34",
+      "feature": "price_position_20d",
+      "group": "C",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "price_position_20d"
+      ]
+    },
+    {
+      "id": "S4_full34_price_position_60d_2023",
+      "context": "full34",
+      "feature": "price_position_60d",
+      "group": "C",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "price_position_60d"
+      ]
+    },
+    {
+      "id": "S4_full34_amount_ratio_20d_2023",
+      "context": "full34",
+      "feature": "amount_ratio_20d",
+      "group": "D",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_20d"
+      ]
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_2023",
+      "context": "full34",
+      "feature": "log_mean_amount_20d",
+      "group": "D",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d"
+      ]
+    },
+    {
+      "id": "S4_full34_volatility_60d_2023",
+      "context": "full34",
+      "feature": "volatility_60d",
+      "group": "D",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "volatility_60d"
+      ]
+    },
+    {
+      "id": "S4_full34_flag_limit_up_2023",
+      "context": "full34",
+      "feature": "flag_limit_up",
+      "group": "E",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_up"
+      ]
+    },
+    {
+      "id": "S4_full34_flag_limit_down_2023",
+      "context": "full34",
+      "feature": "flag_limit_down",
+      "group": "E",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_down"
+      ]
+    },
+    {
+      "id": "S4_full34_limit_up_count_5d_2023",
+      "context": "full34",
+      "feature": "limit_up_count_5d",
+      "group": "E",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "limit_up_count_5d"
+      ]
+    },
+    {
+      "id": "S4_full34_limit_down_count_5d_2023",
+      "context": "full34",
+      "feature": "limit_down_count_5d",
+      "group": "E",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "limit_down_count_5d"
+      ]
+    },
+    {
+      "id": "S4_full34_ret_1d_rank_pct_2023",
+      "context": "full34",
+      "feature": "ret_1d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "ret_1d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_full34_ret_5d_rank_pct_2023",
+      "context": "full34",
+      "feature": "ret_5d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "ret_5d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_full34_ret_20d_rank_pct_2023",
+      "context": "full34",
+      "feature": "ret_20d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "ret_20d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_full34_amount_ratio_5d_rank_pct_2023",
+      "context": "full34",
+      "feature": "amount_ratio_5d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_5d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_full34_volatility_20d_rank_pct_2023",
+      "context": "full34",
+      "feature": "volatility_20d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "volatility_20d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_full34_log_mean_amount_20d_rank_pct_2023",
+      "context": "full34",
+      "feature": "log_mean_amount_20d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_lean31_close_location_2023",
+      "context": "lean31",
+      "feature": "close_location",
+      "group": "B",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "close_location"
+      ]
+    },
+    {
+      "id": "S4_lean31_upper_shadow_2023",
+      "context": "lean31",
+      "feature": "upper_shadow",
+      "group": "B",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "upper_shadow"
+      ]
+    },
+    {
+      "id": "S4_lean31_lower_shadow_2023",
+      "context": "lean31",
+      "feature": "lower_shadow",
+      "group": "B",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "lower_shadow"
+      ]
+    },
+    {
+      "id": "S4_lean31_body_ratio_2023",
+      "context": "lean31",
+      "feature": "body_ratio",
+      "group": "B",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "body_ratio"
+      ]
+    },
+    {
+      "id": "S4_lean31_bias_20d_2023",
+      "context": "lean31",
+      "feature": "bias_20d",
+      "group": "C",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "bias_20d"
+      ]
+    },
+    {
+      "id": "S4_lean31_bias_60d_2023",
+      "context": "lean31",
+      "feature": "bias_60d",
+      "group": "C",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "bias_60d"
+      ]
+    },
+    {
+      "id": "S4_lean31_price_position_20d_2023",
+      "context": "lean31",
+      "feature": "price_position_20d",
+      "group": "C",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "price_position_20d"
+      ]
+    },
+    {
+      "id": "S4_lean31_price_position_60d_2023",
+      "context": "lean31",
+      "feature": "price_position_60d",
+      "group": "C",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "price_position_60d"
+      ]
+    },
+    {
+      "id": "S4_lean31_amount_ratio_20d_2023",
+      "context": "lean31",
+      "feature": "amount_ratio_20d",
+      "group": "D",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_20d"
+      ]
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_2023",
+      "context": "lean31",
+      "feature": "log_mean_amount_20d",
+      "group": "D",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d"
+      ]
+    },
+    {
+      "id": "S4_lean31_volatility_60d_2023",
+      "context": "lean31",
+      "feature": "volatility_60d",
+      "group": "D",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "volatility_60d"
+      ]
+    },
+    {
+      "id": "S4_lean31_flag_limit_up_2023",
+      "context": "lean31",
+      "feature": "flag_limit_up",
+      "group": "E",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_up"
+      ]
+    },
+    {
+      "id": "S4_lean31_flag_limit_down_2023",
+      "context": "lean31",
+      "feature": "flag_limit_down",
+      "group": "E",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "flag_limit_down"
+      ]
+    },
+    {
+      "id": "S4_lean31_limit_up_count_5d_2023",
+      "context": "lean31",
+      "feature": "limit_up_count_5d",
+      "group": "E",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "limit_up_count_5d"
+      ]
+    },
+    {
+      "id": "S4_lean31_limit_down_count_5d_2023",
+      "context": "lean31",
+      "feature": "limit_down_count_5d",
+      "group": "E",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "limit_down_count_5d"
+      ]
+    },
+    {
+      "id": "S4_lean31_ret_1d_rank_pct_2023",
+      "context": "lean31",
+      "feature": "ret_1d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "ret_1d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_lean31_ret_5d_rank_pct_2023",
+      "context": "lean31",
+      "feature": "ret_5d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "ret_5d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_lean31_ret_20d_rank_pct_2023",
+      "context": "lean31",
+      "feature": "ret_20d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "ret_20d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_lean31_amount_ratio_5d_rank_pct_2023",
+      "context": "lean31",
+      "feature": "amount_ratio_5d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "amount_ratio_5d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_lean31_volatility_20d_rank_pct_2023",
+      "context": "lean31",
+      "feature": "volatility_20d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "volatility_20d_rank_pct"
+      ]
+    },
+    {
+      "id": "S4_lean31_log_mean_amount_20d_rank_pct_2023",
+      "context": "lean31",
+      "feature": "log_mean_amount_20d_rank_pct",
+      "group": "F",
+      "split": "primary_2023",
+      "kind": "single",
+      "exclude": [
+        "log_mean_amount_20d_rank_pct"
+      ]
+    }
+  ],
+  "plan_sha256": null,
+  "registered_at": "2026-10-04T14:30:59.724395+08:00"
+}
