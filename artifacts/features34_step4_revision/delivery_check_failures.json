@@ -1,0 +1,19 @@
+{
+  "failures": [
+    {
+      "phase": "delivery_whitespace",
+      "argv": [
+        "git",
+        "show",
+        "--check",
+        "--oneline",
+        "HEAD"
+      ],
+      "exit_code": 2,
+      "error": "CRLF preserved with -text but cr-at-eol whitespace attribute missing; Git reports CR as trailing whitespace",
+      "log": "delivery_whitespace_attempt01.log",
+      "log_sha256": "2fbe6ffa7b9c0c3fb7e91aea98edd81557966ad375e312c922cf3e0a373a4deb",
+      "models_or_scores_affected": false
+    }
+  ]
+}

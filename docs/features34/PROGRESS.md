@@ -214,6 +214,8 @@ flag_limit_down的保留主要涉及官方含缺标签行的Top换手集合：�
 
 98项回归测试及pip check通过。独立审计通过：49个执行源码快照、39个冻结文件、135项复用的原始验证键与逐日官方分数、6项新保存文件哈希/资格/全部键/重载预测一致性；重算48条单列判定、所有年度/月度表、配对区间及候选排序。官方对比最大差0，逐日评分重建误差≤1e−12。旧第4步84个文件、旧规则文件、215个既有未跟踪文件及Git配置/pre-push保护均保持原哈希。新增精确路径.gitattributes换行保护，避免本次源码及证据哈希被自动换行转换改变。模型和辅助失败均0，failures.json保留空失败清单与真实命令日志。
 
+交付复查补记：模型及独立审计失败0；Git空白检查另有失败1次。首次新增路径的-text保留CRLF但缺少cr-at-eol说明，Git将CR误报为尾随空白；提交前包装器未拦截该检查失败。已留存实际退出码2与完整日志，并仅补充新增路径的whitespace属性；保留真实尾随空格检查，不改任何源码/数据/已验收产物。修正后的检查和提交字节一致性见delivery_verification.json，失败见delivery_check_failures.json及DELIVERY_CHECK.md。不改写已有本地提交历史，使用单独交付修复提交。
+
 证据：docs/features34/STEP4_REVISION_RULES.md、STEP4_REVISION_REPORT.md；artifacts/features34_step4_revision/中的registration.json、matrix.json、probe_evidence.csv、single_decisions.csv、joint_results.csv、candidate_results.csv、monthly_candidate_results.csv、candidate_ranking.csv、frozen_candidates.json、run_index.json、acceptance.json、summary.json、preflight.json、failures.json、EVIDENCE_INDEX.md和commands/。完整模型和大体积预测留在run_index.json指向的不可覆盖目录。
 
 入口：scripts/run_features34_step4_revision.py prepare/run/aggregate；独立审计scripts/audit_features34_step4_revision.py。规则和源码已冻结；已有一致完成实验核验后复用。仅本地ivor-work，按实际AGENTS.md创建本次相关代码/文档/小型证据提交，不进行远程写操作。第4步修订已完成并停止，2024复核等待另行授权。

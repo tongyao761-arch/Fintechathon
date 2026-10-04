@@ -1,0 +1,29 @@
+{
+  "accepted": true,
+  "git_checks": [
+    {
+      "argv": [
+        "git",
+        "show",
+        "--check",
+        "--oneline",
+        "HEAD"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "prior_committed_evidence_bytes_equal": true,
+  "old_artifacts_sources_and_protections_unchanged": true,
+  "model_audit_evidence_unchanged": true,
+  "delivery_check_failures": 1,
+  "model_audit_failures": 0,
+  "used_2024": false
+}
