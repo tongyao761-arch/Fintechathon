@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\fintechathon\\scripts\\validate_frozen_models.py",
+    "resume",
+    "--output",
+    "C:\\fintechathon\\artifacts\\frozen_models_validation\\20261005T062821736270Z_2d9c336c"
+  ],
+  "cwd": "C:\\fintechathon",
+  "started_at": "2026-10-05T14:38:07.856966+08:00",
+  "exit_code": 0,
+  "elapsed_seconds": 463.19960099999935,
+  "peak_rss_mb": 4534.37109375
+}

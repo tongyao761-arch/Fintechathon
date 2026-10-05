@@ -1,0 +1,7 @@
+{
+  "train_start": 20180102,
+  "train_end": 20241230,
+  "purge_date": 20241231,
+  "first_test_date": 20250102,
+  "last_test_date": 20260608
+}

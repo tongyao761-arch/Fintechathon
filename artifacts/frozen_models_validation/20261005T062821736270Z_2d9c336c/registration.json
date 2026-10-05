@@ -1,0 +1,879 @@
+{
+  "config": {
+    "stage": "frozen_test_adaptation_and_model_sensitivity",
+    "freeze": "artifacts/features34_step5/FROZEN_CANDIDATES.json",
+    "candidates": [
+      "S4R_lean31_minus4",
+      "S4R_full34_minus3"
+    ],
+    "changes": {
+      "B1": {
+        "num_leaves": 15
+      },
+      "B2": {
+        "reg_lambda": 10.0
+      }
+    },
+    "splits": [
+      "dev_2021",
+      "dev_2022",
+      "primary_2023"
+    ],
+    "new_training_runs": {
+      "A": 2,
+      "B": 12
+    },
+    "rules": {
+      "direction": "after minus same-year original and baseline10",
+      "annual_conflict": "report any mixed signs; do not accept on mean alone",
+      "near_zero_score_delta": 0.001,
+      "material_annual_degradation": -0.005,
+      "material_month_degradation": -0.005,
+      "monthly": "daily means, annualized excess x252; month-first turnover retains previous trading day; never average monthly scores into annual score",
+      "diagnostics": "official Top includes non-limit-up missing-label rows; price-valid turnover diagnostic only; monthly counts weighted by Top membership",
+      "decision": "no automatic replacement, ranking or extra runs; improvement/degradation does not establish absence/presence of overfitting",
+      "intervals": "descriptive annual/monthly comparisons only; no significance or equivalence claim; historical selection bias is not quantified"
+    }
+  },
+  "config_sha256": "18fadcb0441e4a9954f816276a3463e1bc56ffc8ef31553137cb4a3127a03e89",
+  "freeze_sha256": "12790b50793fb4a3faf5b0df0dfe9cdf937f90c6b68f63d064b1f37c26542063",
+  "registered_at": "2026-10-05T14:28:33.333102+08:00",
+  "references": [
+    {
+      "candidate": "baseline10",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_baseline10_dev_2021/20261003T180659133903Z_69346cd9",
+      "summary_sha256": "2ffc53d2d34721448ae1b1c6f07fd472bf038ba3afddd8d35df4fa4c2fba4171",
+      "model_sha256": "ee7f213de4c49b74ddeff3b8e12350b051c271bffaceed1845e74e0654da5c9f",
+      "predictions_sha256": "a90e4524977984036dea99cf4b8b9fa9e010a964590cc49698197e971044e8d9",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "historical_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "current_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "runner_source_note": "Earlier stages extended runner authorization/metadata; current frozen sources verified; saved model predictions and scores independently reproduced before reuse."
+    },
+    {
+      "candidate": "baseline10",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_baseline10_dev_2022/20261003T181231328895Z_863de785",
+      "summary_sha256": "2228917da7a16b9ed7cc1877106b386f2db4c698b1860ae990a7c6b13150198d",
+      "model_sha256": "9cf76d02c56784d53994bfe1606b628b4b53bfd2c16488acf7d7f752f183d9cc",
+      "predictions_sha256": "0e5f0375a7221c4b5c7d80da6c443608cce57ecd740ac9f92027c2c452e416aa",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "historical_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "current_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "runner_source_note": "Earlier stages extended runner authorization/metadata; current frozen sources verified; saved model predictions and scores independently reproduced before reuse."
+    },
+    {
+      "candidate": "baseline10",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step1_baseline10_2023/20261001T144903748616Z_fb241809",
+      "summary_sha256": "bcc5c87b043aed3cd3b97b7171a48459d42cd81f9f37978f5e95d5a538f09ce6",
+      "model_sha256": "0a5418f6305632aae700b1ec41801db366b1ad10c7197ed86e4e3ce3ccb7183e",
+      "predictions_sha256": "ec80c8605c5c4720ac5ac7723d8e86eaae6c9a8e860d9349fe934869a387411e",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "historical_runner_sha256": "8fa78578f8724707c7acc7b3e9e0234c5737caff9408c51af06ff932de6731fd",
+      "current_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "runner_source_note": "Earlier stages extended runner authorization/metadata; current frozen sources verified; saved model predictions and scores independently reproduced before reuse."
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/S4R_full34_minus3_2021/20261004T090607834910Z_eadde3a4",
+      "summary_sha256": "3ee9ce3ba860de59dd1f40aa18083b4a459c0f6f2a463d18372a4cfd6ff817f2",
+      "model_sha256": "9df14b3f5848374d6fee86157c05765a81c0ce2d85660268e1f3881ecbbb1d1a",
+      "predictions_sha256": "762a2ca76a95273dafa06ca71b5b387d4f376c1ee4d72e4d16aba70695a6d116",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "historical_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "current_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "runner_source_note": "Earlier stages extended runner authorization/metadata; current frozen sources verified; saved model predictions and scores independently reproduced before reuse."
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/S4R_full34_minus3_2022/20261004T090627775954Z_bffc5f5a",
+      "summary_sha256": "e9938f24367b7837b7d297c52e8d5e8cd8ebaaec5da8842360337648e21495f5",
+      "model_sha256": "54950a0545b455d5cd2b1dd26648036ed4918406e79335c514d72108efae920b",
+      "predictions_sha256": "eef4e2d18a81b99cbedbaf9050f6eee0e72ce7927f19bd2d6ce48c93a69fd4ad",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "historical_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "current_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "runner_source_note": "Earlier stages extended runner authorization/metadata; current frozen sources verified; saved model predictions and scores independently reproduced before reuse."
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/S4R_full34_minus3_2023/20261004T090648724514Z_0e18c478",
+      "summary_sha256": "42247e488cc133dfb3dc3c089b733ec7aeb49e4b41c18d870d51c1242cba2de3",
+      "model_sha256": "49854fb688ae82b8fe28f386772704d1db8b0a0ae7e8898d6fb59b00c32e7310",
+      "predictions_sha256": "35880c10d21f4b67d4aeccf288413ca8dfd714cd657ae435e082f20e56c9fb52",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "historical_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "current_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "runner_source_note": "Earlier stages extended runner authorization/metadata; current frozen sources verified; saved model predictions and scores independently reproduced before reuse."
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/S4R_lean31_minus4_2021/20261004T090711374528Z_074f66ba",
+      "summary_sha256": "fd205a25d71e39effac175ba7b3665f2695eb77232eae96bdf6fd12ae8258cdb",
+      "model_sha256": "5b36964099e14201bf88da6c1a8b52e99664a039911fe21c9791da132b3f5f2c",
+      "predictions_sha256": "e08159cc660e6e76a71bee77855514199da8f62baba5406c7a27ca6bef0df4ea",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "historical_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "current_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "runner_source_note": "Earlier stages extended runner authorization/metadata; current frozen sources verified; saved model predictions and scores independently reproduced before reuse."
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/S4R_lean31_minus4_2022/20261004T090730132670Z_e52a05ef",
+      "summary_sha256": "1981ee25e9df86e9d4b894ac37646c6b28f8dbf1420ae407f5fda517ac805480",
+      "model_sha256": "c5a5e74829de3f974d830630db27c636ab1f7ff439ede156ac38289ab41c58a6",
+      "predictions_sha256": "eda67040efb3aa69fd121ddadc6a6049696304b19849eb24337edd7baf9d9c9f",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "historical_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "current_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "runner_source_note": "Earlier stages extended runner authorization/metadata; current frozen sources verified; saved model predictions and scores independently reproduced before reuse."
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/S4R_lean31_minus4_2023/20261004T090750752259Z_95be596d",
+      "summary_sha256": "7e59ea3de6ba396ba070011e17876db3adcafc5ca6ac959082eebba8797a9f31",
+      "model_sha256": "f6ba4b28521c4c1a47b46ed061e879a40bdc4af3bdcd17520683945adbe00046",
+      "predictions_sha256": "c441a74d6f169615a1497d6df0851bad30c6fe0fbd814033c63f1b8584f8ade8",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "historical_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "current_runner_sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+      "runner_source_note": "Earlier stages extended runner authorization/metadata; current frozen sources verified; saved model predictions and scores independently reproduced before reuse."
+    }
+  ],
+  "repeats": [
+    {
+      "item": {
+        "candidate": "S4R_lean31_minus4",
+        "split": "primary_2023"
+      },
+      "directory": "artifacts/experiments/S6_S4R_lean31_minus4_2023/20261004T182620942911Z_24ab2629",
+      "original_directory": "artifacts/experiments/S4R_lean31_minus4_2023/20261004T090750752259Z_95be596d",
+      "summary_sha256": "7ea3aafeee3629deed3401ec5e62df422ddcb887feab7ee4079242760ec25770"
+    },
+    {
+      "item": {
+        "candidate": "S4R_lean31_minus4",
+        "split": "oos_2024"
+      },
+      "directory": "artifacts/experiments/S6_S4R_lean31_minus4_2024/20261004T182650280569Z_8e2d2881",
+      "original_directory": "artifacts/experiments/S5_S4R_lean31_minus4_2024/20261004T153205837882Z_7694eca8",
+      "summary_sha256": "c92edb5d871354146b4dc61da43a0e5b1da814bbd3690e78cfdac82f583318d3"
+    },
+    {
+      "item": {
+        "candidate": "S4R_full34_minus3",
+        "split": "primary_2023"
+      },
+      "directory": "artifacts/experiments/S6_S4R_full34_minus3_2023/20261004T182722043263Z_7bef86a4",
+      "original_directory": "artifacts/experiments/S4R_full34_minus3_2023/20261004T090648724514Z_0e18c478",
+      "summary_sha256": "37952227c77cd4e924745f36047444879340f7447f64930549a871f4c0882409"
+    },
+    {
+      "item": {
+        "candidate": "S4R_full34_minus3",
+        "split": "oos_2024"
+      },
+      "directory": "artifacts/experiments/S6_S4R_full34_minus3_2024/20261004T182752251485Z_1d21e639",
+      "original_directory": "artifacts/experiments/S5_S4R_full34_minus3_2024/20261004T153236927517Z_ba7c2aec",
+      "summary_sha256": "017c7c4c2b4ef8097b9ec53842c931851ad062f0bb781e1efacbaffe857dd50f"
+    }
+  ],
+  "matrix_A": [
+    {
+      "candidate": "S4R_lean31_minus4",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "training": "2018-2024 eligible labels; purge last observed history date; X retained"
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "training": "2018-2024 eligible labels; purge last observed history date; X retained"
+    }
+  ],
+  "matrix_B": [
+    {
+      "candidate": "S4R_lean31_minus4",
+      "probe": "B1",
+      "split": "dev_2021",
+      "change": {
+        "num_leaves": 15
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 15,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20201230,
+        "purge_date": 20201231,
+        "valid_start": 20210104,
+        "valid_end": 20211231
+      }
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "probe": "B1",
+      "split": "dev_2022",
+      "change": {
+        "num_leaves": 15
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 15,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20211230,
+        "purge_date": 20211231,
+        "valid_start": 20220104,
+        "valid_end": 20221230
+      }
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "probe": "B1",
+      "split": "primary_2023",
+      "change": {
+        "num_leaves": 15
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 15,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20221229,
+        "purge_date": 20221230,
+        "valid_start": 20230103,
+        "valid_end": 20231229
+      }
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "probe": "B2",
+      "split": "dev_2021",
+      "change": {
+        "reg_lambda": 10.0
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 10.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20201230,
+        "purge_date": 20201231,
+        "valid_start": 20210104,
+        "valid_end": 20211231
+      }
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "probe": "B2",
+      "split": "dev_2022",
+      "change": {
+        "reg_lambda": 10.0
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 10.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20211230,
+        "purge_date": 20211231,
+        "valid_start": 20220104,
+        "valid_end": 20221230
+      }
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "probe": "B2",
+      "split": "primary_2023",
+      "change": {
+        "reg_lambda": 10.0
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 10.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20221229,
+        "purge_date": 20221230,
+        "valid_start": 20230103,
+        "valid_end": 20231229
+      }
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "probe": "B1",
+      "split": "dev_2021",
+      "change": {
+        "num_leaves": 15
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 15,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20201230,
+        "purge_date": 20201231,
+        "valid_start": 20210104,
+        "valid_end": 20211231
+      }
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "probe": "B1",
+      "split": "dev_2022",
+      "change": {
+        "num_leaves": 15
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 15,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20211230,
+        "purge_date": 20211231,
+        "valid_start": 20220104,
+        "valid_end": 20221230
+      }
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "probe": "B1",
+      "split": "primary_2023",
+      "change": {
+        "num_leaves": 15
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 15,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20221229,
+        "purge_date": 20221230,
+        "valid_start": 20230103,
+        "valid_end": 20231229
+      }
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "probe": "B2",
+      "split": "dev_2021",
+      "change": {
+        "reg_lambda": 10.0
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 10.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20201230,
+        "purge_date": 20201231,
+        "valid_start": 20210104,
+        "valid_end": 20211231
+      }
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "probe": "B2",
+      "split": "dev_2022",
+      "change": {
+        "reg_lambda": 10.0
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 10.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20211230,
+        "purge_date": 20211231,
+        "valid_start": 20220104,
+        "valid_end": 20221230
+      }
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "probe": "B2",
+      "split": "primary_2023",
+      "change": {
+        "reg_lambda": 10.0
+      },
+      "parameters": {
+        "objective": "regression",
+        "boosting_type": "gbdt",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "num_leaves": 31,
+        "max_depth": -1,
+        "min_child_samples": 100,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 10.0,
+        "random_state": 20260927,
+        "data_random_seed": 20260927,
+        "feature_fraction_seed": 20260927,
+        "bagging_seed": 20260927,
+        "deterministic": true,
+        "force_col_wise": true,
+        "n_jobs": -1,
+        "verbosity": -1
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20221229,
+        "purge_date": 20221230,
+        "valid_start": 20230103,
+        "valid_end": 20231229
+      }
+    }
+  ],
+  "provenance_sha256": "d7affc7ef85ce69ccaaa6982acc21e19b81a873b5f155bb8180fdae4eccf15bd"
+}

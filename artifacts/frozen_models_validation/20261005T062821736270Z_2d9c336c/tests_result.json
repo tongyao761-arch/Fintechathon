@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "C:\\fintechathon",
+  "exit_code": 0,
+  "elapsed_seconds": 32.74548400000003
+}

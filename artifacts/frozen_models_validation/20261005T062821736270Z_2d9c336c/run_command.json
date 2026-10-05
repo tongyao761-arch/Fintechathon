@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-B",
+    "C:\\fintechathon\\scripts\\validate_frozen_models.py",
+    "run",
+    "--output",
+    "C:\\fintechathon\\artifacts\\frozen_models_validation\\20261005T062821736270Z_2d9c336c"
+  ],
+  "cwd": "C:\\fintechathon",
+  "started_at": "2026-10-05T14:30:25.550312+08:00",
+  "exit_code": 1,
+  "elapsed_seconds": 302.2726430999992,
+  "error_type": "TypeError",
+  "error": "dict() got multiple values for keyword argument 'candidate'"
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "frozen_test_adaptation_and_model_sensitivity",
+  "freeze": "artifacts/features34_step5/FROZEN_CANDIDATES.json",
+  "candidates": ["S4R_lean31_minus4", "S4R_full34_minus3"],
+  "changes": {"B1": {"num_leaves": 15}, "B2": {"reg_lambda": 10.0}},
+  "splits": ["dev_2021", "dev_2022", "primary_2023"],
+  "new_training_runs": {"A": 2, "B": 12},
+  "rules": {
+    "direction": "after minus same-year original and baseline10",
+    "annual_conflict": "report any mixed signs; do not accept on mean alone",
+    "near_zero_score_delta": 0.001,
+    "material_annual_degradation": -0.005,
+    "material_month_degradation": -0.005,
+    "monthly": "daily means, annualized excess x252; month-first turnover retains previous trading day; never average monthly scores into annual score",
+    "diagnostics": "official Top includes non-limit-up missing-label rows; price-valid turnover diagnostic only; monthly counts weighted by Top membership",
+    "decision": "no automatic replacement, ranking or extra runs; improvement/degradation does not establish absence/presence of overfitting",
+    "intervals": "descriptive annual/monthly comparisons only; no significance or equivalence claim; historical selection bias is not quantified"
+  }
+}

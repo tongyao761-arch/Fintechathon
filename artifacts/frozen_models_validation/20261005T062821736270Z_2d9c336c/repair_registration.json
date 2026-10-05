@@ -1,0 +1,12 @@
+{
+  "original_registration_sha256": "804d846a5dcc6a71a0986ecfff4bfe86585259748f6d50a9660471dd4c15a025",
+  "original_source_sha256": "f6a73f348890dcbaaf38ef29d9a07cb75a9bf3960acc345846dfea23239d5b2f",
+  "repaired_source_sha256": {
+    "scripts/validate_frozen_models.py": "66f71a6e609f96e5481a67de681400ac7cd6322d6b3edbd9815dd68d8ad962bc"
+  },
+  "reason": "Duplicate candidate/split keyword when serializing reference receipt; fix record serialization and add continuation of already accepted A, preserving original matrix/config/freeze/source snapshot and failed logs.",
+  "model_retries": 0,
+  "completed_A_reused": 2,
+  "completed_B_before_repair": 0,
+  "matrix_or_parameters_changed": false
+}

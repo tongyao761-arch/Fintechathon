@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\fintechathon\\scripts\\validate_frozen_models.py",
+    "audit",
+    "--output",
+    "C:\\fintechathon\\artifacts\\frozen_models_validation\\20261005T062821736270Z_2d9c336c"
+  ],
+  "cwd": "C:\\fintechathon",
+  "exit_code": 0,
+  "elapsed_seconds": 254.9539993999997
+}

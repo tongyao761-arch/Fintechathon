@@ -1,0 +1,17 @@
+{
+  "accepted": true,
+  "runs": 2,
+  "training_features_exactly_unchanged": true,
+  "prefix_cutoff": 20250916,
+  "truncated_and_perturbed_features_exactly_equal": true,
+  "both_fixed_models_prefix_predictions_equal": true,
+  "no_test_labels_or_trainability": true,
+  "boundary": {
+    "train_start": 20180102,
+    "train_end": 20241230,
+    "purge_date": 20241231,
+    "first_test_date": 20250102,
+    "last_test_date": 20260608
+  },
+  "all_test_keys_original_order_finite": true
+}

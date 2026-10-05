@@ -1,0 +1,5 @@
+{
+  "phase": "commit_preflight",
+  "error_type": "ValueError",
+  "error": "Evidence path was relative when deriving repository-relative staged paths; corrected by resolving it against repository root. Failed before git add; no staged files, models or experimental records affected."
+}

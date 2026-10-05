@@ -1,0 +1,552 @@
+{
+  "runs": [
+    {
+      "item": {
+        "id": "A_S4R_lean31_minus4",
+        "phase": "A",
+        "candidate": "S4R_lean31_minus4"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/A_S4R_lean31_minus4",
+      "summary_sha256": "267ab62ac2561f3a15da93e30fc4de7883eb6e4683cc6fac7a9820365b498747",
+      "files_sha256": "b96eb8120489edf52785d157fd41b74a47e93be3f81dd79aabf99897be68dc04"
+    },
+    {
+      "item": {
+        "id": "A_S4R_full34_minus3",
+        "phase": "A",
+        "candidate": "S4R_full34_minus3"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/A_S4R_full34_minus3",
+      "summary_sha256": "90a4eadb13ceb7aa807cbd3eaae81e7e66984b5d03dec2b3bfceb0fc774272d6",
+      "files_sha256": "3a6cbb89a700ecf3d968be65c1c42ac67a01258c3d95a38d0075060db1064517"
+    },
+    {
+      "item": {
+        "candidate": "S4R_lean31_minus4",
+        "probe": "B1",
+        "split": "dev_2021",
+        "change": {
+          "num_leaves": 15
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 15,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 1.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20201230,
+          "purge_date": 20201231,
+          "valid_start": 20210104,
+          "valid_end": 20211231
+        },
+        "phase": "B",
+        "id": "B1_S4R_lean31_minus4_dev_2021"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B1_S4R_lean31_minus4_dev_2021",
+      "summary_sha256": "fe50f58fc35c69c9a268aed24060a893c08ea4f155a4138990b780f1d102e1f6",
+      "files_sha256": "7f3887620702e8af46c48125bf00847c88db1dfd12c68cf11a81971c02e355aa"
+    },
+    {
+      "item": {
+        "candidate": "S4R_lean31_minus4",
+        "probe": "B1",
+        "split": "dev_2022",
+        "change": {
+          "num_leaves": 15
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 15,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 1.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20211230,
+          "purge_date": 20211231,
+          "valid_start": 20220104,
+          "valid_end": 20221230
+        },
+        "phase": "B",
+        "id": "B1_S4R_lean31_minus4_dev_2022"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B1_S4R_lean31_minus4_dev_2022",
+      "summary_sha256": "4c662182cd34c1f2976577bef98990d5fc3ca3404f513099045a449257199193",
+      "files_sha256": "cbaf5a20e26d37b26f8ccbba2384e5b440befa954f3c225ffe0163b6f226d365"
+    },
+    {
+      "item": {
+        "candidate": "S4R_lean31_minus4",
+        "probe": "B1",
+        "split": "primary_2023",
+        "change": {
+          "num_leaves": 15
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 15,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 1.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20221229,
+          "purge_date": 20221230,
+          "valid_start": 20230103,
+          "valid_end": 20231229
+        },
+        "phase": "B",
+        "id": "B1_S4R_lean31_minus4_primary_2023"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B1_S4R_lean31_minus4_primary_2023",
+      "summary_sha256": "13428467a26ce06f88dbae048222b42512110ad01b78cc23029554976462a0b5",
+      "files_sha256": "510574df62eef89c0b03cac38f5cea37cdab68be3d95bfcc7e43da1c82d3f28c"
+    },
+    {
+      "item": {
+        "candidate": "S4R_lean31_minus4",
+        "probe": "B2",
+        "split": "dev_2021",
+        "change": {
+          "reg_lambda": 10.0
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 10.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20201230,
+          "purge_date": 20201231,
+          "valid_start": 20210104,
+          "valid_end": 20211231
+        },
+        "phase": "B",
+        "id": "B2_S4R_lean31_minus4_dev_2021"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B2_S4R_lean31_minus4_dev_2021",
+      "summary_sha256": "7fd9247d4ae328c511c4c63c67ab7a9f708a2de82d6cc10c0396a497ef3a4d07",
+      "files_sha256": "30724f99dac2cfdfcb3c58af787c3c5a4ff58f1ffcde90f37a693eb98c13d4ef"
+    },
+    {
+      "item": {
+        "candidate": "S4R_lean31_minus4",
+        "probe": "B2",
+        "split": "dev_2022",
+        "change": {
+          "reg_lambda": 10.0
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 10.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20211230,
+          "purge_date": 20211231,
+          "valid_start": 20220104,
+          "valid_end": 20221230
+        },
+        "phase": "B",
+        "id": "B2_S4R_lean31_minus4_dev_2022"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B2_S4R_lean31_minus4_dev_2022",
+      "summary_sha256": "64a7bb322c6dc2e96a8514c56c8f735fe01eb05188410af869a09f96ffcf6d07",
+      "files_sha256": "d340c2babbb1d60f480d3d587825c9744070e6a051174c0e2e3f802c59816d16"
+    },
+    {
+      "item": {
+        "candidate": "S4R_lean31_minus4",
+        "probe": "B2",
+        "split": "primary_2023",
+        "change": {
+          "reg_lambda": 10.0
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 10.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20221229,
+          "purge_date": 20221230,
+          "valid_start": 20230103,
+          "valid_end": 20231229
+        },
+        "phase": "B",
+        "id": "B2_S4R_lean31_minus4_primary_2023"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B2_S4R_lean31_minus4_primary_2023",
+      "summary_sha256": "11ccb6989ab7b28e8688073955cc118f68f1c46cc1542003f7cf9afaea8282c1",
+      "files_sha256": "eeb828a2b6f89476db4fd69a617f594679d617269037bb307eef94dbf3c34e75"
+    },
+    {
+      "item": {
+        "candidate": "S4R_full34_minus3",
+        "probe": "B1",
+        "split": "dev_2021",
+        "change": {
+          "num_leaves": 15
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 15,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 1.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20201230,
+          "purge_date": 20201231,
+          "valid_start": 20210104,
+          "valid_end": 20211231
+        },
+        "phase": "B",
+        "id": "B1_S4R_full34_minus3_dev_2021"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B1_S4R_full34_minus3_dev_2021",
+      "summary_sha256": "f21191ec893ed83c4b31354f03cab2d5ab7c70733d60069c3e5a5931b72381f5",
+      "files_sha256": "d75a84a7ea6a0a4f0431a02ddb38a90ea1d805eaec4f8b9d2475f577a38b4a45"
+    },
+    {
+      "item": {
+        "candidate": "S4R_full34_minus3",
+        "probe": "B1",
+        "split": "dev_2022",
+        "change": {
+          "num_leaves": 15
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 15,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 1.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20211230,
+          "purge_date": 20211231,
+          "valid_start": 20220104,
+          "valid_end": 20221230
+        },
+        "phase": "B",
+        "id": "B1_S4R_full34_minus3_dev_2022"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B1_S4R_full34_minus3_dev_2022",
+      "summary_sha256": "772c2c612d8c96d3fd80b7c7a74875c355017b1b0c1a865ba4c3365ba35eda53",
+      "files_sha256": "c9ffba89d7d7eb3f0b9f61fb67efa689915eb4ff93b669ecbddba9cbed8a4738"
+    },
+    {
+      "item": {
+        "candidate": "S4R_full34_minus3",
+        "probe": "B1",
+        "split": "primary_2023",
+        "change": {
+          "num_leaves": 15
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 15,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 1.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20221229,
+          "purge_date": 20221230,
+          "valid_start": 20230103,
+          "valid_end": 20231229
+        },
+        "phase": "B",
+        "id": "B1_S4R_full34_minus3_primary_2023"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B1_S4R_full34_minus3_primary_2023",
+      "summary_sha256": "9ba60e9e22f1dce099c2d6c9929e8df688c91d152d1556c604332931e9ec860a",
+      "files_sha256": "a74f0737b8d879d710c43493ba930bdcd8353320c899f146c08ce47452f4838f"
+    },
+    {
+      "item": {
+        "candidate": "S4R_full34_minus3",
+        "probe": "B2",
+        "split": "dev_2021",
+        "change": {
+          "reg_lambda": 10.0
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 10.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20201230,
+          "purge_date": 20201231,
+          "valid_start": 20210104,
+          "valid_end": 20211231
+        },
+        "phase": "B",
+        "id": "B2_S4R_full34_minus3_dev_2021"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B2_S4R_full34_minus3_dev_2021",
+      "summary_sha256": "3441bf07f7df356ee21fc8953b1f867660a258cdd202dfe53dad46eb09eb7ab3",
+      "files_sha256": "31d415851c40bc554ab6058dfa12655feade1c1259f3dc771602f1c81e9eebe4"
+    },
+    {
+      "item": {
+        "candidate": "S4R_full34_minus3",
+        "probe": "B2",
+        "split": "dev_2022",
+        "change": {
+          "reg_lambda": 10.0
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 10.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20211230,
+          "purge_date": 20211231,
+          "valid_start": 20220104,
+          "valid_end": 20221230
+        },
+        "phase": "B",
+        "id": "B2_S4R_full34_minus3_dev_2022"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B2_S4R_full34_minus3_dev_2022",
+      "summary_sha256": "7dc8e40b86760763b9079249f15b5b3a9469687709e5823439a992bac48306fe",
+      "files_sha256": "b18864a8be6da0c2b31f1182c8426e87b7baf4033e91a1cb44c3f99df6d7558a"
+    },
+    {
+      "item": {
+        "candidate": "S4R_full34_minus3",
+        "probe": "B2",
+        "split": "primary_2023",
+        "change": {
+          "reg_lambda": 10.0
+        },
+        "parameters": {
+          "objective": "regression",
+          "boosting_type": "gbdt",
+          "n_estimators": 100,
+          "learning_rate": 0.05,
+          "num_leaves": 31,
+          "max_depth": -1,
+          "min_child_samples": 100,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 10.0,
+          "random_state": 20260927,
+          "data_random_seed": 20260927,
+          "feature_fraction_seed": 20260927,
+          "bagging_seed": 20260927,
+          "deterministic": true,
+          "force_col_wise": true,
+          "n_jobs": -1,
+          "verbosity": -1
+        },
+        "split_spec": {
+          "train_start": 20180102,
+          "train_end": 20221229,
+          "purge_date": 20221230,
+          "valid_start": 20230103,
+          "valid_end": 20231229
+        },
+        "phase": "B",
+        "id": "B2_S4R_full34_minus3_primary_2023"
+      },
+      "directory": "artifacts/frozen_models_validation/20261005T062821736270Z_2d9c336c/B2_S4R_full34_minus3_primary_2023",
+      "summary_sha256": "d97146716d8d0ace8a73ec96d29211df7957d75a25f6b744025e23a97ba2a6f0",
+      "files_sha256": "1585f1c2b98867c2d6bc7f5fbb2adb4eac6118a94b7f92d34d8f6433e02c9fda"
+    }
+  ]
+}
