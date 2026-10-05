@@ -1,0 +1,12 @@
+{
+  "stage": "frozen27_fixed_small_budget_model_comparison",
+  "freeze": "artifacts/features34_step5/FROZEN_CANDIDATES.json",
+  "candidate": "S4R_lean31_minus4",
+  "splits": ["dev_2021", "dev_2022", "primary_2023"],
+  "controls": ["S4R_lean31_minus4", "S4R_full34_minus3", "baseline10"],
+  "changes": {"M1": {"calendar_training_years": 3}, "M2": {"n_estimators": 200, "learning_rate": 0.025}, "M3": {"min_child_samples": 500}},
+  "budget": {"logical_comparisons": 9, "new_full_training": 8, "reuse": ["M1_dev_2021"]},
+  "risk_flags": {"annual_delta_vs27_below": -0.005, "monthly_delta_below": -0.005, "severe_monthly_delta_below": -0.02, "small_mean_absolute_delta_below": 0.003},
+  "contract": {"features": "full sorted panel starting 20180102 before any training mask; unchanged float32 frozen formulas and order", "training": "existing price-valid/nonmissing-label eligibility; finite float32 labels; existing end/purge/validation dates", "predictions": "raw model output, no blending or smoothing", "annual": "official evaluator; equal-weight three-year mean delta", "monthly": "full-year daily metrics; retain previous eligible day across months", "retry": "same registered configuration only; keep failed attempts", "interpretation": "descriptive flags only; no significance or automatic acceptance; at most one future candidate"},
+  "scope": {"evaluate_2024": false, "official_test_fit_or_selection": false, "early_stopping": false, "search": false, "replace_original": false, "final_submission": false}
+}
