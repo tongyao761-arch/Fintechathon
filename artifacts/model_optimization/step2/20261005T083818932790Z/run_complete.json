@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "new_training_runs": 0,
+  "new_prediction_comparisons": 6,
+  "official_scored_controls": 9,
+  "official_scored_transforms": 6,
+  "evaluated_2024": 0,
+  "evaluated_official_test": 0,
+  "annual_rows": 15,
+  "monthly_rows": 180,
+  "monthly_comparison_rows": 216
+}

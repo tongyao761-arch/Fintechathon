@@ -1,0 +1,22 @@
+{
+  "command": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/test_prediction_transforms.py",
+    "tests/test_frozen_prediction_diagnostics.py",
+    "tests/test_official_score.py",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "cwd": "C:\\fintechathon",
+  "started_at": "2026-10-05T08:39:08.412491+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 2.130266699999993,
+  "log": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\tests.log",
+  "log_sha256": "0a018f89c5da4d373be656d98546ba462cd082a47a236e97bc73902134d2490e"
+}

@@ -1,0 +1,33 @@
+{
+  "successful_prepare": {
+    "command": [
+      "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "scripts/validate_prediction_transforms.py",
+      "prepare"
+    ],
+    "exit_code": 0,
+    "output": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z",
+    "elapsed_seconds": null,
+    "timing_note": "Initial prepare invoked through terminal tool; no internal elapsed timer. Subsequent tests/run/audit have measured subprocess receipts."
+  },
+  "failed_prepare": {
+    "command": [
+      "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "scripts/validate_prediction_transforms.py",
+      "prepare"
+    ],
+    "exit_code": 1,
+    "tool_wall_time_seconds": 2.0743897000000002,
+    "exception": "AttributeError: 'str' object has no attribute 'open'",
+    "location": "gate -> src.validation.experiment.sha256_file",
+    "repair": "Convert incoming path string to Path in the new entry only, before registration and any scoring.",
+    "new_training_runs": 0,
+    "prediction_comparisons": 0
+  }
+}

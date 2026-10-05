@@ -1,0 +1,24 @@
+{
+  "before_registration_prepare": {
+    "failure": "string path passed to Path-only hash utility",
+    "predictions_or_scores_executed": 0,
+    "resolved": true
+  },
+  "audit": {
+    "receipt": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\audit_result.json",
+    "failure": "empty Top transition code lists default-read as NaN",
+    "resolved_by": "repair_registration.json; audit_repaired_result.json"
+  },
+  "repair_test_setup": {
+    "receipt": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\repair_tests_result.json",
+    "failure": "WinError 5 in default pytest system temp directory",
+    "resolved_by": "repair_tests_localtemp_result.json, new local basetemp"
+  },
+  "original_execute": {
+    "receipt": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\execute_result.json",
+    "state": "failed as audit failed; never relabeled successful"
+  },
+  "new_model_training_failures": 0,
+  "prediction_scoring_failures": 0,
+  "experiment_matrix_changed": false
+}

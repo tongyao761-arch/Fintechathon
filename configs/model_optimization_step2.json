@@ -1,0 +1,29 @@
+{
+  "stage": "fixed_prediction_transforms_development_only",
+  "freeze": "artifacts/features34_step5/FROZEN_CANDIDATES.json",
+  "step1_handoff": "docs/model_optimization/STEP1_HANDOFF.json",
+  "splits": ["dev_2021", "dev_2022", "primary_2023"],
+  "controls": ["S4R_lean31_minus4", "S4R_full34_minus3", "baseline10"],
+  "experiments": {
+    "F1": {"formula": "0.5 * original27 + 0.5 * original31", "weights": [0.5, 0.5]},
+    "S1": {"formula": "0.8 * original27_today + 0.2 * original27_previous_market_day", "weights": [0.8, 0.2]}
+  },
+  "prediction_source": "unchanged original float64 predictions.parquet, not B1/B2",
+  "smoothing": {
+    "stock_match": "same ts_code only",
+    "calendar": "sorted unique raw-panel market dates; immediately previous market day only",
+    "previous_value": "original prediction; never recursive",
+    "fallback": "today original on validation first day, year/model boundary or missing exact previous-day prediction",
+    "month_boundary": "continuous",
+    "missing_day": "no older borrowing, no backward fill",
+    "future": "never read future prediction for current output"
+  },
+  "comparison": {
+    "annual": "official evaluator against all three same-year controls; equal-weight three-year mean delta",
+    "monthly": "aggregate full-year daily metrics; first monthly turnover retains previous eligible day",
+    "cross_year_conflict": "both positive and negative annual deltas; report any negative separately",
+    "risk_flags": {"annual_delta_vs27_below": -0.005, "monthly_delta_below": -0.005, "severe_monthly_delta_below": -0.02, "small_mean_absolute_delta_below": 0.003},
+    "interpretation": "descriptive flags only; no statistical significance or automatic acceptance; disclose IC/return costs and invalid-price turnover Top"
+  },
+  "scope": {"prediction_comparisons": 6, "new_training_runs": 0, "evaluate_2024": false, "official_test_selection": false, "stack_transforms": false, "extra_weights": false, "replace_frozen_candidate": false, "final_submission": false, "interval_estimation": false}
+}

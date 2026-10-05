@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "scripts/validate_prediction_transforms.py",
+    "audit",
+    "--output",
+    "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z"
+  ],
+  "cwd": "C:\\fintechathon",
+  "started_at": "2026-10-05T08:46:19.350709+00:00",
+  "exit_code": 0,
+  "elapsed_seconds": 154.66049209999983,
+  "log": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\audit_repaired.log",
+  "log_sha256": "a7a407aac3436f8b4b3a516908e592915d60aa9810d40ea979c0cc0f59f3fdd1"
+}

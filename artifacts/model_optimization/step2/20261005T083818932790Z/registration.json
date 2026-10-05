@@ -1,0 +1,2727 @@
+{
+  "registered_at": "2026-10-05T08:38:19.530424+00:00",
+  "config": {
+    "stage": "fixed_prediction_transforms_development_only",
+    "freeze": "artifacts/features34_step5/FROZEN_CANDIDATES.json",
+    "step1_handoff": "docs/model_optimization/STEP1_HANDOFF.json",
+    "splits": [
+      "dev_2021",
+      "dev_2022",
+      "primary_2023"
+    ],
+    "controls": [
+      "S4R_lean31_minus4",
+      "S4R_full34_minus3",
+      "baseline10"
+    ],
+    "experiments": {
+      "F1": {
+        "formula": "0.5 * original27 + 0.5 * original31",
+        "weights": [
+          0.5,
+          0.5
+        ]
+      },
+      "S1": {
+        "formula": "0.8 * original27_today + 0.2 * original27_previous_market_day",
+        "weights": [
+          0.8,
+          0.2
+        ]
+      }
+    },
+    "prediction_source": "unchanged original float64 predictions.parquet, not B1/B2",
+    "smoothing": {
+      "stock_match": "same ts_code only",
+      "calendar": "sorted unique raw-panel market dates; immediately previous market day only",
+      "previous_value": "original prediction; never recursive",
+      "fallback": "today original on validation first day, year/model boundary or missing exact previous-day prediction",
+      "month_boundary": "continuous",
+      "missing_day": "no older borrowing, no backward fill",
+      "future": "never read future prediction for current output"
+    },
+    "comparison": {
+      "annual": "official evaluator against all three same-year controls; equal-weight three-year mean delta",
+      "monthly": "aggregate full-year daily metrics; first monthly turnover retains previous eligible day",
+      "cross_year_conflict": "both positive and negative annual deltas; report any negative separately",
+      "risk_flags": {
+        "annual_delta_vs27_below": -0.005,
+        "monthly_delta_below": -0.005,
+        "severe_monthly_delta_below": -0.02,
+        "small_mean_absolute_delta_below": 0.003
+      },
+      "interpretation": "descriptive flags only; no statistical significance or automatic acceptance; disclose IC/return costs and invalid-price turnover Top"
+    },
+    "scope": {
+      "prediction_comparisons": 6,
+      "new_training_runs": 0,
+      "evaluate_2024": false,
+      "official_test_selection": false,
+      "stack_transforms": false,
+      "extra_weights": false,
+      "replace_frozen_candidate": false,
+      "final_submission": false,
+      "interval_estimation": false
+    }
+  },
+  "matrix": [
+    {
+      "experiment": "F1",
+      "split": "dev_2021",
+      "year": 2021,
+      "original27_model_sha256": "5b36964099e14201bf88da6c1a8b52e99664a039911fe21c9791da132b3f5f2c",
+      "original31_model_sha256": "9df14b3f5848374d6fee86157c05765a81c0ce2d85660268e1f3881ecbbb1d1a"
+    },
+    {
+      "experiment": "F1",
+      "split": "dev_2022",
+      "year": 2022,
+      "original27_model_sha256": "c5a5e74829de3f974d830630db27c636ab1f7ff439ede156ac38289ab41c58a6",
+      "original31_model_sha256": "54950a0545b455d5cd2b1dd26648036ed4918406e79335c514d72108efae920b"
+    },
+    {
+      "experiment": "F1",
+      "split": "primary_2023",
+      "year": 2023,
+      "original27_model_sha256": "f6ba4b28521c4c1a47b46ed061e879a40bdc4af3bdcd17520683945adbe00046",
+      "original31_model_sha256": "49854fb688ae82b8fe28f386772704d1db8b0a0ae7e8898d6fb59b00c32e7310"
+    },
+    {
+      "experiment": "S1",
+      "split": "dev_2021",
+      "year": 2021,
+      "original27_model_sha256": "5b36964099e14201bf88da6c1a8b52e99664a039911fe21c9791da132b3f5f2c",
+      "original31_model_sha256": "9df14b3f5848374d6fee86157c05765a81c0ce2d85660268e1f3881ecbbb1d1a"
+    },
+    {
+      "experiment": "S1",
+      "split": "dev_2022",
+      "year": 2022,
+      "original27_model_sha256": "c5a5e74829de3f974d830630db27c636ab1f7ff439ede156ac38289ab41c58a6",
+      "original31_model_sha256": "54950a0545b455d5cd2b1dd26648036ed4918406e79335c514d72108efae920b"
+    },
+    {
+      "experiment": "S1",
+      "split": "primary_2023",
+      "year": 2023,
+      "original27_model_sha256": "f6ba4b28521c4c1a47b46ed061e879a40bdc4af3bdcd17520683945adbe00046",
+      "original31_model_sha256": "49854fb688ae82b8fe28f386772704d1db8b0a0ae7e8898d6fb59b00c32e7310"
+    }
+  ],
+  "inputs": [
+    {
+      "candidate": "baseline10",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/features34_step3_baseline10_dev_2021/20261003T180659133903Z_69346cd9",
+      "summary_sha256": "2ffc53d2d34721448ae1b1c6f07fd472bf038ba3afddd8d35df4fa4c2fba4171",
+      "paths": {
+        "predictions": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2021\\20261003T180659133903Z_69346cd9\\dev_2021\\predictions.parquet",
+        "score_prediction": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2021\\20261003T180659133903Z_69346cd9\\dev_2021\\evaluate_input\\submission.csv",
+        "score_truth": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2021\\20261003T180659133903Z_69346cd9\\dev_2021\\evaluate_input\\测试集_Y.csv",
+        "score_x": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2021\\20261003T180659133903Z_69346cd9\\dev_2021\\evaluate_input\\测试集_X.csv",
+        "model": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2021\\20261003T180659133903Z_69346cd9\\dev_2021\\models\\lightgbm.txt",
+        "summary": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2021\\20261003T180659133903Z_69346cd9\\summary.json",
+        "provenance": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2021\\20261003T180659133903Z_69346cd9\\provenance.json"
+      },
+      "sha256": {
+        "predictions": "a90e4524977984036dea99cf4b8b9fa9e010a964590cc49698197e971044e8d9",
+        "score_prediction": "3f4361b611483b94e2ac8c0f565493b017d9f1d0bd11a19d1fd68da5edd67e66",
+        "score_truth": "7987dd75735184122ccd4054d7353ef8c00da677f92eec569bf96047f2f5e580",
+        "score_x": "2d492df56c77e51e6ea41da13cd1f0860081ed1a404fd9382ec985349aabed3d",
+        "model": "ee7f213de4c49b74ddeff3b8e12350b051c271bffaceed1845e74e0654da5c9f",
+        "summary": "2ffc53d2d34721448ae1b1c6f07fd472bf038ba3afddd8d35df4fa4c2fba4171",
+        "provenance": "d50c826097b6a7dd26799dfb12f3e6af0cde0b3b93e70871b13e4f18f7fcb3af"
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20201230,
+        "purge_date": 20201231,
+        "valid_start": 20210104,
+        "valid_end": 20211231
+      },
+      "features": [
+        "ret_1d",
+        "ret_5d",
+        "ret_20d",
+        "gap_1d",
+        "intraday_ret",
+        "high_low_range",
+        "volatility_5d",
+        "volatility_20d",
+        "volume_ratio_5d",
+        "amount_ratio_5d"
+      ],
+      "executed_sources": {
+        "configs/features34.json": {
+          "sha256": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\configs\\features34.json"
+        },
+        "configs/features34_step2.json": {
+          "sha256": "3db07d995ef104a2bf94a33b21b3b5343ef3c777de262803b76ba57932156133",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\configs\\features34_step2.json"
+        },
+        "configs/features34_step3.json": {
+          "sha256": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\configs\\features34_step3.json"
+        },
+        "configs/splits.yaml": {
+          "sha256": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\configs\\splits.yaml"
+        },
+        "requirements-model.in": {
+          "sha256": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\requirements-model.in"
+        },
+        "requirements-model.lock": {
+          "sha256": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\requirements-model.lock"
+        },
+        "requirements.txt": {
+          "sha256": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\requirements.txt"
+        },
+        "scripts/audit_baseline.py": {
+          "sha256": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\audit_baseline.py"
+        },
+        "scripts/run_baseline_2024.py": {
+          "sha256": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\run_baseline_2024.py"
+        },
+        "scripts/run_features34.py": {
+          "sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\run_features34.py"
+        },
+        "scripts/run_features34_step2.py": {
+          "sha256": "5b1d69b94c577ebd106d7ece02cddc0eea73140140a6f4af2f62035816a8ab53",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\run_features34_step2.py"
+        },
+        "scripts/run_features34_step3.py": {
+          "sha256": "ad5ef7f0415fd589007c47c7e6575273e7ef651500999b25b9d749c19da9581d",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\run_features34_step3.py"
+        },
+        "scripts/run_lightgbm_baseline.py": {
+          "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\run_lightgbm_baseline.py"
+        },
+        "src/__init__.py": {
+          "sha256": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\__init__.py"
+        },
+        "src/data/__init__.py": {
+          "sha256": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\data\\__init__.py"
+        },
+        "src/data/baseline_panel.py": {
+          "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\data\\baseline_panel.py"
+        },
+        "src/data/data_contract.py": {
+          "sha256": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\data\\data_contract.py"
+        },
+        "src/data/load_panel.py": {
+          "sha256": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\data\\load_panel.py"
+        },
+        "src/data/profile_raw.py": {
+          "sha256": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\data\\profile_raw.py"
+        },
+        "src/features/__init__.py": {
+          "sha256": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\features\\__init__.py"
+        },
+        "src/features/baseline_v1.py": {
+          "sha256": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\features\\baseline_v1.py"
+        },
+        "src/features/features34.py": {
+          "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\features\\features34.py"
+        },
+        "src/metrics/__init__.py": {
+          "sha256": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\metrics\\__init__.py"
+        },
+        "src/metrics/diagnostics.py": {
+          "sha256": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\metrics\\diagnostics.py"
+        },
+        "src/metrics/official.py": {
+          "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\metrics\\official.py"
+        },
+        "src/validation/__init__.py": {
+          "sha256": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\validation\\__init__.py"
+        },
+        "src/validation/experiment.py": {
+          "sha256": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\validation\\experiment.py"
+        },
+        "src/validation/leakage.py": {
+          "sha256": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\validation\\leakage.py"
+        },
+        "src/validation/splits.py": {
+          "sha256": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\validation\\splits.py"
+        },
+        "src/validation/submission.py": {
+          "sha256": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\validation\\submission.py"
+        },
+        "tests/__init__.py": {
+          "sha256": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\__init__.py"
+        },
+        "tests/test_baseline_acceptance.py": {
+          "sha256": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_baseline_acceptance.py"
+        },
+        "tests/test_baseline_audit.py": {
+          "sha256": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_baseline_audit.py"
+        },
+        "tests/test_features34.py": {
+          "sha256": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_features34.py"
+        },
+        "tests/test_features34_step2.py": {
+          "sha256": "fb647aa72cbf4bea5a2d1173d9873433b6bd8aa74df2ea4249816ff623d41dae",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_features34_step2.py"
+        },
+        "tests/test_features34_step3.py": {
+          "sha256": "923c788da17ce0652734bf8acd9b5f47dfc2c146c537dbbd09f8730fdbfe5408",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_features34_step3.py"
+        },
+        "tests/test_lightgbm_baseline.py": {
+          "sha256": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_lightgbm_baseline.py"
+        },
+        "tests/test_official_score.py": {
+          "sha256": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_official_score.py"
+        },
+        "tests/test_splits.py": {
+          "sha256": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_splits.py"
+        },
+        "tests/test_submission.py": {
+          "sha256": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_submission.py"
+        },
+        "赛题五/evaluate.py": {
+          "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\赛题五\\evaluate.py"
+        }
+      },
+      "csv_minus_parquet_max_abs": 1.0061396160665481e-16,
+      "csv_rounding_note": "Official script uses default pandas CSV parser; parquet unchanged. Only existing CSV scored.",
+      "all_keys_raw_labels_flags_and_train_counts_verified": true,
+      "year": 2021,
+      "best_10_excess_dates": [
+        {
+          "trade_date": 20210929,
+          "excess": 0.01634402632358743
+        },
+        {
+          "trade_date": 20210309,
+          "excess": 0.01598721500631384
+        },
+        {
+          "trade_date": 20210728,
+          "excess": 0.014115631249769386
+        },
+        {
+          "trade_date": 20210114,
+          "excess": 0.012386632157459379
+        },
+        {
+          "trade_date": 20211015,
+          "excess": 0.011952288204330152
+        },
+        {
+          "trade_date": 20211022,
+          "excess": 0.010574735605147993
+        },
+        {
+          "trade_date": 20210325,
+          "excess": 0.010499708247449202
+        },
+        {
+          "trade_date": 20210729,
+          "excess": 0.008318118306970223
+        },
+        {
+          "trade_date": 20210806,
+          "excess": 0.008022888277683776
+        },
+        {
+          "trade_date": 20211117,
+          "excess": 0.007935664479021486
+        }
+      ],
+      "elapsed_seconds": 7.5036439999985305
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/S4R_lean31_minus4_2021/20261004T090711374528Z_074f66ba",
+      "summary_sha256": "fd205a25d71e39effac175ba7b3665f2695eb77232eae96bdf6fd12ae8258cdb",
+      "paths": {
+        "predictions": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\predictions.parquet",
+        "score_prediction": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\evaluate_input\\submission.csv",
+        "score_truth": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\evaluate_input\\测试集_Y.csv",
+        "score_x": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\evaluate_input\\测试集_X.csv",
+        "model": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\models\\lightgbm.txt",
+        "summary": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\summary.json",
+        "provenance": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\provenance.json"
+      },
+      "sha256": {
+        "predictions": "e08159cc660e6e76a71bee77855514199da8f62baba5406c7a27ca6bef0df4ea",
+        "score_prediction": "17664ada675ba4ff7825af4eafb308eac01c24aebd9ca906de4230d33dd47250",
+        "score_truth": "7987dd75735184122ccd4054d7353ef8c00da677f92eec569bf96047f2f5e580",
+        "score_x": "2d492df56c77e51e6ea41da13cd1f0860081ed1a404fd9382ec985349aabed3d",
+        "model": "5b36964099e14201bf88da6c1a8b52e99664a039911fe21c9791da132b3f5f2c",
+        "summary": "fd205a25d71e39effac175ba7b3665f2695eb77232eae96bdf6fd12ae8258cdb",
+        "provenance": "f117e410724b2fa04e1d076a8ec56464b5cb8f27eb58c6344c24b0483691f79e"
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20201230,
+        "purge_date": 20201231,
+        "valid_start": 20210104,
+        "valid_end": 20211231
+      },
+      "features": [
+        "ret_1d",
+        "ret_5d",
+        "ret_20d",
+        "gap_1d",
+        "intraday_ret",
+        "high_low_range",
+        "volatility_5d",
+        "volatility_20d",
+        "volume_ratio_5d",
+        "amount_ratio_5d",
+        "close_location",
+        "upper_shadow",
+        "body_ratio",
+        "bias_20d",
+        "bias_60d",
+        "price_position_60d",
+        "amount_ratio_20d",
+        "log_mean_amount_20d",
+        "volatility_60d",
+        "flag_limit_up",
+        "flag_limit_down",
+        "limit_up_count_5d",
+        "limit_down_count_5d",
+        "ret_1d_rank_pct",
+        "ret_20d_rank_pct",
+        "amount_ratio_5d_rank_pct",
+        "log_mean_amount_20d_rank_pct"
+      ],
+      "executed_sources": {
+        "configs/features34.json": {
+          "sha256": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34.json"
+        },
+        "configs/features34_step2.json": {
+          "sha256": "3db07d995ef104a2bf94a33b21b3b5343ef3c777de262803b76ba57932156133",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step2.json"
+        },
+        "configs/features34_step3.json": {
+          "sha256": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step3.json"
+        },
+        "configs/features34_step4.json": {
+          "sha256": "8dd635336432dff1dc0385b8b3df55d8c44ff35a2ca6336f55c96394a7ee5733",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4.json"
+        },
+        "configs/features34_step4_revision.json": {
+          "sha256": "581daade8c89d0c65327d8e2b595b0a5a9e9ed0ca83ab08cde597d0568a54224",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4_revision.json"
+        },
+        "configs/splits.yaml": {
+          "sha256": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\splits.yaml"
+        },
+        "requirements-model.in": {
+          "sha256": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.in"
+        },
+        "requirements-model.lock": {
+          "sha256": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.lock"
+        },
+        "requirements.txt": {
+          "sha256": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements.txt"
+        },
+        "scripts/audit_baseline.py": {
+          "sha256": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_baseline.py"
+        },
+        "scripts/audit_features34_step4.py": {
+          "sha256": "dff811c78b69bb06f0dee1f27d261c5f0a748ef027120ef67ffc17f935d0f298",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4.py"
+        },
+        "scripts/audit_features34_step4_revision.py": {
+          "sha256": "5930164ea25d436af3956dcb4ec5b10b53012ddcde7f5cd7512fd07f728191bd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4_revision.py"
+        },
+        "scripts/run_baseline_2024.py": {
+          "sha256": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_baseline_2024.py"
+        },
+        "scripts/run_features34.py": {
+          "sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34.py"
+        },
+        "scripts/run_features34_step2.py": {
+          "sha256": "5b1d69b94c577ebd106d7ece02cddc0eea73140140a6f4af2f62035816a8ab53",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step2.py"
+        },
+        "scripts/run_features34_step3.py": {
+          "sha256": "ad5ef7f0415fd589007c47c7e6575273e7ef651500999b25b9d749c19da9581d",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step3.py"
+        },
+        "scripts/run_features34_step4.py": {
+          "sha256": "b08af57e5b0acec5100c6c36b4514bbb49877b067b220d2c00a8a419601c80b7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4.py"
+        },
+        "scripts/run_features34_step4_revision.py": {
+          "sha256": "6e479547db61856859b615ea54e8f013ec8173a33b22c9b5aa35b0a3cedfb243",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4_revision.py"
+        },
+        "scripts/run_lightgbm_baseline.py": {
+          "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_lightgbm_baseline.py"
+        },
+        "src/__init__.py": {
+          "sha256": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\__init__.py"
+        },
+        "src/data/__init__.py": {
+          "sha256": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\__init__.py"
+        },
+        "src/data/baseline_panel.py": {
+          "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\baseline_panel.py"
+        },
+        "src/data/data_contract.py": {
+          "sha256": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\data_contract.py"
+        },
+        "src/data/load_panel.py": {
+          "sha256": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\load_panel.py"
+        },
+        "src/data/profile_raw.py": {
+          "sha256": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\profile_raw.py"
+        },
+        "src/features/__init__.py": {
+          "sha256": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\__init__.py"
+        },
+        "src/features/baseline_v1.py": {
+          "sha256": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\baseline_v1.py"
+        },
+        "src/features/features34.py": {
+          "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\features34.py"
+        },
+        "src/metrics/__init__.py": {
+          "sha256": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\__init__.py"
+        },
+        "src/metrics/diagnostics.py": {
+          "sha256": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\diagnostics.py"
+        },
+        "src/metrics/official.py": {
+          "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\official.py"
+        },
+        "src/validation/__init__.py": {
+          "sha256": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\__init__.py"
+        },
+        "src/validation/experiment.py": {
+          "sha256": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\experiment.py"
+        },
+        "src/validation/leakage.py": {
+          "sha256": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\leakage.py"
+        },
+        "src/validation/splits.py": {
+          "sha256": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\splits.py"
+        },
+        "src/validation/submission.py": {
+          "sha256": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\submission.py"
+        },
+        "tests/__init__.py": {
+          "sha256": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\__init__.py"
+        },
+        "tests/test_baseline_acceptance.py": {
+          "sha256": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_acceptance.py"
+        },
+        "tests/test_baseline_audit.py": {
+          "sha256": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_audit.py"
+        },
+        "tests/test_features34.py": {
+          "sha256": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34.py"
+        },
+        "tests/test_features34_step2.py": {
+          "sha256": "fb647aa72cbf4bea5a2d1173d9873433b6bd8aa74df2ea4249816ff623d41dae",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step2.py"
+        },
+        "tests/test_features34_step3.py": {
+          "sha256": "923c788da17ce0652734bf8acd9b5f47dfc2c146c537dbbd09f8730fdbfe5408",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step3.py"
+        },
+        "tests/test_features34_step4.py": {
+          "sha256": "6f0dd574ef411effd742c20d56cce43a3eb5a144c8c67ca46d1b0a4ec74320b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4.py"
+        },
+        "tests/test_features34_step4_revision.py": {
+          "sha256": "db63b4655dbf472c12baff165aeb1b3af674d094ff5116f5986ba877cde42cf0",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4_revision.py"
+        },
+        "tests/test_lightgbm_baseline.py": {
+          "sha256": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_lightgbm_baseline.py"
+        },
+        "tests/test_official_score.py": {
+          "sha256": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_official_score.py"
+        },
+        "tests/test_splits.py": {
+          "sha256": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_splits.py"
+        },
+        "tests/test_submission.py": {
+          "sha256": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_submission.py"
+        },
+        "赛题五/evaluate.py": {
+          "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\赛题五\\evaluate.py"
+        }
+      },
+      "csv_minus_parquet_max_abs": 1.0061396160665481e-16,
+      "csv_rounding_note": "Official script uses default pandas CSV parser; parquet unchanged. Only existing CSV scored.",
+      "all_keys_raw_labels_flags_and_train_counts_verified": true,
+      "year": 2021,
+      "best_10_excess_dates": [
+        {
+          "trade_date": 20210929,
+          "excess": 0.015727365893113434
+        },
+        {
+          "trade_date": 20210114,
+          "excess": 0.012610776645451193
+        },
+        {
+          "trade_date": 20210309,
+          "excess": 0.012095221208571549
+        },
+        {
+          "trade_date": 20210210,
+          "excess": 0.011592321616457839
+        },
+        {
+          "trade_date": 20210616,
+          "excess": 0.011074421025385526
+        },
+        {
+          "trade_date": 20210223,
+          "excess": 0.010510561446498937
+        },
+        {
+          "trade_date": 20210303,
+          "excess": 0.009753012970319877
+        },
+        {
+          "trade_date": 20210910,
+          "excess": 0.009530136001619685
+        },
+        {
+          "trade_date": 20211130,
+          "excess": 0.009423734600468091
+        },
+        {
+          "trade_date": 20210611,
+          "excess": 0.009135523055576604
+        }
+      ],
+      "elapsed_seconds": 7.636494299998958
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "split": "dev_2021",
+      "directory": "artifacts/experiments/S4R_full34_minus3_2021/20261004T090607834910Z_eadde3a4",
+      "summary_sha256": "3ee9ce3ba860de59dd1f40aa18083b4a459c0f6f2a463d18372a4cfd6ff817f2",
+      "paths": {
+        "predictions": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2021\\20261004T090607834910Z_eadde3a4\\dev_2021\\predictions.parquet",
+        "score_prediction": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2021\\20261004T090607834910Z_eadde3a4\\dev_2021\\evaluate_input\\submission.csv",
+        "score_truth": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2021\\20261004T090607834910Z_eadde3a4\\dev_2021\\evaluate_input\\测试集_Y.csv",
+        "score_x": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2021\\20261004T090607834910Z_eadde3a4\\dev_2021\\evaluate_input\\测试集_X.csv",
+        "model": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2021\\20261004T090607834910Z_eadde3a4\\dev_2021\\models\\lightgbm.txt",
+        "summary": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2021\\20261004T090607834910Z_eadde3a4\\summary.json",
+        "provenance": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2021\\20261004T090607834910Z_eadde3a4\\provenance.json"
+      },
+      "sha256": {
+        "predictions": "762a2ca76a95273dafa06ca71b5b387d4f376c1ee4d72e4d16aba70695a6d116",
+        "score_prediction": "87e8b99220c69751d4dfe8b3d55024fb7a81eb5a0a39919e80571d96f524c230",
+        "score_truth": "7987dd75735184122ccd4054d7353ef8c00da677f92eec569bf96047f2f5e580",
+        "score_x": "2d492df56c77e51e6ea41da13cd1f0860081ed1a404fd9382ec985349aabed3d",
+        "model": "9df14b3f5848374d6fee86157c05765a81c0ce2d85660268e1f3881ecbbb1d1a",
+        "summary": "3ee9ce3ba860de59dd1f40aa18083b4a459c0f6f2a463d18372a4cfd6ff817f2",
+        "provenance": "f117e410724b2fa04e1d076a8ec56464b5cb8f27eb58c6344c24b0483691f79e"
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20201230,
+        "purge_date": 20201231,
+        "valid_start": 20210104,
+        "valid_end": 20211231
+      },
+      "features": [
+        "ret_1d",
+        "ret_5d",
+        "ret_20d",
+        "gap_1d",
+        "intraday_ret",
+        "high_low_range",
+        "volatility_5d",
+        "volatility_20d",
+        "volume_ratio_5d",
+        "amount_ratio_5d",
+        "ret_2d",
+        "ret_60d",
+        "close_location",
+        "upper_shadow",
+        "lower_shadow",
+        "body_ratio",
+        "bias_20d",
+        "bias_60d",
+        "price_position_20d",
+        "price_position_60d",
+        "amount_ratio_20d",
+        "log_mean_amount_20d",
+        "volatility_60d",
+        "flag_limit_up",
+        "flag_limit_down",
+        "limit_down_count_5d",
+        "ret_1d_rank_pct",
+        "ret_5d_rank_pct",
+        "ret_20d_rank_pct",
+        "amount_ratio_5d_rank_pct",
+        "log_mean_amount_20d_rank_pct"
+      ],
+      "executed_sources": {
+        "configs/features34.json": {
+          "sha256": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34.json"
+        },
+        "configs/features34_step2.json": {
+          "sha256": "3db07d995ef104a2bf94a33b21b3b5343ef3c777de262803b76ba57932156133",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step2.json"
+        },
+        "configs/features34_step3.json": {
+          "sha256": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step3.json"
+        },
+        "configs/features34_step4.json": {
+          "sha256": "8dd635336432dff1dc0385b8b3df55d8c44ff35a2ca6336f55c96394a7ee5733",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4.json"
+        },
+        "configs/features34_step4_revision.json": {
+          "sha256": "581daade8c89d0c65327d8e2b595b0a5a9e9ed0ca83ab08cde597d0568a54224",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4_revision.json"
+        },
+        "configs/splits.yaml": {
+          "sha256": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\splits.yaml"
+        },
+        "requirements-model.in": {
+          "sha256": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.in"
+        },
+        "requirements-model.lock": {
+          "sha256": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.lock"
+        },
+        "requirements.txt": {
+          "sha256": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements.txt"
+        },
+        "scripts/audit_baseline.py": {
+          "sha256": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_baseline.py"
+        },
+        "scripts/audit_features34_step4.py": {
+          "sha256": "dff811c78b69bb06f0dee1f27d261c5f0a748ef027120ef67ffc17f935d0f298",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4.py"
+        },
+        "scripts/audit_features34_step4_revision.py": {
+          "sha256": "5930164ea25d436af3956dcb4ec5b10b53012ddcde7f5cd7512fd07f728191bd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4_revision.py"
+        },
+        "scripts/run_baseline_2024.py": {
+          "sha256": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_baseline_2024.py"
+        },
+        "scripts/run_features34.py": {
+          "sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34.py"
+        },
+        "scripts/run_features34_step2.py": {
+          "sha256": "5b1d69b94c577ebd106d7ece02cddc0eea73140140a6f4af2f62035816a8ab53",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step2.py"
+        },
+        "scripts/run_features34_step3.py": {
+          "sha256": "ad5ef7f0415fd589007c47c7e6575273e7ef651500999b25b9d749c19da9581d",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step3.py"
+        },
+        "scripts/run_features34_step4.py": {
+          "sha256": "b08af57e5b0acec5100c6c36b4514bbb49877b067b220d2c00a8a419601c80b7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4.py"
+        },
+        "scripts/run_features34_step4_revision.py": {
+          "sha256": "6e479547db61856859b615ea54e8f013ec8173a33b22c9b5aa35b0a3cedfb243",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4_revision.py"
+        },
+        "scripts/run_lightgbm_baseline.py": {
+          "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_lightgbm_baseline.py"
+        },
+        "src/__init__.py": {
+          "sha256": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\__init__.py"
+        },
+        "src/data/__init__.py": {
+          "sha256": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\__init__.py"
+        },
+        "src/data/baseline_panel.py": {
+          "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\baseline_panel.py"
+        },
+        "src/data/data_contract.py": {
+          "sha256": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\data_contract.py"
+        },
+        "src/data/load_panel.py": {
+          "sha256": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\load_panel.py"
+        },
+        "src/data/profile_raw.py": {
+          "sha256": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\profile_raw.py"
+        },
+        "src/features/__init__.py": {
+          "sha256": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\__init__.py"
+        },
+        "src/features/baseline_v1.py": {
+          "sha256": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\baseline_v1.py"
+        },
+        "src/features/features34.py": {
+          "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\features34.py"
+        },
+        "src/metrics/__init__.py": {
+          "sha256": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\__init__.py"
+        },
+        "src/metrics/diagnostics.py": {
+          "sha256": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\diagnostics.py"
+        },
+        "src/metrics/official.py": {
+          "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\official.py"
+        },
+        "src/validation/__init__.py": {
+          "sha256": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\__init__.py"
+        },
+        "src/validation/experiment.py": {
+          "sha256": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\experiment.py"
+        },
+        "src/validation/leakage.py": {
+          "sha256": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\leakage.py"
+        },
+        "src/validation/splits.py": {
+          "sha256": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\splits.py"
+        },
+        "src/validation/submission.py": {
+          "sha256": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\submission.py"
+        },
+        "tests/__init__.py": {
+          "sha256": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\__init__.py"
+        },
+        "tests/test_baseline_acceptance.py": {
+          "sha256": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_acceptance.py"
+        },
+        "tests/test_baseline_audit.py": {
+          "sha256": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_audit.py"
+        },
+        "tests/test_features34.py": {
+          "sha256": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34.py"
+        },
+        "tests/test_features34_step2.py": {
+          "sha256": "fb647aa72cbf4bea5a2d1173d9873433b6bd8aa74df2ea4249816ff623d41dae",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step2.py"
+        },
+        "tests/test_features34_step3.py": {
+          "sha256": "923c788da17ce0652734bf8acd9b5f47dfc2c146c537dbbd09f8730fdbfe5408",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step3.py"
+        },
+        "tests/test_features34_step4.py": {
+          "sha256": "6f0dd574ef411effd742c20d56cce43a3eb5a144c8c67ca46d1b0a4ec74320b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4.py"
+        },
+        "tests/test_features34_step4_revision.py": {
+          "sha256": "db63b4655dbf472c12baff165aeb1b3af674d094ff5116f5986ba877cde42cf0",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4_revision.py"
+        },
+        "tests/test_lightgbm_baseline.py": {
+          "sha256": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_lightgbm_baseline.py"
+        },
+        "tests/test_official_score.py": {
+          "sha256": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_official_score.py"
+        },
+        "tests/test_splits.py": {
+          "sha256": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_splits.py"
+        },
+        "tests/test_submission.py": {
+          "sha256": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_submission.py"
+        },
+        "赛题五/evaluate.py": {
+          "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\赛题五\\evaluate.py"
+        }
+      },
+      "csv_minus_parquet_max_abs": 1.0061396160665481e-16,
+      "csv_rounding_note": "Official script uses default pandas CSV parser; parquet unchanged. Only existing CSV scored.",
+      "all_keys_raw_labels_flags_and_train_counts_verified": true,
+      "year": 2021,
+      "best_10_excess_dates": [
+        {
+          "trade_date": 20210114,
+          "excess": 0.016758014489988114
+        },
+        {
+          "trade_date": 20210929,
+          "excess": 0.01588129652378099
+        },
+        {
+          "trade_date": 20210210,
+          "excess": 0.011884342441947075
+        },
+        {
+          "trade_date": 20210616,
+          "excess": 0.01165190542178237
+        },
+        {
+          "trade_date": 20210611,
+          "excess": 0.010785107289216828
+        },
+        {
+          "trade_date": 20210910,
+          "excess": 0.009965190540300652
+        },
+        {
+          "trade_date": 20211130,
+          "excess": 0.009710051231925743
+        },
+        {
+          "trade_date": 20210309,
+          "excess": 0.00958523430978614
+        },
+        {
+          "trade_date": 20210729,
+          "excess": 0.009560871022417379
+        },
+        {
+          "trade_date": 20210303,
+          "excess": 0.00932483896473933
+        }
+      ],
+      "elapsed_seconds": 7.739432300000772
+    },
+    {
+      "candidate": "baseline10",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/features34_step3_baseline10_dev_2022/20261003T181231328895Z_863de785",
+      "summary_sha256": "2228917da7a16b9ed7cc1877106b386f2db4c698b1860ae990a7c6b13150198d",
+      "paths": {
+        "predictions": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2022\\20261003T181231328895Z_863de785\\dev_2022\\predictions.parquet",
+        "score_prediction": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2022\\20261003T181231328895Z_863de785\\dev_2022\\evaluate_input\\submission.csv",
+        "score_truth": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2022\\20261003T181231328895Z_863de785\\dev_2022\\evaluate_input\\测试集_Y.csv",
+        "score_x": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2022\\20261003T181231328895Z_863de785\\dev_2022\\evaluate_input\\测试集_X.csv",
+        "model": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2022\\20261003T181231328895Z_863de785\\dev_2022\\models\\lightgbm.txt",
+        "summary": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2022\\20261003T181231328895Z_863de785\\summary.json",
+        "provenance": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2022\\20261003T181231328895Z_863de785\\provenance.json"
+      },
+      "sha256": {
+        "predictions": "0e5f0375a7221c4b5c7d80da6c443608cce57ecd740ac9f92027c2c452e416aa",
+        "score_prediction": "c26e0796240d5bde47e623c4d5318b8aadb5773a49fdc91fdecd872d2971c3b8",
+        "score_truth": "3ca58ec316a5ebf0657461f61f583b6f4d0c097392b918a3f91f790911000130",
+        "score_x": "e18e3d3489d1b5aa336549b5e5d6205608e63731279741052d22645950770b1a",
+        "model": "9cf76d02c56784d53994bfe1606b628b4b53bfd2c16488acf7d7f752f183d9cc",
+        "summary": "2228917da7a16b9ed7cc1877106b386f2db4c698b1860ae990a7c6b13150198d",
+        "provenance": "d50c826097b6a7dd26799dfb12f3e6af0cde0b3b93e70871b13e4f18f7fcb3af"
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20211230,
+        "purge_date": 20211231,
+        "valid_start": 20220104,
+        "valid_end": 20221230
+      },
+      "features": [
+        "ret_1d",
+        "ret_5d",
+        "ret_20d",
+        "gap_1d",
+        "intraday_ret",
+        "high_low_range",
+        "volatility_5d",
+        "volatility_20d",
+        "volume_ratio_5d",
+        "amount_ratio_5d"
+      ],
+      "executed_sources": {
+        "configs/features34.json": {
+          "sha256": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\configs\\features34.json"
+        },
+        "configs/features34_step2.json": {
+          "sha256": "3db07d995ef104a2bf94a33b21b3b5343ef3c777de262803b76ba57932156133",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\configs\\features34_step2.json"
+        },
+        "configs/features34_step3.json": {
+          "sha256": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\configs\\features34_step3.json"
+        },
+        "configs/splits.yaml": {
+          "sha256": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\configs\\splits.yaml"
+        },
+        "requirements-model.in": {
+          "sha256": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\requirements-model.in"
+        },
+        "requirements-model.lock": {
+          "sha256": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\requirements-model.lock"
+        },
+        "requirements.txt": {
+          "sha256": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\requirements.txt"
+        },
+        "scripts/audit_baseline.py": {
+          "sha256": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\audit_baseline.py"
+        },
+        "scripts/run_baseline_2024.py": {
+          "sha256": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\run_baseline_2024.py"
+        },
+        "scripts/run_features34.py": {
+          "sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\run_features34.py"
+        },
+        "scripts/run_features34_step2.py": {
+          "sha256": "5b1d69b94c577ebd106d7ece02cddc0eea73140140a6f4af2f62035816a8ab53",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\run_features34_step2.py"
+        },
+        "scripts/run_features34_step3.py": {
+          "sha256": "ad5ef7f0415fd589007c47c7e6575273e7ef651500999b25b9d749c19da9581d",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\run_features34_step3.py"
+        },
+        "scripts/run_lightgbm_baseline.py": {
+          "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\scripts\\run_lightgbm_baseline.py"
+        },
+        "src/__init__.py": {
+          "sha256": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\__init__.py"
+        },
+        "src/data/__init__.py": {
+          "sha256": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\data\\__init__.py"
+        },
+        "src/data/baseline_panel.py": {
+          "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\data\\baseline_panel.py"
+        },
+        "src/data/data_contract.py": {
+          "sha256": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\data\\data_contract.py"
+        },
+        "src/data/load_panel.py": {
+          "sha256": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\data\\load_panel.py"
+        },
+        "src/data/profile_raw.py": {
+          "sha256": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\data\\profile_raw.py"
+        },
+        "src/features/__init__.py": {
+          "sha256": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\features\\__init__.py"
+        },
+        "src/features/baseline_v1.py": {
+          "sha256": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\features\\baseline_v1.py"
+        },
+        "src/features/features34.py": {
+          "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\features\\features34.py"
+        },
+        "src/metrics/__init__.py": {
+          "sha256": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\metrics\\__init__.py"
+        },
+        "src/metrics/diagnostics.py": {
+          "sha256": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\metrics\\diagnostics.py"
+        },
+        "src/metrics/official.py": {
+          "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\metrics\\official.py"
+        },
+        "src/validation/__init__.py": {
+          "sha256": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\validation\\__init__.py"
+        },
+        "src/validation/experiment.py": {
+          "sha256": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\validation\\experiment.py"
+        },
+        "src/validation/leakage.py": {
+          "sha256": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\validation\\leakage.py"
+        },
+        "src/validation/splits.py": {
+          "sha256": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\validation\\splits.py"
+        },
+        "src/validation/submission.py": {
+          "sha256": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\src\\validation\\submission.py"
+        },
+        "tests/__init__.py": {
+          "sha256": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\__init__.py"
+        },
+        "tests/test_baseline_acceptance.py": {
+          "sha256": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_baseline_acceptance.py"
+        },
+        "tests/test_baseline_audit.py": {
+          "sha256": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_baseline_audit.py"
+        },
+        "tests/test_features34.py": {
+          "sha256": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_features34.py"
+        },
+        "tests/test_features34_step2.py": {
+          "sha256": "fb647aa72cbf4bea5a2d1173d9873433b6bd8aa74df2ea4249816ff623d41dae",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_features34_step2.py"
+        },
+        "tests/test_features34_step3.py": {
+          "sha256": "923c788da17ce0652734bf8acd9b5f47dfc2c146c537dbbd09f8730fdbfe5408",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_features34_step3.py"
+        },
+        "tests/test_lightgbm_baseline.py": {
+          "sha256": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_lightgbm_baseline.py"
+        },
+        "tests/test_official_score.py": {
+          "sha256": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_official_score.py"
+        },
+        "tests/test_splits.py": {
+          "sha256": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_splits.py"
+        },
+        "tests/test_submission.py": {
+          "sha256": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\tests\\test_submission.py"
+        },
+        "赛题五/evaluate.py": {
+          "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step3\\executed_sources\\赛题五\\evaluate.py"
+        }
+      },
+      "csv_minus_parquet_max_abs": 1.0061396160665481e-16,
+      "csv_rounding_note": "Official script uses default pandas CSV parser; parquet unchanged. Only existing CSV scored.",
+      "all_keys_raw_labels_flags_and_train_counts_verified": true,
+      "year": 2022,
+      "best_10_excess_dates": [
+        {
+          "trade_date": 20220426,
+          "excess": 0.015680860904442828
+        },
+        {
+          "trade_date": 20220113,
+          "excess": 0.011656017983163795
+        },
+        {
+          "trade_date": 20220428,
+          "excess": 0.011118269290234746
+        },
+        {
+          "trade_date": 20220111,
+          "excess": 0.009733149383939115
+        },
+        {
+          "trade_date": 20220923,
+          "excess": 0.008961785142610385
+        },
+        {
+          "trade_date": 20220919,
+          "excess": 0.008935868880814766
+        },
+        {
+          "trade_date": 20220214,
+          "excess": 0.008523200593808213
+        },
+        {
+          "trade_date": 20220121,
+          "excess": 0.008310059713421091
+        },
+        {
+          "trade_date": 20220906,
+          "excess": 0.008306936608125731
+        },
+        {
+          "trade_date": 20221223,
+          "excess": 0.008290248038442359
+        }
+      ],
+      "elapsed_seconds": 7.684961700000713
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/S4R_lean31_minus4_2022/20261004T090730132670Z_e52a05ef",
+      "summary_sha256": "1981ee25e9df86e9d4b894ac37646c6b28f8dbf1420ae407f5fda517ac805480",
+      "paths": {
+        "predictions": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\predictions.parquet",
+        "score_prediction": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\evaluate_input\\submission.csv",
+        "score_truth": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\evaluate_input\\测试集_Y.csv",
+        "score_x": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\evaluate_input\\测试集_X.csv",
+        "model": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\models\\lightgbm.txt",
+        "summary": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\summary.json",
+        "provenance": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\provenance.json"
+      },
+      "sha256": {
+        "predictions": "eda67040efb3aa69fd121ddadc6a6049696304b19849eb24337edd7baf9d9c9f",
+        "score_prediction": "64e23c06ada1a8112fc75c92ec9370b6269d11803f6a3e95ca6d17a7b0d74459",
+        "score_truth": "3ca58ec316a5ebf0657461f61f583b6f4d0c097392b918a3f91f790911000130",
+        "score_x": "e18e3d3489d1b5aa336549b5e5d6205608e63731279741052d22645950770b1a",
+        "model": "c5a5e74829de3f974d830630db27c636ab1f7ff439ede156ac38289ab41c58a6",
+        "summary": "1981ee25e9df86e9d4b894ac37646c6b28f8dbf1420ae407f5fda517ac805480",
+        "provenance": "f117e410724b2fa04e1d076a8ec56464b5cb8f27eb58c6344c24b0483691f79e"
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20211230,
+        "purge_date": 20211231,
+        "valid_start": 20220104,
+        "valid_end": 20221230
+      },
+      "features": [
+        "ret_1d",
+        "ret_5d",
+        "ret_20d",
+        "gap_1d",
+        "intraday_ret",
+        "high_low_range",
+        "volatility_5d",
+        "volatility_20d",
+        "volume_ratio_5d",
+        "amount_ratio_5d",
+        "close_location",
+        "upper_shadow",
+        "body_ratio",
+        "bias_20d",
+        "bias_60d",
+        "price_position_60d",
+        "amount_ratio_20d",
+        "log_mean_amount_20d",
+        "volatility_60d",
+        "flag_limit_up",
+        "flag_limit_down",
+        "limit_up_count_5d",
+        "limit_down_count_5d",
+        "ret_1d_rank_pct",
+        "ret_20d_rank_pct",
+        "amount_ratio_5d_rank_pct",
+        "log_mean_amount_20d_rank_pct"
+      ],
+      "executed_sources": {
+        "configs/features34.json": {
+          "sha256": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34.json"
+        },
+        "configs/features34_step2.json": {
+          "sha256": "3db07d995ef104a2bf94a33b21b3b5343ef3c777de262803b76ba57932156133",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step2.json"
+        },
+        "configs/features34_step3.json": {
+          "sha256": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step3.json"
+        },
+        "configs/features34_step4.json": {
+          "sha256": "8dd635336432dff1dc0385b8b3df55d8c44ff35a2ca6336f55c96394a7ee5733",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4.json"
+        },
+        "configs/features34_step4_revision.json": {
+          "sha256": "581daade8c89d0c65327d8e2b595b0a5a9e9ed0ca83ab08cde597d0568a54224",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4_revision.json"
+        },
+        "configs/splits.yaml": {
+          "sha256": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\splits.yaml"
+        },
+        "requirements-model.in": {
+          "sha256": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.in"
+        },
+        "requirements-model.lock": {
+          "sha256": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.lock"
+        },
+        "requirements.txt": {
+          "sha256": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements.txt"
+        },
+        "scripts/audit_baseline.py": {
+          "sha256": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_baseline.py"
+        },
+        "scripts/audit_features34_step4.py": {
+          "sha256": "dff811c78b69bb06f0dee1f27d261c5f0a748ef027120ef67ffc17f935d0f298",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4.py"
+        },
+        "scripts/audit_features34_step4_revision.py": {
+          "sha256": "5930164ea25d436af3956dcb4ec5b10b53012ddcde7f5cd7512fd07f728191bd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4_revision.py"
+        },
+        "scripts/run_baseline_2024.py": {
+          "sha256": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_baseline_2024.py"
+        },
+        "scripts/run_features34.py": {
+          "sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34.py"
+        },
+        "scripts/run_features34_step2.py": {
+          "sha256": "5b1d69b94c577ebd106d7ece02cddc0eea73140140a6f4af2f62035816a8ab53",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step2.py"
+        },
+        "scripts/run_features34_step3.py": {
+          "sha256": "ad5ef7f0415fd589007c47c7e6575273e7ef651500999b25b9d749c19da9581d",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step3.py"
+        },
+        "scripts/run_features34_step4.py": {
+          "sha256": "b08af57e5b0acec5100c6c36b4514bbb49877b067b220d2c00a8a419601c80b7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4.py"
+        },
+        "scripts/run_features34_step4_revision.py": {
+          "sha256": "6e479547db61856859b615ea54e8f013ec8173a33b22c9b5aa35b0a3cedfb243",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4_revision.py"
+        },
+        "scripts/run_lightgbm_baseline.py": {
+          "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_lightgbm_baseline.py"
+        },
+        "src/__init__.py": {
+          "sha256": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\__init__.py"
+        },
+        "src/data/__init__.py": {
+          "sha256": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\__init__.py"
+        },
+        "src/data/baseline_panel.py": {
+          "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\baseline_panel.py"
+        },
+        "src/data/data_contract.py": {
+          "sha256": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\data_contract.py"
+        },
+        "src/data/load_panel.py": {
+          "sha256": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\load_panel.py"
+        },
+        "src/data/profile_raw.py": {
+          "sha256": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\profile_raw.py"
+        },
+        "src/features/__init__.py": {
+          "sha256": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\__init__.py"
+        },
+        "src/features/baseline_v1.py": {
+          "sha256": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\baseline_v1.py"
+        },
+        "src/features/features34.py": {
+          "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\features34.py"
+        },
+        "src/metrics/__init__.py": {
+          "sha256": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\__init__.py"
+        },
+        "src/metrics/diagnostics.py": {
+          "sha256": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\diagnostics.py"
+        },
+        "src/metrics/official.py": {
+          "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\official.py"
+        },
+        "src/validation/__init__.py": {
+          "sha256": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\__init__.py"
+        },
+        "src/validation/experiment.py": {
+          "sha256": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\experiment.py"
+        },
+        "src/validation/leakage.py": {
+          "sha256": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\leakage.py"
+        },
+        "src/validation/splits.py": {
+          "sha256": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\splits.py"
+        },
+        "src/validation/submission.py": {
+          "sha256": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\submission.py"
+        },
+        "tests/__init__.py": {
+          "sha256": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\__init__.py"
+        },
+        "tests/test_baseline_acceptance.py": {
+          "sha256": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_acceptance.py"
+        },
+        "tests/test_baseline_audit.py": {
+          "sha256": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_audit.py"
+        },
+        "tests/test_features34.py": {
+          "sha256": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34.py"
+        },
+        "tests/test_features34_step2.py": {
+          "sha256": "fb647aa72cbf4bea5a2d1173d9873433b6bd8aa74df2ea4249816ff623d41dae",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step2.py"
+        },
+        "tests/test_features34_step3.py": {
+          "sha256": "923c788da17ce0652734bf8acd9b5f47dfc2c146c537dbbd09f8730fdbfe5408",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step3.py"
+        },
+        "tests/test_features34_step4.py": {
+          "sha256": "6f0dd574ef411effd742c20d56cce43a3eb5a144c8c67ca46d1b0a4ec74320b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4.py"
+        },
+        "tests/test_features34_step4_revision.py": {
+          "sha256": "db63b4655dbf472c12baff165aeb1b3af674d094ff5116f5986ba877cde42cf0",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4_revision.py"
+        },
+        "tests/test_lightgbm_baseline.py": {
+          "sha256": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_lightgbm_baseline.py"
+        },
+        "tests/test_official_score.py": {
+          "sha256": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_official_score.py"
+        },
+        "tests/test_splits.py": {
+          "sha256": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_splits.py"
+        },
+        "tests/test_submission.py": {
+          "sha256": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_submission.py"
+        },
+        "赛题五/evaluate.py": {
+          "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\赛题五\\evaluate.py"
+        }
+      },
+      "csv_minus_parquet_max_abs": 1.0061396160665481e-16,
+      "csv_rounding_note": "Official script uses default pandas CSV parser; parquet unchanged. Only existing CSV scored.",
+      "all_keys_raw_labels_flags_and_train_counts_verified": true,
+      "year": 2022,
+      "best_10_excess_dates": [
+        {
+          "trade_date": 20220425,
+          "excess": 0.014936910669848164
+        },
+        {
+          "trade_date": 20220426,
+          "excess": 0.013469465794524713
+        },
+        {
+          "trade_date": 20220428,
+          "excess": 0.01258820481740637
+        },
+        {
+          "trade_date": 20221025,
+          "excess": 0.011809998345306546
+        },
+        {
+          "trade_date": 20220214,
+          "excess": 0.01173046155138452
+        },
+        {
+          "trade_date": 20220919,
+          "excess": 0.011552930146701276
+        },
+        {
+          "trade_date": 20221111,
+          "excess": 0.011429631137235337
+        },
+        {
+          "trade_date": 20220118,
+          "excess": 0.01096642338889961
+        },
+        {
+          "trade_date": 20221212,
+          "excess": 0.010754485869960466
+        },
+        {
+          "trade_date": 20221215,
+          "excess": 0.010610926136913737
+        }
+      ],
+      "elapsed_seconds": 7.971808500000407
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "split": "dev_2022",
+      "directory": "artifacts/experiments/S4R_full34_minus3_2022/20261004T090627775954Z_bffc5f5a",
+      "summary_sha256": "e9938f24367b7837b7d297c52e8d5e8cd8ebaaec5da8842360337648e21495f5",
+      "paths": {
+        "predictions": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2022\\20261004T090627775954Z_bffc5f5a\\dev_2022\\predictions.parquet",
+        "score_prediction": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2022\\20261004T090627775954Z_bffc5f5a\\dev_2022\\evaluate_input\\submission.csv",
+        "score_truth": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2022\\20261004T090627775954Z_bffc5f5a\\dev_2022\\evaluate_input\\测试集_Y.csv",
+        "score_x": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2022\\20261004T090627775954Z_bffc5f5a\\dev_2022\\evaluate_input\\测试集_X.csv",
+        "model": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2022\\20261004T090627775954Z_bffc5f5a\\dev_2022\\models\\lightgbm.txt",
+        "summary": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2022\\20261004T090627775954Z_bffc5f5a\\summary.json",
+        "provenance": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2022\\20261004T090627775954Z_bffc5f5a\\provenance.json"
+      },
+      "sha256": {
+        "predictions": "eef4e2d18a81b99cbedbaf9050f6eee0e72ce7927f19bd2d6ce48c93a69fd4ad",
+        "score_prediction": "236286042b9401ec695e03401f2a228f361ed4079903f4274a57dc25144c8308",
+        "score_truth": "3ca58ec316a5ebf0657461f61f583b6f4d0c097392b918a3f91f790911000130",
+        "score_x": "e18e3d3489d1b5aa336549b5e5d6205608e63731279741052d22645950770b1a",
+        "model": "54950a0545b455d5cd2b1dd26648036ed4918406e79335c514d72108efae920b",
+        "summary": "e9938f24367b7837b7d297c52e8d5e8cd8ebaaec5da8842360337648e21495f5",
+        "provenance": "f117e410724b2fa04e1d076a8ec56464b5cb8f27eb58c6344c24b0483691f79e"
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20211230,
+        "purge_date": 20211231,
+        "valid_start": 20220104,
+        "valid_end": 20221230
+      },
+      "features": [
+        "ret_1d",
+        "ret_5d",
+        "ret_20d",
+        "gap_1d",
+        "intraday_ret",
+        "high_low_range",
+        "volatility_5d",
+        "volatility_20d",
+        "volume_ratio_5d",
+        "amount_ratio_5d",
+        "ret_2d",
+        "ret_60d",
+        "close_location",
+        "upper_shadow",
+        "lower_shadow",
+        "body_ratio",
+        "bias_20d",
+        "bias_60d",
+        "price_position_20d",
+        "price_position_60d",
+        "amount_ratio_20d",
+        "log_mean_amount_20d",
+        "volatility_60d",
+        "flag_limit_up",
+        "flag_limit_down",
+        "limit_down_count_5d",
+        "ret_1d_rank_pct",
+        "ret_5d_rank_pct",
+        "ret_20d_rank_pct",
+        "amount_ratio_5d_rank_pct",
+        "log_mean_amount_20d_rank_pct"
+      ],
+      "executed_sources": {
+        "configs/features34.json": {
+          "sha256": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34.json"
+        },
+        "configs/features34_step2.json": {
+          "sha256": "3db07d995ef104a2bf94a33b21b3b5343ef3c777de262803b76ba57932156133",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step2.json"
+        },
+        "configs/features34_step3.json": {
+          "sha256": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step3.json"
+        },
+        "configs/features34_step4.json": {
+          "sha256": "8dd635336432dff1dc0385b8b3df55d8c44ff35a2ca6336f55c96394a7ee5733",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4.json"
+        },
+        "configs/features34_step4_revision.json": {
+          "sha256": "581daade8c89d0c65327d8e2b595b0a5a9e9ed0ca83ab08cde597d0568a54224",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4_revision.json"
+        },
+        "configs/splits.yaml": {
+          "sha256": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\splits.yaml"
+        },
+        "requirements-model.in": {
+          "sha256": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.in"
+        },
+        "requirements-model.lock": {
+          "sha256": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.lock"
+        },
+        "requirements.txt": {
+          "sha256": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements.txt"
+        },
+        "scripts/audit_baseline.py": {
+          "sha256": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_baseline.py"
+        },
+        "scripts/audit_features34_step4.py": {
+          "sha256": "dff811c78b69bb06f0dee1f27d261c5f0a748ef027120ef67ffc17f935d0f298",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4.py"
+        },
+        "scripts/audit_features34_step4_revision.py": {
+          "sha256": "5930164ea25d436af3956dcb4ec5b10b53012ddcde7f5cd7512fd07f728191bd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4_revision.py"
+        },
+        "scripts/run_baseline_2024.py": {
+          "sha256": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_baseline_2024.py"
+        },
+        "scripts/run_features34.py": {
+          "sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34.py"
+        },
+        "scripts/run_features34_step2.py": {
+          "sha256": "5b1d69b94c577ebd106d7ece02cddc0eea73140140a6f4af2f62035816a8ab53",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step2.py"
+        },
+        "scripts/run_features34_step3.py": {
+          "sha256": "ad5ef7f0415fd589007c47c7e6575273e7ef651500999b25b9d749c19da9581d",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step3.py"
+        },
+        "scripts/run_features34_step4.py": {
+          "sha256": "b08af57e5b0acec5100c6c36b4514bbb49877b067b220d2c00a8a419601c80b7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4.py"
+        },
+        "scripts/run_features34_step4_revision.py": {
+          "sha256": "6e479547db61856859b615ea54e8f013ec8173a33b22c9b5aa35b0a3cedfb243",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4_revision.py"
+        },
+        "scripts/run_lightgbm_baseline.py": {
+          "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_lightgbm_baseline.py"
+        },
+        "src/__init__.py": {
+          "sha256": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\__init__.py"
+        },
+        "src/data/__init__.py": {
+          "sha256": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\__init__.py"
+        },
+        "src/data/baseline_panel.py": {
+          "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\baseline_panel.py"
+        },
+        "src/data/data_contract.py": {
+          "sha256": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\data_contract.py"
+        },
+        "src/data/load_panel.py": {
+          "sha256": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\load_panel.py"
+        },
+        "src/data/profile_raw.py": {
+          "sha256": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\profile_raw.py"
+        },
+        "src/features/__init__.py": {
+          "sha256": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\__init__.py"
+        },
+        "src/features/baseline_v1.py": {
+          "sha256": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\baseline_v1.py"
+        },
+        "src/features/features34.py": {
+          "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\features34.py"
+        },
+        "src/metrics/__init__.py": {
+          "sha256": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\__init__.py"
+        },
+        "src/metrics/diagnostics.py": {
+          "sha256": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\diagnostics.py"
+        },
+        "src/metrics/official.py": {
+          "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\official.py"
+        },
+        "src/validation/__init__.py": {
+          "sha256": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\__init__.py"
+        },
+        "src/validation/experiment.py": {
+          "sha256": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\experiment.py"
+        },
+        "src/validation/leakage.py": {
+          "sha256": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\leakage.py"
+        },
+        "src/validation/splits.py": {
+          "sha256": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\splits.py"
+        },
+        "src/validation/submission.py": {
+          "sha256": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\submission.py"
+        },
+        "tests/__init__.py": {
+          "sha256": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\__init__.py"
+        },
+        "tests/test_baseline_acceptance.py": {
+          "sha256": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_acceptance.py"
+        },
+        "tests/test_baseline_audit.py": {
+          "sha256": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_audit.py"
+        },
+        "tests/test_features34.py": {
+          "sha256": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34.py"
+        },
+        "tests/test_features34_step2.py": {
+          "sha256": "fb647aa72cbf4bea5a2d1173d9873433b6bd8aa74df2ea4249816ff623d41dae",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step2.py"
+        },
+        "tests/test_features34_step3.py": {
+          "sha256": "923c788da17ce0652734bf8acd9b5f47dfc2c146c537dbbd09f8730fdbfe5408",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step3.py"
+        },
+        "tests/test_features34_step4.py": {
+          "sha256": "6f0dd574ef411effd742c20d56cce43a3eb5a144c8c67ca46d1b0a4ec74320b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4.py"
+        },
+        "tests/test_features34_step4_revision.py": {
+          "sha256": "db63b4655dbf472c12baff165aeb1b3af674d094ff5116f5986ba877cde42cf0",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4_revision.py"
+        },
+        "tests/test_lightgbm_baseline.py": {
+          "sha256": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_lightgbm_baseline.py"
+        },
+        "tests/test_official_score.py": {
+          "sha256": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_official_score.py"
+        },
+        "tests/test_splits.py": {
+          "sha256": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_splits.py"
+        },
+        "tests/test_submission.py": {
+          "sha256": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_submission.py"
+        },
+        "赛题五/evaluate.py": {
+          "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\赛题五\\evaluate.py"
+        }
+      },
+      "csv_minus_parquet_max_abs": 1.0061396160665481e-16,
+      "csv_rounding_note": "Official script uses default pandas CSV parser; parquet unchanged. Only existing CSV scored.",
+      "all_keys_raw_labels_flags_and_train_counts_verified": true,
+      "year": 2022,
+      "best_10_excess_dates": [
+        {
+          "trade_date": 20220425,
+          "excess": 0.016450030003240704
+        },
+        {
+          "trade_date": 20221025,
+          "excess": 0.014904177648545246
+        },
+        {
+          "trade_date": 20221220,
+          "excess": 0.012425991933131295
+        },
+        {
+          "trade_date": 20220118,
+          "excess": 0.012197033104903447
+        },
+        {
+          "trade_date": 20220919,
+          "excess": 0.011247518872399196
+        },
+        {
+          "trade_date": 20220428,
+          "excess": 0.010577217694759847
+        },
+        {
+          "trade_date": 20221215,
+          "excess": 0.010490862611966767
+        },
+        {
+          "trade_date": 20220426,
+          "excess": 0.00989874916112524
+        },
+        {
+          "trade_date": 20221212,
+          "excess": 0.00980794574957296
+        },
+        {
+          "trade_date": 20220818,
+          "excess": 0.009518004188186498
+        }
+      ],
+      "elapsed_seconds": 7.911380399998961
+    },
+    {
+      "candidate": "baseline10",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/features34_step1_baseline10_2023/20261001T144903748616Z_fb241809",
+      "summary_sha256": "bcc5c87b043aed3cd3b97b7171a48459d42cd81f9f37978f5e95d5a538f09ce6",
+      "paths": {
+        "predictions": "C:\\fintechathon\\artifacts\\experiments\\features34_step1_baseline10_2023\\20261001T144903748616Z_fb241809\\primary_2023\\predictions.parquet",
+        "score_prediction": "C:\\fintechathon\\artifacts\\experiments\\features34_step1_baseline10_2023\\20261001T144903748616Z_fb241809\\primary_2023\\evaluate_input\\submission.csv",
+        "score_truth": "C:\\fintechathon\\artifacts\\experiments\\features34_step1_baseline10_2023\\20261001T144903748616Z_fb241809\\primary_2023\\evaluate_input\\测试集_Y.csv",
+        "score_x": "C:\\fintechathon\\artifacts\\experiments\\features34_step1_baseline10_2023\\20261001T144903748616Z_fb241809\\primary_2023\\evaluate_input\\测试集_X.csv",
+        "model": "C:\\fintechathon\\artifacts\\experiments\\features34_step1_baseline10_2023\\20261001T144903748616Z_fb241809\\primary_2023\\models\\lightgbm.txt",
+        "summary": "C:\\fintechathon\\artifacts\\experiments\\features34_step1_baseline10_2023\\20261001T144903748616Z_fb241809\\summary.json",
+        "provenance": "C:\\fintechathon\\artifacts\\experiments\\features34_step1_baseline10_2023\\20261001T144903748616Z_fb241809\\provenance.json"
+      },
+      "sha256": {
+        "predictions": "ec80c8605c5c4720ac5ac7723d8e86eaae6c9a8e860d9349fe934869a387411e",
+        "score_prediction": "88bd5f4ff2719460e7540b7b9fcde294a36493b9391185dcbad9290d195eaba7",
+        "score_truth": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "score_x": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "model": "0a5418f6305632aae700b1ec41801db366b1ad10c7197ed86e4e3ce3ccb7183e",
+        "summary": "bcc5c87b043aed3cd3b97b7171a48459d42cd81f9f37978f5e95d5a538f09ce6",
+        "provenance": "7b5b41e2093cb4a45d108d9e501d71c59be2d5196904e987dbedf2cef6ffcf2e"
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20221229,
+        "purge_date": 20221230,
+        "valid_start": 20230103,
+        "valid_end": 20231229
+      },
+      "features": [
+        "ret_1d",
+        "ret_5d",
+        "ret_20d",
+        "gap_1d",
+        "intraday_ret",
+        "high_low_range",
+        "volatility_5d",
+        "volatility_20d",
+        "volume_ratio_5d",
+        "amount_ratio_5d"
+      ],
+      "executed_sources": {
+        "configs/features34.json": {
+          "sha256": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+          "snapshot": "C:\\fintechathon\\configs\\features34.json"
+        },
+        "configs/splits.yaml": {
+          "sha256": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+          "snapshot": "C:\\fintechathon\\configs\\splits.yaml"
+        },
+        "requirements-model.in": {
+          "sha256": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+          "snapshot": "C:\\fintechathon\\requirements-model.in"
+        },
+        "requirements-model.lock": {
+          "sha256": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+          "snapshot": "C:\\fintechathon\\requirements-model.lock"
+        },
+        "requirements.txt": {
+          "sha256": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+          "snapshot": "C:\\fintechathon\\requirements.txt"
+        },
+        "scripts/audit_baseline.py": {
+          "sha256": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+          "snapshot": "C:\\fintechathon\\scripts\\audit_baseline.py"
+        },
+        "scripts/run_baseline_2024.py": {
+          "sha256": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+          "snapshot": "C:\\fintechathon\\scripts\\run_baseline_2024.py"
+        },
+        "scripts/run_features34.py": {
+          "sha256": "8fa78578f8724707c7acc7b3e9e0234c5737caff9408c51af06ff932de6731fd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step1\\executed_sources\\run_features34.py",
+          "layout": "historical flattened snapshot"
+        },
+        "scripts/run_lightgbm_baseline.py": {
+          "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+          "snapshot": "C:\\fintechathon\\scripts\\run_lightgbm_baseline.py"
+        },
+        "src/__init__.py": {
+          "sha256": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+          "snapshot": "C:\\fintechathon\\src\\__init__.py"
+        },
+        "src/data/__init__.py": {
+          "sha256": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+          "snapshot": "C:\\fintechathon\\src\\data\\__init__.py"
+        },
+        "src/data/baseline_panel.py": {
+          "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+          "snapshot": "C:\\fintechathon\\src\\data\\baseline_panel.py"
+        },
+        "src/data/data_contract.py": {
+          "sha256": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+          "snapshot": "C:\\fintechathon\\src\\data\\data_contract.py"
+        },
+        "src/data/load_panel.py": {
+          "sha256": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+          "snapshot": "C:\\fintechathon\\src\\data\\load_panel.py"
+        },
+        "src/data/profile_raw.py": {
+          "sha256": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+          "snapshot": "C:\\fintechathon\\src\\data\\profile_raw.py"
+        },
+        "src/features/__init__.py": {
+          "sha256": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+          "snapshot": "C:\\fintechathon\\src\\features\\__init__.py"
+        },
+        "src/features/baseline_v1.py": {
+          "sha256": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+          "snapshot": "C:\\fintechathon\\src\\features\\baseline_v1.py"
+        },
+        "src/features/features34.py": {
+          "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+          "snapshot": "C:\\fintechathon\\src\\features\\features34.py"
+        },
+        "src/metrics/__init__.py": {
+          "sha256": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+          "snapshot": "C:\\fintechathon\\src\\metrics\\__init__.py"
+        },
+        "src/metrics/diagnostics.py": {
+          "sha256": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+          "snapshot": "C:\\fintechathon\\src\\metrics\\diagnostics.py"
+        },
+        "src/metrics/official.py": {
+          "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+          "snapshot": "C:\\fintechathon\\src\\metrics\\official.py"
+        },
+        "src/validation/__init__.py": {
+          "sha256": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035",
+          "snapshot": "C:\\fintechathon\\src\\validation\\__init__.py"
+        },
+        "src/validation/experiment.py": {
+          "sha256": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+          "snapshot": "C:\\fintechathon\\src\\validation\\experiment.py"
+        },
+        "src/validation/leakage.py": {
+          "sha256": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+          "snapshot": "C:\\fintechathon\\src\\validation\\leakage.py"
+        },
+        "src/validation/splits.py": {
+          "sha256": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+          "snapshot": "C:\\fintechathon\\src\\validation\\splits.py"
+        },
+        "src/validation/submission.py": {
+          "sha256": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+          "snapshot": "C:\\fintechathon\\src\\validation\\submission.py"
+        },
+        "tests/__init__.py": {
+          "sha256": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+          "snapshot": "C:\\fintechathon\\tests\\__init__.py"
+        },
+        "tests/test_baseline_acceptance.py": {
+          "sha256": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+          "snapshot": "C:\\fintechathon\\tests\\test_baseline_acceptance.py"
+        },
+        "tests/test_baseline_audit.py": {
+          "sha256": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+          "snapshot": "C:\\fintechathon\\tests\\test_baseline_audit.py"
+        },
+        "tests/test_features34.py": {
+          "sha256": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+          "snapshot": "C:\\fintechathon\\tests\\test_features34.py"
+        },
+        "tests/test_lightgbm_baseline.py": {
+          "sha256": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+          "snapshot": "C:\\fintechathon\\tests\\test_lightgbm_baseline.py"
+        },
+        "tests/test_official_score.py": {
+          "sha256": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+          "snapshot": "C:\\fintechathon\\tests\\test_official_score.py"
+        },
+        "tests/test_splits.py": {
+          "sha256": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+          "snapshot": "C:\\fintechathon\\tests\\test_splits.py"
+        },
+        "tests/test_submission.py": {
+          "sha256": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+          "snapshot": "C:\\fintechathon\\tests\\test_submission.py"
+        },
+        "赛题五/evaluate.py": {
+          "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+          "snapshot": "C:\\fintechathon\\赛题五\\evaluate.py"
+        }
+      },
+      "csv_minus_parquet_max_abs": 1.0061396160665481e-16,
+      "csv_rounding_note": "Official script uses default pandas CSV parser; parquet unchanged. Only existing CSV scored.",
+      "all_keys_raw_labels_flags_and_train_counts_verified": true,
+      "year": 2023,
+      "best_10_excess_dates": [
+        {
+          "trade_date": 20230829,
+          "excess": 0.016251858286258018
+        },
+        {
+          "trade_date": 20230228,
+          "excess": 0.01429695300628363
+        },
+        {
+          "trade_date": 20230427,
+          "excess": 0.00895475040913709
+        },
+        {
+          "trade_date": 20231124,
+          "excess": 0.008819856739094271
+        },
+        {
+          "trade_date": 20231106,
+          "excess": 0.007660196670714283
+        },
+        {
+          "trade_date": 20231102,
+          "excess": 0.007606904160010629
+        },
+        {
+          "trade_date": 20231103,
+          "excess": 0.007578531518250241
+        },
+        {
+          "trade_date": 20230517,
+          "excess": 0.0075729888338782565
+        },
+        {
+          "trade_date": 20230411,
+          "excess": 0.007246867698996744
+        },
+        {
+          "trade_date": 20230328,
+          "excess": 0.006887461860025163
+        }
+      ],
+      "elapsed_seconds": 8.200316000000385
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/S4R_lean31_minus4_2023/20261004T090750752259Z_95be596d",
+      "summary_sha256": "7e59ea3de6ba396ba070011e17876db3adcafc5ca6ac959082eebba8797a9f31",
+      "paths": {
+        "predictions": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\predictions.parquet",
+        "score_prediction": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\evaluate_input\\submission.csv",
+        "score_truth": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\evaluate_input\\测试集_Y.csv",
+        "score_x": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\evaluate_input\\测试集_X.csv",
+        "model": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\models\\lightgbm.txt",
+        "summary": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\summary.json",
+        "provenance": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\provenance.json"
+      },
+      "sha256": {
+        "predictions": "c441a74d6f169615a1497d6df0851bad30c6fe0fbd814033c63f1b8584f8ade8",
+        "score_prediction": "3c32e303d35b9455ae9fdea58b91ef2d31a1dbe8a86adb30af91ad8879639c32",
+        "score_truth": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "score_x": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "model": "f6ba4b28521c4c1a47b46ed061e879a40bdc4af3bdcd17520683945adbe00046",
+        "summary": "7e59ea3de6ba396ba070011e17876db3adcafc5ca6ac959082eebba8797a9f31",
+        "provenance": "f117e410724b2fa04e1d076a8ec56464b5cb8f27eb58c6344c24b0483691f79e"
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20221229,
+        "purge_date": 20221230,
+        "valid_start": 20230103,
+        "valid_end": 20231229
+      },
+      "features": [
+        "ret_1d",
+        "ret_5d",
+        "ret_20d",
+        "gap_1d",
+        "intraday_ret",
+        "high_low_range",
+        "volatility_5d",
+        "volatility_20d",
+        "volume_ratio_5d",
+        "amount_ratio_5d",
+        "close_location",
+        "upper_shadow",
+        "body_ratio",
+        "bias_20d",
+        "bias_60d",
+        "price_position_60d",
+        "amount_ratio_20d",
+        "log_mean_amount_20d",
+        "volatility_60d",
+        "flag_limit_up",
+        "flag_limit_down",
+        "limit_up_count_5d",
+        "limit_down_count_5d",
+        "ret_1d_rank_pct",
+        "ret_20d_rank_pct",
+        "amount_ratio_5d_rank_pct",
+        "log_mean_amount_20d_rank_pct"
+      ],
+      "executed_sources": {
+        "configs/features34.json": {
+          "sha256": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34.json"
+        },
+        "configs/features34_step2.json": {
+          "sha256": "3db07d995ef104a2bf94a33b21b3b5343ef3c777de262803b76ba57932156133",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step2.json"
+        },
+        "configs/features34_step3.json": {
+          "sha256": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step3.json"
+        },
+        "configs/features34_step4.json": {
+          "sha256": "8dd635336432dff1dc0385b8b3df55d8c44ff35a2ca6336f55c96394a7ee5733",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4.json"
+        },
+        "configs/features34_step4_revision.json": {
+          "sha256": "581daade8c89d0c65327d8e2b595b0a5a9e9ed0ca83ab08cde597d0568a54224",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4_revision.json"
+        },
+        "configs/splits.yaml": {
+          "sha256": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\splits.yaml"
+        },
+        "requirements-model.in": {
+          "sha256": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.in"
+        },
+        "requirements-model.lock": {
+          "sha256": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.lock"
+        },
+        "requirements.txt": {
+          "sha256": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements.txt"
+        },
+        "scripts/audit_baseline.py": {
+          "sha256": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_baseline.py"
+        },
+        "scripts/audit_features34_step4.py": {
+          "sha256": "dff811c78b69bb06f0dee1f27d261c5f0a748ef027120ef67ffc17f935d0f298",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4.py"
+        },
+        "scripts/audit_features34_step4_revision.py": {
+          "sha256": "5930164ea25d436af3956dcb4ec5b10b53012ddcde7f5cd7512fd07f728191bd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4_revision.py"
+        },
+        "scripts/run_baseline_2024.py": {
+          "sha256": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_baseline_2024.py"
+        },
+        "scripts/run_features34.py": {
+          "sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34.py"
+        },
+        "scripts/run_features34_step2.py": {
+          "sha256": "5b1d69b94c577ebd106d7ece02cddc0eea73140140a6f4af2f62035816a8ab53",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step2.py"
+        },
+        "scripts/run_features34_step3.py": {
+          "sha256": "ad5ef7f0415fd589007c47c7e6575273e7ef651500999b25b9d749c19da9581d",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step3.py"
+        },
+        "scripts/run_features34_step4.py": {
+          "sha256": "b08af57e5b0acec5100c6c36b4514bbb49877b067b220d2c00a8a419601c80b7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4.py"
+        },
+        "scripts/run_features34_step4_revision.py": {
+          "sha256": "6e479547db61856859b615ea54e8f013ec8173a33b22c9b5aa35b0a3cedfb243",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4_revision.py"
+        },
+        "scripts/run_lightgbm_baseline.py": {
+          "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_lightgbm_baseline.py"
+        },
+        "src/__init__.py": {
+          "sha256": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\__init__.py"
+        },
+        "src/data/__init__.py": {
+          "sha256": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\__init__.py"
+        },
+        "src/data/baseline_panel.py": {
+          "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\baseline_panel.py"
+        },
+        "src/data/data_contract.py": {
+          "sha256": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\data_contract.py"
+        },
+        "src/data/load_panel.py": {
+          "sha256": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\load_panel.py"
+        },
+        "src/data/profile_raw.py": {
+          "sha256": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\profile_raw.py"
+        },
+        "src/features/__init__.py": {
+          "sha256": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\__init__.py"
+        },
+        "src/features/baseline_v1.py": {
+          "sha256": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\baseline_v1.py"
+        },
+        "src/features/features34.py": {
+          "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\features34.py"
+        },
+        "src/metrics/__init__.py": {
+          "sha256": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\__init__.py"
+        },
+        "src/metrics/diagnostics.py": {
+          "sha256": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\diagnostics.py"
+        },
+        "src/metrics/official.py": {
+          "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\official.py"
+        },
+        "src/validation/__init__.py": {
+          "sha256": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\__init__.py"
+        },
+        "src/validation/experiment.py": {
+          "sha256": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\experiment.py"
+        },
+        "src/validation/leakage.py": {
+          "sha256": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\leakage.py"
+        },
+        "src/validation/splits.py": {
+          "sha256": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\splits.py"
+        },
+        "src/validation/submission.py": {
+          "sha256": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\submission.py"
+        },
+        "tests/__init__.py": {
+          "sha256": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\__init__.py"
+        },
+        "tests/test_baseline_acceptance.py": {
+          "sha256": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_acceptance.py"
+        },
+        "tests/test_baseline_audit.py": {
+          "sha256": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_audit.py"
+        },
+        "tests/test_features34.py": {
+          "sha256": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34.py"
+        },
+        "tests/test_features34_step2.py": {
+          "sha256": "fb647aa72cbf4bea5a2d1173d9873433b6bd8aa74df2ea4249816ff623d41dae",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step2.py"
+        },
+        "tests/test_features34_step3.py": {
+          "sha256": "923c788da17ce0652734bf8acd9b5f47dfc2c146c537dbbd09f8730fdbfe5408",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step3.py"
+        },
+        "tests/test_features34_step4.py": {
+          "sha256": "6f0dd574ef411effd742c20d56cce43a3eb5a144c8c67ca46d1b0a4ec74320b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4.py"
+        },
+        "tests/test_features34_step4_revision.py": {
+          "sha256": "db63b4655dbf472c12baff165aeb1b3af674d094ff5116f5986ba877cde42cf0",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4_revision.py"
+        },
+        "tests/test_lightgbm_baseline.py": {
+          "sha256": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_lightgbm_baseline.py"
+        },
+        "tests/test_official_score.py": {
+          "sha256": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_official_score.py"
+        },
+        "tests/test_splits.py": {
+          "sha256": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_splits.py"
+        },
+        "tests/test_submission.py": {
+          "sha256": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_submission.py"
+        },
+        "赛题五/evaluate.py": {
+          "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\赛题五\\evaluate.py"
+        }
+      },
+      "csv_minus_parquet_max_abs": 1.0061396160665481e-16,
+      "csv_rounding_note": "Official script uses default pandas CSV parser; parquet unchanged. Only existing CSV scored.",
+      "all_keys_raw_labels_flags_and_train_counts_verified": true,
+      "year": 2023,
+      "best_10_excess_dates": [
+        {
+          "trade_date": 20230703,
+          "excess": 0.010343600356773055
+        },
+        {
+          "trade_date": 20230419,
+          "excess": 0.009226745224414298
+        },
+        {
+          "trade_date": 20230427,
+          "excess": 0.008570510231455268
+        },
+        {
+          "trade_date": 20230829,
+          "excess": 0.008557520902696479
+        },
+        {
+          "trade_date": 20230330,
+          "excess": 0.008503999740624485
+        },
+        {
+          "trade_date": 20230410,
+          "excess": 0.0081307226295717
+        },
+        {
+          "trade_date": 20230725,
+          "excess": 0.007841398655382727
+        },
+        {
+          "trade_date": 20230208,
+          "excess": 0.00717237025789997
+        },
+        {
+          "trade_date": 20230814,
+          "excess": 0.0070015732169013255
+        },
+        {
+          "trade_date": 20231229,
+          "excess": 0.006480280813106495
+        }
+      ],
+      "elapsed_seconds": 8.807006499999261
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "split": "primary_2023",
+      "directory": "artifacts/experiments/S4R_full34_minus3_2023/20261004T090648724514Z_0e18c478",
+      "summary_sha256": "42247e488cc133dfb3dc3c089b733ec7aeb49e4b41c18d870d51c1242cba2de3",
+      "paths": {
+        "predictions": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2023\\20261004T090648724514Z_0e18c478\\primary_2023\\predictions.parquet",
+        "score_prediction": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2023\\20261004T090648724514Z_0e18c478\\primary_2023\\evaluate_input\\submission.csv",
+        "score_truth": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2023\\20261004T090648724514Z_0e18c478\\primary_2023\\evaluate_input\\测试集_Y.csv",
+        "score_x": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2023\\20261004T090648724514Z_0e18c478\\primary_2023\\evaluate_input\\测试集_X.csv",
+        "model": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2023\\20261004T090648724514Z_0e18c478\\primary_2023\\models\\lightgbm.txt",
+        "summary": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2023\\20261004T090648724514Z_0e18c478\\summary.json",
+        "provenance": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2023\\20261004T090648724514Z_0e18c478\\provenance.json"
+      },
+      "sha256": {
+        "predictions": "35880c10d21f4b67d4aeccf288413ca8dfd714cd657ae435e082f20e56c9fb52",
+        "score_prediction": "751d889a46474b614158458615a6cf71877f17a6b0d20d52fd3da257217e77d6",
+        "score_truth": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "score_x": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "model": "49854fb688ae82b8fe28f386772704d1db8b0a0ae7e8898d6fb59b00c32e7310",
+        "summary": "42247e488cc133dfb3dc3c089b733ec7aeb49e4b41c18d870d51c1242cba2de3",
+        "provenance": "f117e410724b2fa04e1d076a8ec56464b5cb8f27eb58c6344c24b0483691f79e"
+      },
+      "split_spec": {
+        "train_start": 20180102,
+        "train_end": 20221229,
+        "purge_date": 20221230,
+        "valid_start": 20230103,
+        "valid_end": 20231229
+      },
+      "features": [
+        "ret_1d",
+        "ret_5d",
+        "ret_20d",
+        "gap_1d",
+        "intraday_ret",
+        "high_low_range",
+        "volatility_5d",
+        "volatility_20d",
+        "volume_ratio_5d",
+        "amount_ratio_5d",
+        "ret_2d",
+        "ret_60d",
+        "close_location",
+        "upper_shadow",
+        "lower_shadow",
+        "body_ratio",
+        "bias_20d",
+        "bias_60d",
+        "price_position_20d",
+        "price_position_60d",
+        "amount_ratio_20d",
+        "log_mean_amount_20d",
+        "volatility_60d",
+        "flag_limit_up",
+        "flag_limit_down",
+        "limit_down_count_5d",
+        "ret_1d_rank_pct",
+        "ret_5d_rank_pct",
+        "ret_20d_rank_pct",
+        "amount_ratio_5d_rank_pct",
+        "log_mean_amount_20d_rank_pct"
+      ],
+      "executed_sources": {
+        "configs/features34.json": {
+          "sha256": "5fe1ea93340dd9484f8884769df53af8a29cf237375252cae7e28ea47038c7e7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34.json"
+        },
+        "configs/features34_step2.json": {
+          "sha256": "3db07d995ef104a2bf94a33b21b3b5343ef3c777de262803b76ba57932156133",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step2.json"
+        },
+        "configs/features34_step3.json": {
+          "sha256": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step3.json"
+        },
+        "configs/features34_step4.json": {
+          "sha256": "8dd635336432dff1dc0385b8b3df55d8c44ff35a2ca6336f55c96394a7ee5733",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4.json"
+        },
+        "configs/features34_step4_revision.json": {
+          "sha256": "581daade8c89d0c65327d8e2b595b0a5a9e9ed0ca83ab08cde597d0568a54224",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\features34_step4_revision.json"
+        },
+        "configs/splits.yaml": {
+          "sha256": "3e3124001ff63382340939d5dd504107209a20cee633290165b28d5414045ee1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\configs\\splits.yaml"
+        },
+        "requirements-model.in": {
+          "sha256": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.in"
+        },
+        "requirements-model.lock": {
+          "sha256": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements-model.lock"
+        },
+        "requirements.txt": {
+          "sha256": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\requirements.txt"
+        },
+        "scripts/audit_baseline.py": {
+          "sha256": "07a276c42a4bb6c96e2d5d9321bc6e26aa996a3941b0d02c09452ff6a2304b52",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_baseline.py"
+        },
+        "scripts/audit_features34_step4.py": {
+          "sha256": "dff811c78b69bb06f0dee1f27d261c5f0a748ef027120ef67ffc17f935d0f298",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4.py"
+        },
+        "scripts/audit_features34_step4_revision.py": {
+          "sha256": "5930164ea25d436af3956dcb4ec5b10b53012ddcde7f5cd7512fd07f728191bd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\audit_features34_step4_revision.py"
+        },
+        "scripts/run_baseline_2024.py": {
+          "sha256": "3852eb5f34b13262902104b7387c66fd654761910feda27b1e8c6039e41ad74f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_baseline_2024.py"
+        },
+        "scripts/run_features34.py": {
+          "sha256": "980975ee3a560ae65e0868f67aaaad22db500c3bbed70e39c713d65207ac0bf4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34.py"
+        },
+        "scripts/run_features34_step2.py": {
+          "sha256": "5b1d69b94c577ebd106d7ece02cddc0eea73140140a6f4af2f62035816a8ab53",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step2.py"
+        },
+        "scripts/run_features34_step3.py": {
+          "sha256": "ad5ef7f0415fd589007c47c7e6575273e7ef651500999b25b9d749c19da9581d",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step3.py"
+        },
+        "scripts/run_features34_step4.py": {
+          "sha256": "b08af57e5b0acec5100c6c36b4514bbb49877b067b220d2c00a8a419601c80b7",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4.py"
+        },
+        "scripts/run_features34_step4_revision.py": {
+          "sha256": "6e479547db61856859b615ea54e8f013ec8173a33b22c9b5aa35b0a3cedfb243",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_features34_step4_revision.py"
+        },
+        "scripts/run_lightgbm_baseline.py": {
+          "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\scripts\\run_lightgbm_baseline.py"
+        },
+        "src/__init__.py": {
+          "sha256": "597d243a5c4565723c0f34cce417e4d9fab3a7aba4a34599514dc781dd00be6b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\__init__.py"
+        },
+        "src/data/__init__.py": {
+          "sha256": "ca6e6c7968ee313419c2e115a410b0e114030fd35ae51da9a494f2ce09176cdb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\__init__.py"
+        },
+        "src/data/baseline_panel.py": {
+          "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\baseline_panel.py"
+        },
+        "src/data/data_contract.py": {
+          "sha256": "3861ea9a9ad94d4f9ff4dfd7ae561a9597d6981896cf954138be7e31d86d355e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\data_contract.py"
+        },
+        "src/data/load_panel.py": {
+          "sha256": "f46d757401c4778777edfc152733dfd2806f25e3ef228efa4fe20e137476bd11",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\load_panel.py"
+        },
+        "src/data/profile_raw.py": {
+          "sha256": "200f026478b307fa35ca353c751beb51a432e6f352ca833bcb544d11c9c10cd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\data\\profile_raw.py"
+        },
+        "src/features/__init__.py": {
+          "sha256": "05fa4fe552160efe7b63e8edc0f856c3042a412801014cb46fbd8872cc0ba09e",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\__init__.py"
+        },
+        "src/features/baseline_v1.py": {
+          "sha256": "748ccc1104b18c26ad10b5f34d065baf73310e8fcffdfa52f1407cb21915aac6",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\baseline_v1.py"
+        },
+        "src/features/features34.py": {
+          "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\features\\features34.py"
+        },
+        "src/metrics/__init__.py": {
+          "sha256": "89131cadaf52ac4127e28d38e1a263f829262a2496b98f2d550c600ae6666752",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\__init__.py"
+        },
+        "src/metrics/diagnostics.py": {
+          "sha256": "bd0834f168df4d7bc6498a2a2e94fe7b32285dea5b0acfdede9bc3fff33413c1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\diagnostics.py"
+        },
+        "src/metrics/official.py": {
+          "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\metrics\\official.py"
+        },
+        "src/validation/__init__.py": {
+          "sha256": "8bf76abea4f0a4e0a08297db3d9ebf6a2f6871d84d95be3a7fcc036f778d9035",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\__init__.py"
+        },
+        "src/validation/experiment.py": {
+          "sha256": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\experiment.py"
+        },
+        "src/validation/leakage.py": {
+          "sha256": "a062dbbf9be7f680a81708c9879ef4925f2e30bb1d491b68469563ffdcbaabbb",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\leakage.py"
+        },
+        "src/validation/splits.py": {
+          "sha256": "659c6f5745505a2448bfe4b1ecff1c12ec100146f856b489a75302b3eca5b688",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\splits.py"
+        },
+        "src/validation/submission.py": {
+          "sha256": "69bd6f369178e73c2b0f83a4602c2af9bc4cf5e988de55d24dc8094d2efca0b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\src\\validation\\submission.py"
+        },
+        "tests/__init__.py": {
+          "sha256": "625583a0ede3141c270b4ec6944fdd2e08fa322eee4bf5118b4af635d3ddbb06",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\__init__.py"
+        },
+        "tests/test_baseline_acceptance.py": {
+          "sha256": "a36aa3a3f4d1ebe738b7444fbf45c17618200ef7a8f01969d9a85e4d6fbd7dd1",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_acceptance.py"
+        },
+        "tests/test_baseline_audit.py": {
+          "sha256": "7c333da2bc6a0525cb93b947d3b80755deb13efd0c6e773d0bc4035c1fd7db0f",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_baseline_audit.py"
+        },
+        "tests/test_features34.py": {
+          "sha256": "1521332e8af9161c38ebfc0412d7302faa97c6e4124cc94c3db2f351bd8de2bf",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34.py"
+        },
+        "tests/test_features34_step2.py": {
+          "sha256": "fb647aa72cbf4bea5a2d1173d9873433b6bd8aa74df2ea4249816ff623d41dae",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step2.py"
+        },
+        "tests/test_features34_step3.py": {
+          "sha256": "923c788da17ce0652734bf8acd9b5f47dfc2c146c537dbbd09f8730fdbfe5408",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step3.py"
+        },
+        "tests/test_features34_step4.py": {
+          "sha256": "6f0dd574ef411effd742c20d56cce43a3eb5a144c8c67ca46d1b0a4ec74320b4",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4.py"
+        },
+        "tests/test_features34_step4_revision.py": {
+          "sha256": "db63b4655dbf472c12baff165aeb1b3af674d094ff5116f5986ba877cde42cf0",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_features34_step4_revision.py"
+        },
+        "tests/test_lightgbm_baseline.py": {
+          "sha256": "fa0edbde00cf73abcf5e6aa628066877cb2745e9184c2371f9cdf5029c1f9095",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_lightgbm_baseline.py"
+        },
+        "tests/test_official_score.py": {
+          "sha256": "25fa37e236354d17cf5d687c6b3136750172942f31ea9d8e87e6e752ff5b7afd",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_official_score.py"
+        },
+        "tests/test_splits.py": {
+          "sha256": "93b23fd53dc1d758faa2a886c780b5a7c54f5a9d7754aac7125889c0ef0018f3",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_splits.py"
+        },
+        "tests/test_submission.py": {
+          "sha256": "0849a2ef80153eb4ba53d658701d0b20d538ca9f5cd0832cfea72025eebc2a04",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\tests\\test_submission.py"
+        },
+        "赛题五/evaluate.py": {
+          "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+          "snapshot": "C:\\fintechathon\\artifacts\\features34_step4_revision\\executed_sources\\赛题五\\evaluate.py"
+        }
+      },
+      "csv_minus_parquet_max_abs": 1.0061396160665481e-16,
+      "csv_rounding_note": "Official script uses default pandas CSV parser; parquet unchanged. Only existing CSV scored.",
+      "all_keys_raw_labels_flags_and_train_counts_verified": true,
+      "year": 2023,
+      "best_10_excess_dates": [
+        {
+          "trade_date": 20230703,
+          "excess": 0.010404889812171043
+        },
+        {
+          "trade_date": 20230330,
+          "excess": 0.00877473398908851
+        },
+        {
+          "trade_date": 20230208,
+          "excess": 0.008272639106674924
+        },
+        {
+          "trade_date": 20230829,
+          "excess": 0.007537811909119543
+        },
+        {
+          "trade_date": 20230410,
+          "excess": 0.006999033956002572
+        },
+        {
+          "trade_date": 20230810,
+          "excess": 0.006945519124828652
+        },
+        {
+          "trade_date": 20230802,
+          "excess": 0.0063904191634162055
+        },
+        {
+          "trade_date": 20230202,
+          "excess": 0.006358077488127589
+        },
+        {
+          "trade_date": 20230307,
+          "excess": 0.00624831700021573
+        },
+        {
+          "trade_date": 20230907,
+          "excess": 0.0062253938413850615
+        }
+      ],
+      "elapsed_seconds": 8.717089300000225
+    }
+  ],
+  "step1_handoff_sha256": "1c6990904d342a436ae96d89cad3cddce93fe52f1364c65c07cd5ff0827d0593",
+  "freeze_sha256": "12790b50793fb4a3faf5b0df0dfe9cdf937f90c6b68f63d064b1f37c26542063",
+  "raw_sha256": "e9d23e87f7e1f9439f28f7dd951d129ea49eaacda5ad650da8576a830a6deac9",
+  "calendar_sha256": "81f9b23fdc527d06c7fb137f253640acdc244bba81c97ee57cc93274a5c7ac98",
+  "source_sha256": {
+    "scripts/validate_prediction_transforms.py": "2d802c1b2b8fb460c9b119c58913d588483ede9deaeac55a41324baa22bc0993",
+    "configs/model_optimization_step2.json": "d1625db23182be03047f158f53d4927ad5cc94ff3cad593cef1fa6b826716e59",
+    "tests/test_prediction_transforms.py": "e0d1c7003d3eb2fcc3fd345d6e8c807a87ffbb760d7eee6878b94c2b9c94d768",
+    "scripts/diagnose_frozen_predictions.py": "ed70726200c7ff14ffde50b65b0471efdbf2ac50a27b93352ea300fcc5ce3346",
+    "src/metrics/official.py": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+    "src/data/baseline_panel.py": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+    "src/validation/experiment.py": "32cca60a1226dcf6b6d3c1e796fcbc1159787de80f461ad64f01f34423486ed1",
+    "赛题五/evaluate.py": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+    "赛题五/完整赛题说明_本地.md": "dcce7a31b5dfd18e47f1dd1c97a6c7497a7cf1f42586e18df1647a646c21c344",
+    "AGENTS.md": "1385cfaf9e9adc4dd83acdbc6862f74cfc1ebade9b0b4ae4b1fb95f1968bb5e2",
+    "AGENTS.override.md": "848999c2dfafeaf10cf2f6bd1ec58118b0fe00833022964247f715bf974faca5",
+    "configs/features34_step3.json": "f5a59b9a23e9040640b72690adb68d6aa38d65006b37a7862936cf615ca84a26",
+    "docs/features34/RESULTS.md": "50a3171d7aa46714fc62d2059aaeab07745f4737dcbae37de45492aacfc9ba59",
+    "docs/features34/FROZEN_MODEL_VALIDATION_REPORT.md": "85c85d5c7ab2716f3d084be2198ff9cc4ebcbb4e647f739404bc78e72bb2d894",
+    "docs/model_optimization/STEP1_REPORT.md": "41d7f7a340b8e3267480b8ef444a9f0137c70562a50399b316afa59d3c0770d7",
+    "docs/model_optimization/STEP1_HANDOFF.json": "1c6990904d342a436ae96d89cad3cddce93fe52f1364c65c07cd5ff0827d0593",
+    "artifacts/features34_step5/FROZEN_CANDIDATES.json": "12790b50793fb4a3faf5b0df0dfe9cdf937f90c6b68f63d064b1f37c26542063"
+  },
+  "parent_commit": "336b424223f8822514bd50191c05385df2aa531c",
+  "branch": "ivor-work",
+  "preserved_sha256": "5096bb6e833726ae2f374d0d012e9f652f60e2eacce740858dac1454617833c3",
+  "prediction_precision": "Formula on original float64 parquet; save float64 parquet and %.17g CSV. Official default CSV parse explicitly audited; no invalid-sample ranking intervention."
+}

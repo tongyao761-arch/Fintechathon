@@ -1,0 +1,353 @@
+[
+  {
+    "candidate": "S4R_lean31_minus4",
+    "split": "dev_2021",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "score_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\evaluate_input\\submission.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "S4R_full34_minus3",
+    "split": "dev_2021",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "score_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2021\\20261004T090607834910Z_eadde3a4\\dev_2021\\evaluate_input\\submission.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2021\\20261004T090607834910Z_eadde3a4\\dev_2021\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2021\\20261004T090607834910Z_eadde3a4\\dev_2021\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "baseline10",
+    "split": "dev_2021",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "score_path": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2021\\20261003T180659133903Z_69346cd9\\dev_2021\\evaluate_input\\submission.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2021\\20261003T180659133903Z_69346cd9\\dev_2021\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2021\\20261003T180659133903Z_69346cd9\\dev_2021\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "F1",
+    "split": "dev_2021",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": null,
+    "score_path": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\dev_2021\\evaluation_predictions.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "S1",
+    "split": "dev_2021",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": null,
+    "score_path": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\dev_2021\\evaluation_predictions.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2021\\20261004T090711374528Z_074f66ba\\dev_2021\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "S4R_lean31_minus4",
+    "split": "dev_2022",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "score_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\evaluate_input\\submission.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "S4R_full34_minus3",
+    "split": "dev_2022",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "score_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2022\\20261004T090627775954Z_bffc5f5a\\dev_2022\\evaluate_input\\submission.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2022\\20261004T090627775954Z_bffc5f5a\\dev_2022\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2022\\20261004T090627775954Z_bffc5f5a\\dev_2022\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "baseline10",
+    "split": "dev_2022",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "score_path": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2022\\20261003T181231328895Z_863de785\\dev_2022\\evaluate_input\\submission.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2022\\20261003T181231328895Z_863de785\\dev_2022\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\features34_step3_baseline10_dev_2022\\20261003T181231328895Z_863de785\\dev_2022\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "F1",
+    "split": "dev_2022",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": null,
+    "score_path": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\dev_2022\\evaluation_predictions.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "S1",
+    "split": "dev_2022",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": null,
+    "score_path": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\dev_2022\\evaluation_predictions.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2022\\20261004T090730132670Z_e52a05ef\\dev_2022\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "S4R_lean31_minus4",
+    "split": "primary_2023",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "score_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\evaluate_input\\submission.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "S4R_full34_minus3",
+    "split": "primary_2023",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "score_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2023\\20261004T090648724514Z_0e18c478\\primary_2023\\evaluate_input\\submission.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2023\\20261004T090648724514Z_0e18c478\\primary_2023\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_full34_minus3_2023\\20261004T090648724514Z_0e18c478\\primary_2023\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "baseline10",
+    "split": "primary_2023",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "score_path": "C:\\fintechathon\\artifacts\\experiments\\features34_step1_baseline10_2023\\20261001T144903748616Z_fb241809\\primary_2023\\evaluate_input\\submission.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\features34_step1_baseline10_2023\\20261001T144903748616Z_fb241809\\primary_2023\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\features34_step1_baseline10_2023\\20261001T144903748616Z_fb241809\\primary_2023\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "F1",
+    "split": "primary_2023",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": null,
+    "score_path": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\primary_2023\\evaluation_predictions.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\evaluate_input\\测试集_X.csv"
+  },
+  {
+    "candidate": "S1",
+    "split": "primary_2023",
+    "official_difference": {
+      "ic_mean": 0.0,
+      "ic_std": 0.0,
+      "icir": 0.0,
+      "ic_positive_ratio": 0.0,
+      "annual_excess": 0.0,
+      "top1_annual_ret": 0.0,
+      "mean_turnover": 0.0,
+      "final_score": 0.0
+    },
+    "historical_difference": null,
+    "score_path": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\primary_2023\\evaluation_predictions.csv",
+    "truth_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\evaluate_input\\测试集_Y.csv",
+    "x_path": "C:\\fintechathon\\artifacts\\experiments\\S4R_lean31_minus4_2023\\20261004T090750752259Z_95be596d\\primary_2023\\evaluate_input\\测试集_X.csv"
+  }
+]

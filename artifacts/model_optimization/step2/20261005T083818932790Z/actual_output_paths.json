@@ -1,0 +1,128 @@
+[
+  {
+    "experiment": "F1",
+    "split": "dev_2021",
+    "rows": 1129950,
+    "prediction_sha256": "43171b3cf5aaa25a5897a656574eab8e68d2b00542bca033314ccc95bd22bff4",
+    "file_sha256": "9a897768416b6165f24de5c69dc381b5cfb8cc690afa9d25cc80ca1dbace75b3",
+    "score_csv_sha256": "0c81f398584a0b8252086dbcc2edc99d29a9298d53867efd2184772325a733e3",
+    "csv_max_abs": 1.0061396160665481e-16,
+    "smoothing_used_previous": null,
+    "smoothing_fallback": null,
+    "directory": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\dev_2021",
+    "paths": {
+      "predictions.parquet": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\dev_2021\\predictions.parquet",
+      "evaluation_predictions.csv": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\dev_2021\\evaluation_predictions.csv"
+    },
+    "sha256": {
+      "predictions.parquet": "9a897768416b6165f24de5c69dc381b5cfb8cc690afa9d25cc80ca1dbace75b3",
+      "evaluation_predictions.csv": "0c81f398584a0b8252086dbcc2edc99d29a9298d53867efd2184772325a733e3"
+    }
+  },
+  {
+    "experiment": "S1",
+    "split": "dev_2021",
+    "rows": 1129950,
+    "prediction_sha256": "96e5507771b70616e2592025bb4c19235998ea08cf6d71bacc167d963ad929dc",
+    "file_sha256": "73818984cae2485d0c4d9a72680b1e0c242141243c614a68f9345bb177e43c2e",
+    "score_csv_sha256": "a0615979a58c55cd096c5f89936fba65b010ebeb2c4f2dddd12fc7fd706a26f1",
+    "csv_max_abs": 1.0061396160665481e-16,
+    "smoothing_used_previous": 1125300,
+    "smoothing_fallback": 4650,
+    "directory": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\dev_2021",
+    "paths": {
+      "predictions.parquet": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\dev_2021\\predictions.parquet",
+      "evaluation_predictions.csv": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\dev_2021\\evaluation_predictions.csv",
+      "lag_trace.parquet": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\dev_2021\\lag_trace.parquet"
+    },
+    "sha256": {
+      "predictions.parquet": "73818984cae2485d0c4d9a72680b1e0c242141243c614a68f9345bb177e43c2e",
+      "evaluation_predictions.csv": "a0615979a58c55cd096c5f89936fba65b010ebeb2c4f2dddd12fc7fd706a26f1",
+      "lag_trace.parquet": "5afd882cacf0e1b19ecfc3ce3413ca21185276d35ec8325bbf23d4b24888354e"
+    }
+  },
+  {
+    "experiment": "F1",
+    "split": "dev_2022",
+    "rows": 1125300,
+    "prediction_sha256": "62d0628219c0bcbfcfa7ce05a654166d918df46eca44d5aaa7544e497cb31b5a",
+    "file_sha256": "998b651ecf1cd4f06d6412d7de99c6a5c6c7544e70ceea63deba170226956777",
+    "score_csv_sha256": "26d87be219035663b3266b8631016b3631b6823a982c49acc23a3ae42da8088c",
+    "csv_max_abs": 1.0061396160665481e-16,
+    "smoothing_used_previous": null,
+    "smoothing_fallback": null,
+    "directory": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\dev_2022",
+    "paths": {
+      "predictions.parquet": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\dev_2022\\predictions.parquet",
+      "evaluation_predictions.csv": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\dev_2022\\evaluation_predictions.csv"
+    },
+    "sha256": {
+      "predictions.parquet": "998b651ecf1cd4f06d6412d7de99c6a5c6c7544e70ceea63deba170226956777",
+      "evaluation_predictions.csv": "26d87be219035663b3266b8631016b3631b6823a982c49acc23a3ae42da8088c"
+    }
+  },
+  {
+    "experiment": "S1",
+    "split": "dev_2022",
+    "rows": 1125300,
+    "prediction_sha256": "a5b0f578fe148b7bc43434a3bc73d2ba47917e33d4e6be1252ff4cbf148c7955",
+    "file_sha256": "f68806c63885847cf7d0b2b81926e76432cd91ef8784f9d63f21f2e401465f47",
+    "score_csv_sha256": "fbcefe94291b9ab2989da23bdb3e9b6373616d3ce63061ed27d48dafa854a1a1",
+    "csv_max_abs": 1.0061396160665481e-16,
+    "smoothing_used_previous": 1120650,
+    "smoothing_fallback": 4650,
+    "directory": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\dev_2022",
+    "paths": {
+      "predictions.parquet": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\dev_2022\\predictions.parquet",
+      "evaluation_predictions.csv": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\dev_2022\\evaluation_predictions.csv",
+      "lag_trace.parquet": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\dev_2022\\lag_trace.parquet"
+    },
+    "sha256": {
+      "predictions.parquet": "f68806c63885847cf7d0b2b81926e76432cd91ef8784f9d63f21f2e401465f47",
+      "evaluation_predictions.csv": "fbcefe94291b9ab2989da23bdb3e9b6373616d3ce63061ed27d48dafa854a1a1",
+      "lag_trace.parquet": "cd4d86e744328fcc93115ff1d3e41ce820c6e640c822a69ffce0ab65ae184f24"
+    }
+  },
+  {
+    "experiment": "F1",
+    "split": "primary_2023",
+    "rows": 1125300,
+    "prediction_sha256": "d7da9c509c26cea899324a099653181318d84011181aa006a945745822782a99",
+    "file_sha256": "86ce82923aa5a5bf60dc7ff6e34649ca9240d2de1f9c2f6b83cb7aac152a8746",
+    "score_csv_sha256": "805e111ca73d7f4b1630ec1dc86642be03a3d32a895ebb7925d26af6575b56dd",
+    "csv_max_abs": 1.0061396160665481e-16,
+    "smoothing_used_previous": null,
+    "smoothing_fallback": null,
+    "directory": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\primary_2023",
+    "paths": {
+      "predictions.parquet": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\primary_2023\\predictions.parquet",
+      "evaluation_predictions.csv": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\F1\\primary_2023\\evaluation_predictions.csv"
+    },
+    "sha256": {
+      "predictions.parquet": "86ce82923aa5a5bf60dc7ff6e34649ca9240d2de1f9c2f6b83cb7aac152a8746",
+      "evaluation_predictions.csv": "805e111ca73d7f4b1630ec1dc86642be03a3d32a895ebb7925d26af6575b56dd"
+    }
+  },
+  {
+    "experiment": "S1",
+    "split": "primary_2023",
+    "rows": 1125300,
+    "prediction_sha256": "ffe2ba4d810d0e3a34f5d8377f67a70407303b8d00a27c132cea48d85ac5e6e9",
+    "file_sha256": "ed495677c818737ebd871cdfce4f9bac8cb031f6fb570cfc031e9c9cda17abad",
+    "score_csv_sha256": "b20f8d0bebfe32dc45dc032e052b5195bdca70399c807b6896fa3614b5b08c3e",
+    "csv_max_abs": 1.0061396160665481e-16,
+    "smoothing_used_previous": 1120650,
+    "smoothing_fallback": 4650,
+    "directory": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\primary_2023",
+    "paths": {
+      "predictions.parquet": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\primary_2023\\predictions.parquet",
+      "evaluation_predictions.csv": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\primary_2023\\evaluation_predictions.csv",
+      "lag_trace.parquet": "C:\\fintechathon\\artifacts\\model_optimization\\step2\\20261005T083818932790Z\\S1\\primary_2023\\lag_trace.parquet"
+    },
+    "sha256": {
+      "predictions.parquet": "ed495677c818737ebd871cdfce4f9bac8cb031f6fb570cfc031e9c9cda17abad",
+      "evaluation_predictions.csv": "b20f8d0bebfe32dc45dc032e052b5195bdca70399c807b6896fa3614b5b08c3e",
+      "lag_trace.parquet": "92f95a6a91e94ca4dc36e9fbcbc8d65c199a3a27120b4f7ac969f27d9ef71cc6"
+    }
+  }
+]

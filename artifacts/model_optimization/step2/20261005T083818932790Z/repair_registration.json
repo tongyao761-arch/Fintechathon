@@ -1,0 +1,10 @@
+{
+  "original_registration_sha256": "9725f6e128e6d4717c1a593e36386afbe0966fa6451f594074cb6c5afb92a62a",
+  "repaired_source_sha256": {
+    "scripts/validate_prediction_transforms.py": "dcd2db828d62b95e49d8a9e76dbd271a6d9659d686c59372bfb8818bb9cf9df2",
+    "tests/test_prediction_transforms.py": "c4abb15c5bed6ebccd8e32c92b217d46e4ac08c22174c6ce3b33704b7c149de3"
+  },
+  "reason": "Audit CSV reader must preserve empty entered/exited Top-member strings. Add regression test and explicit original/repaired source validation. No prediction, score, matrix, formula or risk-rule changes; only tests and audit rerun.",
+  "new_training_runs": 0,
+  "new_prediction_comparisons": 0
+}
