@@ -1,0 +1,93 @@
+{
+  "accepted": true,
+  "verified": [
+    {
+      "candidate": "baseline10",
+      "year": 2021,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "year": 2021,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "year": 2021,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "baseline10",
+      "year": 2022,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "year": 2022,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "year": 2022,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "baseline10",
+      "year": 2024,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "year": 2024,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "year": 2024,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "baseline10",
+      "year": 2023,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "year": 2023,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "year": 2023,
+      "top_sets_original_and_reconstructed": true,
+      "top_quality_and_enter_exit_counts": true,
+      "concentration_from_prior_returns": true
+    }
+  ],
+  "all_daily_correlations_and_top_pairwise_changes_verified": true,
+  "max_correlation_difference": 0.0,
+  "elapsed_seconds": 69.98500749999948,
+  "source_sha256": "a8c7f9391c2b2cc870f6c4807c2b6ae1beb2112cd5bbda2ec94a22c0551ee99d"
+}

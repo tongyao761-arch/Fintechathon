@@ -1,0 +1,223 @@
+{
+  "accepted": true,
+  "new_training_runs": 0,
+  "prediction_transformations": 0,
+  "official_verified_runs": [
+    {
+      "candidate": "baseline10",
+      "split": "dev_2021",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "split": "dev_2021",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "split": "dev_2021",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "baseline10",
+      "split": "dev_2022",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "split": "dev_2022",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "split": "dev_2022",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "baseline10",
+      "split": "oos_2024",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "split": "oos_2024",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "split": "oos_2024",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "baseline10",
+      "split": "primary_2023",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "S4R_lean31_minus4",
+      "split": "primary_2023",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    },
+    {
+      "candidate": "S4R_full34_minus3",
+      "split": "primary_2023",
+      "official_difference": {
+        "ic_mean": 0.0,
+        "ic_std": 0.0,
+        "icir": 0.0,
+        "ic_positive_ratio": 0.0,
+        "annual_excess": 0.0,
+        "top1_annual_ret": 0.0,
+        "mean_turnover": 0.0,
+        "final_score": 0.0
+      },
+      "raw_keys_labels_split_verified": true,
+      "daily_recomputed": true
+    }
+  ],
+  "preserved_source_artifacts_untracked_files_and_push_protections": true,
+  "annual_and_monthly_and_daily_decomposition": true,
+  "test_scope": "unlabeled only; no true IC/excess/complete score",
+  "tests": {
+    "command": [
+      "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "-m",
+      "pytest",
+      "tests/test_frozen_prediction_diagnostics.py",
+      "tests/test_official_score.py",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "cwd": "C:\\fintechathon",
+    "started_at": "2026-10-05T08:04:14.975240+00:00",
+    "exit_code": 0,
+    "elapsed_seconds": 1.9516471000006277,
+    "log": "C:\\fintechathon\\artifacts\\model_optimization\\step1\\20261005T074709491570Z\\tests.log",
+    "log_sha256": "3bb36110c6345c1c6a2849e24ed98b27f7b284cfe855b1ccff90844d58008730"
+  }
+}
