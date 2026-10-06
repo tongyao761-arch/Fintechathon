@@ -1,0 +1,17 @@
+{
+  "stage": "frozen_overfitting_risk_diagnostic",
+  "candidates": ["baseline10", "S4R_lean31_minus4", "S4R_full34_minus3"],
+  "years": [2021, 2022, 2023, 2024],
+  "maximum_fit_calls_including_failures": 12,
+  "iterations": [20, 40, 60, 80, 100],
+  "training_diagnostic_market_days": 126,
+  "bootstrap": {"block_days": 20, "repetitions": 2000, "seed": 20261006, "confidence": 0.95},
+  "official_parity_tolerance": 1e-12,
+  "csv_prediction_tolerance": 1e-15,
+  "scope": "Historical post hoc diagnosis only; no test X, hidden Y, search, early stopping, adoption or submission",
+  "diagnostic_qualification": "current price valid AND finite label; training diagnostic additionally restricted to actual training mask",
+  "interpretation": "Any adjacent-prefix train MSE decline with validation MSE rise or validation IC decline is a descriptive signal; report all magnitudes without selecting tree counts. Annual/half-year signs, worst periods, all negative months and component conflicts are reported. Intervals condition on fixed predictions and cannot remove feature-selection bias.",
+  "interval_missing_rule": "Jointly resample paired date rows in noncircular moving blocks; preserve each series' finite mask and calculate its own nanmean; retain precomputed turnover at all sampled dates, including block starts; no turnover recomputation. Final-score replicate is the weighted difference of separately averaged components.",
+  "schemes": ["annual_fixed", "halfyear_update"],
+  "comparisons": [["S4R_lean31_minus4", "baseline10"], ["S4R_full34_minus3", "baseline10"], ["S4R_lean31_minus4", "S4R_full34_minus3"]]
+}
