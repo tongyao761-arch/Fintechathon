@@ -1,0 +1,136 @@
+{
+  "accepted": true,
+  "search_ended": true,
+  "primary": "PJ_a080",
+  "backup": "PJ_a090",
+  "shared_base_model": "P+J",
+  "run_directory": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z",
+  "artifacts": {
+    "final_model.txt": {
+      "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\final_model.txt",
+      "sha256": "76d9fc38e08e797cab5b939561085bf392ce3dbcb191b17878a6b50646f38ede",
+      "bytes": 332883
+    },
+    "raw_predictions.parquet": {
+      "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\raw_predictions.parquet",
+      "sha256": "10e1f481cf79e4bb811848efccc8a4877120ab63e9d23b26c715d8dca1076d0f",
+      "bytes": 13009237,
+      "rows": 1599600,
+      "min_date": 20250102,
+      "max_date": 20260608
+    },
+    "PJ_a080_predictions.parquet": {
+      "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\PJ_a080_predictions.parquet",
+      "sha256": "77de51875fe8c6232233ecd870023736a4f69306fb807304a3a9d4830fbe8652",
+      "bytes": 13307350,
+      "rows": 1599600,
+      "min_date": 20250102,
+      "max_date": 20260608
+    },
+    "PJ_a080_predictions.csv": {
+      "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\PJ_a080_predictions.csv",
+      "sha256": "96f0f30b5c52c526705c6b2dff9e89ebad730dbe15474219025e187a3c2faaa5",
+      "bytes": 68948143,
+      "rows": 1599600,
+      "min_date": 20250102,
+      "max_date": 20260608
+    },
+    "PJ_a090_predictions.parquet": {
+      "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\PJ_a090_predictions.parquet",
+      "sha256": "1fdc736b540cfcc76649fb75fded2ebe79993d2c66ad1053dce5bde15cea8616",
+      "bytes": 13306148,
+      "rows": 1599600,
+      "min_date": 20250102,
+      "max_date": 20260608
+    },
+    "PJ_a090_predictions.csv": {
+      "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\PJ_a090_predictions.csv",
+      "sha256": "7b3edfec559d1b350f1a16b08e3423c54845010c3a41101614f50adeb01feef1",
+      "bytes": 68923869,
+      "rows": 1599600,
+      "min_date": 20250102,
+      "max_date": 20260608
+    }
+  },
+  "budget": {
+    "fits": 1,
+    "predictions": 2,
+    "synthetic_fits": 0,
+    "retries": 0
+  },
+  "training_summary": {
+    "total_rows": 7900350,
+    "purge_label_rows": 4650,
+    "outside_train_interval": 4650,
+    "invalid_prices_in_interval": 1139857,
+    "missing_labels_after_price_gate": 1837,
+    "nonfinite_labels_after_price_and_presence": 0,
+    "train_rows": 6754006,
+    "train_keys_sha256": "5b68ee00a7dcb8087d8bb59de48c552dce60d233f5744602069c4dda5effba08",
+    "training_labels_float32_sha256": "cc75c1c6c6f95213df3d17644148f8b868f70657796dfe56bb43da2a364b5d71",
+    "training_source_row_ids_sha256": "af8af332fc1d2df345fed064ff6375d6c64719f12a2fe8d758ef867df347d4b1",
+    "first_train_date": 20180102,
+    "last_train_date": 20241230,
+    "purge_Y_in_training": false,
+    "history_X_purge_date_rows": 4650,
+    "test_keys_sha256": "e9cb8635d7ac31e6fd25586c2d3bcc3eb25bf47966102b366b535d19a80ebdb7",
+    "boundary": {
+      "train_start": 20180102,
+      "train_end": 20241230,
+      "purge_date": 20241231,
+      "first_test_date": 20250102,
+      "last_test_date": 20260608
+    },
+    "test_invalid_price_rows": 44844,
+    "test_limit_up_rows": 26192
+  },
+  "resources": {
+    "compute_seconds": 736.4894139000003,
+    "peak_rss_bytes": 7925067776,
+    "peak_process_threads": 124,
+    "actual_model_threads": 32,
+    "artifact_disk_bytes": 1865172025,
+    "includes": [
+      "prepare",
+      "fit_and_initial_prediction",
+      "independent_audit"
+    ],
+    "initial_resources": {
+      "available_memory_bytes": 17693212672,
+      "disk_free_bytes": 184398323712,
+      "logical_cpu_count": 32
+    },
+    "finalize_seconds_before_index": 0.22434119999979885
+  },
+  "failures": [
+    {
+      "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\signed_NaN_audit_precheck_failure.json",
+      "sha256": "fc5b22a02aa34c65cc33efd1042ddb4654e36fca886d5ab02f4451449909368d"
+    },
+    {
+      "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\prechecks\\initial_test_failure.json",
+      "sha256": "6ce308542cc7761da3656a31d3cc2a05ce884b84d88a2c5d00b97495755c1cdd"
+    }
+  ],
+  "final_training_completed": true,
+  "official_test_prediction_generated": true,
+  "submission_generated": false,
+  "competition_report_completed": false,
+  "stop": true,
+  "git_commit_performed": false,
+  "remote_operations_performed": false,
+  "registration_path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\registration.json",
+  "registration_sha256": "5845df8254f8090f496856188053c107ffc2aa0a3c26c1783b459f62ddd217c9",
+  "acceptance_path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\acceptance.json",
+  "acceptance_sha256": "bc15207e4c07e37448cb8e7647f1ecc237cbec4efda13b2568ff382a9bf09c14",
+  "run_index_path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\run_index.json",
+  "run_index_sha256": "6bb326ea1b294ea080a93d1c2f7b341070882e92b985f8b7aed15d0cea679357",
+  "progress_version_link_path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\progress_version_link.json",
+  "progress_version_link_sha256": "f32d891464ee65c9859de692deb61ceb41f6a2fc00001e7a95163578842c3b86",
+  "resources_path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\resources.json",
+  "resources_sha256": "72e448a8cdef02d8566a886650b5ab382c259758e7f7eacf82bfc9712e9eb09b",
+  "budget_ledger_path": "C:\\fintechathon\\artifacts\\final_training_v1\\task_ledger.json",
+  "budget_ledger_sha256": "510478dc7aa0751fb0e5d138934b2ed90502245728838d48f62279d241e01e02",
+  "report_path": "C:\\fintechathon\\docs\\final_training_v1\\RESULTS.md",
+  "report_sha256": "4bae9d52b11158f72599965cdc87f572e3a59b364b221e5ad7523b8f1ee81c24"
+}

@@ -1,0 +1,22 @@
+{
+  "reason": "psutil Windows disk_usage requires str, not Path",
+  "prior_source": {
+    "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_setup_before_repair01.py",
+    "sha256": "8df159a071351152f82594b509d6ee221ca0513d3c335104fd691f3f9ee2ed2b",
+    "bytes": 12099
+  },
+  "repaired_source": {
+    "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_setup.py",
+    "sha256": "f0ffe0028bb97d66c1ba868453394cd1be38ce58df164e8b6f40322d4bfe4230",
+    "bytes": 12109
+  },
+  "failures": [
+    {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\failure_preflight_1791704250833379800.json",
+      "sha256": "701b54ab6228b883200494bc274adb0e7ca01e71037b06751cbd7910cf2ef74c",
+      "bytes": 1009
+    }
+  ],
+  "existing_environment_modified_by_failure": false,
+  "synthetic_fit_consumed": 0
+}

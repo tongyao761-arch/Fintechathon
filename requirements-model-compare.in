@@ -1,0 +1,4 @@
+# Installed model-comparison additions; preserve the original model environment.
+-r requirements-model.in
+xgboost==3.4.1
+catboost==1.2.10

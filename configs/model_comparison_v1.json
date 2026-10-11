@@ -1,0 +1,1164 @@
+{
+  "schema_version": 1,
+  "registered_at": "2026-10-11T07:43:17.172330+00:00",
+  "stage": "plan_frozen_formal_not_executed",
+  "execution_authorized": false,
+  "formal_runner_present": false,
+  "auto_start_commands": [],
+  "environment": {
+    "executable": "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+    "python": "3.12.10",
+    "versions": {
+      "catboost": "1.2.10",
+      "cloudpickle": "3.1.2",
+      "colorama": "0.4.6",
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "fonttools": "4.66.1",
+      "graphviz": "0.21",
+      "iniconfig": "2.3.0",
+      "joblib": "1.6.0",
+      "kiwisolver": "1.5.1",
+      "lightgbm": "4.7.0",
+      "loguru": "0.7.3",
+      "matplotlib": "3.11.2",
+      "narwhals": "2.26.0",
+      "numpy": "2.3.4",
+      "packaging": "26.3",
+      "pandas": "2.3.3",
+      "pillow": "12.3.0",
+      "pip": "25.0.1",
+      "plotly": "7.1.0",
+      "pluggy": "1.6.0",
+      "psutil": "7.2.2",
+      "pyarrow": "25.0.1",
+      "pygments": "2.21.0",
+      "pyparsing": "3.3.3",
+      "pytest": "9.1.1",
+      "python-dateutil": "2.9.0.post0",
+      "pytz": "2026.4",
+      "pyyaml": "6.0.3",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1",
+      "six": "1.17.0",
+      "threadpoolctl": "3.7.0",
+      "tzdata": "2026.4",
+      "win32-setctime": "1.2.0",
+      "xgboost": "3.4.1"
+    },
+    "before": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_before.json",
+      "sha256": "d773f3b8eb5793003165321e13e1e450a114ed66714a69e76b88cf196310b2be"
+    },
+    "after": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_after.json",
+      "sha256": "151437facf2e2bd612a2ead37ffbf41e131e17b695b639141f719161adaad259"
+    }
+  },
+  "data": {
+    "raw": {
+      "path": "C:\\fintechathon\\赛题五\\赛题五数据\\训练集.csv",
+      "sha256": "e9d23e87f7e1f9439f28f7dd951d129ea49eaacda5ad650da8576a830a6deac9"
+    },
+    "label": "y_ret_1d",
+    "label_train_dtype": "float32",
+    "label_score_dtype": "original float64 CSV",
+    "X_dtype": "float32",
+    "missing": "NaN retained; feature overflow/inf -> NaN by original builder; no Y repair",
+    "features": [
+      "ret_1d",
+      "ret_5d",
+      "ret_20d",
+      "gap_1d",
+      "intraday_ret",
+      "high_low_range",
+      "volatility_5d",
+      "volatility_20d",
+      "volume_ratio_5d",
+      "amount_ratio_5d",
+      "close_location",
+      "upper_shadow",
+      "body_ratio",
+      "bias_20d",
+      "bias_60d",
+      "price_position_60d",
+      "amount_ratio_20d",
+      "log_mean_amount_20d",
+      "volatility_60d",
+      "flag_limit_up",
+      "flag_limit_down",
+      "limit_up_count_5d",
+      "limit_down_count_5d",
+      "ret_1d_rank_pct",
+      "ret_20d_rank_pct",
+      "amount_ratio_5d_rank_pct",
+      "log_mean_amount_20d_rank_pct",
+      "downside_deviation_20d",
+      "illiquidity_proxy_20d"
+    ],
+    "ordered_features_sha256": "1f506cebac4886ea25eab7abd9c1e342ac3374eade0998fbc72e7c1493b654d9",
+    "definitions": {
+      "ret_1d": "close / close.shift(1) - 1",
+      "ret_5d": "close / close.shift(5) - 1",
+      "ret_20d": "close / close.shift(20) - 1",
+      "gap_1d": "open / close.shift(1) - 1",
+      "intraday_ret": "close / open - 1",
+      "high_low_range": "high / low - 1",
+      "volatility_5d": "ret_1d.rolling(5, min_periods=5).std(ddof=1)",
+      "volatility_20d": "ret_1d.rolling(20, min_periods=20).std(ddof=1)",
+      "volume_ratio_5d": "vol / vol.shift(1).rolling(5, min_periods=5).mean()",
+      "amount_ratio_5d": "amount / amount.shift(1).rolling(5, min_periods=5).mean()",
+      "close_location": "(C-L)/(H-L)",
+      "upper_shadow": "(H-max(O,C))/C",
+      "body_ratio": "(C-O)/(H-L)",
+      "bias_20d": "C/close.rolling(20, min_periods=20).mean()-1",
+      "bias_60d": "C/close.rolling(60, min_periods=60).mean()-1",
+      "price_position_60d": "(C-low.rolling(60).min())/(high.rolling(60).max()-low.rolling(60).min()); min_periods=60",
+      "amount_ratio_20d": "A/amount.shift(1).rolling(20, min_periods=20).mean()",
+      "log_mean_amount_20d": "log1p(amount.rolling(20, min_periods=20).mean())",
+      "volatility_60d": "baseline ret_1d.rolling(60, min_periods=60).std(ddof=1)",
+      "flag_limit_up": "raw current flag_limit_up",
+      "flag_limit_down": "raw current flag_limit_down",
+      "limit_up_count_5d": "flag_limit_up.rolling(5, min_periods=5).sum()",
+      "limit_down_count_5d": "flag_limit_down.rolling(5, min_periods=5).sum()",
+      "ret_1d_rank_pct": "same-date ret_1d.rank(method='average', pct=True); price valid and finite source only",
+      "ret_20d_rank_pct": "same-date ret_20d.rank(method='average', pct=True); price valid and finite source only",
+      "amount_ratio_5d_rank_pct": "same-date amount_ratio_5d.rank(method='average', pct=True); price valid and finite source only",
+      "log_mean_amount_20d_rank_pct": "same-date log_mean_amount_20d.rank(method='average', pct=True); price valid and finite source only",
+      "downside_deviation_20d": {
+        "formula": "sqrt(mean_W20(min(r,0)^2))",
+        "validity": "all 20 r finite; lower semideviation, not conditional negative-return std"
+      },
+      "illiquidity_proxy_20d": {
+        "formula": "log1p(1e8*mean_W20(abs(r)/A))",
+        "validity": "20 finite r, corresponding finite A>0; no epsilon denominator; 1e8 fixed, no variant search"
+      }
+    },
+    "complete_X_cache_reference": {
+      "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\history_features.parquet",
+      "sha256": "6511acccdf628af932f1f450fb0918d8e523b5a191e766f512435e377fe72b6e",
+      "rows": 7900350,
+      "columns": [
+        "ret_1d",
+        "ret_5d",
+        "ret_20d",
+        "gap_1d",
+        "intraday_ret",
+        "high_low_range",
+        "volatility_5d",
+        "volatility_20d",
+        "volume_ratio_5d",
+        "amount_ratio_5d",
+        "close_location",
+        "upper_shadow",
+        "body_ratio",
+        "bias_20d",
+        "bias_60d",
+        "price_position_60d",
+        "amount_ratio_20d",
+        "log_mean_amount_20d",
+        "volatility_60d",
+        "flag_limit_up",
+        "flag_limit_down",
+        "limit_up_count_5d",
+        "limit_down_count_5d",
+        "ret_1d_rank_pct",
+        "ret_20d_rank_pct",
+        "amount_ratio_5d_rank_pct",
+        "log_mean_amount_20d_rank_pct",
+        "downside_deviation_20d",
+        "illiquidity_proxy_20d"
+      ],
+      "dtype": "float32",
+      "identity": "complete sorted historical panel, X-only causally verified in final_risk_review_v1; not a current final-model historical prediction"
+    },
+    "splits": {
+      "dev_2021": {
+        "spec": {
+          "train_start": 20180102,
+          "train_end": 20201230,
+          "purge_date": 20201231,
+          "valid_start": 20210104,
+          "valid_end": 20211231
+        },
+        "expected": {
+          "train_rows": 2594048,
+          "valid_rows": 1129950,
+          "purge_rows": 4650,
+          "train_keys_sha256": "ea6d90364fe4f5a1c755fda2ed1719f15149e26eb346d5a166e1431ab9da9915",
+          "validation_keys_sha256": "ff434d47ea64e7e7c10cc756a478c50617e2182df452291ac7240293a38c177b",
+          "training_labels_float32_sha256": "817fb8c1971e9386e141623cc17e375a4a87e6909c5652af9afd0541f5268720",
+          "next_label_date_max": 20201231,
+          "all_next_dates_before_validation": true
+        },
+        "actual_config": {
+          "path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\actual_config.json",
+          "sha256": "3e60c0c6d506f98a47d2d0be6ed0af8b23b20fc15d6ce4d0b50fb095a3c21ded"
+        },
+        "summary": {
+          "path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\summary.json",
+          "sha256": "6197a3c02f0c039bba837b6500f8bd5924d34db4c731543dd0dda4925390c38e"
+        },
+        "feature_identity": {
+          "complete_X": {
+            "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\history_features.parquet",
+            "sha256": "6511acccdf628af932f1f450fb0918d8e523b5a191e766f512435e377fe72b6e",
+            "rows": 7900350,
+            "columns": [
+              "ret_1d",
+              "ret_5d",
+              "ret_20d",
+              "gap_1d",
+              "intraday_ret",
+              "high_low_range",
+              "volatility_5d",
+              "volatility_20d",
+              "volume_ratio_5d",
+              "amount_ratio_5d",
+              "close_location",
+              "upper_shadow",
+              "body_ratio",
+              "bias_20d",
+              "bias_60d",
+              "price_position_60d",
+              "amount_ratio_20d",
+              "log_mean_amount_20d",
+              "volatility_60d",
+              "flag_limit_up",
+              "flag_limit_down",
+              "limit_up_count_5d",
+              "limit_down_count_5d",
+              "ret_1d_rank_pct",
+              "ret_20d_rank_pct",
+              "amount_ratio_5d_rank_pct",
+              "log_mean_amount_20d_rank_pct",
+              "downside_deviation_20d",
+              "illiquidity_proxy_20d"
+            ],
+            "dtype": "float32",
+            "identity": "complete sorted historical panel, X-only causally verified in final_risk_review_v1; not a current final-model historical prediction"
+          },
+          "ordered_columns_sha256": "1f506cebac4886ea25eab7abd9c1e342ac3374eade0998fbc72e7c1493b654d9",
+          "selection": "exact split_masks training gate, complete validation mask; array byte hashes to be sealed before future fit",
+          "per_split_matrix_byte_hash_already_recorded": false
+        }
+      },
+      "dev_2022": {
+        "spec": {
+          "train_start": 20180102,
+          "train_end": 20211230,
+          "purge_date": 20211231,
+          "valid_start": 20220104,
+          "valid_end": 20221230
+        },
+        "expected": {
+          "train_rows": 3568878,
+          "valid_rows": 1125300,
+          "purge_rows": 4650,
+          "train_keys_sha256": "2620c45cb66cc42e7763b59d6f7f1abb4c9f338507731689a9ea83b1fbcbd775",
+          "validation_keys_sha256": "2e405119151f5da975bfa8785db1922e3f8e8136dbe5719fdfde083f812028cd",
+          "training_labels_float32_sha256": "d094183a9f3f9d40bc63f43bbfc2eda65402d060652bba82cd23fd6ba8707594",
+          "next_label_date_max": 20211231,
+          "all_next_dates_before_validation": true
+        },
+        "actual_config": {
+          "path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\actual_config.json",
+          "sha256": "f12661f14ac55d0399032bd901ffbd53a265c7534b96045960fd71bc3c55fb72"
+        },
+        "summary": {
+          "path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\summary.json",
+          "sha256": "2859fc656994d240689cae3aafd0fdcf568a642e129b1e4c433bae2464579fe6"
+        },
+        "feature_identity": {
+          "complete_X": {
+            "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\history_features.parquet",
+            "sha256": "6511acccdf628af932f1f450fb0918d8e523b5a191e766f512435e377fe72b6e",
+            "rows": 7900350,
+            "columns": [
+              "ret_1d",
+              "ret_5d",
+              "ret_20d",
+              "gap_1d",
+              "intraday_ret",
+              "high_low_range",
+              "volatility_5d",
+              "volatility_20d",
+              "volume_ratio_5d",
+              "amount_ratio_5d",
+              "close_location",
+              "upper_shadow",
+              "body_ratio",
+              "bias_20d",
+              "bias_60d",
+              "price_position_60d",
+              "amount_ratio_20d",
+              "log_mean_amount_20d",
+              "volatility_60d",
+              "flag_limit_up",
+              "flag_limit_down",
+              "limit_up_count_5d",
+              "limit_down_count_5d",
+              "ret_1d_rank_pct",
+              "ret_20d_rank_pct",
+              "amount_ratio_5d_rank_pct",
+              "log_mean_amount_20d_rank_pct",
+              "downside_deviation_20d",
+              "illiquidity_proxy_20d"
+            ],
+            "dtype": "float32",
+            "identity": "complete sorted historical panel, X-only causally verified in final_risk_review_v1; not a current final-model historical prediction"
+          },
+          "ordered_columns_sha256": "1f506cebac4886ea25eab7abd9c1e342ac3374eade0998fbc72e7c1493b654d9",
+          "selection": "exact split_masks training gate, complete validation mask; array byte hashes to be sealed before future fit",
+          "per_split_matrix_byte_hash_already_recorded": false
+        }
+      },
+      "primary_2023": {
+        "spec": {
+          "train_start": 20180102,
+          "train_end": 20221229,
+          "purge_date": 20221230,
+          "valid_start": 20230103,
+          "valid_end": 20231229
+        },
+        "expected": {
+          "train_rows": 4597785,
+          "valid_rows": 1125300,
+          "purge_rows": 4650,
+          "train_keys_sha256": "b45aa5c324a41a39aaedb4455526854db5a720b6b1297745930a36b311ab7107",
+          "validation_keys_sha256": "84f9bbbf34f5460732ad12e2a6c09f1b1edbf6b1ef392af067bed45b62b3fecc",
+          "training_labels_float32_sha256": "cc1f9802a87732e35b8fde0ad7666823b6ea89ee21eabd70350612671d61ed21",
+          "next_label_date_max": 20221230,
+          "all_next_dates_before_validation": true
+        },
+        "actual_config": {
+          "path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\actual_config.json",
+          "sha256": "8f23ba908bbb37848e419c4919bc1f12d2e9da7bae06387d41a93cccee1618a4"
+        },
+        "summary": {
+          "path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\summary.json",
+          "sha256": "dc8598463a82cd0702375eba81a1dcdf5145c147dbee86296c8859bb35f6a3a1"
+        },
+        "feature_identity": {
+          "complete_X": {
+            "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\history_features.parquet",
+            "sha256": "6511acccdf628af932f1f450fb0918d8e523b5a191e766f512435e377fe72b6e",
+            "rows": 7900350,
+            "columns": [
+              "ret_1d",
+              "ret_5d",
+              "ret_20d",
+              "gap_1d",
+              "intraday_ret",
+              "high_low_range",
+              "volatility_5d",
+              "volatility_20d",
+              "volume_ratio_5d",
+              "amount_ratio_5d",
+              "close_location",
+              "upper_shadow",
+              "body_ratio",
+              "bias_20d",
+              "bias_60d",
+              "price_position_60d",
+              "amount_ratio_20d",
+              "log_mean_amount_20d",
+              "volatility_60d",
+              "flag_limit_up",
+              "flag_limit_down",
+              "limit_up_count_5d",
+              "limit_down_count_5d",
+              "ret_1d_rank_pct",
+              "ret_20d_rank_pct",
+              "amount_ratio_5d_rank_pct",
+              "log_mean_amount_20d_rank_pct",
+              "downside_deviation_20d",
+              "illiquidity_proxy_20d"
+            ],
+            "dtype": "float32",
+            "identity": "complete sorted historical panel, X-only causally verified in final_risk_review_v1; not a current final-model historical prediction"
+          },
+          "ordered_columns_sha256": "1f506cebac4886ea25eab7abd9c1e342ac3374eade0998fbc72e7c1493b654d9",
+          "selection": "exact split_masks training gate, complete validation mask; array byte hashes to be sealed before future fit",
+          "per_split_matrix_byte_hash_already_recorded": false
+        }
+      }
+    },
+    "implementations": {
+      "raw_loader": {
+        "path": "C:\\fintechathon\\src\\data\\baseline_panel.py",
+        "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+        "function": "load_raw_baseline_panel"
+      },
+      "training_mask": {
+        "path": "C:\\fintechathon\\scripts\\run_lightgbm_baseline.py",
+        "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+        "function": "split_masks"
+      },
+      "feature_builder": {
+        "path": "C:\\fintechathon\\src\\features\\feature_round2.py",
+        "sha256": "89f57d748873bf03105bfcd73c3ef78bd2b962178fc7cc9e7a571c5266531bd1",
+        "function": "build_feature_round2(project_x(panel))"
+      },
+      "frozen_P": {
+        "path": "C:\\fintechathon\\src\\features\\features34.py",
+        "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+        "function": "build_features34"
+      },
+      "X_only_adapter": {
+        "path": "C:\\fintechathon\\src\\data\\frozen_test_adapter.py",
+        "sha256": "7f6b230c1ea63a7d7448fa0d771fe3837616010e7d74ef808452ee21d02d161e",
+        "function": "adapt_test_x / bridge_x; future test phase only"
+      },
+      "smoothing": {
+        "path": "C:\\fintechathon\\scripts\\select_final_candidates_v2.py",
+        "sha256": "2590e85235ad0dcb0e4959ba08ef5b9ab20250d7d574d9311fec6a550fdd6d29",
+        "function": "smooth"
+      },
+      "official": {
+        "path": "C:\\fintechathon\\赛题五\\evaluate.py",
+        "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+        "function": "evaluate"
+      },
+      "strict_wrapper": {
+        "path": "C:\\fintechathon\\src\\metrics\\official.py",
+        "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+        "function": "score_official"
+      },
+      "independent": {
+        "path": "C:\\fintechathon\\scripts\\audit_final_candidates_v2.py",
+        "sha256": "8a20b70ab1ae8b70fcc538796a5bfd9c3b0ba0468551dca54663dbf454d4dc47",
+        "function": "oracle_scores / oracle_smooth"
+      }
+    },
+    "forbidden_inputs": [
+      "ts_code",
+      "trade_date",
+      "y_ret_1d",
+      "is_trainable",
+      "label_missing"
+    ],
+    "preparation": "build X on complete sorted original panel before train filtering; compare keyed finite values exactly and NaN locations against frozen cache before any future fit"
+  },
+  "models": {
+    "XGBoost": {
+      "version": "3.4.1",
+      "params": {
+        "objective": "reg:squarederror",
+        "booster": "gbtree",
+        "tree_method": "hist",
+        "device": "cpu",
+        "n_estimators": 100,
+        "learning_rate": 0.05,
+        "max_depth": 6,
+        "max_leaves": 64,
+        "grow_policy": "depthwise",
+        "min_child_weight": 100,
+        "gamma": 0.0,
+        "reg_alpha": 0.0,
+        "reg_lambda": 1.0,
+        "subsample": 1.0,
+        "sampling_method": "uniform",
+        "colsample_bytree": 1.0,
+        "colsample_bylevel": 1.0,
+        "colsample_bynode": 1.0,
+        "max_bin": 256,
+        "base_score": 0.0,
+        "max_delta_step": 0.0,
+        "num_parallel_tree": 1,
+        "multi_strategy": "one_output_per_tree",
+        "n_jobs": 32,
+        "random_state": 20260927,
+        "eval_metric": "rmse",
+        "validate_parameters": true,
+        "verbosity": 1,
+        "enable_categorical": false,
+        "early_stopping_rounds": null
+      },
+      "numeric_features_only": true,
+      "data_wrapper": "float32 ndarray / QuantileDMatrix (hist), missing=np.nan, unchanged row order",
+      "effective_smoke_configuration": {
+        "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\synthetic_XGBoost_effective.json",
+        "sha256": "263b275d96a2d72217a213244f43071e5efc5c0b59e2b9ab85755e0536dd7aeb"
+      }
+    },
+    "CatBoost": {
+      "version": "1.2.10",
+      "params": {
+        "loss_function": "RMSE",
+        "eval_metric": "RMSE",
+        "task_type": "CPU",
+        "iterations": 100,
+        "learning_rate": 0.05,
+        "depth": 6,
+        "grow_policy": "SymmetricTree",
+        "l2_leaf_reg": 3.0,
+        "bootstrap_type": "No",
+        "rsm": 1.0,
+        "random_strength": 0.0,
+        "random_seed": 20260927,
+        "thread_count": 32,
+        "nan_mode": "Min",
+        "border_count": 254,
+        "feature_border_type": "GreedyLogSum",
+        "boosting_type": "Plain",
+        "boost_from_average": false,
+        "leaf_estimation_method": "Newton",
+        "leaf_estimation_iterations": 1,
+        "leaf_estimation_backtracking": "No",
+        "score_function": "L2",
+        "has_time": true,
+        "fold_permutation_block": 1,
+        "model_shrink_rate": 0.0,
+        "model_shrink_mode": "Constant",
+        "langevin": false,
+        "posterior_sampling": false,
+        "use_best_model": false,
+        "allow_writing_files": false,
+        "verbose": false
+      },
+      "numeric_features_only": true,
+      "data_wrapper": "Pool, numeric features only, cat_features=[], unchanged float32/NaN/row order",
+      "effective_smoke_configuration": {
+        "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\synthetic_CatBoost_effective.json",
+        "sha256": "f4c1318988e142807da9da188a73a63f6fc1cdb9038225fab72e311a86a217d9"
+      }
+    }
+  },
+  "matrix": [
+    {
+      "model": "XGBoost",
+      "split": "dev_2021"
+    },
+    {
+      "model": "XGBoost",
+      "split": "dev_2022"
+    },
+    {
+      "model": "XGBoost",
+      "split": "primary_2023"
+    },
+    {
+      "model": "CatBoost",
+      "split": "dev_2021"
+    },
+    {
+      "model": "CatBoost",
+      "split": "dev_2022"
+    },
+    {
+      "model": "CatBoost",
+      "split": "primary_2023"
+    }
+  ],
+  "postprocessing": [
+    {
+      "id": "raw",
+      "weights": [
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "id": "a080",
+      "weights": [
+        0.8,
+        0.2
+      ]
+    }
+  ],
+  "execution_order": [
+    "XGBoost/dev_2021",
+    "XGBoost/dev_2022",
+    "XGBoost/primary_2023",
+    "CatBoost/dev_2021",
+    "CatBoost/dev_2022",
+    "CatBoost/primary_2023"
+  ],
+  "controls": [
+    {
+      "id": "PJ_a100",
+      "split": "dev_2021",
+      "entry": {
+        "truth_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\evaluate_input\\测试集_Y.csv",
+        "x_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\evaluate_input\\测试集_X.csv",
+        "base_model_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\models\\lightgbm.txt",
+        "base_model_sha256": "3dc77860ff3011194ef30edb64fde295c4936a6588b6055d545e393e5e5d1284",
+        "truth_sha256": "7987dd75735184122ccd4054d7353ef8c00da677f92eec569bf96047f2f5e580",
+        "x_sha256": "2d492df56c77e51e6ea41da13cd1f0860081ed1a404fd9382ec985349aabed3d",
+        "id": "PJ_a100",
+        "split": "dev_2021",
+        "weights": [
+          1.0,
+          0.0
+        ],
+        "base": "PJ",
+        "prediction_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\predictions.parquet",
+        "prediction_sha256": "21d49ce2ecaf615d470f28314880c6b00251a629d564d58b906c15dbcbde38e5",
+        "score_csv_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\evaluate_input\\submission.csv",
+        "score_csv_sha256": "73870417f4d9013c6031052ce31ab09a54f098a380f45cca83d11c59b885e29a",
+        "score_directory": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021",
+        "lag_trace_path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\lag_trace\\PJ\\dev_2021.parquet",
+        "lag_trace_sha256": "b54ad8012b1b7757c32a529dbfc00f60f8c1b8865886b33ea2ef45f2829eeaf5",
+        "new_prediction_set": false,
+        "corresponding_v1": "B",
+        "scored_at": "2026-10-08T18:11:51.874327+00:00",
+        "elapsed_seconds": 10.822505000000092
+      },
+      "saved_score_files": {
+        "daily_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\daily_metrics.csv",
+          "sha256": "66cb5230bdde835a0736259196af3a9a7a9a078393bef18cac469caad28ccb56"
+        },
+        "monthly_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\monthly_metrics.csv",
+          "sha256": "630d961d3f0b97141d28ab8b9994863b0fc60a9e78df5765f027ed3b3e115e7c"
+        },
+        "official_metrics.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\official_metrics.json",
+          "sha256": "a0af5772f488cd0eb3087560a58935ef0dd8ab8f11b8694a9848baf15f6be974"
+        },
+        "price_valid_turnover.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\price_valid_turnover.csv",
+          "sha256": "9bd29976aa3455f2e6a8e929e3308b0abc30a0687a91622b52c023e65fed0e24"
+        },
+        "run_record.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\run_record.json",
+          "sha256": "4be69aa7ce3b1d1527c0bfc1189e745f1686ed64e089e70f4e06958894de54e0"
+        },
+        "top_membership.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\top_membership.csv",
+          "sha256": "40134263b2d223e09110628ac3794beddf1df1d3cb7e2f9248f3e0a07eb849e4"
+        },
+        "top_quality.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\top_quality.csv",
+          "sha256": "167e61f7b609bbfd585d03442edb8bbf9fbc0b8c925dbc82263440265530953c"
+        },
+        "top_transitions.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\top_transitions.csv",
+          "sha256": "78d4b5e2343d7e87b212e7198d04d2e03d88b3f77a30b6604127b97bcc5e559a"
+        }
+      }
+    },
+    {
+      "id": "PJ_a080",
+      "split": "dev_2021",
+      "entry": {
+        "truth_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\evaluate_input\\测试集_Y.csv",
+        "x_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\evaluate_input\\测试集_X.csv",
+        "base_model_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\models\\lightgbm.txt",
+        "base_model_sha256": "3dc77860ff3011194ef30edb64fde295c4936a6588b6055d545e393e5e5d1284",
+        "truth_sha256": "7987dd75735184122ccd4054d7353ef8c00da677f92eec569bf96047f2f5e580",
+        "x_sha256": "2d492df56c77e51e6ea41da13cd1f0860081ed1a404fd9382ec985349aabed3d",
+        "id": "PJ_a080",
+        "split": "dev_2021",
+        "weights": [
+          0.8,
+          0.2
+        ],
+        "base": "PJ",
+        "prediction_path": "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\dev_2021\\predictions.parquet",
+        "prediction_sha256": "9052905ac1484ae07bb24f8638426c4a9c9849c26122a055b39b7d86792b2c8f",
+        "score_csv_path": "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\dev_2021\\evaluation_predictions.csv",
+        "score_csv_sha256": "ff2f658117cfefca302746ab6bdcda4061fff507915c82a4e901aad86fade9ab",
+        "score_directory": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021",
+        "lag_trace_path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\lag_trace\\PJ\\dev_2021.parquet",
+        "lag_trace_sha256": "b54ad8012b1b7757c32a529dbfc00f60f8c1b8865886b33ea2ef45f2829eeaf5",
+        "new_prediction_set": false,
+        "corresponding_v1": "D",
+        "scored_at": "2026-10-08T18:12:13.279825+00:00",
+        "elapsed_seconds": 9.540390300000581
+      },
+      "saved_score_files": {
+        "daily_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\daily_metrics.csv",
+          "sha256": "7e537f9c12d6ea234b10e7b2ad76087417b4703479e595113812a883f3a58200"
+        },
+        "monthly_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\monthly_metrics.csv",
+          "sha256": "8a5ca433d74ac936efab11d821311069a4fc6b34ef4832ca305da12db6fb9fca"
+        },
+        "official_metrics.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\official_metrics.json",
+          "sha256": "b78e8e1966dc8a51e079ae727434b935ced91ba414960e0da4f3106fb2150503"
+        },
+        "price_valid_turnover.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\price_valid_turnover.csv",
+          "sha256": "c3bdf10aacf67985b9a893561282c4e4db8b9e3b50b7a4c190cf0e8afcc15017"
+        },
+        "run_record.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\run_record.json",
+          "sha256": "77656e9bb9cedc78f2a4c9e3411cdc84cf71aa200f68055a5bd5973ee7feb14b"
+        },
+        "top_membership.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\top_membership.csv",
+          "sha256": "79956cbe18240cc8cb56f82d2106521a015e28418de46955ccc11d7ea6d94943"
+        },
+        "top_quality.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\top_quality.csv",
+          "sha256": "79ef496aa838a4f8f468e5e91549a9a5941fa790b53cece02f97cc3a6e09d2ae"
+        },
+        "top_transitions.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\top_transitions.csv",
+          "sha256": "19bae34ba1ac23e1ba856dee3b3423f97b08367a022eb966e6695406be68a9d7"
+        }
+      }
+    },
+    {
+      "id": "PJ_a100",
+      "split": "dev_2022",
+      "entry": {
+        "truth_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\evaluate_input\\测试集_Y.csv",
+        "x_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\evaluate_input\\测试集_X.csv",
+        "base_model_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\models\\lightgbm.txt",
+        "base_model_sha256": "d61f484a9ca4aedc404a39f10c854e50ae204074f70def76f857e86a6350139a",
+        "truth_sha256": "3ca58ec316a5ebf0657461f61f583b6f4d0c097392b918a3f91f790911000130",
+        "x_sha256": "e18e3d3489d1b5aa336549b5e5d6205608e63731279741052d22645950770b1a",
+        "id": "PJ_a100",
+        "split": "dev_2022",
+        "weights": [
+          1.0,
+          0.0
+        ],
+        "base": "PJ",
+        "prediction_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\predictions.parquet",
+        "prediction_sha256": "dbc0d755c77a6ab132903252dcb797f9b4a25611ad393d4b81676bb3f0767398",
+        "score_csv_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\evaluate_input\\submission.csv",
+        "score_csv_sha256": "15fc87f79d2f534cf1bc0e7babb1dcf092b311848f2c1a088ff93a45ec46e644",
+        "score_directory": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022",
+        "lag_trace_path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\lag_trace\\PJ\\dev_2022.parquet",
+        "lag_trace_sha256": "6c90dff931deced04e2fec633f980c960356dd76937340ab25fc8638348106a7",
+        "new_prediction_set": false,
+        "corresponding_v1": "B",
+        "scored_at": "2026-10-08T18:15:17.279274+00:00",
+        "elapsed_seconds": 26.034643099999812
+      },
+      "saved_score_files": {
+        "daily_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\daily_metrics.csv",
+          "sha256": "fdac4b15543c0ff3deeef7117a7c07444daf110b5931d225702c5da052d899f5"
+        },
+        "monthly_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\monthly_metrics.csv",
+          "sha256": "efcf649f0b8a1d72b09ba7bd3ca56d0c01f2ea02459a00831c10a703fcb7a01d"
+        },
+        "official_metrics.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\official_metrics.json",
+          "sha256": "e79f36f42f7ce2490710b6ee7c7e839f65becb6b3a8ddcba804ea74e75785d3e"
+        },
+        "price_valid_turnover.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\price_valid_turnover.csv",
+          "sha256": "81dcd1a864673fd966bedb9d73443be9a894407f510533565a75de82e8b559d6"
+        },
+        "run_record.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\run_record.json",
+          "sha256": "20d0081d64388b7ff7c14421370ebd07623935a267d27c6dfadd45be792ccdd9"
+        },
+        "top_membership.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\top_membership.csv",
+          "sha256": "d5acad483ba127e805ce027edeaa2b0fae7b309cec41014c3194d4f36f1e118c"
+        },
+        "top_quality.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\top_quality.csv",
+          "sha256": "5c85bf3a830bab042f5e61abf3acb581a74e980646ec1c38d887f3e66ed77a8a"
+        },
+        "top_transitions.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\top_transitions.csv",
+          "sha256": "3a0e95be103b40085adea71fc5f01479e8c2e76750192a1e24710353231c148d"
+        }
+      }
+    },
+    {
+      "id": "PJ_a080",
+      "split": "dev_2022",
+      "entry": {
+        "truth_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\evaluate_input\\测试集_Y.csv",
+        "x_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\evaluate_input\\测试集_X.csv",
+        "base_model_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\models\\lightgbm.txt",
+        "base_model_sha256": "d61f484a9ca4aedc404a39f10c854e50ae204074f70def76f857e86a6350139a",
+        "truth_sha256": "3ca58ec316a5ebf0657461f61f583b6f4d0c097392b918a3f91f790911000130",
+        "x_sha256": "e18e3d3489d1b5aa336549b5e5d6205608e63731279741052d22645950770b1a",
+        "id": "PJ_a080",
+        "split": "dev_2022",
+        "weights": [
+          0.8,
+          0.2
+        ],
+        "base": "PJ",
+        "prediction_path": "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\dev_2022\\predictions.parquet",
+        "prediction_sha256": "2c58aa7ef4a4efaf8c19104d3b0c3416c2d561c09a5a0faa67d81bf5f741ecb3",
+        "score_csv_path": "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\dev_2022\\evaluation_predictions.csv",
+        "score_csv_sha256": "5fcfab9b8de39cf30b7674211ada44689001265450f670abc984045cdcef2097",
+        "score_directory": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022",
+        "lag_trace_path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\lag_trace\\PJ\\dev_2022.parquet",
+        "lag_trace_sha256": "6c90dff931deced04e2fec633f980c960356dd76937340ab25fc8638348106a7",
+        "new_prediction_set": false,
+        "corresponding_v1": "D",
+        "scored_at": "2026-10-08T18:15:48.751905+00:00",
+        "elapsed_seconds": 11.728174599998965
+      },
+      "saved_score_files": {
+        "daily_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\daily_metrics.csv",
+          "sha256": "b9e9000c34674de0d2aa3af396d0fea21aa1ea488dd06ba1872835de0be2bc1c"
+        },
+        "monthly_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\monthly_metrics.csv",
+          "sha256": "a9ff0aa2ab2c99db2702c986a2761f24a9b491985b874c0b8c53069a4834993a"
+        },
+        "official_metrics.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\official_metrics.json",
+          "sha256": "5e4eb7d0fb18dd96ed56ad67393090c6f86b256bc33a1f410b1e4b617f0109e0"
+        },
+        "price_valid_turnover.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\price_valid_turnover.csv",
+          "sha256": "1c8a3c24440dce1122992830a6b21b044934bef0ffb8e7fe15dd332e5b129f2b"
+        },
+        "run_record.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\run_record.json",
+          "sha256": "0436ba0a28c616cfe6d99a18e3979dd080ecbce4509ccb7dcbf7fd59531da3a6"
+        },
+        "top_membership.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\top_membership.csv",
+          "sha256": "b180033d6e7ea4fd0a46ece6cf86e7e30475407cf5b6e1020c5235f5bed52101"
+        },
+        "top_quality.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\top_quality.csv",
+          "sha256": "0311dd094809fca91ecb04a6758eaf456ae262add71615c5fcabd9793f92d278"
+        },
+        "top_transitions.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\top_transitions.csv",
+          "sha256": "355dc360e0591ee392c76497b25e03e788733a4be9c561a40e365f8721ed83ee"
+        }
+      }
+    },
+    {
+      "id": "PJ_a100",
+      "split": "primary_2023",
+      "entry": {
+        "truth_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\evaluate_input\\测试集_Y.csv",
+        "x_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\evaluate_input\\测试集_X.csv",
+        "base_model_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\models\\lightgbm.txt",
+        "base_model_sha256": "fd600c73a2e2f54f75b96942061248d4f80fee95798867bb27b65ea147596a8f",
+        "truth_sha256": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "x_sha256": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "id": "PJ_a100",
+        "split": "primary_2023",
+        "weights": [
+          1.0,
+          0.0
+        ],
+        "base": "PJ",
+        "prediction_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\predictions.parquet",
+        "prediction_sha256": "4ffcb7850faf1e5e90c3cb461610ecafcf508f6d28f00fb15891b32703a6efa0",
+        "score_csv_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\evaluate_input\\submission.csv",
+        "score_csv_sha256": "7070a14b370b3ee2978e5cf2e90ddc6f382873bb40b6b0a71e27509b0ae29040",
+        "score_directory": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023",
+        "lag_trace_path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\lag_trace\\PJ\\primary_2023.parquet",
+        "lag_trace_sha256": "b35ebcc686e29ce398012b2915dbf0cc8edd5b102cad9c0fd61921a4c7061b02",
+        "new_prediction_set": false,
+        "corresponding_v1": "B",
+        "scored_at": "2026-10-08T18:18:06.533517+00:00",
+        "elapsed_seconds": 11.612367700001414
+      },
+      "saved_score_files": {
+        "daily_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\daily_metrics.csv",
+          "sha256": "de9e733027bb83876ff5db00eb3a607b219615fc6f1bf619a2dc994647f6a53d"
+        },
+        "monthly_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\monthly_metrics.csv",
+          "sha256": "08e99afd47401c5ed43da06f4f2f1f1df756e8637716207c95993fee643b04ca"
+        },
+        "official_metrics.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\official_metrics.json",
+          "sha256": "3561c142e1847fe4c28563181d3285a6570e3e700322cd80ff0141dea70f4607"
+        },
+        "price_valid_turnover.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\price_valid_turnover.csv",
+          "sha256": "bf58c4630e4efb50107ab748aab5c037e22019f5bdf93ad620d7c18a146024bb"
+        },
+        "run_record.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\run_record.json",
+          "sha256": "31236b467779486dfd804770ee4c7412bade7a89e0c98614dc500c1b130630ef"
+        },
+        "top_membership.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\top_membership.csv",
+          "sha256": "a9225773d42415be1af59ab27572076529ecd4259fe2c7246a523eb2ef19c848"
+        },
+        "top_quality.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\top_quality.csv",
+          "sha256": "a55bdb2f49b8c26831a1ac7839a3c8c921a976c3a3242f7c7fc07c85dbfc31b1"
+        },
+        "top_transitions.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\top_transitions.csv",
+          "sha256": "5b3455733592ab34631601f607a88cc691090e03fe9c8880ab82ad385dc68cf7"
+        }
+      }
+    },
+    {
+      "id": "PJ_a080",
+      "split": "primary_2023",
+      "entry": {
+        "truth_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\evaluate_input\\测试集_Y.csv",
+        "x_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\evaluate_input\\测试集_X.csv",
+        "base_model_path": "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\models\\lightgbm.txt",
+        "base_model_sha256": "fd600c73a2e2f54f75b96942061248d4f80fee95798867bb27b65ea147596a8f",
+        "truth_sha256": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+        "x_sha256": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+        "id": "PJ_a080",
+        "split": "primary_2023",
+        "weights": [
+          0.8,
+          0.2
+        ],
+        "base": "PJ",
+        "prediction_path": "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\primary_2023\\predictions.parquet",
+        "prediction_sha256": "ec008d3f96d57c09b5b51945aae6a30b7f75ce9e23c03e77a9740aaf664fbff7",
+        "score_csv_path": "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\primary_2023\\evaluation_predictions.csv",
+        "score_csv_sha256": "87bb3ecb64a76372960c0b9b7486bb15f5b81361dbe32ffe54b7316629375ec6",
+        "score_directory": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023",
+        "lag_trace_path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\lag_trace\\PJ\\primary_2023.parquet",
+        "lag_trace_sha256": "b35ebcc686e29ce398012b2915dbf0cc8edd5b102cad9c0fd61921a4c7061b02",
+        "new_prediction_set": false,
+        "corresponding_v1": "D",
+        "scored_at": "2026-10-08T18:18:46.550693+00:00",
+        "elapsed_seconds": 17.414014699999825
+      },
+      "saved_score_files": {
+        "daily_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\daily_metrics.csv",
+          "sha256": "112421493b37c81df959c7d18d8f93f8fa3923d5b5b57f15ae7ccb21fa7e6ccb"
+        },
+        "monthly_metrics.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\monthly_metrics.csv",
+          "sha256": "11e7caf7db62e1b9d83b5a9aa298dc59e0129b80b9c00dbce224ce612eb6c5d8"
+        },
+        "official_metrics.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\official_metrics.json",
+          "sha256": "985d9a6282e4602bc23d983792294ea0329a46d203a6802bb3dedbd67dd20625"
+        },
+        "price_valid_turnover.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\price_valid_turnover.csv",
+          "sha256": "b2e2bae01ce4e746777d4fc69de70b17754555ba6828029730714734e25f347c"
+        },
+        "run_record.json": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\run_record.json",
+          "sha256": "01e30bfe600075a4b447c8b2868a780018f32b6a63824500a76009e661c5aeef"
+        },
+        "top_membership.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\top_membership.csv",
+          "sha256": "106846959359ccd31f8d53753d4cbf4b2906dd7cc8aa3cc354ac506f7efca777"
+        },
+        "top_quality.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\top_quality.csv",
+          "sha256": "e20579baf792d8dab42e7fd28c0463797d7a5418f6bca2e42c7a01fef019605d"
+        },
+        "top_transitions.csv": {
+          "path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\top_transitions.csv",
+          "sha256": "ef22cc62da2b19f0ed28f89e07e13169148a293c2e03a6aa460a1c7b24241c54"
+        }
+      }
+    }
+  ],
+  "resources": {
+    "machine_snapshot": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_before.json",
+      "sha256": "d773f3b8eb5793003165321e13e1e450a114ed66714a69e76b88cf196310b2be"
+    },
+    "historical_receipts": [
+      {
+        "split": "dev_2021",
+        "elapsed_seconds": 16.00049940000008,
+        "peak_RSS_MB": 3505.66015625,
+        "includes": "LightGBM fit, initial/reload prediction, serialization, official/wrapper scoring and diagnostics; no claim about new-model runtime"
+      },
+      {
+        "split": "dev_2022",
+        "elapsed_seconds": 17.77634100000023,
+        "peak_RSS_MB": 3535.25390625,
+        "includes": "LightGBM fit, initial/reload prediction, serialization, official/wrapper scoring and diagnostics; no claim about new-model runtime"
+      },
+      {
+        "split": "primary_2023",
+        "elapsed_seconds": 18.691367899999932,
+        "peak_RSS_MB": 3614.15234375,
+        "includes": "LightGBM fit, initial/reload prediction, serialization, official/wrapper scoring and diagnostics; no claim about new-model runtime"
+      }
+    ],
+    "final_training_receipt": {
+      "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\resources.json",
+      "sha256": "72e448a8cdef02d8566a886650b5ab382c259758e7f7eacf82bfc9712e9eb09b"
+    },
+    "estimates_are_budgets_not_measurements": true,
+    "serial": true,
+    "threads": 32,
+    "BLAS_threads": 1,
+    "start_min_available_memory_bytes": 15032385536,
+    "stop_min_available_memory_bytes": 4294967296,
+    "peak_aggregate_RSS_bytes": 12884901888,
+    "start_min_disk_free_bytes": 42949672960,
+    "stop_min_disk_free_bytes": 21474836480,
+    "max_new_run_disk_bytes": 21474836480,
+    "per_model_job_seconds": 1800,
+    "all_model_jobs_seconds": 10800,
+    "feature_preparation_seconds": 1800,
+    "scoring_and_audit_seconds": 7200,
+    "whole_development_seconds": 21600,
+    "poll_RSS_seconds": 0.5,
+    "poll_disk_seconds": 2,
+    "include_failed_jobs": true,
+    "action": "supervisor terminates current registered process tree on first cap breach, records failure, halts whole matrix; no retry/resize/GPU change"
+  },
+  "budget": {
+    "real_fit_cap": 6,
+    "real_initial_predict_cap": 6,
+    "real_reload_predict_cap": 6,
+    "real_predict_cap": 12,
+    "fit_failures_count": true,
+    "retry_cap": 0,
+    "new_annual_logical_scores": 12,
+    "control_annual_logical_scores": 6,
+    "annual_logical_scores": 18,
+    "new_monthly_logical_scores": 144,
+    "control_monthly_logical_scores": 72,
+    "monthly_logical_scores": 216,
+    "official_annual_calls": 18,
+    "strict_wrapper_annual_calls": 18,
+    "independent_annual_calls": 18,
+    "actual_annual_score_computations": 54,
+    "official_month_only_calls": 0,
+    "monthly_aggregation_calls": 432,
+    "monthly_count_rule": "each (scheme,year,month) once logical, aggregated separately from wrapper and independent annual daily arrays; cross-month turnover kept"
+  },
+  "technical_gates": {
+    "full_unique_keys": true,
+    "exact_row_order": true,
+    "finite_predictions": true,
+    "X_finite_values_exact": true,
+    "NaN_positions_exact": true,
+    "NaN_sign_bit_ignored": true,
+    "training_keys_and_labels_match_recorded_hashes": true,
+    "save_reload_atol": 1e-12,
+    "save_reload_rtol": 0,
+    "annual_daily_monthly_score_atol": 1e-12,
+    "score_rtol": 0,
+    "CSV_format": "%.17g",
+    "CSV_round_trip_exact": true,
+    "independent_smoothing_atol": 1e-12,
+    "repeat_fit_determinism_proved": false,
+    "trees": 100,
+    "unknown_parameter_warning_fatal": true
+  },
+  "nomination": {
+    "final_comparator": "PJ_a080",
+    "raw_component_comparator": "PJ_a100",
+    "smooth_component_comparator": "PJ_a080",
+    "annual_equal_weight_mean": true,
+    "strict_mean_delta_gt": 0.003,
+    "positive_years_min": 2,
+    "worst_year_delta_ge": -0.005,
+    "max_candidates": 1,
+    "tie_tolerance": 1e-12,
+    "tie_order": [
+      "mean descending fixed highest anchor grouping",
+      "worst annual delta descending",
+      "raw before a080",
+      "XGBoost before CatBoost"
+    ],
+    "monthly_metrics_disclosed_not_posthoc_thresholds": true,
+    "invalid_occupancy_veto": {
+      "invalid_Top_fraction_higher_years_min": 2,
+      "mean_turnover_contribution_gt": 0,
+      "mean_IC_plus_return_contribution_le": 0,
+      "combine": "all three -> veto; fractions use per-year stock-date appearance counts in official turnover Top"
+    },
+    "thresholds_are_local_decisions_not_competition_or_significance": true
+  },
+  "review_2024": {
+    "authorized": false,
+    "previously_seen": true,
+    "independent_blind_test": false,
+    "identity_frozen_before_review": true,
+    "requires_development_gate_pass_and_new_authorization": true,
+    "candidate_cap": 1,
+    "real_fit_cap": 1,
+    "initial_predict_cap": 1,
+    "reload_predict_cap": 1,
+    "real_predict_cap": 2,
+    "split": {
+      "train_start": 20180102,
+      "train_end": 20231228,
+      "purge_date": 20231229,
+      "valid_start": 20240102,
+      "valid_end": 20241231
+    },
+    "expected": {
+      "train_rows": 5659954,
+      "valid_rows": 1125300,
+      "purge_rows": 4650,
+      "train_keys_sha256": "405eec05da65042b5432aee90b48bc1b052ee3226a0be212ece5b39b965f55d6",
+      "validation_keys_sha256": "4724e8f410473a74c339ea09f7d0c8fd1c41ad2660da68845facb21f823e9b25",
+      "training_labels_float32_sha256": "ee9113f5f5bfa6f279847c54b4e43fe06ccfa8cc800502baae1ee0f3168da7ce",
+      "next_label_date_max": 20231229,
+      "all_next_dates_before_validation": true
+    },
+    "control": [
+      {
+        "truth_path": "C:\\fintechathon\\artifacts\\feature_round2\\step5_20261008T094235798796Z\\runs\\P+J\\oos_2024\\evaluate_input\\测试集_Y.csv",
+        "x_path": "C:\\fintechathon\\artifacts\\feature_round2\\step5_20261008T094235798796Z\\runs\\P+J\\oos_2024\\evaluate_input\\测试集_X.csv",
+        "base_model_path": "C:\\fintechathon\\artifacts\\feature_round2\\step5_20261008T094235798796Z\\runs\\P+J\\oos_2024\\models\\lightgbm.txt",
+        "base_model_sha256": "f288a843f53f90798e0559a0780a5f9d36bc82a902af3292358f32b3c3b84ebd",
+        "truth_sha256": "efd3d9d13f94a1ee689ae3a45c47ae43bdb3b8df05a94f57e98d3f63c5898a80",
+        "x_sha256": "e3a1f33991d28543ac131db14548f6837bcf9fdb0609676725d6f43d8e3fec96",
+        "id": "PJ_a080",
+        "split": "oos_2024",
+        "weights": [
+          0.8,
+          0.2
+        ],
+        "base": "PJ",
+        "prediction_path": "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\oos_2024\\predictions.parquet",
+        "prediction_sha256": "579867ee38e028554a0bb3730e5111e6c8848eb07735c87d715314c022654f64",
+        "score_csv_path": "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\oos_2024\\evaluation_predictions.csv",
+        "score_csv_sha256": "7f62fe495f488a136a636451a3dd768c5d1b438f4f172e5df31959f6d4bd45b0",
+        "score_directory": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\oos_2024",
+        "lag_trace_path": "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\lag_trace\\PJ\\oos_2024.parquet",
+        "lag_trace_sha256": "f1109cb404dac2ebb5bd8276b87f502c0b25da5fbf6257219adcc5d61f08e50d",
+        "new_prediction_set": false,
+        "corresponding_v1": "D",
+        "scored_at": "2026-10-08T18:19:45.528717+00:00",
+        "elapsed_seconds": 10.333018299999821
+      }
+    ],
+    "annual_logical_scores": 2,
+    "monthly_logical_scores": 24,
+    "official_calls": 2,
+    "wrapper_calls": 2,
+    "independent_calls": 2,
+    "actual_annual_score_computations": 6,
+    "official_month_only_calls": 0,
+    "monthly_aggregation_calls": 48,
+    "pass_rules": {
+      "technical_all": true,
+      "annual_delta_vs_PJ080_ge": 0,
+      "worst_month_delta_ge": -0.05,
+      "positive_months_min": 6,
+      "invalid_occupancy_veto": "single-year invalid fraction rises + turnover contribution >0 + IC/return contribution <=0 -> fail"
+    },
+    "no_second_candidate": true,
+    "no_retuning": true,
+    "no_new_smoothing": true,
+    "resources": "same per-job/RSS/disk caps; separately registered whole review cap 7200s; same memory gates"
+  },
+  "final_delivery": {
+    "primary": "PJ_a080",
+    "backup": "PJ_a090",
+    "replace_automatically": false,
+    "full_train_authorized": false,
+    "test_predict_authorized": false,
+    "new_submission_authorized": false,
+    "upload_authorized": false
+  },
+  "stop": "install, synthetic acceptance and preregistration only; formal development requires next-stage explicit authorization and guarded runner implementation"
+}

@@ -1,0 +1,44 @@
+{
+  "accepted": true,
+  "checked_files": 1018,
+  "handoff_sha256": "6a7459ec85b484b4e98635c77f05e46e4fc4a9be43dd323dcaad2f87c14fde03",
+  "final_index_sha256": "997ee9e39d05feae9824960bec7a288947790342ce1f20a8c723e07f4edadc61",
+  "protection": {
+    "accepted": true,
+    "hashes": 317,
+    "prior_artifact_stats": 17374
+  },
+  "counts": {
+    "fit": 6,
+    "initial_predict": 6,
+    "reload_predict": 6,
+    "official": 30,
+    "wrapper": 30,
+    "independent": 30,
+    "monthly_logical": 360,
+    "wrapper_monthly": 360,
+    "independent_monthly": 360
+  },
+  "current_primary_preserved": true,
+  "submission_sha256": "96f0f30b5c52c526705c6b2dff9e89ebad730dbe15474219025e187a3c2faaa5",
+  "negative_months_and_quality_transition_correlation_summaries_delivered": true,
+  "all_phases_completed": true,
+  "stop": true,
+  "timestamp": "2026-10-11T10:00:47.271008+00:00",
+  "all_recorded_running_resource_caps_passed": true,
+  "initial_startup_refusal_retained": true,
+  "startup_refusal_exact_values_not_recorded": true,
+  "monthly_aggregation_function_entries": {
+    "wrapper": 30,
+    "independent": 30
+  },
+  "monthly_aggregated_rows": {
+    "wrapper": 360,
+    "independent": 360
+  },
+  "annual_function_entries": {
+    "official": 30,
+    "wrapper": 30,
+    "independent": 30
+  }
+}

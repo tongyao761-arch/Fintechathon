@@ -1,0 +1,23 @@
+{
+  "accepted": true,
+  "run_directory": "C:\\fintechathon\\artifacts\\project_docs_update_v1\\20261010T120147223008Z",
+  "README_updated": true,
+  "readme_path": "C:\\fintechathon\\README.md",
+  "readme_sha256": "f41b6a34c1598fad876c8a5d1e4e56bc784777634219e0b5b7a7b2cf00c74f00",
+  "prior_readme_path": "C:\\fintechathon\\artifacts\\project_docs_update_v1\\20261010T120147223008Z\\prior_README.md",
+  "prior_readme_sha256": "ddec2318ad8014ad98ac49bc8d1c0d8b79cbe8b2f825c5f02a6498b27b537af7",
+  "readme_version_link_path": "C:\\fintechathon\\artifacts\\project_docs_update_v1\\20261010T120147223008Z\\readme_version_link.json",
+  "readme_version_link_sha256": "c1e06bdafd94c64572cb50d3a68b0d467fea616d71ab2b7bf1c5363bd5e137de",
+  "risk_prompt_path": "C:\\fintechathon\\docs\\final_risk_review_v1\\EXECUTION_PROMPT.md",
+  "risk_prompt_sha256": "7251f156696bb908b94a2559a6c9e440f0009bbdecad22d9bb8d47a17c6f14aa",
+  "risk_review_executed": false,
+  "registration_path": "C:\\fintechathon\\artifacts\\project_docs_update_v1\\20261010T120147223008Z\\registration.json",
+  "registration_sha256": "20a041af73895d984fdde751c09c03de07b6487fffd9362476bb3299d7793b2d",
+  "verification_path": "C:\\fintechathon\\artifacts\\project_docs_update_v1\\20261010T120147223008Z\\scope_verification.json",
+  "verification_sha256": "d0d458f16598fad72877e154d7f5bcb75e0189597a7518920b6594ce158ce171",
+  "new_fits": 0,
+  "new_model_predictions": 0,
+  "git_commit_performed": false,
+  "submission_changed": false,
+  "stop": true
+}

@@ -1,0 +1,345 @@
+{
+  "task": "model_comparison_v1",
+  "status_date": "2026-10-11",
+  "accepted": true,
+  "installation_success": true,
+  "environment_acceptance_passed": true,
+  "plan_frozen": true,
+  "formal_experiment_executed": false,
+  "run_directory": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z",
+  "interpreter": "C:\\fintechathon\\.venv\\Scripts\\python.exe",
+  "installed_models": {
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10"
+  },
+  "existing_packages_unchanged": true,
+  "actual_counts": {
+    "stage": "installation_and_preregistration",
+    "synthetic_fit_attempts": 2,
+    "synthetic_retry_attempts": 0,
+    "synthetic_fit_cap": 4,
+    "real_fit": 0,
+    "real_predict": 0,
+    "official_score": 0,
+    "independent_score": 0,
+    "annual_logical_scores": 0,
+    "monthly_logical_scores": 0,
+    "uploads": 0,
+    "events": [
+      {
+        "model": "XGBoost",
+        "version": "3.4.1",
+        "status": "accepted",
+        "params": {
+          "objective": "reg:squarederror",
+          "booster": "gbtree",
+          "tree_method": "hist",
+          "device": "cpu",
+          "n_estimators": 5,
+          "learning_rate": 0.05,
+          "max_depth": 6,
+          "max_leaves": 64,
+          "grow_policy": "depthwise",
+          "min_child_weight": 100,
+          "gamma": 0.0,
+          "reg_alpha": 0.0,
+          "reg_lambda": 1.0,
+          "subsample": 1.0,
+          "sampling_method": "uniform",
+          "colsample_bytree": 1.0,
+          "colsample_bylevel": 1.0,
+          "colsample_bynode": 1.0,
+          "max_bin": 256,
+          "base_score": 0.0,
+          "max_delta_step": 0.0,
+          "num_parallel_tree": 1,
+          "multi_strategy": "one_output_per_tree",
+          "n_jobs": 32,
+          "random_state": 20260927,
+          "eval_metric": "rmse",
+          "validate_parameters": true,
+          "verbosity": 1,
+          "enable_categorical": false,
+          "early_stopping_rounds": null
+        },
+        "retry": false,
+        "reload_max_abs": 0.0,
+        "trees": 5,
+        "finite": true,
+        "elapsed_seconds": 0.20398800000111805,
+        "model_sha256": "4956761c70fd45ef58e4a8ad0493475249a8123a42d98093e2d92bcf50774c35",
+        "rss_at_end": 313696256
+      },
+      {
+        "model": "CatBoost",
+        "version": "1.2.10",
+        "status": "accepted",
+        "params": {
+          "loss_function": "RMSE",
+          "eval_metric": "RMSE",
+          "task_type": "CPU",
+          "iterations": 5,
+          "learning_rate": 0.05,
+          "depth": 6,
+          "grow_policy": "SymmetricTree",
+          "l2_leaf_reg": 3.0,
+          "bootstrap_type": "No",
+          "rsm": 1.0,
+          "random_strength": 0.0,
+          "random_seed": 20260927,
+          "thread_count": 32,
+          "nan_mode": "Min",
+          "border_count": 254,
+          "feature_border_type": "GreedyLogSum",
+          "boosting_type": "Plain",
+          "boost_from_average": false,
+          "leaf_estimation_method": "Newton",
+          "leaf_estimation_iterations": 1,
+          "leaf_estimation_backtracking": "No",
+          "score_function": "L2",
+          "has_time": true,
+          "fold_permutation_block": 1,
+          "model_shrink_rate": 0.0,
+          "model_shrink_mode": "Constant",
+          "langevin": false,
+          "posterior_sampling": false,
+          "use_best_model": false,
+          "allow_writing_files": false,
+          "verbose": false
+        },
+        "retry": false,
+        "reload_max_abs": 0.0,
+        "trees": 5,
+        "finite": true,
+        "elapsed_seconds": 0.20923530000072788,
+        "model_sha256": "91b65430e61536350bdd10b68a341e37081ec55da16fea00596c368d55a19989",
+        "rss_at_end": 328245248
+      }
+    ],
+    "formal_experiment_executed": false,
+    "synthetic_initial_predict": 2,
+    "synthetic_reload_predict": 2,
+    "synthetic_predict_total": 4,
+    "authorization": "installation and preregistration only",
+    "development_budget": {
+      "real_fit_cap": 6,
+      "initial_predict_cap": 6,
+      "reload_predict_cap": 6,
+      "real_predict_cap": 12,
+      "automatic_fit_retries": 0
+    },
+    "status": "environment_accepted_plan_frozen_formal_not_executed"
+  },
+  "acceptance": {
+    "accepted": true,
+    "environment_installed": true,
+    "plan_frozen": true,
+    "tests": 5,
+    "reference_assets_verified": 167,
+    "immutable_hash_count": 183,
+    "preexisting_artifacts_stat_count": 18500,
+    "original_navigation_text_preserved": true,
+    "local_link_count": 13,
+    "existing_packages_unchanged": true,
+    "submission_unchanged": true,
+    "final_model_unchanged": true,
+    "old_locks_unchanged": true,
+    "old_code_and_ledgers_unchanged": true,
+    "git_config_and_push_hook_unchanged": true,
+    "branch": "ivor-work",
+    "git_head_unchanged": true,
+    "synthetic_fit_attempts": 2,
+    "synthetic_predict": 4,
+    "synthetic_retries": 0,
+    "real_fit": 0,
+    "real_predict": 0,
+    "official_score": 0,
+    "independent_score": 0,
+    "uploads": 0,
+    "git_commit": false,
+    "remote_operations": false,
+    "full_real_runner_implemented": false,
+    "future_execution_requires_new_authorization": true,
+    "validated_at": "2026-10-11T07:50:51.998555+00:00"
+  },
+  "artifacts": {
+    "PLAN.md": {
+      "path": "C:\\fintechathon\\docs\\model_comparison_v1\\PLAN.md",
+      "sha256": "c5465a7fb39606ec36cd0bf997e989eae1a7f3dda8ff22a4c4f7303047f130bd",
+      "bytes": 18415
+    },
+    "ENVIRONMENT_REPORT.md": {
+      "path": "C:\\fintechathon\\docs\\model_comparison_v1\\ENVIRONMENT_REPORT.md",
+      "sha256": "e6b3a1fb52203265f6a6469802dd31f8e388e46e4fedf80648706e36d691f754",
+      "bytes": 7632
+    },
+    "model_comparison_v1.json": {
+      "path": "C:\\fintechathon\\configs\\model_comparison_v1.json",
+      "sha256": "0f8538c1028038c495935186277d8bd2091095d5779020c4f0ac34e516ac15f2",
+      "bytes": 57042
+    },
+    "requirements-model-compare.in": {
+      "path": "C:\\fintechathon\\requirements-model-compare.in",
+      "sha256": "e5f84c61c1fa48808e0797cb7d1e57b6412e67c51f253dab728ed11d35b66b06",
+      "bytes": 142
+    },
+    "requirements-model-compare.lock": {
+      "path": "C:\\fintechathon\\requirements-model-compare.lock",
+      "sha256": "bb41eb9c4476df0a914d14ef27d6a1845b91d53ef3deec630f47e6cdc55911b7",
+      "bytes": 780
+    },
+    "test_model_comparison_v1.py": {
+      "path": "C:\\fintechathon\\tests\\test_model_comparison_v1.py",
+      "sha256": "8edbff049b06f47da5c557df4cafdcbba4302d66c119e1115901264ce2f1bfef",
+      "bytes": 6653
+    },
+    "acceptance.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\acceptance.json",
+      "sha256": "b8c8df1478b498354c0b1e4616ff083e3d04bee98458fef6cdad2c80e316f7dd",
+      "bytes": 976
+    },
+    "ledger.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\ledger.json",
+      "sha256": "6885309f06f114f87e29dfdf0b896c855e02ec6078abd1753466980de69c6f22",
+      "bytes": 3577
+    },
+    "reference_manifest.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\reference_manifest.json",
+      "sha256": "88cd6cb9ab13c33584f000dc4ce28efd19082e926a8d6d2352da9c06795d7476",
+      "bytes": 36057
+    },
+    "reference_verification.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\reference_verification.json",
+      "sha256": "e64ecbb986e59d7f5ba982c16f74283e6a79851ee55744b944e216ce8ae87827",
+      "bytes": 212
+    },
+    "environment_before.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_before.json",
+      "sha256": "d773f3b8eb5793003165321e13e1e450a114ed66714a69e76b88cf196310b2be",
+      "bytes": 1207
+    },
+    "environment_after.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_after.json",
+      "sha256": "151437facf2e2bd612a2ead37ffbf41e131e17b695b639141f719161adaad259",
+      "bytes": 1134
+    },
+    "environment_diff.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_diff.json",
+      "sha256": "1c46a1838d0b1d529454e8c0b81241a013adc1726583709fb0678cff2b621e97",
+      "bytes": 352
+    },
+    "constraints_before.txt": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\constraints_before.txt",
+      "sha256": "6843f3188360e36c4f73634be53a9d000988f2ab8dfa67e5c6f5f4327b10ecf0",
+      "bytes": 428
+    },
+    "wheel_manifest.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\wheel_manifest.json",
+      "sha256": "944d500202c7b1bd827cef6b6f9ad646dadd578ae0380dda423774b092776f1f",
+      "bytes": 2626
+    },
+    "pip_resolve_report.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\pip_resolve_report.json",
+      "sha256": "e37edf500dd41a8455e65d3209d1e5f529464d82259f433b0ba8e12c0d28d63f",
+      "bytes": 273267
+    },
+    "pip_install_report.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\pip_install_report.json",
+      "sha256": "a7f7de34a2f2bf2d859dd006ed1ca452fcc74c172b6ac0e201c172b51670265e",
+      "bytes": 272994
+    },
+    "tests_final.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\tests_final.json",
+      "sha256": "712c1e244b66bf62fa56decd48f15b26d178b6a32d54b913163cf04e287dc44f",
+      "bytes": 428
+    },
+    "navigation_version_link.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\navigation_version_link.json",
+      "sha256": "3c655c994c5bc15309a69405015f201107365909a3d89e8016805e8c3f72023a",
+      "bytes": 3632
+    },
+    "environment_setup.py": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_setup.py",
+      "sha256": "f0ffe0028bb97d66c1ba868453394cd1be38ce58df164e8b6f40322d4bfe4230",
+      "bytes": 12109
+    },
+    "collect_registration.py": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\collect_registration.py",
+      "sha256": "a1e21958dc517801d3ff36725f9e8790a8fb9c774bd6e29150a2434f9388d0da",
+      "bytes": 15457
+    },
+    "finalize_registration.py": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\finalize_registration.py",
+      "sha256": "4469c90d6c34f957b07cf02b83e3128d556ae06b8457b3528650d6437e7cdbd4",
+      "bytes": 17222
+    },
+    "official_documentation_sources.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\official_documentation_sources.json",
+      "sha256": "11726892a066c265532c6e34d8bb32bbb3db1b65e557ccbb020aa8225d404efe",
+      "bytes": 3475
+    },
+    "repair01.json": {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\repair01.json",
+      "sha256": "03c09259870ef1ec78cabc8ae1f7c25eddb3525900fa20ba748ba1d4bb8c9b01",
+      "bytes": 935
+    }
+  },
+  "source_evidence_manifest": {
+    "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\reference_manifest.json",
+    "sha256": "88cd6cb9ab13c33584f000dc4ce28efd19082e926a8d6d2352da9c06795d7476",
+    "bytes": 36057
+  },
+  "protection_manifest": {
+    "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\protected_before.json",
+    "sha256": "782ad0ba888a5d62c0105d66635a248bd3d13c78baa432f729bb8e85668e4283",
+    "bytes": 33734
+  },
+  "navigation_version_link": {
+    "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\navigation_version_link.json",
+    "sha256": "3c655c994c5bc15309a69405015f201107365909a3d89e8016805e8c3f72023a",
+    "bytes": 3632
+  },
+  "failures": [
+    {
+      "path": "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\failure_preflight_1791704250833379800.json",
+      "sha256": "701b54ab6228b883200494bc274adb0e7ca01e71037b06751cbd7910cf2ef74c",
+      "bytes": 1009
+    }
+  ],
+  "documentation_download_failure_count": 1,
+  "current_primary": "PJ_a080",
+  "current_backup": "PJ_a090",
+  "current_primary_unchanged": true,
+  "current_backup_unchanged": true,
+  "final_model": {
+    "path": "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\final_model.txt",
+    "sha256": "76d9fc38e08e797cab5b939561085bf392ce3dbcb191b17878a6b50646f38ede",
+    "bytes": 332883
+  },
+  "submission": {
+    "path": "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\submission.csv",
+    "sha256": "96f0f30b5c52c526705c6b2dff9e89ebad730dbe15474219025e187a3c2faaa5",
+    "bytes": 68948143
+  },
+  "submission_changed": false,
+  "submission_uploaded": false,
+  "competition_report_completed": false,
+  "next_stage": {
+    "authorized": false,
+    "scope": "implement guarded new runner and independent audit, then fixed two-model three-development-year matrix if explicitly authorized",
+    "fit_cap": 6,
+    "predict_cap": 12,
+    "no_automatic_fit_retries": true,
+    "review_2024_separate_authorization": true,
+    "formal_delivery_separate_decision": true,
+    "full_real_runner_implemented": false,
+    "auto_start_commands": []
+  },
+  "old_final_training_stage_counts_are_unchanged": {
+    "fits": 1,
+    "predictions": 2
+  },
+  "git_commit_performed": false,
+  "remote_operations_performed": false,
+  "stop": true
+}

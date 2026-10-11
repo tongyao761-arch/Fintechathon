@@ -1,0 +1,37 @@
+{
+  "accepted": true,
+  "jobs": [
+    {
+      "job": "00_XGBoost_dev_2021",
+      "constructor_all_exact": true,
+      "effective_objective_structure_regularization_sampling_quantization_seed_device_rounds_passed": true
+    },
+    {
+      "job": "01_XGBoost_dev_2022",
+      "constructor_all_exact": true,
+      "effective_objective_structure_regularization_sampling_quantization_seed_device_rounds_passed": true
+    },
+    {
+      "job": "02_XGBoost_primary_2023",
+      "constructor_all_exact": true,
+      "effective_objective_structure_regularization_sampling_quantization_seed_device_rounds_passed": true
+    },
+    {
+      "job": "03_CatBoost_dev_2021",
+      "constructor_all_exact": true,
+      "effective_objective_structure_regularization_sampling_quantization_seed_device_rounds_passed": true
+    },
+    {
+      "job": "04_CatBoost_dev_2022",
+      "constructor_all_exact": true,
+      "effective_objective_structure_regularization_sampling_quantization_seed_device_rounds_passed": true
+    },
+    {
+      "job": "05_CatBoost_primary_2023",
+      "constructor_all_exact": true,
+      "effective_objective_structure_regularization_sampling_quantization_seed_device_rounds_passed": true
+    }
+  ],
+  "learning_rate_tolerance_reason": "installed libraries serialize effective learning rate as float32",
+  "save_reload_is_not_repeat_fit_determinism": true
+}

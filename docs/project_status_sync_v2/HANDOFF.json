@@ -1,0 +1,43 @@
+{
+  "task": "project_status_sync_v2",
+  "status_date": "2026-10-11",
+  "documentation_synchronized": true,
+  "current_primary": "PJ_a080",
+  "current_backup": "PJ_a090",
+  "model_comparison_completed": true,
+  "model_comparison_stage_counts": {
+    "fit": 6,
+    "initial_predict": 6,
+    "reload_predict": 6,
+    "official": 30,
+    "wrapper": 30,
+    "independent": 30,
+    "monthly_logical": 360,
+    "wrapper_monthly": 360,
+    "independent_monthly": 360
+  },
+  "model_comparison_selected": [],
+  "best_candidate": "LGB_XGB050_a080",
+  "best_mean_score": 0.3074226358150165,
+  "primary_mean_score": 0.36585500356238604,
+  "best_mean_delta": -0.0584323677473695,
+  "best_negative_months": 32,
+  "submission_sha256": "96f0f30b5c52c526705c6b2dff9e89ebad730dbe15474219025e187a3c2faaa5",
+  "submission_changed": false,
+  "submission_uploaded_to_competition": false,
+  "competition_report_completed": false,
+  "this_sync_counts": {
+    "fits": 0,
+    "predictions": 0,
+    "scores": 0,
+    "competition_uploads": 0
+  },
+  "github_main_publication_requested": true,
+  "github_publication_status": "see local publication receipt; this handoff records validated content, not push completion",
+  "navigation_version_link_path": "C:\\fintechathon\\artifacts\\project_status_sync_v2\\20261011T101857291523Z\\navigation_version_link.json",
+  "navigation_version_link_sha256": "3657b0a6d88b16c09a3be34d04db23fb12f2341de721ec4dfef26aef82837e43",
+  "model_comparison_handoff_path": "C:\\fintechathon\\docs\\model_comparison_v2\\HANDOFF.json",
+  "model_comparison_handoff_sha256": "6a7459ec85b484b4e98635c77f05e46e4fc4a9be43dd323dcaad2f87c14fde03",
+  "remote_publication_scope": "selected documentation and small verification summaries; no raw data, models, full predictions, submission or all local historical archives",
+  "next_stage": "final competition report and submission preparation; no new model search authorized"
+}

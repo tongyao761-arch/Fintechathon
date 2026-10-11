@@ -1,0 +1,27 @@
+{
+  "time": "2026-10-11T09:57:39.842620+00:00",
+  "development_audit_accepted": true,
+  "implementation_test_failure_001": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z\\implementation_failures\\001\\failure.json",
+  "preparation_input_failure_002": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z\\implementation_failures\\002\\diagnosis.json",
+  "original_HALTED_preserved": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z\\HALTED.json",
+  "user_authorized_preparation_repair": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z\\PREPARATION_REPAIR_AUTHORIZATION.json",
+  "startup_refusal": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z\\startup_resource_failure_002.json",
+  "user_authorized_resource_recheck": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z\\STARTUP_RECHECK_AUTHORIZATION.json",
+  "prepared_repair_accepted": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z\\PREPARATION_REPAIR_ACCEPTED.json",
+  "clock_source_amendment_before_real_calls": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z\\pre_fit_source_amendment.json",
+  "final_counts": {
+    "fit": 6,
+    "initial_predict": 6,
+    "reload_predict": 6,
+    "official": 30,
+    "wrapper": 30,
+    "independent": 30,
+    "monthly_logical": 360,
+    "wrapper_monthly": 360,
+    "independent_monthly": 360
+  },
+  "failed_real_fit": 0,
+  "failed_real_predict": 0,
+  "failed_score": 0,
+  "failure_handoffs_are_historical_not_current_status": true
+}

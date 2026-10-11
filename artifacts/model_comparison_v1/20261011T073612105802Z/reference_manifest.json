@@ -1,0 +1,670 @@
+{
+  "C:\\fintechathon\\docs\\CURRENT_STATUS.md": {
+    "sha256": "07a488a5a5419c16d438c70d83b846d3d7ca8f39297253ed2eca2570eecad915",
+    "bytes": 10169
+  },
+  "C:\\fintechathon\\README.md": {
+    "sha256": "bc85ed26b5be6b6c99bef6f39baf6f95baba087ba22bf5751fce553d1267b728",
+    "bytes": 16039
+  },
+  "C:\\fintechathon\\docs\\PROJECT_PROGRESS.md": {
+    "sha256": "238319a824f0de41a9cfefbfe04e00d435f7eb80490d753db1e6d0f1e8f2761f",
+    "bytes": 13267
+  },
+  "C:\\fintechathon\\docs\\project_status_sync_v1\\HANDOFF.json": {
+    "sha256": "05f08b999b515af0d96c1e690546cba52b664ba3e1340c40a1c8bb6c8076586f",
+    "bytes": 9881
+  },
+  "C:\\fintechathon\\赛题五\\完整赛题说明_本地.md": {
+    "sha256": "dcce7a31b5dfd18e47f1dd1c97a6c7497a7cf1f42586e18df1647a646c21c344",
+    "bytes": 5713
+  },
+  "C:\\fintechathon\\赛题五\\evaluate.py": {
+    "sha256": "2366e713c6928208078124dedf96b1072b6ce974e3a9aa1594c524c06620f6e5",
+    "bytes": 4762
+  },
+  "C:\\fintechathon\\docs\\final_selection_v2\\RESULTS.md": {
+    "sha256": "f9fccd8ff8d8a1d7a19b3cd9fa4a3db792d723f6cbdf0faa87042d19270ef964",
+    "bytes": 328657
+  },
+  "C:\\fintechathon\\docs\\final_selection_v2\\HANDOFF.json": {
+    "sha256": "ba2ffbada0ba4f73291616ed98111cd3bb1108fd44567340cc2863f59046da80",
+    "bytes": 1457507
+  },
+  "C:\\fintechathon\\docs\\feature_round2\\RESULTS.md": {
+    "sha256": "9976efe61ab279d0040257484d999953dff496d5f52347973f41bb5acd317e30",
+    "bytes": 37490
+  },
+  "C:\\fintechathon\\docs\\feature_round2\\STEP6_HANDOFF.json": {
+    "sha256": "bb7cf8efd4911d4271039f40c49f1e67bd3c2b62f7539a86e2c2e8f22ccc4585",
+    "bytes": 14811
+  },
+  "C:\\fintechathon\\docs\\final_training_v1\\HANDOFF.json": {
+    "sha256": "41bcaa29eadea12a80c057eea53d478997f028570fcf633ee420e59cb5a4a56e",
+    "bytes": 6125
+  },
+  "C:\\fintechathon\\docs\\final_delivery_v1\\HANDOFF.json": {
+    "sha256": "83be4442f959e29772b8b33c53125b3b2f6f590cc7f1f6de7d11f7f22cc6514c",
+    "bytes": 4076
+  },
+  "C:\\fintechathon\\docs\\final_risk_review_v1\\RESULTS.md": {
+    "sha256": "477ee5ef82666f1b588fe9f869196d1df2161e15c4dfb53b5d8c238c1bbe09c6",
+    "bytes": 15230
+  },
+  "C:\\fintechathon\\docs\\final_risk_review_v1\\HANDOFF.json": {
+    "sha256": "7da33704a9aef4ea3bf3e47021ba854f396cc1f3d1a0bae41b5c4a2696cd449e",
+    "bytes": 3673
+  },
+  "C:\\fintechathon\\requirements-model.in": {
+    "sha256": "99d3674aa9737bf3d0665966930e6e5293027768221b24ceabca330f2770f59e",
+    "bytes": 192
+  },
+  "C:\\fintechathon\\requirements-model.lock": {
+    "sha256": "d9fddb82c15c678c00e564462dbfddb439f92cbe546b133122f0e9a581424b27",
+    "bytes": 510
+  },
+  "C:\\fintechathon\\requirements.txt": {
+    "sha256": "b225b4453e25a0cce539e18393c1cac5438759b0a4d6d50d34e04dde8a484cb4",
+    "bytes": 44
+  },
+  "C:\\fintechathon\\docs\\model_optimization\\STEP3_REPORT.md": {
+    "sha256": "ddda843eb145964ef8bc7dd9d98e60993588201c2d57657632ea8ec253758b9d",
+    "bytes": 35887
+  },
+  "C:\\fintechathon\\docs\\target_demean_v1\\RESULTS.md": {
+    "sha256": "40849a2e92e1a498eb0d1e5288fdfe45805709b25686ab355603424aa80d663b",
+    "bytes": 15475
+  },
+  "C:\\fintechathon\\docs\\model_comparison_v1\\EXECUTION_PROMPT.md": {
+    "sha256": "9dabe870f33965a43cc353f87ac95227fcf9966255d23cf46bf97dde53efb407",
+    "bytes": 14567
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\submission.csv": {
+    "sha256": "96f0f30b5c52c526705c6b2dff9e89ebad730dbe15474219025e187a3c2faaa5",
+    "bytes": 68948143
+  },
+  "C:\\fintechathon\\artifacts\\project_status_sync_v1\\20261011T061326609725Z\\registration.json": {
+    "sha256": "95b723645b38aba38516433a1a7162f082b523a423cf88088564c85a4e6a996f",
+    "bytes": 1102559
+  },
+  "C:\\fintechathon\\artifacts\\project_status_sync_v1\\20261011T061326609725Z\\document_version_links_final.json": {
+    "sha256": "ad9288f4d2e303142bad1c6b3d94201b3db5a31890044746748acde66997b443",
+    "bytes": 3093
+  },
+  "C:\\fintechathon\\artifacts\\project_status_sync_v1\\20261011T061326609725Z\\registration_amendment.json": {
+    "sha256": "567a4dd023c2284e9b12826b9aa8af46171044b0517e530f1e3b5942f7490f14",
+    "bytes": 1118
+  },
+  "C:\\fintechathon\\artifacts\\project_status_sync_v1\\20261011T061326609725Z\\prior_sync_HANDOFF.json": {
+    "sha256": "97dc7d5cfdaed7c9acd965e13eddf34f1318b43907f589ce345f7e397a6ca714",
+    "bytes": 8705
+  },
+  "C:\\fintechathon\\artifacts\\project_status_sync_v1\\20261011T061326609725Z\\verification.json": {
+    "sha256": "a27e06cea64f3d12dbf2ff04e18b8bf9bf73c8d3807f11960c46d4e522c1f66b",
+    "bytes": 1773
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\registration.json": {
+    "sha256": "b17d99cec76b00a513cc664e934ae6b07c8882a3f19b9306088460401243d066",
+    "bytes": 1955181
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\run_index.json": {
+    "sha256": "775f6b25e2ec9d3c8590824809b708e0eb70b76f9fc7a0f89add476a58e263e0",
+    "bytes": 70795
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\FINAL_SCHEMES_V2.json": {
+    "sha256": "1d6bdab3d45c5faa4c9cb40191c540308eefeab55fcefc3ebfe020c0c53b7ede",
+    "bytes": 119657
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\development_prefreeze.json": {
+    "sha256": "3e2fbbfaa25d087eccbc0a0c68fd8ddd9a2af1e465b67298dc52707cea9ad6bb",
+    "bytes": 4598
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\audit_20261009T033702680612Z\\acceptance.json": {
+    "sha256": "0d2d1ab3169e539dcc672547af56c481a6b0d71450e7bbb8117515230ac3516e",
+    "bytes": 14149
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\delivery_artifact_index.json": {
+    "sha256": "3b6aced875b649d65a137dda14e4ffc1a83cb8a137f9d6dbc847a74350fc8310",
+    "bytes": 99290
+  },
+  "C:\\fintechathon\\docs\\feature_round2\\STEP6_REPORT.md": {
+    "sha256": "c8f91f43c2f3f6adf56ad2ced09e188a2aa84cfd6f028fa5b85206376fd537c6",
+    "bytes": 3371
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step6_20261008T103732736951Z\\final_acceptance.json": {
+    "sha256": "b5f2c7cfb7c5f8af66b238dd6ad90bc6ca068e93096c0741a8f81366e5057efc",
+    "bytes": 1118
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step6_20261008T103732736951Z\\final_audit_20261008T105102475393Z\\acceptance.json": {
+    "sha256": "78ea232b534fc6c2df68445d90ecbc06ea2889753fa70715d5360ca37a205a64",
+    "bytes": 273447
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step6_20261008T103732736951Z\\test_x_qa_20261008T105838248573Z\\acceptance.json": {
+    "sha256": "b89374a9388a5adc8248465224e2cbe016fc30270eff29ee88040c2a9fb0b86c",
+    "bytes": 2463
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step6_20261008T103732736951Z\\supplement_20261008T111347237759Z\\acceptance.json": {
+    "sha256": "f69feaf4a4d518392146f2694b7483119b0cb79d8b8ea55e6b2e490a7586fefb",
+    "bytes": 610
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step6_20261008T103732736951Z\\scope_audit_20261008T111742414016Z\\acceptance.json": {
+    "sha256": "be2b3aa384f0be4531c474726924d93ccb6a3022400f37f21dd599f10b2fa1ef",
+    "bytes": 2195
+  },
+  "C:\\fintechathon\\configs\\feature_round2.json": {
+    "sha256": "62550d664c1b5b851dcf8f80d3db836ddabc0f18911b436b566ee88b5d4ac668",
+    "bytes": 56150
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\budget_ledger.json": {
+    "sha256": "ede013ea4b08df6334645233c1c9a64fcf6a1e17de0cdc3e7967404267762d67",
+    "bytes": 1301939
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step4_20261008T050707101588Z\\FROZEN_CANDIDATES.json": {
+    "sha256": "07295d0c71325cdfa6977163d54f8d0dfd4c99856155b4abc3c8c63ceb367978",
+    "bytes": 437018
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step6_20261008T103732736951Z\\handover_artifact_index.json": {
+    "sha256": "cc40cf8d41f9e72eb59bd85a09fc28eb65105db52537d3f0b7e4addd41c82fe3",
+    "bytes": 1317711
+  },
+  "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\registration.json": {
+    "sha256": "5845df8254f8090f496856188053c107ffc2aa0a3c26c1783b459f62ddd217c9",
+    "bytes": 15756
+  },
+  "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\acceptance.json": {
+    "sha256": "bc15207e4c07e37448cb8e7647f1ecc237cbec4efda13b2568ff382a9bf09c14",
+    "bytes": 1518
+  },
+  "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\run_index.json": {
+    "sha256": "6bb326ea1b294ea080a93d1c2f7b341070882e92b985f8b7aed15d0cea679357",
+    "bytes": 19988
+  },
+  "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\progress_version_link.json": {
+    "sha256": "f32d891464ee65c9859de692deb61ceb41f6a2fc00001e7a95163578842c3b86",
+    "bytes": 478
+  },
+  "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\resources.json": {
+    "sha256": "72e448a8cdef02d8566a886650b5ab382c259758e7f7eacf82bfc9712e9eb09b",
+    "bytes": 477
+  },
+  "C:\\fintechathon\\artifacts\\final_training_v1\\task_ledger.json": {
+    "sha256": "510478dc7aa0751fb0e5d138934b2ed90502245728838d48f62279d241e01e02",
+    "bytes": 201
+  },
+  "C:\\fintechathon\\docs\\final_training_v1\\RESULTS.md": {
+    "sha256": "4bae9d52b11158f72599965cdc87f572e3a59b364b221e5ad7523b8f1ee81c24",
+    "bytes": 4407
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\registration.json": {
+    "sha256": "ba33e6f6ed67e1ff2d9844dcff0e1ba668cc9111b74ae23683f81af9709e036a",
+    "bytes": 4270
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\final_acceptance.json": {
+    "sha256": "59342c56f905439e489dd239e9d31ea47d7208cd8567887b523a59aa2853a130",
+    "bytes": 2469
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\final_run_index.json": {
+    "sha256": "edd297cff87432ba744bbfaa73a10b82128d5ab090cdc87c2b7ca13edccb725a",
+    "bytes": 22940
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\progress_version_link.json": {
+    "sha256": "9ea6ff767c0bbe92a40564d227c0c15eff6bed94a2448ed4d20ef12fd95f5f7a",
+    "bytes": 731
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\total_execution_resources.json": {
+    "sha256": "0c942d52d78c1180cb655e371dff5cf7bf7cde13c8eff4024bd41a0c141f70f9",
+    "bytes": 1721
+  },
+  "C:\\fintechathon\\docs\\final_delivery_v1\\RESULTS.md": {
+    "sha256": "7dee6f05af783c3d1781af3c58c0751d98986e29f62cdf032f46ab1b941d0c56",
+    "bytes": 8596
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\drift_summary.json": {
+    "sha256": "7ab85729012df1e5aaecf703b700f583e15d186abcbfb412e8bf49f9d942cbea",
+    "bytes": 9577
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\delivery_document_version_link.json": {
+    "sha256": "dc512e4de718f4f461f8105bcb8d7413cb91154042c972d08cdf56227ca9e4c8",
+    "bytes": 994
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\prior_delivery_HANDOFF.json": {
+    "sha256": "a673b126ad520e3bc68fb11d3f0c6147b2b767cd20ee0e84587fe2c295ebdf5f",
+    "bytes": 2819
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\tests_final_result.json": {
+    "sha256": "092c8d68f0c9d544f47350c2401e38fd8d15f5c3828397653e5f2424f8fa0a49",
+    "bytes": 709
+  },
+  "C:\\fintechathon\\artifacts\\final_delivery_v1\\20261010T090539553866Z\\final_fit_predict_call_audit.json": {
+    "sha256": "0b6c1cf3290a70ab691f6c85ddd5b684f2fa1e2c4d7de203e87b903008845a7b",
+    "bytes": 527
+  },
+  "C:\\fintechathon\\artifacts\\final_risk_review_v1\\20261010T171000313570Z\\registration.json": {
+    "sha256": "6a1851063ec64e231c0708975c4070b8b049915d44998bcfd2a2b70a14d010c1",
+    "bytes": 15878
+  },
+  "C:\\fintechathon\\artifacts\\final_risk_review_v1\\20261010T171000313570Z\\acceptance.json": {
+    "sha256": "716b71057a10ba2e3001cdab420556d6eb575f410967624cd40cb8c4ba195bcf",
+    "bytes": 4010
+  },
+  "C:\\fintechathon\\artifacts\\final_risk_review_v1\\20261010T171000313570Z\\progress_version_link.json": {
+    "sha256": "51778a88d024e716a97b71a5e0faa87395005726861bc0a37bb62a585fdc037f",
+    "bytes": 705
+  },
+  "C:\\fintechathon\\artifacts\\final_risk_review_v1\\20261010T171000313570Z\\readme_version_link.json": {
+    "sha256": "4e7a347f2ea882e6f03f29a2bdc0a41993a0f0b2622b4b4ca6a4147aa87fa4c5",
+    "bytes": 682
+  },
+  "C:\\fintechathon\\artifacts\\final_risk_review_v1\\20261010T171000313570Z\\budget_final.json": {
+    "sha256": "86b5ef60f5093a5e8c2e082f445aeac33b5507ac820cfa8c24532161c020395b",
+    "bytes": 345
+  },
+  "C:\\fintechathon\\artifacts\\final_risk_review_v1\\20261010T171000313570Z\\run_index.json": {
+    "sha256": "b3f7f6aa04d04424a3738e17807e25fbd8d8e20eb4769244b3e87437282c943d",
+    "bytes": 51251
+  },
+  "C:\\fintechathon\\artifacts\\final_risk_review_v1\\20261010T171000313570Z\\resources.json": {
+    "sha256": "465cab83d3690215bdebd1f4f4cd15d29f9a4ddd856d5b9fc73ddb11eb2cfbce",
+    "bytes": 1884
+  },
+  "C:\\fintechathon\\AGENTS.md": {
+    "sha256": "5dd0ecbba9f02c122064944a44760f0e601aea7b89e898679d90a215702114f0",
+    "bytes": 3926
+  },
+  "C:\\fintechathon\\AGENTS.override.md": {
+    "sha256": "29fe5aa6bd2248823e8e4bd7dfb03b1ac6c7743fbad994b7bd21a4ec4cadf5b0",
+    "bytes": 2575
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\split_checks.json": {
+    "sha256": "be6551d1561192ff1f9327c8d16c313cba0a4e55e65a3ff11b9e22bc505db305",
+    "bytes": 1919
+  },
+  "C:\\fintechathon\\赛题五\\赛题五数据\\训练集.csv": {
+    "sha256": "e9d23e87f7e1f9439f28f7dd951d129ea49eaacda5ad650da8576a830a6deac9",
+    "bytes": 946832276
+  },
+  "C:\\fintechathon\\artifacts\\final_training_v1\\20261010T082317559902Z\\history_features.parquet": {
+    "sha256": "6511acccdf628af932f1f450fb0918d8e523b5a191e766f512435e377fe72b6e",
+    "bytes": 721842887
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\actual_config.json": {
+    "sha256": "3e60c0c6d506f98a47d2d0be6ed0af8b23b20fc15d6ce4d0b50fb095a3c21ded",
+    "bytes": 2178
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\summary.json": {
+    "sha256": "6197a3c02f0c039bba837b6500f8bd5924d34db4c731543dd0dda4925390c38e",
+    "bytes": 7469
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\predictions.parquet": {
+    "sha256": "21d49ce2ecaf615d470f28314880c6b00251a629d564d58b906c15dbcbde38e5",
+    "bytes": 8467820
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\evaluate_input\\submission.csv": {
+    "sha256": "73870417f4d9013c6031052ce31ab09a54f098a380f45cca83d11c59b885e29a",
+    "bytes": 48214654
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\evaluate_input\\测试集_Y.csv": {
+    "sha256": "7987dd75735184122ccd4054d7353ef8c00da677f92eec569bf96047f2f5e580",
+    "bytes": 41837596
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\evaluate_input\\测试集_X.csv": {
+    "sha256": "2d492df56c77e51e6ea41da13cd1f0860081ed1a404fd9382ec985349aabed3d",
+    "bytes": 24858934
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2021\\models\\lightgbm.txt": {
+    "sha256": "3dc77860ff3011194ef30edb64fde295c4936a6588b6055d545e393e5e5d1284",
+    "bytes": 335521
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\lag_trace\\PJ\\dev_2021.parquet": {
+    "sha256": "b54ad8012b1b7757c32a529dbfc00f60f8c1b8865886b33ea2ef45f2829eeaf5",
+    "bytes": 8577236
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\daily_metrics.csv": {
+    "sha256": "66cb5230bdde835a0736259196af3a9a7a9a078393bef18cac469caad28ccb56",
+    "bytes": 48333
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\monthly_metrics.csv": {
+    "sha256": "630d961d3f0b97141d28ab8b9994863b0fc60a9e78df5765f027ed3b3e115e7c",
+    "bytes": 2261
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\official_metrics.json": {
+    "sha256": "a0af5772f488cd0eb3087560a58935ef0dd8ab8f11b8694a9848baf15f6be974",
+    "bytes": 668
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\price_valid_turnover.csv": {
+    "sha256": "9bd29976aa3455f2e6a8e929e3308b0abc30a0687a91622b52c023e65fed0e24",
+    "bytes": 7258
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\run_record.json": {
+    "sha256": "4be69aa7ce3b1d1527c0bfc1189e745f1686ed64e089e70f4e06958894de54e0",
+    "bytes": 1776
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\top_membership.csv": {
+    "sha256": "40134263b2d223e09110628ac3794beddf1df1d3cb7e2f9248f3e0a07eb849e4",
+    "bytes": 3034033
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\top_quality.csv": {
+    "sha256": "167e61f7b609bbfd585d03442edb8bbf9fbc0b8c925dbc82263440265530953c",
+    "bytes": 28625
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2021\\top_transitions.csv": {
+    "sha256": "78d4b5e2343d7e87b212e7198d04d2e03d88b3f77a30b6604127b97bcc5e559a",
+    "bytes": 3404960
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\dev_2021\\predictions.parquet": {
+    "sha256": "9052905ac1484ae07bb24f8638426c4a9c9849c26122a055b39b7d86792b2c8f",
+    "bytes": 8490841
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\dev_2021\\evaluation_predictions.csv": {
+    "sha256": "ff2f658117cfefca302746ab6bdcda4061fff507915c82a4e901aad86fade9ab",
+    "bytes": 48245132
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\daily_metrics.csv": {
+    "sha256": "7e537f9c12d6ea234b10e7b2ad76087417b4703479e595113812a883f3a58200",
+    "bytes": 48255
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\monthly_metrics.csv": {
+    "sha256": "8a5ca433d74ac936efab11d821311069a4fc6b34ef4832ca305da12db6fb9fca",
+    "bytes": 2263
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\official_metrics.json": {
+    "sha256": "b78e8e1966dc8a51e079ae727434b935ced91ba414960e0da4f3106fb2150503",
+    "bytes": 671
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\price_valid_turnover.csv": {
+    "sha256": "c3bdf10aacf67985b9a893561282c4e4db8b9e3b50b7a4c190cf0e8afcc15017",
+    "bytes": 7257
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\run_record.json": {
+    "sha256": "77656e9bb9cedc78f2a4c9e3411cdc84cf71aa200f68055a5bd5973ee7feb14b",
+    "bytes": 1751
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\top_membership.csv": {
+    "sha256": "79956cbe18240cc8cb56f82d2106521a015e28418de46955ccc11d7ea6d94943",
+    "bytes": 3034033
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\top_quality.csv": {
+    "sha256": "79ef496aa838a4f8f468e5e91549a9a5941fa790b53cece02f97cc3a6e09d2ae",
+    "bytes": 28724
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2021\\top_transitions.csv": {
+    "sha256": "19bae34ba1ac23e1ba856dee3b3423f97b08367a022eb966e6695406be68a9d7",
+    "bytes": 3015713
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\actual_config.json": {
+    "sha256": "f12661f14ac55d0399032bd901ffbd53a265c7534b96045960fd71bc3c55fb72",
+    "bytes": 2178
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\summary.json": {
+    "sha256": "2859fc656994d240689cae3aafd0fdcf568a642e129b1e4c433bae2464579fe6",
+    "bytes": 7547
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\predictions.parquet": {
+    "sha256": "dbc0d755c77a6ab132903252dcb797f9b4a25611ad393d4b81676bb3f0767398",
+    "bytes": 8889129
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\evaluate_input\\submission.csv": {
+    "sha256": "15fc87f79d2f534cf1bc0e7babb1dcf092b311848f2c1a088ff93a45ec46e644",
+    "bytes": 48025433
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\evaluate_input\\测试集_Y.csv": {
+    "sha256": "3ca58ec316a5ebf0657461f61f583b6f4d0c097392b918a3f91f790911000130",
+    "bytes": 42869801
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\evaluate_input\\测试集_X.csv": {
+    "sha256": "e18e3d3489d1b5aa336549b5e5d6205608e63731279741052d22645950770b1a",
+    "bytes": 24756634
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\dev_2022\\models\\lightgbm.txt": {
+    "sha256": "d61f484a9ca4aedc404a39f10c854e50ae204074f70def76f857e86a6350139a",
+    "bytes": 336921
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\lag_trace\\PJ\\dev_2022.parquet": {
+    "sha256": "6c90dff931deced04e2fec633f980c960356dd76937340ab25fc8638348106a7",
+    "bytes": 8989426
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\daily_metrics.csv": {
+    "sha256": "fdac4b15543c0ff3deeef7117a7c07444daf110b5931d225702c5da052d899f5",
+    "bytes": 48020
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\monthly_metrics.csv": {
+    "sha256": "efcf649f0b8a1d72b09ba7bd3ca56d0c01f2ea02459a00831c10a703fcb7a01d",
+    "bytes": 2263
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\official_metrics.json": {
+    "sha256": "e79f36f42f7ce2490710b6ee7c7e839f65becb6b3a8ddcba804ea74e75785d3e",
+    "bytes": 671
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\price_valid_turnover.csv": {
+    "sha256": "81dcd1a864673fd966bedb9d73443be9a894407f510533565a75de82e8b559d6",
+    "bytes": 7224
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\run_record.json": {
+    "sha256": "20d0081d64388b7ff7c14421370ebd07623935a267d27c6dfadd45be792ccdd9",
+    "bytes": 1776
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\top_membership.csv": {
+    "sha256": "d5acad483ba127e805ce027edeaa2b0fae7b309cec41014c3194d4f36f1e118c",
+    "bytes": 3142619
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\top_quality.csv": {
+    "sha256": "5c85bf3a830bab042f5e61abf3acb581a74e980646ec1c38d887f3e66ed77a8a",
+    "bytes": 35882
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\dev_2022\\top_transitions.csv": {
+    "sha256": "3a0e95be103b40085adea71fc5f01479e8c2e76750192a1e24710353231c148d",
+    "bytes": 3375728
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\dev_2022\\predictions.parquet": {
+    "sha256": "2c58aa7ef4a4efaf8c19104d3b0c3416c2d561c09a5a0faa67d81bf5f741ecb3",
+    "bytes": 8889182
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\dev_2022\\evaluation_predictions.csv": {
+    "sha256": "5fcfab9b8de39cf30b7674211ada44689001265450f670abc984045cdcef2097",
+    "bytes": 48037515
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\daily_metrics.csv": {
+    "sha256": "b9e9000c34674de0d2aa3af396d0fea21aa1ea488dd06ba1872835de0be2bc1c",
+    "bytes": 48063
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\monthly_metrics.csv": {
+    "sha256": "a9ff0aa2ab2c99db2702c986a2761f24a9b491985b874c0b8c53069a4834993a",
+    "bytes": 2260
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\official_metrics.json": {
+    "sha256": "5e4eb7d0fb18dd96ed56ad67393090c6f86b256bc33a1f410b1e4b617f0109e0",
+    "bytes": 673
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\price_valid_turnover.csv": {
+    "sha256": "1c8a3c24440dce1122992830a6b21b044934bef0ffb8e7fe15dd332e5b129f2b",
+    "bytes": 7194
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\run_record.json": {
+    "sha256": "0436ba0a28c616cfe6d99a18e3979dd080ecbce4509ccb7dcbf7fd59531da3a6",
+    "bytes": 1752
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\top_membership.csv": {
+    "sha256": "b180033d6e7ea4fd0a46ece6cf86e7e30475407cf5b6e1020c5235f5bed52101",
+    "bytes": 3142619
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\top_quality.csv": {
+    "sha256": "0311dd094809fca91ecb04a6758eaf456ae262add71615c5fcabd9793f92d278",
+    "bytes": 36055
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\dev_2022\\top_transitions.csv": {
+    "sha256": "355dc360e0591ee392c76497b25e03e788733a4be9c561a40e365f8721ed83ee",
+    "bytes": 2901619
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\actual_config.json": {
+    "sha256": "8f23ba908bbb37848e419c4919bc1f12d2e9da7bae06387d41a93cccee1618a4",
+    "bytes": 2182
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\summary.json": {
+    "sha256": "dc8598463a82cd0702375eba81a1dcdf5145c147dbee86296c8859bb35f6a3a1",
+    "bytes": 7549
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\predictions.parquet": {
+    "sha256": "4ffcb7850faf1e5e90c3cb461610ecafcf508f6d28f00fb15891b32703a6efa0",
+    "bytes": 9159884
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\evaluate_input\\submission.csv": {
+    "sha256": "7070a14b370b3ee2978e5cf2e90ddc6f382873bb40b6b0a71e27509b0ae29040",
+    "bytes": 48421337
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\evaluate_input\\测试集_Y.csv": {
+    "sha256": "4307bc528370d6c63c7412c59abb29ce147101008eb6d42d292cb61df7aa4453",
+    "bytes": 43522920
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\evaluate_input\\测试集_X.csv": {
+    "sha256": "1882b2685b55ba2cf59c4cf84c597bdffb681993be5101734e903f42c11b9839",
+    "bytes": 24756634
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step3_20261008T040655121749Z\\runs\\P+J\\primary_2023\\models\\lightgbm.txt": {
+    "sha256": "fd600c73a2e2f54f75b96942061248d4f80fee95798867bb27b65ea147596a8f",
+    "bytes": 338465
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\lag_trace\\PJ\\primary_2023.parquet": {
+    "sha256": "b35ebcc686e29ce398012b2915dbf0cc8edd5b102cad9c0fd61921a4c7061b02",
+    "bytes": 9260316
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\daily_metrics.csv": {
+    "sha256": "de9e733027bb83876ff5db00eb3a607b219615fc6f1bf619a2dc994647f6a53d",
+    "bytes": 49321
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\monthly_metrics.csv": {
+    "sha256": "08e99afd47401c5ed43da06f4f2f1f1df756e8637716207c95993fee643b04ca",
+    "bytes": 2330
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\official_metrics.json": {
+    "sha256": "3561c142e1847fe4c28563181d3285a6570e3e700322cd80ff0141dea70f4607",
+    "bytes": 671
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\price_valid_turnover.csv": {
+    "sha256": "bf58c4630e4efb50107ab748aab5c037e22019f5bdf93ad620d7c18a146024bb",
+    "bytes": 7199
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\run_record.json": {
+    "sha256": "31236b467779486dfd804770ee4c7412bade7a89e0c98614dc500c1b130630ef",
+    "bytes": 1808
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\top_membership.csv": {
+    "sha256": "a9225773d42415be1af59ab27572076529ecd4259fe2c7246a523eb2ef19c848",
+    "bytes": 3232889
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\top_quality.csv": {
+    "sha256": "a55bdb2f49b8c26831a1ac7839a3c8c921a976c3a3242f7c7fc07c85dbfc31b1",
+    "bytes": 36595
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a100\\primary_2023\\top_transitions.csv": {
+    "sha256": "5b3455733592ab34631601f607a88cc691090e03fe9c8880ab82ad385dc68cf7",
+    "bytes": 4062065
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\primary_2023\\predictions.parquet": {
+    "sha256": "ec008d3f96d57c09b5b51945aae6a30b7f75ce9e23c03e77a9740aaf664fbff7",
+    "bytes": 9191272
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\primary_2023\\evaluation_predictions.csv": {
+    "sha256": "87bb3ecb64a76372960c0b9b7486bb15f5b81361dbe32ffe54b7316629375ec6",
+    "bytes": 48464626
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\daily_metrics.csv": {
+    "sha256": "112421493b37c81df959c7d18d8f93f8fa3923d5b5b57f15ae7ccb21fa7e6ccb",
+    "bytes": 49311
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\monthly_metrics.csv": {
+    "sha256": "11e7caf7db62e1b9d83b5a9aa298dc59e0129b80b9c00dbce224ce612eb6c5d8",
+    "bytes": 2322
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\official_metrics.json": {
+    "sha256": "985d9a6282e4602bc23d983792294ea0329a46d203a6802bb3dedbd67dd20625",
+    "bytes": 668
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\price_valid_turnover.csv": {
+    "sha256": "b2e2bae01ce4e746777d4fc69de70b17754555ba6828029730714734e25f347c",
+    "bytes": 7197
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\run_record.json": {
+    "sha256": "01e30bfe600075a4b447c8b2868a780018f32b6a63824500a76009e661c5aeef",
+    "bytes": 1784
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\top_membership.csv": {
+    "sha256": "106846959359ccd31f8d53753d4cbf4b2906dd7cc8aa3cc354ac506f7efca777",
+    "bytes": 3232889
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\top_quality.csv": {
+    "sha256": "e20579baf792d8dab42e7fd28c0463797d7a5418f6bca2e42c7a01fef019605d",
+    "bytes": 36634
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v2\\20261008T180831618991Z\\scores\\PJ_a080\\primary_2023\\top_transitions.csv": {
+    "sha256": "ef22cc62da2b19f0ed28f89e07e13169148a293c2e03a6aa460a1c7b24241c54",
+    "bytes": 3509968
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\oos_2024\\predictions.parquet": {
+    "sha256": "579867ee38e028554a0bb3730e5111e6c8848eb07735c87d715314c022654f64",
+    "bytes": 9457395
+  },
+  "C:\\fintechathon\\artifacts\\final_selection_v1\\20261008T170623849307Z\\D\\oos_2024\\evaluation_predictions.csv": {
+    "sha256": "7f62fe495f488a136a636451a3dd768c5d1b438f4f172e5df31959f6d4bd45b0",
+    "bytes": 48117222
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step5_20261008T094235798796Z\\runs\\P+J\\oos_2024\\evaluate_input\\测试集_Y.csv": {
+    "sha256": "efd3d9d13f94a1ee689ae3a45c47ae43bdb3b8df05a94f57e98d3f63c5898a80",
+    "bytes": 44123309
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step5_20261008T094235798796Z\\runs\\P+J\\oos_2024\\evaluate_input\\测试集_X.csv": {
+    "sha256": "e3a1f33991d28543ac131db14548f6837bcf9fdb0609676725d6f43d8e3fec96",
+    "bytes": 24756634
+  },
+  "C:\\fintechathon\\artifacts\\feature_round2\\step5_20261008T094235798796Z\\runs\\P+J\\oos_2024\\models\\lightgbm.txt": {
+    "sha256": "f288a843f53f90798e0559a0780a5f9d36bc82a902af3292358f32b3c3b84ebd",
+    "bytes": 338926
+  },
+  "C:\\fintechathon\\src\\data\\baseline_panel.py": {
+    "sha256": "bacee5d69d50b2305ed5818095a6ba9d3a8c2458b6e763d421b2a807b7f03a2b",
+    "bytes": 3816
+  },
+  "C:\\fintechathon\\scripts\\run_lightgbm_baseline.py": {
+    "sha256": "d85e0ac4c61133341b1ae1871ad6776dbaebab61e21474a3c121bfb29df0ae57",
+    "bytes": 19544
+  },
+  "C:\\fintechathon\\src\\features\\feature_round2.py": {
+    "sha256": "89f57d748873bf03105bfcd73c3ef78bd2b962178fc7cc9e7a571c5266531bd1",
+    "bytes": 7624
+  },
+  "C:\\fintechathon\\src\\features\\features34.py": {
+    "sha256": "1167c067b0e05a9287f3a5f23b700bd720179a746a3049acc8de90e91daf8cd4",
+    "bytes": 7778
+  },
+  "C:\\fintechathon\\src\\data\\frozen_test_adapter.py": {
+    "sha256": "7f6b230c1ea63a7d7448fa0d771fe3837616010e7d74ef808452ee21d02d161e",
+    "bytes": 2949
+  },
+  "C:\\fintechathon\\scripts\\select_final_candidates_v2.py": {
+    "sha256": "2590e85235ad0dcb0e4959ba08ef5b9ab20250d7d574d9311fec6a550fdd6d29",
+    "bytes": 25170
+  },
+  "C:\\fintechathon\\src\\metrics\\official.py": {
+    "sha256": "cbeaefda7a087b156ac2f5bb4b8319da9d8a9ebbdcf8ab4853085ab8a1964afe",
+    "bytes": 6738
+  },
+  "C:\\fintechathon\\scripts\\audit_final_candidates_v2.py": {
+    "sha256": "8a20b70ab1ae8b70fcc538796a5bfd9c3b0ba0468551dca54663dbf454d4dc47",
+    "bytes": 24194
+  },
+  "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_before.json": {
+    "sha256": "d773f3b8eb5793003165321e13e1e450a114ed66714a69e76b88cf196310b2be",
+    "bytes": 1207
+  },
+  "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\environment_after.json": {
+    "sha256": "151437facf2e2bd612a2ead37ffbf41e131e17b695b639141f719161adaad259",
+    "bytes": 1134
+  },
+  "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\synthetic_XGBoost_effective.json": {
+    "sha256": "263b275d96a2d72217a213244f43071e5efc5c0b59e2b9ab85755e0536dd7aeb",
+    "bytes": 8208
+  },
+  "C:\\fintechathon\\artifacts\\model_comparison_v1\\20261011T073612105802Z\\synthetic_CatBoost_effective.json": {
+    "sha256": "f4c1318988e142807da9da188a73a63f6fc1cdb9038225fab72e311a86a217d9",
+    "bytes": 1210
+  }
+}

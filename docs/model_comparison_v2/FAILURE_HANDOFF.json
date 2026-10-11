@@ -1,0 +1,60 @@
+{
+  "task": "model_comparison_v2",
+  "accepted": false,
+  "development_complete": false,
+  "status": "stopped_at_preparation_input_gate",
+  "run_directory": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z",
+  "counts": {
+    "fit": 0,
+    "initial_predict": 0,
+    "reload_predict": 0,
+    "official": 0,
+    "wrapper": 0,
+    "independent": 0,
+    "monthly_logical": 0,
+    "wrapper_monthly": 0,
+    "independent_monthly": 0
+  },
+  "diagnosis": {
+    "failure": "prepare original score label precision",
+    "real_fit": 0,
+    "real_predict": 0,
+    "official_score": 0,
+    "independent_score": 0,
+    "full_X_rebuild_parity_passed": true,
+    "raw_loader_default_vs_control_default_exact": true,
+    "default_vs_roundtrip_different_finite_labels": 912470,
+    "default_vs_roundtrip_max_absolute_difference": 9.996344030316351e-17,
+    "cause": "preparation check used round-trip for control labels; loader and evaluator use default parser",
+    "repair": "use default parser for score labels; preserve round-trip only for prediction serialization checks",
+    "time": "2026-10-11T08:18:29.466985+00:00"
+  },
+  "corrective_code_applied": true,
+  "parser_repair_tests_passed": 9,
+  "preparation_rerun_authorized": false,
+  "preparation_rerun_executed": false,
+  "failed_attempt_preserved": true,
+  "protection": {
+    "accepted": true,
+    "hashes": 317,
+    "prior_artifact_stats": 17374
+  },
+  "resource_receipt": {
+    "path": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z\\phases\\prepare_resource.json",
+    "sha256": "1c48eb442d09ed948bc3cfcb55dbdde6c09fac1856cd12c4e2aab8fd6fbb48ae"
+  },
+  "HALTED_path": "C:\\fintechathon\\artifacts\\model_comparison_v2\\20261011T080555020792Z\\HALTED.json",
+  "config_sha256": "fbe707471a6e9596459c3d26ccd55b44ed2a41e9b3d9ffef1135d835145f9705",
+  "current_primary": "PJ_a080",
+  "current_backup": "PJ_a090",
+  "submission_unchanged": true,
+  "submission_sha256": "96f0f30b5c52c526705c6b2dff9e89ebad730dbe15474219025e187a3c2faaa5",
+  "review_2024": 0,
+  "full_train": 0,
+  "test_predict": 0,
+  "new_submission": 0,
+  "uploads": 0,
+  "git_commit": false,
+  "remote_operations": false,
+  "next_action": "Await explicit answer to preparation-only repair/restart question; keep same cumulative task budget, retain old attempt; no automatic resume."
+}

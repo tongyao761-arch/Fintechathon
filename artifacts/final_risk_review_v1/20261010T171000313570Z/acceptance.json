@@ -1,0 +1,135 @@
+{
+  "technical_accepted": true,
+  "accepted_at": "2026-10-10T17:39:30.927090+00:00",
+  "cross_table_cells_independently_checked": 48,
+  "records": [
+    {
+      "year": 2021,
+      "keys_complete": true,
+      "formula_exact": true,
+      "valid_values_exact": true,
+      "changes_X_only": true,
+      "truth_precision_exact": true,
+      "annual_monthly_daily_reconciled": true,
+      "Top_quality_independently_verified": true
+    },
+    {
+      "year": 2022,
+      "keys_complete": true,
+      "formula_exact": true,
+      "valid_values_exact": true,
+      "changes_X_only": true,
+      "truth_precision_exact": true,
+      "annual_monthly_daily_reconciled": true,
+      "Top_quality_independently_verified": true
+    },
+    {
+      "year": 2023,
+      "keys_complete": true,
+      "formula_exact": true,
+      "valid_values_exact": true,
+      "changes_X_only": true,
+      "truth_precision_exact": true,
+      "annual_monthly_daily_reconciled": true,
+      "Top_quality_independently_verified": true
+    },
+    {
+      "year": 2024,
+      "keys_complete": true,
+      "formula_exact": true,
+      "valid_values_exact": true,
+      "changes_X_only": true,
+      "truth_precision_exact": true,
+      "annual_monthly_daily_reconciled": true,
+      "Top_quality_independently_verified": true
+    }
+  ],
+  "test_X_Top_independent": true,
+  "baseline_and_diagnostic_official_parity": [
+    {
+      "id": "PJ_a080",
+      "year": 2021,
+      "max_official_independent_abs": 2.220446049250313e-16,
+      "baseline_reproduced": true,
+      "official_tie_sort_compatible": true
+    },
+    {
+      "id": "INVALID_BELOW_VALID_PJ080_D1",
+      "year": 2021,
+      "max_official_independent_abs": 2.220446049250313e-16,
+      "baseline_reproduced": false,
+      "official_tie_sort_compatible": true
+    },
+    {
+      "id": "PJ_a080",
+      "year": 2022,
+      "max_official_independent_abs": 0.0,
+      "baseline_reproduced": true,
+      "official_tie_sort_compatible": true
+    },
+    {
+      "id": "INVALID_BELOW_VALID_PJ080_D1",
+      "year": 2022,
+      "max_official_independent_abs": 0.0,
+      "baseline_reproduced": false,
+      "official_tie_sort_compatible": true
+    },
+    {
+      "id": "PJ_a080",
+      "year": 2023,
+      "max_official_independent_abs": 0.0,
+      "baseline_reproduced": true,
+      "official_tie_sort_compatible": true
+    },
+    {
+      "id": "INVALID_BELOW_VALID_PJ080_D1",
+      "year": 2023,
+      "max_official_independent_abs": 0.0,
+      "baseline_reproduced": false,
+      "official_tie_sort_compatible": true
+    },
+    {
+      "id": "PJ_a080",
+      "year": 2024,
+      "max_official_independent_abs": 0.0,
+      "baseline_reproduced": true,
+      "official_tie_sort_compatible": true
+    },
+    {
+      "id": "INVALID_BELOW_VALID_PJ080_D1",
+      "year": 2024,
+      "max_official_independent_abs": 0.0,
+      "baseline_reproduced": false,
+      "official_tie_sort_compatible": true
+    }
+  ],
+  "budget": {
+    "new_fits": 0,
+    "new_model_predictions": 0,
+    "synthetic_fits": 0,
+    "fit_retries": 0,
+    "postprocessing_rules": 1,
+    "historical_diagnostic_prediction_sets": 4,
+    "annual_logical_scores": 8,
+    "actual_score_computations": 24,
+    "official_calls": 8,
+    "independent_calls": 8,
+    "wrapper_calls": 8,
+    "failed_scoring_calls": 0
+  },
+  "protected": {
+    "all_protected_hashes_exact": true,
+    "head_unchanged": true,
+    "branch_unchanged": true,
+    "old_ledger": {
+      "fits": 1,
+      "predictions": 2,
+      "synthetic_fits": 0,
+      "retries": 0
+    }
+  },
+  "tests_result_sha256": "6d80d4a3d04c0b4d5fb20b4a57e86a161e323397e4bc3d9d5da3d962eb69322f",
+  "registration_sha256": "6a1851063ec64e231c0708975c4070b8b049915d44998bcfd2a2b70a14d010c1",
+  "fit_predict_call_audit_sha256": "b98ee3d0467ae39a6e97df7412217ffbb8543cd3f470c0f0406085c6125977bd",
+  "no_upload_blocking_technical_error_found": true
+}
